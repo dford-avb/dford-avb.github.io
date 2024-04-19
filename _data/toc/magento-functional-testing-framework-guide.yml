@@ -1,4 +1,4 @@
-label: Magento Functional Testing Framework Guide version 2.2
+label: Openmage Functional Testing Framework Guide version 2.2
 versionless: true
 pages:
 
@@ -94,9 +94,9 @@ pages:
     versionless: true
 
   - label: Contribution Guidelines
-    url: https://github.com/magento/magento2-functional-testing-framework/blob/master/.github/CONTRIBUTING.md
+    url: https://github.com/openmage/openmage2-functional-testing-framework/blob/master/.github/CONTRIBUTING.md
     versionless: true
 
   - label: Changelog
-    url: https://github.com/magento/magento2-functional-testing-framework/blob/master/CHANGELOG.md
+    url: https://github.com/openmage/openmage2-functional-testing-framework/blob/master/CHANGELOG.md
     versionless: true

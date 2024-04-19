@@ -1,5 +1,5 @@
-label: Magento Commerce Cloud
-project-webint-basiclabel: Magento Commerce Cloud Guide
+label: Openmage Commerce Cloud
+project-webint-basiclabel: Openmage Commerce Cloud Guide
 pages:
     - label: Overview
       url: /cloud/bk-cloud.html
@@ -35,7 +35,7 @@ pages:
         - label: Composer
           url: /cloud/reference/cloud-composer.html
 
-        - label: Magento Cloud CLI
+        - label: Openmage Cloud CLI
           url: /cloud/reference/cli-ref-topic.html
 
         - label: Git
@@ -78,19 +78,19 @@ pages:
         - label: Prepare for manual setup
           url: /cloud/before/before-workspace.html
           children:
-            - label: Install Magento prerequisites
-              url: /cloud/before/before-workspace-magento-prereqs.html
+            - label: Install Openmage prerequisites
+              url: /cloud/before/before-workspace-openmage-prereqs.html
 
             - label: Enable SSH keys
               url: /cloud/before/before-workspace-ssh.html
 
-            - label: Set up the Magento file system owner
+            - label: Set up the Openmage file system owner
               url: /cloud/before/before-workspace-file-sys-owner.html
 
             - label: Clone and branch the project
               url: /cloud/before/before-setup-env-2_clone.html
 
-            - label: Install Magento
+            - label: Install Openmage
               url: /cloud/before/before-setup-env-install.html
 
             - label: First time deployment
@@ -118,10 +118,10 @@ pages:
     - label: Import existing code into a project
       url: /cloud/setup/first-time-setup-import-first-steps.html
       children:
-        - label: Prepare your existing Magento Commerce system
+        - label: Prepare your existing Openmage Commerce system
           url: /cloud/setup/first-time-setup-import-prepare.html
 
-        - label: Import Magento Commerce code
+        - label: Import Openmage Commerce code
           url: /cloud/setup/first-time-setup-import-import.html
 
     - label: Configure your store
@@ -134,7 +134,7 @@ pages:
           url: /cloud/live/paypal-onboarding.html
           exclude_versions: ["2.0"]
 
-        - label: Set up Magento B2B
+        - label: Set up Openmage B2B
           url: /cloud/configure/setup-b2b.html
           include_versions: ["2.2","2.3"]
 
@@ -195,10 +195,10 @@ pages:
       url: /cloud/env/environments.html
       children:
         - label: Application
-          url: /cloud/project/project-conf-files_magento-app.html
+          url: /cloud/project/project-conf-files_openmage-app.html
 
         - label: Build and deploy
-          url: /cloud/project/magento-env-yaml.html
+          url: /cloud/project/openmage-env-yaml.html
           exclude_versions: ["2.0"]
           children:
             - label: Set up notifications
@@ -211,7 +211,7 @@ pages:
           url: /cloud/env/variables-intro.html
           children:
             - label: ADMIN variables
-              url: /cloud/env/environment-vars_magento.html
+              url: /cloud/env/environment-vars_openmage.html
 
             - label: Global variables
               url: /cloud/env/variables-global.html
@@ -412,7 +412,7 @@ pages:
         - label: Apply custom patches
           url: /cloud/project/project-patch.html
 
-        - label: Upgrade Magento version
+        - label: Upgrade Openmage version
           url: /cloud/project/project-upgrade.html
 
         - label: Upgrade from 2.0.4 (Cloud)

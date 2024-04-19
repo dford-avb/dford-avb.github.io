@@ -5,13 +5,13 @@ We recommend creating a backup of your project before an upgrade. Use the follow
 1.  Create a local backup of the remote database.
 
     ```bash
-    magento-cloud db:dump
+    openmage-cloud db:dump
     ```
 
 1.  Back up code and media.
 
     ```bash
-    php bin/magento setup:backup --code [--media]
+    php bin/openmage setup:backup --code [--media]
     ```
 
     Optionally, you can omit `[--media]` if you have a large number of static files that are already in source control.
@@ -27,4 +27,4 @@ We recommend creating a backup of your project before an upgrade. Use the follow
     ```
 
 -   We recommend setting the application in maintenance mode before doing a database dump in Production environments.
--   This creates an `dump-<timestamp>.sql.gz` archive file in your local project directory. See [Snapshot and backup management](http://devdocs.magento.com/guides/v2.2/cloud/project/project-webint-snap.html#db-dump).
+-   This creates an `dump-<timestamp>.sql.gz` archive file in your local project directory. See [Snapshot and backup management](http://devdocs.openmage.com/guides/v2.2/cloud/project/project-webint-snap.html#db-dump).

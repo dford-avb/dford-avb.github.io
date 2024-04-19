@@ -11,7 +11,7 @@ If an error displays, use the following steps to install Composer.
 
 To install Composer:
 
-1.	Change to or create an empty directory on your Magento server.
+1.	Change to or create an empty directory on your Openmage server.
 
 2.	Enter the following commands:
 

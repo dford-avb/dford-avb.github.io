@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/common/css/stylesheet-fonts.css" type="text/css" charset="utf-8">
     <link rel="icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
-    <title>Magento for Developers: Part 4&mdash;Magento Layouts, Blocks and Templates</title>
+    <title>Openmage for Developers: Part 4&mdash;Openmage Layouts, Blocks and Templates</title>
 
 </head>
 
@@ -19,13 +19,13 @@
 <div id="top"></div>
 
 <div id="content">
-<h1>Magento for Developers: Part 4&mdash;Magento Layouts, Blocks and Templates</h1>
-<p><em>by Alan Storm</em>, updated for Magento 1.12</p>
+<h1>Openmage for Developers: Part 4&mdash;Openmage Layouts, Blocks and Templates</h1>
+<p><em>by Alan Storm</em>, updated for Openmage 1.12</p>
 <p><a href="{{ site.m1xgithuburl }}/magefordev/mage-for-dev-4.html" target="_blank">Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
 
 
-<!-- Magento for Developers: Part 4&mdash;Magento Layouts, Blocks and Templates -->
-<!-- magento-for-dev-part-4-magento-layouts-blocks-and-templates 
+<!-- Openmage for Developers: Part 4&mdash;Openmage Layouts, Blocks and Templates -->
+<!-- openmage-for-dev-part-4-openmage-layouts-blocks-and-templates 
 
 
 <style type="text/css">
@@ -36,19 +36,19 @@
 
 <h5>Other articles in this series:</h5>
 <ul>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-1.html">Part 1&mdash;Introduction to Magento</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-2.html">Part 2&mdash;The Magento Config</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-3.html">Part 3&mdash;Magento Controller Dispatch</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-4.html">Part 4&mdash;Magento Layouts, Blocks and Templates</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-5.html">Part 5&mdash;Magento Models and ORM Basics</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-6.html">Part 6&mdash;Magento Setup Resources</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-1.html">Part 1&mdash;Introduction to Openmage</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-2.html">Part 2&mdash;The Openmage Config</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-3.html">Part 3&mdash;Openmage Controller Dispatch</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-4.html">Part 4&mdash;Openmage Layouts, Blocks and Templates</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-5.html">Part 5&mdash;Openmage Models and ORM Basics</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-6.html">Part 6&mdash;Openmage Setup Resources</a>
 <li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-7.html">Part 7&mdash;Advanced ORM: Entity Attribute Value</a>
 <li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-8.html">Part 8&mdash;Varien Data Collections</a>
 </ul>
 </div>
-<p class="para1">Developers new to Magento are often confused by the Layout and View system.  This article will take a look at Magento's Layout/Block approach, and show you how it fits into Magento MVC worldview.</p>
+<p class="para1">Developers new to Openmage are often confused by the Layout and View system.  This article will take a look at Openmage's Layout/Block approach, and show you how it fits into Openmage MVC worldview.</p>
 
-<p>Unlike many popular MVC systems, Magento's Action Controller does <strong>not</strong> pass a data object to the view or set properties on the view object (with a few exceptions).  Instead, the View component directly references system models to get the information it needs for display.  </p>
+<p>Unlike many popular MVC systems, Openmage's Action Controller does <strong>not</strong> pass a data object to the view or set properties on the view object (with a few exceptions).  Instead, the View component directly references system models to get the information it needs for display.  </p>
 
 <p>One consequence of this design decision is that the View has been separated into Blocks and Templates.  Blocks are PHP objects, Templates are "raw" PHP files (with a .phtml extension) that contain a mix of HTML and PHP (where PHP is used as a templating language).  Each Block is tied to a single Template file.  Inside a phtml file, PHP's <tt>$this</tt> keyword will contain a reference to the Template's Block object.</p>
 <br clear="all" />
@@ -112,14 +112,14 @@ public function getLoadedProductCollection()
 <p>So, Blocks and Templates are all well and good, but you're probably wondering</p>
 
 <ol>
-<li>How do I tell Magento which Blocks I want to use on a page?</li>
-<li>How do I tell Magento which Block I should start rendering with?</li>
+<li>How do I tell Openmage which Blocks I want to use on a page?</li>
+<li>How do I tell Openmage which Block I should start rendering with?</li>
 <li>How do I specify a particular Block in <tt>getChildHtml(...)</tt>? Those argument strings don't look like Block names to me.</li>
 </ol>
 
 <p>This is where the Layout Object enters the picture.  The Layout Object is an XML object that will define which Blocks are included on a page, and which Block(s) should kick off the rendering process.</p>
 
-<p><a href="mage-for-dev-3.html" title="Link to Magento for Developers: Part 3&mdash;Magento Controller Dispatch">Last time</a> we were echoing content directly from our Action Methods.  This time let's create a simple HTML template for our Hello World module.</p>
+<p><a href="mage-for-dev-3.html" title="Link to Openmage for Developers: Part 3&mdash;Openmage Controller Dispatch">Last time</a> we were echoing content directly from our Action Methods.  This time let's create a simple HTML template for our Hello World module.</p>
 
 <p>First, create a file at</p>
 
@@ -130,14 +130,14 @@ public function getLoadedProductCollection()
 <pre>
 &lt;layout version="0.1.0">
     &lt;default>
-        &lt;block type="page/html" name="root" output="toHtml" template="magentotutorial/helloworld/simple_page.phtml" />
+        &lt;block type="page/html" name="root" output="toHtml" template="openmagetutorial/helloworld/simple_page.phtml" />
     &lt;/default>
 &lt;/layout>
 </pre>
 
 <p>Then, create a file at  </p>
 
-<pre>app/design/frontend/base/default/template/magentotutorial/helloworld/simple_page.phtml</pre>
+<pre>app/design/frontend/base/default/template/openmagetutorial/helloworld/simple_page.phtml</pre>
 
 <p>with the following contents
 <pre>
@@ -169,19 +169,19 @@ public function indexAction() {
 }
 </pre>
 
-<p>Clear your Magento cache and reload your Hello World controller page.  You should now see a website with a bright red background and an HTML source that matches what's in simple_page.phtml.  </p>
+<p>Clear your Openmage cache and reload your Hello World controller page.  You should now see a website with a bright red background and an HTML source that matches what's in simple_page.phtml.  </p>
 
 <h2>What's Going On</h2>
 
 <p>So, that's a lot of voodoo and cryptic incantations.  Let's take a look at what's going on.</p>
 
-<p>First, you'll want to install the <a href="http://alanstorm.com/2005/projects/MagentoLayoutViewer.tar.gz">Layoutviewer</a> module.  This is a module similar to the <a href="http://alanstorm.com/2005/projects/MagentoConfigViewer.tar.gz">Configviewer</a> module you built in the Hello World article that will let us peek at some of Magento's internals.</p>
+<p>First, you'll want to install the <a href="http://alanstorm.com/2005/projects/OpenmageLayoutViewer.tar.gz">Layoutviewer</a> module.  This is a module similar to the <a href="http://alanstorm.com/2005/projects/OpenmageConfigViewer.tar.gz">Configviewer</a> module you built in the Hello World article that will let us peek at some of Openmage's internals.</p>
 
-<p>Once you've installed the module (similar to how you setup the <a href="http://alanstorm.com/2005/projects/MagentoConfigViewer.tar.gz">Configviewer</a> module), go to the following URL</p>
+<p>Once you've installed the module (similar to how you setup the <a href="http://alanstorm.com/2005/projects/OpenmageConfigViewer.tar.gz">Configviewer</a> module), go to the following URL</p>
 
 <pre>http://example.com/helloworld/index/index?showLayout=page</pre>
 
-<p>This is the layout xml for your page/request.  It's made up of &lt;block /&gt;, &lt;reference /&gt; and &lt;remove /&gt; tags.  When you call the  <tt>loadLayout</tt> method of your Action Controller, Magento will </p>
+<p>This is the layout xml for your page/request.  It's made up of &lt;block /&gt;, &lt;reference /&gt; and &lt;remove /&gt; tags.  When you call the  <tt>loadLayout</tt> method of your Action Controller, Openmage will </p>
 
 <ol>
 <li><p>Generate this Layout XML </p></li>
@@ -189,7 +189,7 @@ public function indexAction() {
 <li><p>If the &lt;block /&gt; tag contains an output attribute, its value is added to the internal <tt>_output</tt> array of the layout object.</p></li>
 </ol>
 
-<p>Then, when you call the <tt>renderLayout</tt> method in your Action Controller, Magento will iterate over all the Blocks in the <tt>_output</tt> array, using the value of the output attribute as a callback method. This is always <tt>toHtml</tt>, and means the starting point for output will be that Block's Template.</p>
+<p>Then, when you call the <tt>renderLayout</tt> method in your Action Controller, Openmage will iterate over all the Blocks in the <tt>_output</tt> array, using the value of the output attribute as a callback method. This is always <tt>toHtml</tt>, and means the starting point for output will be that Block's Template.</p>
 
 <p>The following sections will cover how Blocks are instantiated, how this layout file is generated, and finishes up with kicking off the output process.</p>
 
@@ -201,9 +201,9 @@ public function indexAction() {
 &lt;block type="page/template_links" ...
 </pre>
 
-<p>The URI references a location in the (say it with me) global config.  The first portion of the URI (in the above examples <tt>page</tt>) will be used to query the global config to find the page class name.  The second portion of the URI (in the two examples above, <tt>html</tt> and <tt>template_links</tt>) will be appended to the base class name to create the class name Magento should instantiate.</p>
+<p>The URI references a location in the (say it with me) global config.  The first portion of the URI (in the above examples <tt>page</tt>) will be used to query the global config to find the page class name.  The second portion of the URI (in the two examples above, <tt>html</tt> and <tt>template_links</tt>) will be appended to the base class name to create the class name Openmage should instantiate.</p>
 
-<p>We'll go through <tt>page/html</tt> as an example.  First, Magento looks for the global config node at file</p>
+<p>We'll go through <tt>page/html</tt> as an example.  First, Openmage looks for the global config node at file</p>
 
 <pre>app/code/core/Mage/Page/etc/config.xml</pre>
 
@@ -221,7 +221,7 @@ public function indexAction() {
 <pre>
 &lt;layout version="0.1.0">
     &lt;default>
-        &lt;block type="page/html" name="root" output="toHtml" template="magentotutorial/helloworld/simple_page.phtml" />
+        &lt;block type="page/html" name="root" output="toHtml" template="openmagetutorial/helloworld/simple_page.phtml" />
     &lt;/default>
 &lt;/layout>
 </pre>
@@ -255,7 +255,7 @@ public function indexAction() {
 &lt;/layout>
 </pre>
 
-<p>Even though the root block is declared in a separate layout XML file, the new block is added as a child block. Magento initially creates a <tt>page/html</tt> Block named <tt>root</tt>.  Then, when it later encounters the reference with the same name (<tt>root</tt>), it will assign the new block <tt>some.other.block.name</tt> as a child of the root block.
+<p>Even though the root block is declared in a separate layout XML file, the new block is added as a child block. Openmage initially creates a <tt>page/html</tt> Block named <tt>root</tt>.  Then, when it later encounters the reference with the same name (<tt>root</tt>), it will assign the new block <tt>some.other.block.name</tt> as a child of the root block.
 </p>
 
 <h2>How Layout Files are Generated</h2>
@@ -264,7 +264,7 @@ public function indexAction() {
 
 <h3>Handles</h3>
 
-<p>Each page request in Magento will generate several unique Handles.  The Layoutview module can show you these Handles by using a URL something like</p>
+<p>Each page request in Openmage will generate several unique Handles.  The Layoutview module can show you these Handles by using a URL something like</p>
 
 <pre>http://example.com/helloworld/index/index?showLayout=handles</pre>
 
@@ -278,9 +278,9 @@ public function indexAction() {
 <li><tt>customer_logged_out</tt></li>
 </ol>
 
-<p>Each of these is a Handle. Handles are set in a variety of places within the Magento system.  The two we want to pay attention to are <tt>default</tt> and <tt>helloworld_index_index</tt>.  The <tt>default</tt> Handle is present in <strong>every</strong> request into the Magento system.  The <tt>helloworld_index_index</tt> Handle is created by combining the route name (helloworld), Action Controller name (index), and Action Controller Action Method (index) into a single string.  This means each possible method on an Action Controller has a Handle associated with it.  </p>
+<p>Each of these is a Handle. Handles are set in a variety of places within the Openmage system.  The two we want to pay attention to are <tt>default</tt> and <tt>helloworld_index_index</tt>.  The <tt>default</tt> Handle is present in <strong>every</strong> request into the Openmage system.  The <tt>helloworld_index_index</tt> Handle is created by combining the route name (helloworld), Action Controller name (index), and Action Controller Action Method (index) into a single string.  This means each possible method on an Action Controller has a Handle associated with it.  </p>
 
-<p>Remember that "index" is the Magento default for both Action Controllers and Action Methods, so the following request</p>
+<p>Remember that "index" is the Openmage default for both Action Controllers and Action Methods, so the following request</p>
 
 <pre>http://example.com/helloworld/?showLayout=handles</pre>
 
@@ -288,7 +288,7 @@ public function indexAction() {
 
 <h2>Package Layout</h2>
 
-<p>You can think of the Package Layout similar to the global config.  It's a large XML file that contains <strong>every possible layout configuration</strong> for a particular Magento install.  Let's take a look at it using the Layoutview module</p>
+<p>You can think of the Package Layout similar to the global config.  It's a large XML file that contains <strong>every possible layout configuration</strong> for a particular Openmage install.  Let's take a look at it using the Layoutview module</p>
 
 <pre>http://example.com/helloworld/index/index?showLayout=package</pre>
 
@@ -300,7 +300,7 @@ public function indexAction() {
 
 <pre>app/design/frontend/base/default/layout/</pre>
 
-<p>Behind the scenes there are <strong>&lt;frontend&gt;&lt;layout&gt;&lt;updates /&gt;</strong> and <strong>&lt;adminhtml&gt;&lt;layout&gt;&lt;updates /&gt;</strong> sections of the global config that contains nodes with all the file names to load for the respective area.  Once the files listed in the config have been combined, Magento will merge in one last xml file, local.xml.  This is the file where you're able to add your customizations to your Magento install. </p>
+<p>Behind the scenes there are <strong>&lt;frontend&gt;&lt;layout&gt;&lt;updates /&gt;</strong> and <strong>&lt;adminhtml&gt;&lt;layout&gt;&lt;updates /&gt;</strong> sections of the global config that contains nodes with all the file names to load for the respective area.  Once the files listed in the config have been combined, Openmage will merge in one last xml file, local.xml.  This is the file where you're able to add your customizations to your Openmage install. </p>
 
 <h2>Combining Handles and The Package Layout</h2>
 
@@ -340,7 +340,7 @@ etc...
 <pre>
 &lt;layout version="0.1.0">
     &lt;default>
-        &lt;block type="page/html" name="root" output="toHtml" template="magentotutorial/helloworld/simple_page.phtml" />
+        &lt;block type="page/html" name="root" output="toHtml" template="openmagetutorial/helloworld/simple_page.phtml" />
     &lt;/default>
 &lt;/layout>
 </pre>
@@ -348,17 +348,17 @@ etc...
 <p>to <tt>local.xml</tt> means we've overridden the "root" tag. with a different Block.  By placing this in the &lt;default /&gt; Handle we've ensured that this override will happen for <strong>every page request</strong> in the system.   That's probably not what we want.  </p>
 
 
-<p>If you go to any other page in your  Magento site, you'll notice they're either blank white, or have the same red background that your hello world page does.  Let's change your <tt>local.xml</tt> file so it only applies to the hello world page.  We'll do this by changing default to use the full action name handle (<tt>helloworld_index_index</tt>).</p>
+<p>If you go to any other page in your  Openmage site, you'll notice they're either blank white, or have the same red background that your hello world page does.  Let's change your <tt>local.xml</tt> file so it only applies to the hello world page.  We'll do this by changing default to use the full action name handle (<tt>helloworld_index_index</tt>).</p>
 
 <pre>
 &lt;layout version="0.1.0">
     &lt;helloworld_index_index>
-        &lt;block type="page/html" name="root" output="toHtml" template="magentotutorial/helloworld/simple_page.phtml" />
+        &lt;block type="page/html" name="root" output="toHtml" template="openmagetutorial/helloworld/simple_page.phtml" />
     &lt;/helloworld_index_index>
 &lt;/layout>
 </pre>
 
-<p>Clear your Magento cache, and the rest of your pages should be restored.  </p>
+<p>Clear your Openmage cache, and the rest of your pages should be restored.  </p>
 
 <p>Right now this only applies to our index Action Method.  Let's add it to the goodbye Action Method as well.  In your Action Controller, modify the goodbye action so it looks like</p>
 <pre>
@@ -368,7 +368,7 @@ public function goodbyeAction() {
 }
 </pre>
 
-<p>If you load up the following URL, you'll notice you're still getting the default Magento layout.</p>
+<p>If you load up the following URL, you'll notice you're still getting the default Openmage layout.</p>
 
 <pre>http://example.com/helloworld/index/goodbye</pre>
 
@@ -383,7 +383,7 @@ public function goodbyeAction() {
 &lt;/layout>
 </pre>
 
-<p>Loading the following pages (after clearing your Magento cache) should now produce identical results.</p>
+<p>Loading the following pages (after clearing your Openmage cache) should now produce identical results.</p>
 
 <pre>http://example.com/helloworld/index/index
 http://example.com/helloworld/index/goodbye</pre>
@@ -392,19 +392,19 @@ http://example.com/helloworld/index/goodbye</pre>
 
 <p>In a standard configuration, output starts on the Block named root (because it has an output attribute).  We've overridden root's Template with our own</p>
 
-<pre>template="magentotutorial/helloworld/simple_page.phtml"</pre>
+<pre>template="openmagetutorial/helloworld/simple_page.phtml"</pre>
 
 <p>Templates are referenced from the root folder of the current theme. In this case, that's</p>
 
 <pre>app/design/frontend/base/default</pre>
 
-<p>so we need to drill down to our custom page.  Most Magento Templates are stored in </p>
+<p>so we need to drill down to our custom page.  Most Openmage Templates are stored in </p>
 
 <pre>app/design/frontend/base/default/templates</pre>
 
 <p>Combining this gives us the full path</p>
 
-<pre>app/design/frontend/base/default/templates/magentotutorial/helloworld/simple_page.phtml</pre>
+<pre>app/design/frontend/base/default/templates/openmagetutorial/helloworld/simple_page.phtml</pre>
 
 <h2>Adding Content Blocks</h2>
 
@@ -412,13 +412,13 @@ http://example.com/helloworld/index/goodbye</pre>
 
 <pre>
 &lt;helloworld_index_index>
-    &lt;block type="page/html" name="root" output="toHtml" template="magentotutorial/helloworld/simple_page.phtml">
+    &lt;block type="page/html" name="root" output="toHtml" template="openmagetutorial/helloworld/simple_page.phtml">
         &lt;block type="customer/form_register" name="customer_form_register" template="customer/form/register.phtml"/>
     &lt;/block>
 &lt;/helloworld_index_index>
 </pre>
 
-<p>We're adding a new Block nested within our root.  This is a Block that's distributed with Magento, and will display a customer registration form. By nesting this Block within our root Block, we've made it available to be pulled into our <tt>simple_page.html</tt> Template.  Next, we'll use the Block's getChildHtml method in our <tt>simple_page.phtml</tt> file.  Edit <tt>simple_page.html</tt> so it looks like this</p>
+<p>We're adding a new Block nested within our root.  This is a Block that's distributed with Openmage, and will display a customer registration form. By nesting this Block within our root Block, we've made it available to be pulled into our <tt>simple_page.html</tt> Template.  Next, we'll use the Block's getChildHtml method in our <tt>simple_page.phtml</tt> file.  Edit <tt>simple_page.html</tt> so it looks like this</p>
 
 <pre>
 &lt;body>
@@ -426,7 +426,7 @@ http://example.com/helloworld/index/goodbye</pre>
 &lt;/body>
 </pre>
 
-<p>Clear your Magento cache and reload the page and you should see the customer registration form on your red background.  Magento also has a Block named top.links.  Let's try including that.  Change your simple_page.html file so it reads</p>
+<p>Clear your Openmage cache and reload the page and you should see the customer registration form on your red background.  Openmage also has a Block named top.links.  Let's try including that.  Change your simple_page.html file so it reads</p>
 
 <pre>
 &lt;body>
@@ -435,13 +435,13 @@ http://example.com/helloworld/index/goodbye</pre>
 &lt;/body>
 </pre>
 
-<p>When you reload the page, you'll notice that your &lt;h1&gt;Links&lt;/h1&gt; title is rendering, but nothing is rendering for top.links.  That's because we didn't add it to local.xml.  The <tt>getChildHtml</tt> method can only include Blocks that are specified as sub-Blocks in the Layout.  This allows Magento to only instantiate the Blocks it needs, and also allows you to set difference Templates for Blocks based on context.</p>
+<p>When you reload the page, you'll notice that your &lt;h1&gt;Links&lt;/h1&gt; title is rendering, but nothing is rendering for top.links.  That's because we didn't add it to local.xml.  The <tt>getChildHtml</tt> method can only include Blocks that are specified as sub-Blocks in the Layout.  This allows Openmage to only instantiate the Blocks it needs, and also allows you to set difference Templates for Blocks based on context.</p>
 
 <p>Let's add the top.links Block to our local.xml</p>
 
 <pre>
 &lt;helloworld_index_index>
-    &lt;block type="page/html" name="root" output="toHtml" template="magentotutorial/helloworld/simple_page.phtml">
+    &lt;block type="page/html" name="root" output="toHtml" template="openmagetutorial/helloworld/simple_page.phtml">
         &lt;block type="page/template_links" name="top.links"/>
         &lt;block type="customer/form_register" name="customer_form_register" template="customer/form/register.phtml"/>
     &lt;/block>
@@ -459,7 +459,7 @@ http://example.com/helloworld/index/goodbye</pre>
     &lt;helloworld_index_index>
         &lt;reference name="root">
             &lt;action method="setTemplate">
-                &lt;template>magentotutorial/helloworld/simple_page.phtml&lt;/template>
+                &lt;template>openmagetutorial/helloworld/simple_page.phtml&lt;/template>
             &lt;/action>
             &lt;block type="page/template_links" name="top.links"/>
             &lt;block type="customer/form_register" name="customer_form_register" template="customer/form/register.phtml"/>
@@ -475,7 +475,7 @@ http://example.com/helloworld/index/goodbye</pre>
 
 <pre>
 &lt;action method="setTemplate">
-    &lt;some_new_template>magentotutorial/helloworld/simple_page.phtml&lt;/some_new_template>
+    &lt;some_new_template>openmagetutorial/helloworld/simple_page.phtml&lt;/some_new_template>
 &lt;/action>
 </pre>
 
@@ -483,4 +483,4 @@ http://example.com/helloworld/index/goodbye</pre>
 
 <h2>Wrapup</h2>
 
-<p>That covers Layout fundamentals.  We have covered the tags &lt;block /&gt;, &lt;reference /&gt;, &lt;update /&gt; and &lt;action /&gt;, and also layout update handles like &lt;default /&gt; and &lt;cms_index_index /&gt;.  These make up most of the layout configuration used in Magento.  If you found it somewhat daunting, don't worry, you'll rarely need to work with layouts on such a fundamental level.  Magento provides a number of pre-built layouts which can be modified and skinned to meet the needs of your store. Understanding how the entire Layout system works can be a great help when you're trouble shooting Layout issues, or adding new functionality to an existing Magento system.</p>
+<p>That covers Layout fundamentals.  We have covered the tags &lt;block /&gt;, &lt;reference /&gt;, &lt;update /&gt; and &lt;action /&gt;, and also layout update handles like &lt;default /&gt; and &lt;cms_index_index /&gt;.  These make up most of the layout configuration used in Openmage.  If you found it somewhat daunting, don't worry, you'll rarely need to work with layouts on such a fundamental level.  Openmage provides a number of pre-built layouts which can be modified and skinned to meet the needs of your store. Understanding how the entire Layout system works can be a great help when you're trouble shooting Layout issues, or adding new functionality to an existing Openmage system.</p>

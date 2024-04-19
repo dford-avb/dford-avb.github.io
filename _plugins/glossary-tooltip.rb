@@ -1,4 +1,4 @@
-# Author: jcalcaben@magento.com
+# Author: jcalcaben@openmage.com
 #
 # This custom plugin creates the appropriate html block to convert text
 # into a tooltip link.

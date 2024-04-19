@@ -7,7 +7,7 @@ This section lists variable names and configuration paths available for options 
 
 ### Web paths sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **General** > **Web**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **General** > **Web**.
 
 | Name  | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -26,7 +26,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### Currency setup sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **General** > **Currency setup**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **General** > **Currency setup**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -34,7 +34,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### Store email address sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Email Configuration** > **General** > **Store Email Addresses**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Email Configuration** > **General** > **Store Email Addresses**.
 
 | Name  | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -51,7 +51,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### Contacts sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **General** > **Contacts**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **General** > **Contacts**.
 
 | Name  | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -59,7 +59,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### New Relic reporting sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **General** > **New Relic Reporting**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **General** > **New Relic Reporting**.
 
 | Name  | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -76,7 +76,7 @@ This section lists variable names and config paths available for options in the 
 
 ### Customer configuration sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Customers** > **Customer Configuration**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Customers** > **Customer Configuration**.
 
 Name  | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -88,7 +88,7 @@ This section lists variable names and config paths available for options in the 
 
 ### Catalog sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Catalog** > **Catalog**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Catalog** > **Catalog**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -109,7 +109,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### XML sitemap sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Catalog** > **XML Sitemap**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Catalog** > **XML Sitemap**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -121,7 +121,7 @@ This section lists variable names and config paths available for options in the 
 
 ### Shipping settings sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Shipping Settings**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Sales** > **Shipping Settings**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -135,7 +135,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### Sales emails sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Sales Emails**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Sales** > **Sales Emails**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -150,7 +150,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### Checkout sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Checkout**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Sales** > **Checkout**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -158,7 +158,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### Google API sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Google API**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Sales** > **Google API**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -166,7 +166,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### Shipping methods sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Shipping Methods**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Sales** > **Shipping Methods**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -195,25 +195,25 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### Sales sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Sales**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Sales** > **Sales**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
-| Contact Name | `sales/magento_rma/store_name` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| Street Address | `sales/magento_rma/address` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| Street Address | `sales/magento_rma/address1` | <!-- ![Not EE-only]({{ site.baseurl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| City | `sales/magento_rma/city` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| State/Province | `sales/magento_rma/region_id` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| ZIP/Postal Code | `sales/magento_rma/zip` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| Country | `sales/magento_rma/country_id` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| Send RMA Email Copy To | `sales_email/magento_rma/copy_to` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| Send RMA Authorization Email Copy To | `sales_email/magento_rma_auth/copy_to` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| Send RMA Comment Email Copy To | `sales_email/magento_rma_comment/copy_to` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| Send RMA Comment Email Copy To | `sales_email/magento_rma_customer_comment/copy_to` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Contact Name | `sales/openmage_rma/store_name` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Street Address | `sales/openmage_rma/address` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Street Address | `sales/openmage_rma/address1` | <!-- ![Not EE-only]({{ site.baseurl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| City | `sales/openmage_rma/city` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| State/Province | `sales/openmage_rma/region_id` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| ZIP/Postal Code | `sales/openmage_rma/zip` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Country | `sales/openmage_rma/country_id` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Send RMA Email Copy To | `sales_email/openmage_rma/copy_to` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Send RMA Authorization Email Copy To | `sales_email/openmage_rma_auth/copy_to` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Send RMA Comment Email Copy To | `sales_email/openmage_rma_comment/copy_to` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Send RMA Comment Email Copy To | `sales_email/openmage_rma_customer_comment/copy_to` | ![EE-only]({{ site.baseurl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
 
 ### Google API paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Google API**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Sales** > **Google API**.
 
 | Name  | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -225,7 +225,7 @@ This section lists variable names and config paths available for options in the 
 
 ### Admin sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Advanced** > **Admin**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Advanced** > **Admin**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -234,17 +234,17 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### System sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Advanced** > **System**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Advanced** > **System**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
-| Error Email Recipient | `system/magento_scheduled_import_export_log/error_email` | <!-- ![Not EE-only]({{ site.baseurl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Error Email Recipient | `system/openmage_scheduled_import_export_log/error_email` | <!-- ![Not EE-only]({{ site.baseurl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
 | Access list | `system/full_page_cache/varnish/access_list` | <!-- ![Not EE-only]({{ site.baseurl }}/common/images/red-x.png) --> |  | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
-| Error Email Sender | `system/magento_scheduled_import_export_log/error_email_identity` | <!-- ![Not EE-only]({{ site.baseurl }}/common/images/red-x.png) --> |  | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
+| Error Email Sender | `system/openmage_scheduled_import_export_log/error_email_identity` | <!-- ![Not EE-only]({{ site.baseurl }}/common/images/red-x.png) --> |  | | ![Sensitive]({{ site.baseurl }}/common/images/cloud_sens.png) |
 
 ### Developer sensitive and system-specific paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Advanced** > **Developer**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Advanced** > **Developer**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -256,7 +256,7 @@ This section lists variable names and config paths available for options in the 
 
 ### System paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Advanced** > **System**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Advanced** > **System**.
 
 | Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
@@ -267,7 +267,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 
 ### Developer paths
 
-These configuration values are available in the Magento Admin in **Stores** > Settings > **Configuration** > **Advanced** > **Developer**.
+These configuration values are available in the Openmage Admin in **Stores** > Settings > **Configuration** > **Advanced** > **Developer**.
 
 | Name  | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|

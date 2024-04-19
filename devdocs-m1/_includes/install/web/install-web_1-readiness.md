@@ -1,4 +1,4 @@
-## Step 1: Readiness Check   {#instgde-install-magento-web-step1}
+## Step 1: Readiness Check   {#instgde-install-openmage-web-step1}
 
 1.	Click **Start Readiness Check**.
 

@@ -1,16 +1,16 @@
 ### Why to set ulimit
 
-Rolling back to a previous backup can silently fail, resulting in incomplete data being written to the file system or database. (This includes all types of rollbacks, including using System Upgrade, Component Manager, or the [`magento setup:rollback`]({{ page.baseurl }}/install-gde/install/cli/install-cli-backup.html#instgde-cli-uninst-roll) command.)
+Rolling back to a previous backup can silently fail, resulting in incomplete data being written to the file system or database. (This includes all types of rollbacks, including using System Upgrade, Component Manager, or the [`openmage setup:rollback`]({{ page.baseurl }}/install-gde/install/cli/install-cli-backup.html#instgde-cli-uninst-roll) command.)
 
 In some cases, a very long query string causes the user's allocated memory space to run out of memory because of too many recursive calls.
 
 ### How to set ulimit
 
-We recommend setting the [`ulimit`](http://ss64.com/bash/ulimit.html) for the Magento file system user to a value of 65536 or more.
+We recommend setting the [`ulimit`](http://ss64.com/bash/ulimit.html) for the Openmage file system user to a value of 65536 or more.
 
 You can do this either on the command line or you can make it a permanent setting for the user by editing their shell script.
 
-Before you continue, if you haven't done so already, switch to the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+Before you continue, if you haven't done so already, switch to the [Openmage file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 
 Command:
 
@@ -23,7 +23,7 @@ The syntax for `ulimit` depends on the UNIX shell you use. The preceding setting
 
 To optionally set the value in the user's Bash shell:
 
-1.	If you haven't done so already, switch to the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+1.	If you haven't done so already, switch to the [Openmage file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 2.	Open `/home/<username>/.bashrc` in a text editor.
 3.	Add the following line:
 

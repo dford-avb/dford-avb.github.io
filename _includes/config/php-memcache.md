@@ -15,4 +15,4 @@ Because PHP has no native support for memcache, you must install an extension fo
 	The exact name is `php5-memcached` for Ubuntu and `php-pecl-memcached` for CentOS
 
 {:.bs-callout .bs-callout-info}
-For simplicity, we use the PHP `memcache` extension in this guide although we provide examples for both when configuring Magento to use memcache.
+For simplicity, we use the PHP `memcache` extension in this guide although we provide examples for both when configuring Openmage to use memcache.

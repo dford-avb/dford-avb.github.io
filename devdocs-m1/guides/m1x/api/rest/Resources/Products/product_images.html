@@ -46,7 +46,7 @@ title: Product Images
 
 <p>Allows you to manage images of the required product.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/products/:product_id/images<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/products/:product_id/images<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-ProductImages-URI--products--productid-images-GET"></a>HTTP Method: GET</h5>
@@ -62,20 +62,20 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products/8/images</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products/8/images</td></tr></table></div>
 
 <p><b>Response Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;id&gt;5&lt;/id&gt;
     &lt;label&gt;&lt;/label&gt;
     &lt;position&gt;1&lt;/position&gt;
     &lt;exclude&gt;0&lt;/exclude&gt;
-    &lt;url&gt;http://magento/media/catalog/product/v/e/ve2011.jpg&lt;/url&gt;
+    &lt;url&gt;http://openmage/media/catalog/product/v/e/ve2011.jpg&lt;/url&gt;
     &lt;types&gt;
       &lt;data_item&gt;image&lt;/data_item&gt;
       &lt;data_item&gt;thumbnail&lt;/data_item&gt;
@@ -86,12 +86,12 @@ title: Product Images
     &lt;label&gt;second dress&lt;/label&gt;
     &lt;position&gt;2&lt;/position&gt;
     &lt;exclude&gt;1&lt;/exclude&gt;
-    &lt;url&gt;http://magento/media/catalog/product/1/2/12.jpg&lt;/url&gt;
+    &lt;url&gt;http://openmage/media/catalog/product/1/2/12.jpg&lt;/url&gt;
     &lt;types&gt;
       &lt;data_item&gt;small_image&lt;/data_item&gt;
     &lt;/types&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -143,16 +143,16 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://magentohost/api/rest/products/1/images</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/products/1/images</td></tr></table></div>
 
 <p><b>Request Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;file_mime_type&gt;image/jpeg&lt;/file_mime_type&gt;     &lt;file_content&gt;iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWtJREFUeNpi/P//P8NgBkwMgxyMOnDUgTDAyMhIDNYF4vNA/B+IDwCxHLoakgEoFxODiQRXQUYi4e3k2gfDjMRajsP3zED8F8pmA+JvUDEYeArEMugOpFcanA/Ef6A0CPwC4uNoag5SnAjJjGI2tKhkg4rLAfFGIH4IxEuBWIjSKKYkDfZCHddLiwChVhokK8YGohwEZYy3aBmEKmDEhOCgreomo+VmZHxsMEQxIc2MAx3FO/DI3RxMmQTZkI9ALDCaSUYdOOrAIeRAPzQ+PxCHUM2FFDb5paGNBPRa5C20bUhxc4sSB4JaLnvxVHWHsbVu6OnACjyOg+HqgXKgGRD/JMKBoD6LDb0dyAPE94hwHAw/hGYcujlwEQmOg+EV9HJgLBmOg+FMWjsQVKR8psCBoDSrQqoDSSmoG6Hpj1wA6ju30LI9+BBX4UsC+Ai0T4BWVd1EIL5PgeO+APECmoXgaGtm1IE0AgABBgAJAICuV8dAUAAAAABJRU5ErkJggg==&lt;/file_content&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -164,7 +164,7 @@ title: Product Images
 
 <p>Allows you to manage product images for a specified store.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/products/:product_id/images/store/:store_id<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/products/:product_id/images/store/:store_id<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-ProductImages-URI--products--productid-images-store--storeid-GET"></a>HTTP Method: GET</h5>
@@ -180,27 +180,27 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products/8/images/store/2</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products/8/images/store/2</td></tr></table></div>
 
 <p><b>Response Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;id&gt;6&lt;/id&gt;
     &lt;label&gt;white dress&lt;/label&gt;
     &lt;position&gt;1&lt;/position&gt;
     &lt;exclude&gt;0&lt;/exclude&gt;
-    &lt;url&gt;http://magento/media/catalog/product/1/2/12.jpg&lt;/url&gt;
+    &lt;url&gt;http://openmage/media/catalog/product/1/2/12.jpg&lt;/url&gt;
     &lt;types&gt;
       &lt;data_item&gt;image&lt;/data_item&gt;
       &lt;data_item&gt;small_image&lt;/data_item&gt;
       &lt;data_item&gt;thumbnail&lt;/data_item&gt;
     &lt;/types&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -252,16 +252,16 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://magentohost/api/rest/products/8/images/store/3</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/products/8/images/store/3</td></tr></table></div>
 
 <p><b>Request Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;file_mime_type&gt;image/jpeg&lt;/file_mime_type&gt;    &lt;file_content&gt;iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWtJREFUeNpi/P//P8NgBkwMgxyMOnDUgTDAyMhIDNYF4vNA/B+IDwCxHLoakgEoFxODiQRXQUYi4e3k2gfDjMRajsP3zED8F8pmA+JvUDEYeArEMugOpFcanA/Ef6A0CPwC4uNoag5SnAjJjGI2tKhkg4rLAfFGIH4IxEuBWIjSKKYkDfZCHddLiwChVhokK8YGohwEZYy3aBmEKmDEhOCgreomo+VmZHxsMEQxIc2MAx3FO/DI3RxMmQTZkI9ALDCaSUYdOOrAIeRAPzQ+PxCHUM2FFDb5paGNBPRa5C20bUhxc4sSB4JaLnvxVHWHsbVu6OnACjyOg+HqgXKgGRD/JMKBoD6LDb0dyAPE94hwHAw/hGYcujlwEQmOg+EV9HJgLBmOg+FMWjsQVKR8psCBoDSrQqoDSSmoG6Hpj1wA6ju30LI9+BBX4UsC+Ai0T4BWVd1EIL5PgeO+APECmoXgaGtm1IE0AgABBgAJAICuV8dAUAAAAABJRU5ErkJggg==&lt;/file_content&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -272,7 +272,7 @@ title: Product Images
 
 <p>Allows you to manage a specified product image.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/products/:product_id/images/:image_id<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/products/:product_id/images/:image_id<br/>
 <b>Version</b>: 1</p>
 
 
@@ -289,23 +289,23 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products/8/images/7</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products/8/images/7</td></tr></table></div>
 
 <p><b>Response Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;id&gt;7&lt;/id&gt;
   &lt;label&gt;second dress&lt;/label&gt;
   &lt;position&gt;2&lt;/position&gt;
   &lt;exclude&gt;1&lt;/exclude&gt;
-  &lt;url&gt;http://magento/media/catalog/product/1/2/12.jpg&lt;/url&gt;
+  &lt;url&gt;http://openmage/media/catalog/product/1/2/12.jpg&lt;/url&gt;
   &lt;types&gt;
     &lt;data_item&gt;small_image&lt;/data_item&gt;
   &lt;/types&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -386,14 +386,14 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://magentohost/api/rest/products/8/images/7</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://openmagehost/api/rest/products/8/images/7</td></tr></table></div>
 
 <p><b>Request Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;label&gt;English store image&lt;/label&gt;
   &lt;position&gt;3&lt;/position&gt;
   &lt;exclude&gt;0&lt;/exclude&gt;
@@ -402,7 +402,7 @@ title: Product Images
       &lt;data_item&gt;small_image&lt;/data_item&gt;
       &lt;data_item&gt;thumbnail&lt;/data_item&gt;
    &lt;/types&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -426,7 +426,7 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://magentohost/api/rest/products/14/images/6</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://openmagehost/api/rest/products/14/images/6</td></tr></table></div>
 
 
 
@@ -435,7 +435,7 @@ title: Product Images
 
 <p>Allows you to manage a specified product image for a specified store.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/products/:product_id/images/:image_id/store/:store_id<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/products/:product_id/images/:image_id/store/:store_id<br/>
 <b>Version</b>: 1</p>
 
 
@@ -452,21 +452,21 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products/8/images/7/store/3</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products/8/images/7/store/3</td></tr></table></div>
 
 <p><b>Response Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;id&gt;10&lt;/id&gt;
   &lt;label&gt;&lt;/label&gt;
   &lt;position&gt;5&lt;/position&gt;
   &lt;exclude&gt;1&lt;/exclude&gt;
-  &lt;url&gt;http://magento/media/catalog/product/n/e/new_image.gif&lt;/url&gt;
+  &lt;url&gt;http://openmage/media/catalog/product/n/e/new_image.gif&lt;/url&gt;
   &lt;types/&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -549,20 +549,20 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://magentohost/api/rest/products/8/images/7/store/3</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://openmagehost/api/rest/products/8/images/7/store/3</td></tr></table></div>
 
 <p><b>Request Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;position&gt;3&lt;/position&gt;
   &lt;exclude&gt;0&lt;/exclude&gt;
   &lt;types&gt;
       &lt;data_item&gt;image&lt;/data_item&gt;
    &lt;/types&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -581,7 +581,7 @@ title: Product Images
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://magentohost/api/rest/products/14/images/6/store/3</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://openmagehost/api/rest/products/14/images/6/store/3</td></tr></table></div>
 
 
 

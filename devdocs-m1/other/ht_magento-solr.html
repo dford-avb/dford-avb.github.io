@@ -1,11 +1,11 @@
 ---
 layout: m1x
-title: How to Install and Configure the Solr Search Engine With Magento Enterprise Edition (EE) 1.x
+title: How to Install and Configure the Solr Search Engine With Openmage Enterprise Edition (EE) 1.x
 ---
 
 
-<!-- Title: How to Use the Solr Search Engine With Magento Enterprise Edition -->
-<!-- URL: how-to-use-the-solr-search-engine-with-magento-enterprise-edition -->
+<!-- Title: How to Use the Solr Search Engine With Openmage Enterprise Edition -->
+<!-- URL: how-to-use-the-solr-search-engine-with-openmage-enterprise-edition -->
 
 <div class="toc">
   <h4 class="toc">Contents</h4>
@@ -22,7 +22,7 @@ title: How to Install and Configure the Solr Search Engine With Magento Enterpri
 </div>
 
 <h2><a name="overview"></a>Overview</h2>
-<p>Magento Enterprise Edition (EE) versions 1.8.0.0 and later enable you to configure either of the following as a
+<p>Openmage Enterprise Edition (EE) versions 1.8.0.0 and later enable you to configure either of the following as a
   catalog search engine:</p>
 <ul class="level1">
   <li>Full text search using the MySQL database (the default)</li>
@@ -39,19 +39,19 @@ title: How to Install and Configure the Solr Search Engine With Magento Enterpri
 <ul class="level1">
   <li><a href="#overview-this-guide">Intended Audience and Purpose of this Guide</a></li>
   <li><a href="#overview-example">Comparing the Search Options</a></li>
-  <li><a href="#overview-matrix">Support Matrix for Solr and Magento EE</a></li>
+  <li><a href="#overview-matrix">Support Matrix for Solr and Openmage EE</a></li>
   <li><a href="#overview-solr">More Information About the Solr Solution</a></li>
 </ul>
 <!-- <p>Related information:</p>
-<ul class="level1"><li><a href="http://www.magentocommerce.com/knowledge-base/entry/solr-ee-faq" target="_blank">Frequently Asked Questions (FAQ) About Using Solr with Magento Enterprise Edition (EE)</a></li>
-<li><a href="http://www.magentocommerce.com/knowledge-base/entry/solr-ee-best-practices" target="_blank">Solr and Magento Enterprise Edition (EE) Best Practices</a></li></ul> -->
+<ul class="level1"><li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-faq" target="_blank">Frequently Asked Questions (FAQ) About Using Solr with Openmage Enterprise Edition (EE)</a></li>
+<li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-best-practices" target="_blank">Solr and Openmage Enterprise Edition (EE) Best Practices</a></li></ul> -->
 
 <h3><a name="overview-this-guide"></a>Intended Audience and Purpose of this Guide</h3>
-<p>This guide is intended for Magento EE administrators and systems integrators who have some familiarity with search
+<p>This guide is intended for Openmage EE administrators and systems integrators who have some familiarity with search
   engines&mdash;ideally, who also have Solr configuration experience. No programming is required to perform the tasks
   discussed in this guide.</p>
 <p>This guide discusses a simple Solr configuration that uses the example Solr configuration provided with Solr, default
-  Solr integration options provided with Magento EE, and also explains how to configure Magento EE to use Solr. Advanced
+  Solr integration options provided with Openmage EE, and also explains how to configure Openmage EE to use Solr. Advanced
   configuration tasks&mdash;such as setting up dictionaries&mdash;are beyond the scope of this guide.</p>
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
     width="40"><span><strong>Note</strong>: The example Solr configuration is <em>not</em> intended to be used in a
@@ -59,7 +59,7 @@ title: How to Install and Configure the Solr Search Engine With Magento Enterpri
     to learn more about Solr.</div>
 
 <h3><a name="overview-example"></a>Comparing the Search Options</h3>
-<p>The following table provides a quick comparison between Magento with the default MySQL full text search and Magento
+<p>The following table provides a quick comparison between Openmage with the default MySQL full text search and Openmage
   with Solr search.</p>
 <table class="confluenceTable">
   <!-- <colgroup><col width="200">
@@ -69,8 +69,8 @@ title: How to Install and Configure the Solr Search Engine With Magento Enterpri
     <!-- <tr> -->
     <tr>
       <th class="confluenceTh">Feature</th>
-      <th class="confluenceTh">Magento with MySQL full-text search</th>
-      <th class="confluenceTh">Magento with Solr search</th>
+      <th class="confluenceTh">Openmage with MySQL full-text search</th>
+      <th class="confluenceTh">Openmage with Solr search</th>
     </tr>
     <tr>
       <td class="confluenceTd">Full text search</td>
@@ -140,8 +140,8 @@ title: How to Install and Configure the Solr Search Engine With Magento Enterpri
 search using LIKE statements combined by OR. Like searching is best used in stores that have simple products where users
 search for specific terms.
 
-<h3 id="overview-matrix">Support Matrix for Solr and Magento EE</h3>
-<p>The following table summarizes what versions of Magento EE work with what versions of Solr.</p>
+<h3 id="overview-matrix">Support Matrix for Solr and Openmage EE</h3>
+<p>The following table summarizes what versions of Openmage EE work with what versions of Solr.</p>
 <table class="confluenceTable">
   <!-- <colgroup><col width="200">
 <col width="300">
@@ -149,7 +149,7 @@ search for specific terms.
   <tbody>
     <!-- <tr> -->
     <tr>
-      <th class="confluenceTh">Magento EE version</th>
+      <th class="confluenceTh">Openmage EE version</th>
       <th class="confluenceTh">Compatible Solr version(s)</th>
       <th class="confluenceTh">Comment</th>
     </tr>
@@ -177,7 +177,7 @@ search for specific terms.
           href="http://archive.apache.org/dist/lucene/solr/3.5.0/" target="_blank">3.5.0</a></td>
       <td class="confluenceTd">
         <p>If you use a later version, such as 3.6.x, see <a
-            href="http://www.magentocommerce.com/knowledge-base/entry/solr-ee-patches" target="_blank">Information About
+            href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-patches" target="_blank">Information About
             Enterprise Edition (EE) Patches for Apache Solr</a> to get a patch.</p>
         <p><a href="https://archive.apache.org/dist/lucene/solr/" target="_blank">Click here</a> to browse the list of
           all available Solr versions.</p>
@@ -191,7 +191,7 @@ search for specific terms.
       </td>
       <td class="confluenceTd">
         <p>To use a Solr version later than 1.4.x, see <a
-            href="http://www.magentocommerce.com/knowledge-base/entry/solr-ee-patches" target="_blank">Information About
+            href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-patches" target="_blank">Information About
             Enterprise Edition (EE) Patches for Apache Solr</a> to get a patch.</p>
         <a href="https://archive.apache.org/dist/lucene/solr/" target="_blank">Click here</a> to browse the list of all
         available Solr versions.
@@ -200,7 +200,7 @@ search for specific terms.
   </tbody>
 </table>
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
-    width="40"><span><strong>Note</strong>: Magento EE does not support Solr 4.x.</div>
+    width="40"><span><strong>Note</strong>: Openmage EE does not support Solr 4.x.</div>
 
 <h3><a name="overview-solr"></a>More Information About the Solr Solution</h3>
 <p>Solr runs as a standalone full-text search server in a servlet container such as Jetty (which is used by the Solr
@@ -221,19 +221,19 @@ search for specific terms.
   coding, and it has an extensive plug-in architecture when more advanced customization is required. Solr is highly
   scalable, providing distributed search and index replication. </p>
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-important.png" alt="important"
-    align="left" width="40"><span><strong>Important</strong>: Customize the Solr search engine at your own risk. Magento
+    align="left" width="40"><span><strong>Important</strong>: Customize the Solr search engine at your own risk. Openmage
     supports only the options displayed in the Admin Panel. Customizing the Solr engine itself, while potentially
-    useful, can cause issues with Magento. If you encounter problems with your customizations, do not contact Magento
+    useful, can cause issues with Openmage. If you encounter problems with your customizations, do not contact Openmage
     Support; instead, consult the resources available from the <a href="http://wiki.apache.org/solr/"
       target="_blank">Apache Solr Wiki</a>.</span></div>
-<p>In this guide, you'll use the example configuration provided with Solr and Magento's provided Solr configuration to
+<p>In this guide, you'll use the example configuration provided with Solr and Openmage's provided Solr configuration to
   implement a simple, quick integration with Solr.</p>
-<p>Some reasons to use Solr with Magento include:</p>
+<p>Some reasons to use Solr with Openmage include:</p>
 <ul class="level1">
-  <li>Magento ships with a sample Solr configuration that enables you to provide users with a powerful search engine
+  <li>Openmage ships with a sample Solr configuration that enables you to provide users with a powerful search engine
     without your needing to customize any code.</li>
   <li>You get better performance of search, catalog views, and <a
-      href="http://www.magentocommerce.com/knowledge-base/entry/how-does-layered-navigation-work"
+      href="http://www.openmagecommerce.com/knowledge-base/entry/how-does-layered-navigation-work"
       target="_blank">layered navigation</a>.</li>
   <li>When the system is under load, Solr avoids frequent updates of the MySQL <tt>catalogsearch_fulltext</tt> table and
     alleviates issues with database table locks.</li>
@@ -246,27 +246,27 @@ search for specific terms.
   <li>Click <strong>Submit</strong>.</li></ol> -->
 
 <h2 id="simple-demo">Simple Comparison of Solr and MySQL Search Engines</h2>
-<p>Following is a simple comparison of the default MySQL full-text search and Solr search using Magento EE 1.14.0.0 and
-  Solr 3.6.2. Magento EE catalog content is provided by sample data you can download from Magento.</p>
+<p>Following is a simple comparison of the default MySQL full-text search and Solr search using Openmage EE 1.14.0.0 and
+  Solr 3.6.2. Openmage EE catalog content is provided by sample data you can download from Openmage.</p>
 <p>Among the many options Solr gives you is the option to <em>suggest</em> names of products in the event the user
-  enters an incomplete or incorrect search term in your Magento store's <strong>Search</strong> field.</p>
+  enters an incomplete or incorrect search term in your Openmage store's <strong>Search</strong> field.</p>
 
 <h4><a name="overview-example-default"></a>Default MySQL Full-Text Search Using an Incorrect Search Term</h4>
 <p>Using the default MySQL full-text search, if a user enters an incorrect search term (such as <tt>shirrt</tt> instead
   of <tt>shirt</tt>, no results display as the following figure shows.</p>
-<img src="{{ site.baseurl }}/guides/m1x/images/ht_magento-solr_default-search1.png" width="650px" height="469px">
+<img src="{{ site.baseurl }}/guides/m1x/images/ht_openmage-solr_default-search1.png" width="650px" height="469px">
 
 <h4><a name="overview-example-solr"></a>Solr Search Using an Incorrect Search Term</h4>
 <p>Using Solr, if a user enters an incorrect search term, suggestions display as the following figure shows.</p>
-<img src="{{ site.baseurl }}/guides/m1x/images/ht_magento-solr_solr-search1.png" width="650px" height="469px">
-<p>In addition, if a user enters an incomplete search term, Magento provides dictionary-based suggestions as the
+<img src="{{ site.baseurl }}/guides/m1x/images/ht_openmage-solr_solr-search1.png" width="650px" height="469px">
+<p>In addition, if a user enters an incomplete search term, Openmage provides dictionary-based suggestions as the
   following figure shows.</p>
-<img src="{{ site.baseurl }}/guides/m1x/images/ht_magento-solr_solr-search2.png" width="650px" height="469px">
+<img src="{{ site.baseurl }}/guides/m1x/images/ht_openmage-solr_solr-search2.png" width="650px" height="469px">
 
 <h2><a name="prereq"></a>Prerequisites</h2>
 <p>The tasks discussed in this guide require the following:</p>
 <ul class="level1">
-  <li>Magento EE and Solr versions discussed in <a href="#overview-matrix">Support Matrix for Solr and Magento EE</a>.
+  <li>Openmage EE and Solr versions discussed in <a href="#overview-matrix">Support Matrix for Solr and Openmage EE</a>.
   </li>
   <li>Java version 1.6 or later.<br />
     To determine if Java is already installed, enter the following command:<br><br>
@@ -314,7 +314,7 @@ search for specific terms.
       <li><a href="https://archive.apache.org/dist/lucene/solr/3.4.0" target="_blank">Solr 3.4.0</a></li>
     </ul>
     <p>If you're not sure what version of Solr to use, see <a href="#overview-matrix">Support Matrix for Solr and
-        Magento EE</a>.</p>
+        Openmage EE</a>.</p>
   </li>
   <li>As a user with <tt>root</tt> privileges, use <tt>wget</tt> or a similar command to download the file to an empty
     directory such as <tt>/etc/solr</tt>. An example follows.<br><br>
@@ -339,35 +339,35 @@ Saving to: `apache-solr-3.6.2.tgz'
   <li>Continue with the next section.</li>
 </ol>
 
-<h2><a name="config-solr"></a>Configuring Solr to Work With Magento</h2>
-<p>The following topics discuss how to configure Solr to work with Magento EE:</p>
+<h2><a name="config-solr"></a>Configuring Solr to Work With Openmage</h2>
+<p>The following topics discuss how to configure Solr to work with Openmage EE:</p>
 <ul class="level1">
-  <li><a href="#config-solr-copy-config-files">Copying the Magento Solr Configuration and Starting Solr</a></li>
-  <li><a href="#config-solr-magento">Configuring Magento to Work With Solr</a></li>
+  <li><a href="#config-solr-copy-config-files">Copying the Openmage Solr Configuration and Starting Solr</a></li>
+  <li><a href="#config-solr-openmage">Configuring Openmage to Work With Solr</a></li>
 </ul>
 
-<h3><a name="config-solr-copy-config-files"></a>Copying the Magento Solr Configuration and Starting Solr</h3>
-<p>Magento comes packaged with a sample Solr configuration you can use and customize. To get started, you'll copy the
-  Magento configuration to Solr, replacing any existing files. After that you can start Solr and begin configuring
-  Magento to work with it.</p>
+<h3><a name="config-solr-copy-config-files"></a>Copying the Openmage Solr Configuration and Starting Solr</h3>
+<p>Openmage comes packaged with a sample Solr configuration you can use and customize. To get started, you'll copy the
+  Openmage configuration to Solr, replacing any existing files. After that you can start Solr and begin configuring
+  Openmage to work with it.</p>
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
     width="40"><span><strong>Note</strong>: The example Solr configuration is <em>not</em> intended to be used in a
     production site. It's for testing and development only. It's simple to use which makes it a great way for you to
     learn more about Solr.</div>
 
-<p>To copy the Magento Solr configuration:</p>
+<p>To copy the Openmage Solr configuration:</p>
 <ol>
   <li>As a user with <tt>root</tt> privileges, enter the following commands in the order shown to copy over the Solr
-    configuration with the one packaged with Magento EE:<br><br>
+    configuration with the one packaged with Openmage EE:<br><br>
     <pre>cd [your Solr install dir]/example/solr/conf
-cp -R [your Magento install dir]/lib/Apache/Solr/conf/* .</pre><br />
-    For example, if Solr is installed in <tt>/etc/solr/apache-solr-3.6.2</tt> and Magento is installed in
-    <tt>/var/www/magento</tt>, enter:<br><br>
+cp -R [your Openmage install dir]/lib/Apache/Solr/conf/* .</pre><br />
+    For example, if Solr is installed in <tt>/etc/solr/apache-solr-3.6.2</tt> and Openmage is installed in
+    <tt>/var/www/openmage</tt>, enter:<br><br>
     <pre>cd /etc/solr/apache-solr-3.6.2/example/solr/conf
-cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
+cp -R /var/www/openmage/lib/Apache/Solr/conf/* .</pre><br />
     <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
         width="40"><span><strong>Note</strong>: If you're prompted to overwrite files, try the command <tt>\cp -R [your
-          Magento install dir]/lib/Apache/Solr/conf/* .</tt></div>
+          Openmage install dir]/lib/Apache/Solr/conf/* .</tt></div>
   </li>
   <li><em>CentOS with Tomcat 6 only</em>. If you're using Tomcat 6 on CentOS, you must modify <tt>[your Solr install
       dir]/example/solr/conf/solrconfig.xml</tt><br />
@@ -384,11 +384,11 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
         only. In a production environment, you should start and stop Solr using a script as discussed in <a
           href="#solr-script">Scripting Solr Startup and Shutdown</a>.</div>
 
-    <h3><a name="config-solr-magento"></a>Configuring Magento to Work With Solr</h3>
-    <p>This section discusses how to configure Magento EE to use the Solr search engine.</p>
-    <p>To configure Magento to work with Solr:</p>
+    <h3><a name="config-solr-openmage"></a>Configuring Openmage to Work With Solr</h3>
+    <p>This section discusses how to configure Openmage EE to use the Solr search engine.</p>
+    <p>To configure Openmage to work with Solr:</p>
     <ol>
-      <li>Log in to the Magento Admin Panel as an administrator.</li>
+      <li>Log in to the Openmage Admin Panel as an administrator.</li>
       <li>Click <strong>System</strong> > <strong>Configuration</strong> > CATALOG > <strong>Catalog</strong>.</li>
       <li>In the right pane, expand <strong>Catalog Search</strong>.</li>
       <li>The following table shows the minimum amount of information to enter to test the connection to your Solr
@@ -410,7 +410,7 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
             <tr>
               <td class="confluenceTd">Solr Server Hostname</td>
               <td class="confluenceTd">Enter the fully qualified hostname or IP address of the machine running Solr. (If
-                Solr is running on the same host as Magento, you can optionally use 127.0.0.1.)</td>
+                Solr is running on the same host as Openmage, you can optionally use 127.0.0.1.)</td>
             </tr>
             <tr>
               <td class="confluenceTd">Solr Server Port</td>
@@ -451,7 +451,7 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
                   <li>
                     <p><strong>Final commit</strong> (<em>Default, recommended</em>): After you reindex the content
                       search index, Solr starts processing content. Users see results from content that was searchable
-                      before indexing started and the Magento store remains available for other requests.</p>
+                      before indexing started and the Openmage store remains available for other requests.</p>
                     <p>Final commit has much better performance then partial commit, and does not require any additional
                       Solr configuration as does engine autocommit.</p>
                     <p>Indexing begins after all unneeded data is removed and new data is added. At that point, users
@@ -474,7 +474,7 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
           </tbody>
         </table><br />
         The following figure shows an example.<br />
-        <img src="{{ site.baseurl }}/guides/m1x/images/ht_magento-solr_catalog-searchMock.png">
+        <img src="{{ site.baseurl }}/guides/m1x/images/ht_openmage-solr_catalog-searchMock.png">
       </li>
       <li>Click <strong>Test Connection</strong>.<br />
         The button changes as follows.<br />
@@ -488,14 +488,14 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
             </tr>
             <tr>
               <td class="confluenceTd"><img
-                  src="{{ site.baseurl }}/guides/m1x/images/ht_magento-solr_test-connect_succeed.png" width="97px"
+                  src="{{ site.baseurl }}/guides/m1x/images/ht_openmage-solr_test-connect_succeed.png" width="97px"
                   height="17px"></td>
               <td class="confluenceTd">The test connection succeeded. Click <strong>Save Config</strong> and continue
                 with the next section.</td>
             </tr>
             <tr>
               <td class="confluenceTd"><img
-                  src="{{ site.baseurl }}/guides/m1x/images/ht_magento-solr_test-connect_fail.png" width="116px"
+                  src="{{ site.baseurl }}/guides/m1x/images/ht_openmage-solr_test-connect_fail.png" width="116px"
                   height="16px"></td>
               <td class="confluenceTd">The test connection failed. Try the following:
                 <ul class="level1">
@@ -517,9 +517,9 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
                     If Solr is running on port 8983, it displays similar to the following:<br />
                     <tt>tcp 0 0 :::8983 :::* LISTEN</tt></li>
                   <li>If Solr is installed on a remote machine, use the <tt>ping</tt> command to verify that machine is
-                    reachable from your Magento instance.</li>
+                    reachable from your Openmage instance.</li>
                   <li>If SELinux is enabled, make sure the Solr servlet container's listen port is available; otherwise,
-                    Magento cannot communicate with the servlet container. For example, you can consult the <a
+                    Openmage cannot communicate with the servlet container. For example, you can consult the <a
                       href="http://wiki.centos.org/HowTos/SELinux" target="_blank">SELinux Centos wiki</a>.
                 </ul>
               </td>
@@ -532,17 +532,17 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
     </ol>
 
     <h2><a name="solr-config-tweaks"></a>Basic Solr Configuration</h2>
-    <p>This section discusses how to configure Magento to work with Solr using options in the Admin Panel. Although
+    <p>This section discusses how to configure Openmage to work with Solr using options in the Admin Panel. Although
       additional Solr customization is possible, it is beyond the scope of this guide.</p>
     <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-important.png" alt="important"
         align="left" width="40"><span><strong>Important</strong>: Customize the Solr search engine at your own risk.
-        Magento supports only the options displayed in the Admin Panel. Customizing the Solr engine itself, while
-        potentially useful, can cause issues with Magento. If you encounter problems with your customizations, do not
-        contact Magento Support; instead, consult the resources available from the <a
+        Openmage supports only the options displayed in the Admin Panel. Customizing the Solr engine itself, while
+        potentially useful, can cause issues with Openmage. If you encounter problems with your customizations, do not
+        contact Openmage Support; instead, consult the resources available from the <a
           href="http://wiki.apache.org/solr/" target="_blank">Apache Solr Wiki</a>.</span></div>
-    <p>To configure Magento to work with Solr:</p>
+    <p>To configure Openmage to work with Solr:</p>
     <ol>
-      <li>Start the Magento Admin Panel and log in as an administrator.</li>
+      <li>Start the Openmage Admin Panel and log in as an administrator.</li>
       <li>Click <strong>System</strong> > <strong>Configuration</strong>.</li>
       <li>In the left navigation bar, under the CATALOG group, click <strong>Catalog</strong> > <strong>Catalog
           Search</strong>.</li>
@@ -574,7 +574,7 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
                 Solr Server Path<br />
                 Indexation Mode
               </td>
-              <td class="confluenceTd">Discussed in <a href="#config-solr">Configuring Solr to Work With Magento</a>.
+              <td class="confluenceTd">Discussed in <a href="#config-solr">Configuring Solr to Work With Openmage</a>.
               </td>
             </tr>
             <tr>
@@ -613,12 +613,12 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
                   page.</p>
                 <p>This functionality is not based on third party engine functionality, but is implemented as part of
                   the <tt>Enterprise_Search</tt> module and can be shown with the Solr search suggestions block.</p>
-                <p>By default, Magento uses the <tt>Enterprise_Search_Model_Adapter_HttpStream</tt> module for
+                <p>By default, Openmage uses the <tt>Enterprise_Search_Model_Adapter_HttpStream</tt> module for
                   recommendations. If you install the <a href="http://pecl.php.net/package/solr" target="_blank">Apache
-                    Solr PHP extension</a>, Magento automatically uses the
+                    Solr PHP extension</a>, Openmage automatically uses the
                   <tt>Enterprise_Search_Model_Adapter_PhpExtension</tt> adapter instead. Both adapters function in the
                   same way with no difference in performance. However, the <tt>PhpExtension</tt> adapter is not tested
-                  by Magento so you must thoroughly test any modifications you make to it before deploying it in a
+                  by Openmage so you must thoroughly test any modifications you make to it before deploying it in a
                   production environment.</p>
                 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note"
                     align="left" width="40"><span><strong>Note</strong>: Enabling recommendations negatively affects
@@ -641,7 +641,7 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
               <td class="confluenceTd">Enable Solr Engine for Catalog Navigation</td>
               <td class="confluenceTd">
                 <p>Click <strong>Yes</strong> (the default) to use Solr to enable <a
-                    href="http://www.magentocommerce.com/knowledge-base/entry/how-does-layered-navigation-work"
+                    href="http://www.openmagecommerce.com/knowledge-base/entry/how-does-layered-navigation-work"
                     target="_blank">layered navigation</a> in the category view.</p>
                 <p>Click <strong>No</strong> to use the database for layered navigation in the category view.</p>
               </td>
@@ -659,12 +659,12 @@ cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
       <li>Select the checkbox next to <strong>Page Cache</strong>.</li>
       <li>From the <strong>Actions</strong> list in the upper right, click <strong>Refresh</strong>.<br />
         The following figure shows an example.<br />
-        <img src="{{ site.baseurl }}/guides/m1x/images/ht_magento-solr_refresh-fpc.png" height="188px" width="600px">
+        <img src="{{ site.baseurl }}/guides/m1x/images/ht_openmage-solr_refresh-fpc.png" height="188px" width="600px">
       </li>
       <li>To update the catalog search index, open a command prompt window.</li>
-      <li>Change to the <tt>shell</tt> subdirectory of your Magento installation directory.<br />
+      <li>Change to the <tt>shell</tt> subdirectory of your Openmage installation directory.<br />
         For example, on CentOS:
-        <pre>cd /var/www/html/magento/shell</pre>
+        <pre>cd /var/www/html/openmage/shell</pre>
       </li>
       <li>Enter the following command:
         <pre>php indexer.php --reindex catalogsearch_fulltext</pre></li>
@@ -797,11 +797,11 @@ esac</pre>
         <p>For additional information about Solr, see the following:</p>
         <ul class="level1">
           <li>For more information about performance, see "Using Solr as a Search Engine" in <a
-              href="http://info.magento.com/rs/magentocommerce/images/Magento_PerformanceWhitepaper-EEv1-9.1.pdf"
-              target="_blank">Maximizing Performance and Scalability with Magento Enterprise Edition</a></li>
+              href="http://info.openmage.com/rs/openmagecommerce/images/Openmage_PerformanceWhitepaper-EEv1-9.1.pdf"
+              target="_blank">Maximizing Performance and Scalability with Openmage Enterprise Edition</a></li>
           <li><a href="http://wiki.apache.org/solr/#Operations_and_Production" target="_blank">Customize Solr</a></li>
         </ul>
 
         <!-- <h2 id="related">Related Information</h2>
-<ul class="level1"><li><a href="http://www.magentocommerce.com/knowledge-base/entry/solr-ee-faq" target="_blank">Frequently Asked Questions (FAQ) About Using Solr with Magento Enterprise Edition (EE)</a></li>
-<li><a href="http://www.magentocommerce.com/knowledge-base/entry/solr-ee-best-practices" target="_blank">Solr and Magento Enterprise Edition (EE) Best Practices</a></li></ul> -->
+<ul class="level1"><li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-faq" target="_blank">Frequently Asked Questions (FAQ) About Using Solr with Openmage Enterprise Edition (EE)</a></li>
+<li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-best-practices" target="_blank">Solr and Openmage Enterprise Edition (EE) Best Practices</a></li></ul> -->

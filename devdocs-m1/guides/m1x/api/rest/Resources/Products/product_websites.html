@@ -37,7 +37,7 @@ title: Product Websites
 
 <p>Allows you to retrieve information about websites assigned to a product, assign a website to a product, and copy data for a product from a specified store view.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/products/:product_id/websites<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/products/:product_id/websites<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-ProductWebsites-HTTPMethod-GET"></a>HTTP Method: GET</h5>
@@ -52,18 +52,18 @@ title: Product Websites
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products/8/websites</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products/8/websites</td></tr></table></div>
 
 <p><b>Response Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;website_id&gt;2&lt;/website_id&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -104,16 +104,16 @@ title: Product Websites
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://magentohost/api/rest/products/8/websites</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/products/8/websites</td></tr></table></div>
 
 <p><b>Request Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
     &lt;website_id&gt;1&lt;/website_id&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -124,7 +124,7 @@ title: Product Websites
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;success&gt;
     &lt;data_item&gt;
       &lt;website_id&gt;1&lt;/website_id&gt;
@@ -133,7 +133,7 @@ title: Product Websites
       &lt;code&gt;200&lt;/code&gt;
     &lt;/data_item&gt;
   &lt;/success&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -188,14 +188,14 @@ title: Product Websites
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://magentohost/api/rest/products/8/websites</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/products/8/websites</td></tr></table></div>
 
 <p><b>Request Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
      &lt;website_id&gt;2&lt;/website_id&gt;
       &lt;copy_to_stores&gt;
           &lt;data_item&gt;
@@ -203,7 +203,7 @@ title: Product Websites
                &lt;store_to&gt;2&lt;/store_to&gt;
            &lt;/data_item&gt;
       &lt;/copy_to_stores&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -245,21 +245,21 @@ title: Product Websites
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://magentohost/api/rest/products/8/websites</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/products/8/websites</td></tr></table></div>
 
 <p><b>Request Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;website_id&gt;1&lt;/website_id&gt;
   &lt;/data_item&gt;
   &lt;data_item&gt;
     &lt;website_id&gt;3&lt;/website_id&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -270,7 +270,7 @@ title: Product Websites
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;success&gt;
     &lt;data_item&gt;
       &lt;website_id&gt;1&lt;/website_id&gt;
@@ -285,7 +285,7 @@ title: Product Websites
       &lt;code&gt;200&lt;/code&gt;
     &lt;/data_item&gt;
   &lt;/success&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -338,14 +338,14 @@ title: Product Websites
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://magentohost/api/rest/products/8/websites</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/products/8/websites</td></tr></table></div>
 
 <p><b>Request Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
     &lt;data_item&gt;
         &lt;website_id&gt;2&lt;/website_id&gt;
         &lt;copy_to_stores&gt;
@@ -364,7 +364,7 @@ title: Product Websites
             &lt;/data_item&gt;
         &lt;/copy_to_stores&gt;
     &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -375,7 +375,7 @@ title: Product Websites
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;success&gt;
     &lt;data_item&gt;
       &lt;website_id&gt;2&lt;/website_id&gt;
@@ -390,7 +390,7 @@ title: Product Websites
       &lt;code&gt;200&lt;/code&gt;
     &lt;/data_item&gt;
   &lt;/success&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -407,7 +407,7 @@ title: Product Websites
 
 <p>Allows you to unassign a website from a specified product.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/products/:product_id/websites/:website_id<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/products/:product_id/websites/:website_id<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-ProductWebsites-HTTPMethod-DELETE"></a>HTTP Method: DELETE</h5>
@@ -422,7 +422,7 @@ title: Product Websites
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://magentohost/api/rest/products/8/websites/1</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://openmagehost/api/rest/products/8/websites/1</td></tr></table></div>
 
 
 

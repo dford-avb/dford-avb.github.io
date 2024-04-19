@@ -6,7 +6,7 @@ pages:
     - label: Conventional notations used in this Guide
       url: /frontend-dev-guide/conventions.html
 
-    - label: Magento cache overview
+    - label: Openmage cache overview
       url: /frontend-dev-guide/cache_for_frontdevs.html
 
     - label: Theme development best practices
@@ -40,7 +40,7 @@ pages:
         - label: Locate templates, layouts, and styles
           url: /frontend-dev-guide/themes/debug-theme.html
 
-        - label: Magento theme structure
+        - label: Openmage theme structure
           url: /frontend-dev-guide/themes/theme-structure.html
 
         - label: Theme inheritance
@@ -112,7 +112,7 @@ pages:
         - label: Compile LESS using Grunt
           url: /frontend-dev-guide/css-topics/css_debug.html
 
-        - label: Magento UI library
+        - label: Openmage UI library
           url: /frontend-dev-guide/css-topics/theme-ui-lib.html
 
         - label: Using jQuery UI styles
@@ -150,7 +150,7 @@ pages:
         - label: CSS in responsive design
           url: /frontend-dev-guide/responsive-web-design/rwd_css.html
 
-        - label: JavaScript in Magento responsive design
+        - label: JavaScript in Openmage responsive design
           url: /frontend-dev-guide/responsive-web-design/rwd_js.html
 
         - label: Create a responsive mobile theme based on a default theme
@@ -180,5 +180,5 @@ pages:
       url: /frontend-dev-guide/tools/tools_overview.html
       children:
 
-        - label: Using Grunt for Magento tasks
+        - label: Using Grunt for Openmage tasks
           url: /frontend-dev-guide/tools/using_grunt.html

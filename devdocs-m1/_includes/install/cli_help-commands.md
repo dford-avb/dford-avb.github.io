@@ -1,20 +1,20 @@
 To display a complete list of commands, enter:
 
 ```bash
-magento list
+openmage list
 ```
 
 To get help for a particular command, enter:
 
 ```bash
-magento help <command>
+openmage help <command>
 ```
 
 For example,
 
 ```bash
-magento help setup:install
+openmage help setup:install
 ```
 ```bash
-magento help cache:enable
+openmage help cache:enable
 ```

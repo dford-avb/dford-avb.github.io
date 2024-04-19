@@ -20,7 +20,7 @@ You might encounter the following issues with the PHP version readiness check:
 
 ### PHP version is incorrect
 
-If the PHP version reported by the readiness check is incorrect, it's the result of a mismatch of PHP versions between the PHP CLI and the web server plug-in. Magento requires you to use *one version* of PHP for both the CLI (which runs cron) and the web server (which runs the Magento Admin, Component Manager, and System Upgrade).
+If the PHP version reported by the readiness check is incorrect, it's the result of a mismatch of PHP versions between the PHP CLI and the web server plug-in. Openmage requires you to use *one version* of PHP for both the CLI (which runs cron) and the web server (which runs the Openmage Admin, Component Manager, and System Upgrade).
 
 We assume that if you have this issue, you're an advanced user who has likely installed multiple versions of PHP on your system.
 

@@ -1,6 +1,6 @@
 ---
 ---
-<!-- Title: Responsive Email Developer's Guide for Magento EE 1.14.1 and Magento CE 1.9.1 -->
+<!-- Title: Responsive Email Developer's Guide for Openmage EE 1.14.1 and Openmage CE 1.9.1 -->
 <!-- URL: ee1141-ce191-responsive-email -->
 
 
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/common/css/stylesheet-fonts.css" type="text/css" charset="utf-8">
     <link rel="icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
-    <title>Responsive Email Developer's Guide for Magento EE 1.14.1 and Magento CE 1.9.1</title>
+    <title>Responsive Email Developer's Guide for Openmage EE 1.14.1 and Openmage CE 1.9.1</title>
 
 </head>
 
@@ -26,7 +26,7 @@
 
     <div id="content">
 
-        <h1>Responsive Email Developer's Guide for Magento EE 1.14.1 and Magento CE 1.9.1</h1>
+        <h1>Responsive Email Developer's Guide for Openmage EE 1.14.1 and Openmage CE 1.9.1</h1>
         <p><em>by Erik Hansen</em></p>
         <p><a href="{{ site.m1xgithuburl }}/ce19-ee114/RWD_responsive_emails.html" target="_blank">Edit this page on
                 GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
@@ -49,7 +49,7 @@
         </div>
 
         <h2 id="intro">Introduction</h2>
-        <p>We improved transactional emails and newsletter templates in Magento Enterprise 1.14.1 and Magento Community
+        <p>We improved transactional emails and newsletter templates in Openmage Enterprise 1.14.1 and Openmage Community
             1.9.1 in a number of ways, including:</p>
         <ul>
             <li>Emails are now optimized for any screen size, including mobile and tablet devices</li>
@@ -64,7 +64,7 @@
 
 
         <h2 id="cron">Using cron to Send Emails</h2>
-        <p>Starting in Magento EE 1.14.1 and CE 1.9.1, your Magento cron job sends <em>all</em> emails, including
+        <p>Starting in Openmage EE 1.14.1 and CE 1.9.1, your Openmage cron job sends <em>all</em> emails, including
             transactional emails. You must configure cron for emails to work.</p>
         <p>For more information, see <a href="{{ site.m1xgdeurl }}/install/installing_install.html#install-cron"
                 target="_blank">Setting Up Cron Jobs</a>.</p>
@@ -225,7 +225,7 @@
         <h2 id="upgrade">Important Information about Upgrading</h2>
         <p>This section applies to anyone who used transactional emails in a version earlier than EE 1.14.1 or CE 1.9.1.
         </p>
-        <p>After upgrading from an earlier Magento version, you should preview your transactional emails, looking for
+        <p>After upgrading from an earlier Openmage version, you should preview your transactional emails, looking for
             changes in the logo, fonts, and styles. Because of changes introduced in this release, you might notice some
             differences.</p>
         <p>Also, in CE 1.9.1 and EE 1.14.1 for the first time, you must specify a height and width for your logo image;
@@ -233,12 +233,12 @@
                 href="#hi-rez-logo">Using a High-Resolution Logo</a>.</p>
 
         <h2 id="custom-head-foot">Customizing the Header or Footer in Transactional Emails</h2>
-        <p>In earlier Magento CE and EE versions, each transactional email template contained a copy of the HTML for the
+        <p>In earlier Openmage CE and EE versions, each transactional email template contained a copy of the HTML for the
             header and footer. To make it easier to customize transactional emails, the header and footer HTML is now
             centralized in the following template files:</p>
         <ul>
-            <li><code>[your Magento install dir]/app/locale/en_US/template/email/html/header.html</code></li>
-            <li><code>[your Magento install dir]/app/locale/en_US/template/email/html/footer.html</code></li>
+            <li><code>[your Openmage install dir]/app/locale/en_US/template/email/html/header.html</code></li>
+            <li><code>[your Openmage install dir]/app/locale/en_US/template/email/html/footer.html</code></li>
         </ul>
         <p>
             The header and footer template files get included in the transactional emails using a new
@@ -251,27 +251,27 @@
             <p>You can customize the header and footer as discussed in the following sections:</p>
         <ul>
             <li><a href="#custom-head-foot-files">Customizing Header and Footer Templates Using Files</a></li>
-            <li><a href="#custom-head-foot-admin">Customizing Header and Footer Templates Using the Magento Admin
+            <li><a href="#custom-head-foot-admin">Customizing Header and Footer Templates Using the Openmage Admin
                     Panel</a></li>
         </ul>
 
         <h3 id="custom-head-foot-files">Customizing Header and Footer Templates Using Files</h3>
-        <p>If you can access the Magento server file system, you can customize the header and footer by editing the
+        <p>If you can access the Openmage server file system, you can customize the header and footer by editing the
             following files:</p>
         <ul>
-            <li><code>[your Magento install dir]/app/locale/en_US/template/email/html/header.html</code></li>
-            <li><code>[your Magento install dir]/app/locale/en_US/template/email/html/footer.html</code></li>
+            <li><code>[your Openmage install dir]/app/locale/en_US/template/email/html/header.html</code></li>
+            <li><code>[your Openmage install dir]/app/locale/en_US/template/email/html/footer.html</code></li>
         </ul>
         <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note"
                 align="left" width="40"><span><strong>Note</strong>: To make changes to the templates at the website or
                 store view configuration scopes, see the next section.</div>
 
 
-        <h3 id="custom-head-foot-admin">Customizing Header and Footer Templates Using the Magento Admin Panel</h3>
-        <p>You must use the Magento Admin Panel to customize header and footer templates if any of the following are
+        <h3 id="custom-head-foot-admin">Customizing Header and Footer Templates Using the Openmage Admin Panel</h3>
+        <p>You must use the Openmage Admin Panel to customize header and footer templates if any of the following are
             true:</p>
         <ul>
-            <li>You cannot access the Magento server file system</li>
+            <li>You cannot access the Openmage server file system</li>
             <li>To customize the templates for a unique website, store, or store view</li>
         </ul>
         <p>The example discussed in the following sections shows how to customize the header template. You can use the
@@ -285,7 +285,7 @@
 
         <h4 id="custom-head-foot-admin-custom">Customizing the Template in the Admin Panel</h4>
         <ol>
-            <li>Log in to the Magento Admin Panel as an administrator.</li>
+            <li>Log in to the Openmage Admin Panel as an administrator.</li>
             <li>Click <strong>System</strong> &gt; <strong>Transactional Emails</strong>.</li>
             <li>On the Transactional Emails page, click <strong>Add New Template</strong>.</li>
             <li>From the <strong>Template</strong> list, click <strong>Email - Header</strong>.</li>
@@ -309,8 +309,8 @@
                         <tr>
                             <td><strong>Insert Variable</strong> Button</td>
                             <td>Click to see a list of variables to insert. For more information about variables, see
-                                the <a href="http://www.magentocommerce.com/resources/magento-user-guide"
-                                    target="_blank">Magento User Guide</a>.</td>
+                                the <a href="http://www.openmagecommerce.com/resources/openmage-user-guide"
+                                    target="_blank">Openmage User Guide</a>.</td>
                         </tr>
                         <tr>
                             <td><strong>Template Content</strong> field</td>
@@ -362,8 +362,8 @@
             attributes on the HTML tags. </p>
         <p>The CSS for the emails is contained in the following Sass files:</p>
         <ul>
-            <li><code>[your Magento install dir]/skin/frontend/rwd/default/scss/email-inline.scss</code></li>
-            <li><code>[your Magento install dir]/skin/frontend/rwd/default/scss/email-non-inline.scss</code></li>
+            <li><code>[your Openmage install dir]/skin/frontend/rwd/default/scss/email-inline.scss</code></li>
+            <li><code>[your Openmage install dir]/skin/frontend/rwd/default/scss/email-non-inline.scss</code></li>
         </ul>
         <p>As you might expect, these two files compile to <code>skin/frontend/rwd/default/css/email-inline.css</code>
             and <code>skin/frontend/rwd/default/css/email-non-inline.css</code>, respectively. If you're not familiar
@@ -373,14 +373,14 @@
         <h3 id="email-css-inline">Using Inline Styles to Customize Email CSS</h3>
         <p>
             The <code>email-inline.css</code> file contains all of the styles that the Emogrifier class applies to the
-            HTML before an email is sent. Magento applies only these styles to an email template if it contains this new
+            HTML before an email is sent. Openmage applies only these styles to an email template if it contains this new
             directive:</p>
             <pre>&#123;&#123;inlinecss file="email-inline.css"}}</pre>
         <p>Notice that the templates in <code>app/locale/en_US/template/email/</code> include this directive in each
             email template. The directive enables you to specify CSS that loads from the current storefront's theme and
             is inlined on that template.</p>
-        <p>The directive supports the standard Magento fallback hierarchy, which means that if the
-            <code>email-inline.css</code> can't be found in the store's theme, Magento looks in each of the parent
+        <p>The directive supports the standard Openmage fallback hierarchy, which means that if the
+            <code>email-inline.css</code> can't be found in the store's theme, Openmage looks in each of the parent
             themes until a match is found. (A sample theme directory is
             <code>skin/frontend/custompackage/customtheme/css/email-inline.css</code>)</p>
         <p>Refer to the <a href="https://github.com/jjriv/emogrifier#emogrifier" target="_blank">Emogrifier README</a>
@@ -401,7 +401,7 @@
             <ul>
                 <li>The contents of <code>email-non-inline.css</code>.<br>
                     The file loads from the current storefront's theme and supports the same fallback structure as the
-                    <code>email-inline.css</code> file. For Magento to load additional files, go to
+                    <code>email-inline.css</code> file. For Openmage to load additional files, go to
                     <strong>System</strong> &gt; <strong>Configuration</strong> &gt; GENERAL &gt;
                     <strong>Design</strong>, click the <strong>Transactional Emails</strong> section and change the
                     value of the <strong>Non-inline CSS File(s)</strong> field.</li>
@@ -411,10 +411,10 @@
                     If you modify a template and add CSS styles inside that comment, they are included in the
                     <code>non_inline_styles</code> variable.
                 </li>
-                <li>If you customize transactional emails using the Magento Admin Panel, you can add CSS styles to the
+                <li>If you customize transactional emails using the Openmage Admin Panel, you can add CSS styles to the
                     <strong>Template Styles</strong> field to include those styles in the <code>non_inline_styles</code>
                     variable. For more information, see <a href="#custom-head-foot-admin">Customizing Header and Footer
-                        Templates Using the Magento Admin Panel</a>.</li>
+                        Templates Using the Openmage Admin Panel</a>.</li>
             </ul>
             <p>After the CSS is loaded, it's wrapped in a <code>&lt;style
                     type=&quot;text/css&quot;&gt;&lt;/style&gt;</code> tag and is assigned to the
@@ -451,7 +451,7 @@
             </ul>
 
             <h4 id="hi-rez-logo-file">Updating a High-Resolution Logo Using the File System</h4>
-            <p>If you can access the Magento server file system, follow these steps:</p>
+            <p>If you can access the Openmage server file system, follow these steps:</p>
             <ol>
                 <li>Locate the skin directory for your store (for example,
                     <code>skin/frontend/custompackage/customtheme/</code>).</li>
@@ -489,12 +489,12 @@
             <p>You can update your high-resolution logo using the Admin Panel if any of the following are true:</p>
             <ul>
                 <li>The file format is not GIF</li>
-                <li>You don't have access to the Magento server file system</li>
+                <li>You don't have access to the Openmage server file system</li>
                 <li>The logo is specific to a website, store, or store view</li>
             </ul>
             <p>To upload a high-resolution logo using the Admin Panel:</p>
             <ol>
-                <li>Log in to the Magento Admin Panel as an administrator.</li>
+                <li>Log in to the Openmage Admin Panel as an administrator.</li>
                 <li>Click <strong>System</strong> &gt; <strong>Configuration</strong> &gt; GENERAL &gt;
                     <strong>Design</strong>.</li>
                 <li>From the <strong>Current Configuration Scope</strong> in the upper left corner, click the scope to
@@ -547,7 +547,7 @@
             <p>Transactional emails can output your store email address, store phone number, and store hours of
                 operation if those values are configured in the Admin Panel. To set those values:</p>
             <ol>
-                <li>Log in to the Magento Admin Panel as an administrator.</li>
+                <li>Log in to the Openmage Admin Panel as an administrator.</li>
                 <li>To set the phone number and hours of operation:
                     <ol>
                         <li>Click <strong>System</strong> &gt; <strong>Configuration</strong> &gt; GENERAL &gt;
@@ -590,15 +590,15 @@
                 <li>Include non-inline styles using <a href="#email-css-noninline"><code>&#123;&#123;var
                             non_inline_styles}}</code></a></li>
             </ul>
-            <p>In the Magento Admin Panel, go to <strong>Newsletter</strong> &gt; <strong>Newsletter Templates</strong>
+            <p>In the Openmage Admin Panel, go to <strong>Newsletter</strong> &gt; <strong>Newsletter Templates</strong>
                 and look at the template named <strong>Example Newsletter Template</strong>. We added this template as a
                 reference for how to build a responsive newsletter.</p>
 
 
             <h2 id="help">Getting Help</h2>
-            <p>If you encounter issues customizing email templates, contact Magento Support. Another option is to post
-                your question on the community <a href="http://magento.stackexchange.com/questions/ask"
-                    target="_blank">magento.stackexchange.com</a> site and tag it with <code>rwd-email</code> and
+            <p>If you encounter issues customizing email templates, contact Openmage Support. Another option is to post
+                your question on the community <a href="http://openmage.stackexchange.com/questions/ask"
+                    target="_blank">openmage.stackexchange.com</a> site and tag it with <code>rwd-email</code> and
                 <code>rwd-theme</code>.</p>
 
     </div>

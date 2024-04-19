@@ -135,7 +135,7 @@ title: Product Link Update
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/soap/?wsdl');
 $sessionId = $proxy-&gt;login('apiUser', 'apiKey');
 
 $productId = '1';
@@ -164,7 +164,7 @@ $result = $proxy-&gt;call(
 <div>
 		<pre class="theme: Default; brush: php; gutter: false">&lt;?php
 
-$client = new SoapClient('http://magentohost/api/v2_soap/?wsdl');
+$client = new SoapClient('http://openmagehost/api/v2_soap/?wsdl');
 
 $session = $client-&gt;login('apiUser', 'apiKey');
 
@@ -190,7 +190,7 @@ var_dump ($orders);
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/v2_soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/v2_soap/?wsdl');
 $sessionId = $proxy-&gt;login((object)array('username' =&gt; 'apiUser', 'apiKey' =&gt; 'apiKey'));
 
 $result = $proxy-&gt;catalogProductLinkUpdate((object)array('sessionId' =&gt; $sessionId-&gt;result, 'type' =&gt; 'cross_sell', 'productId' =&gt; '1', 'linkedProductId' =&gt; '2', 'data' =&gt; ((object)array(

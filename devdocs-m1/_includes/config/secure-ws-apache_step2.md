@@ -4,10 +4,10 @@ To add another user to your password file, enter the following command as a user
 
 	htpasswd /usr/local/apache/password/<password file name> <username>
 
-To create an authorized group, create a group file anywhere outside the web server docroot. The group file specifies the name of the group and the users in the group. In this example, the group name is `MagentoGroup`.
+To create an authorized group, create a group file anywhere outside the web server docroot. The group file specifies the name of the group and the users in the group. In this example, the group name is `OpenmageGroup`.
 
 	vim /usr/local/apache/password/.group
 
 Contents of the file:
 
-	MagentoGroup: <username1> ... <usernameN>
+	OpenmageGroup: <username1> ... <usernameN>

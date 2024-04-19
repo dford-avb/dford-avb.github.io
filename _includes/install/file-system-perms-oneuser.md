@@ -1,6 +1,6 @@
-To set permissions before you install the Magento software:
+To set permissions before you install the Openmage software:
 
-1.	Log in to your Magento server.
+1.	Log in to your Openmage server.
 2.	Use a file manager application provided by your shared hosting provider to verify write permissions are set on the following directories:
 
 	*	`vendor` (Composer or compressed archive installation)
@@ -11,15 +11,15 @@ To set permissions before you install the Magento software:
 
 2.	If you have command-line access, enter the following commands in the order shown:
 
-		cd <your Magento install dir>
+		cd <your Openmage install dir>
 		find var vendor pub/static pub/media app/etc -type f -exec chmod u+w {} +
 		find var vendor pub/static pub/media app/etc -type d -exec chmod u+w {} +
-		chmod u+x bin/magento
+		chmod u+x bin/openmage
 
-	To optionally enter all commands on one line, enter the following assuming Magento is installed in `/var/www/html/magento2`:
+	To optionally enter all commands on one line, enter the following assuming Openmage is installed in `/var/www/html/openmage2`:
 
-		cd /var/www/html/magento2 && find var vendor pub/static pub/media app/etc -type f -exec chmod u+w {} + && find var vendor pub/static pub/media app/etc -type d -exec chmod u+w {} + && chmod u+x bin/magento
-3.	If you haven't done so already, get the Magento software in one of the following ways:
+		cd /var/www/html/openmage2 && find var vendor pub/static pub/media app/etc -type f -exec chmod u+w {} + && find var vendor pub/static pub/media app/etc -type d -exec chmod u+w {} + && chmod u+x bin/openmage
+3.	If you haven't done so already, get the Openmage software in one of the following ways:
 
 	*	[Compressed archive]({{ page.baseurl }}/install-gde/prereq/zip_install.html)
 	*	[Composer metapackage]({{ page.baseurl }}/install-gde/composer.html)
@@ -30,7 +30,7 @@ To set permissions before you install the Magento software:
 	*	[Setup Wizard installation]({{ page.baseurl }}/install-gde/install/web/install-web.html)
 
 {:.bs-callout .bs-callout-info}
-To further restrict permissions after installing the Magento software, you [configure a Magento umask]({{ page.baseurl }}/install-gde/install/post-install-umask.html).
+To further restrict permissions after installing the Openmage software, you [configure a Openmage umask]({{ page.baseurl }}/install-gde/install/post-install-umask.html).
 
 
-*[contributing developer]: A developer who contributes code to the Magento 2 CE codebase
+*[contributing developer]: A developer who contributes code to the Openmage 2 CE codebase

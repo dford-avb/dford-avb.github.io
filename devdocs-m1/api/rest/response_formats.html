@@ -20,11 +20,11 @@ title: Response Formats
 </ul>
 
 
-<p>If you make a Magento API call, you are guaranteed to receive some kind of a response. If you make a successful call, you will receive an HTTP response with a 200 OK status.</p>
+<p>If you make a Openmage API call, you are guaranteed to receive some kind of a response. If you make a successful call, you will receive an HTTP response with a 200 OK status.</p>
 
 <h1><a name="ResponseFormats-RESTAPIResponseFormats"></a>REST API Response Formats</h1>
 
-<p>You can view the response data from any Magento API call in one of the following two formats:</p>
+<p>You can view the response data from any Openmage API call in one of the following two formats:</p>
 
 <ul>
 	<li>XML</li>
@@ -46,7 +46,7 @@ To set the response format to XML, add the Accept request header with the text/x
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;item_id&gt;1&lt;/item_id&gt;
     &lt;product_id&gt;1&lt;/product_id&gt;
@@ -61,7 +61,7 @@ To set the response format to XML, add the Accept request header with the text/x
     &lt;qty&gt;100.0000&lt;/qty&gt;
     &lt;low_stock_date&gt;&lt;/low_stock_date&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -72,7 +72,7 @@ To set the response format to XML, add the Accept request header with the text/x
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;messages&gt;
     &lt;error&gt;
       &lt;data_item&gt;
@@ -81,7 +81,7 @@ To set the response format to XML, add the Accept request header with the text/x
       &lt;/data_item&gt;
     &lt;/error&gt;
   &lt;/messages&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -130,7 +130,7 @@ To set the response format to JSON, add the Accept request header with the appli
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;item_id&gt;1&lt;/item_id&gt;
     &lt;product_id&gt;1&lt;/product_id&gt;
@@ -145,7 +145,7 @@ To set the response format to JSON, add the Accept request header with the appli
     &lt;qty&gt;100.0000&lt;/qty&gt;
     &lt;low_stock_date&gt;&lt;/low_stock_date&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -160,7 +160,7 @@ To set the response format to JSON, add the Accept request header with the appli
 </div></div>
 
 
-<p>The list of HTTP status codes that are returned in the API response is described in the <a href="http://www.magentocommerce.com/api/rest/common_http_status_codes.html" title="Common HTTP Status Codes">Common HTTP Status Codes</a> part of the documentation. There, you can find the list of codes themselves together with their description.</p>
+<p>The list of HTTP status codes that are returned in the API response is described in the <a href="http://www.openmagecommerce.com/api/rest/common_http_status_codes.html" title="Common HTTP Status Codes">Common HTTP Status Codes</a> part of the documentation. There, you can find the list of codes themselves together with their description.</p>
 
 				    
 

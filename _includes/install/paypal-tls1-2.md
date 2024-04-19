@@ -52,7 +52,7 @@ If you're already running CentOS 6.8 or later, no action is necessary. According
 
 You have the following options:
 
-*	(Recommended). Upgrade your Magento server to CentOS 6.8 or later.
+*	(Recommended). Upgrade your Openmage server to CentOS 6.8 or later.
 
 	Its recommended repositories support current versions of TLS with `libcurl`. Using CentOS 6.8 or later is the most secure way to continue operating your store and accepting PayPal.
 

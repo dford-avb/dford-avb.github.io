@@ -8,7 +8,7 @@
          <dc:format>application/pdf</dc:format>
          <dc:title>
             <rdf:Alt>
-               <rdf:li xml:lang="x-default">ht_magento-REST-API_verify_view-coupon-codesMock</rdf:li>
+               <rdf:li xml:lang="x-default">ht_openmage-REST-API_verify_view-coupon-codesMock</rdf:li>
             </rdf:Alt>
          </dc:title>
       </rdf:Description>
@@ -61,7 +61,7 @@
                <rdf:li rdf:parseType="Resource">
                   <stMfs:linkForm>EmbedByReference</stMfs:linkForm>
                   <stMfs:reference rdf:parseType="Resource">
-                     <stRef:filePath>C:\subversion\dev-docs\Magento\images\ht_magento-REST-API_verify_view-coupon-codes.png</stRef:filePath>
+                     <stRef:filePath>C:\subversion\dev-docs\Openmage\images\ht_openmage-REST-API_verify_view-coupon-codes.png</stRef:filePath>
                   </stMfs:reference>
                </rdf:li>
             </rdf:Seq>
@@ -2312,7 +2312,7 @@ endstreamendobj5 0 obj<</Intent 18 0 R/Name(Background)/Type/OCG/Usage 19 0 R
 %%BoundingBox: 11 -671 855 -194
 %%HiResBoundingBox: 11 -670.9404 854.6445 -194
 %%DocumentProcessColors: Cyan Magenta Yellow Black
-%%DocumentFiles:C:\subversion\dev-docs\Magento\images\ht_magento-REST-API_verify_view-coupon-codes.png
+%%DocumentFiles:C:\subversion\dev-docs\Openmage\images\ht_openmage-REST-API_verify_view-coupon-codes.png
 %AI5_FileFormat 11.0
 %AI12_BuildNumber: 399
 %AI3_ColorUsage: Color
@@ -4754,7 +4754,7 @@ Y"‡ü¸äĞªªØ@à¢ao5¶Ç]lM;_ª¯vğûÌêäõGv±iÛx3l—®d¡u”VVå~è7ÏH6yTjH’n4ÚªWWŒu±Ş›´á
 ,œåÓF{,¾´-|Ø/ ÖMåÇGçˆÅ>(¬óø lm ·˜Kx#asÜ1nËx²5-í²pyèü!.!ñ÷aÕ°ìØ\¡Sït*ãİŞ·7ÛæVVæd1‘õ*^^®ï½x·
 »·ëÂ|oµ\îæ•ºg–eB5%5i÷ED¼!ÆZ8K–#1A2bÅä©Í¸œÍ;H{”ÑÇ­RSjcdĞ] ¿Ó3ÖiïøzÑŸøç¥[ï²ƒãñÌÔ,;(Ï¶ÖÈ{.u‡®J›¶¿ipqËqA8©t~*|ğHä{E)I´Q"÷ÖæMvÙçl˜À¦Ç.D²çFg®`Q¥ı|.‡‚®T‡äj·ªUÃˆô¢¾&9òÈ7¬†Aºªo[âã×ºÏÛW¬ÃAâ^æn‘[³ğ=.·Â<–´¥Ëñ¢¹R÷	tT.QâÉwoó‘àÂ0/èP ò“ã²Á•‰qV–0­b!Û¨'8Ó.?¦t/ç*T?:mÉ!ğ8[$L¾[¼<™ 'x’ßYÙ÷So“ï¹û"F]2 ¶3ññ‡ Ì{ÁÍ›o§ÒRÈæ¶Û÷´“iÉşV?ÌÕú!^¤¥zŒz Ü¹â®¼İ¬s1\	>ã 'ù„/¶ôâÔ¹Ğ5V`šFîô¼í¨emÇëÒF&t`µ˜ŸÍ·¿‡l…—ßüøø™Acv;UÇN™ºàéUõ…ïİ ãş‡çè¾zº+®w>òdïBgcšE¥²İ¶@v©!£¹¨Ş¡ˆ;L”Ÿ=&+†•îÆ­îó¥Üõ3åFó<Ûô ~pI“zQ^ŸüŒw¡G"9±FÀ÷¹LÛWÆ×
 +$ĞO »±.&vs§‘0½£‹ó~Œk`>ÛšŸå/÷ıœèîÚĞ¶Œœjé§K^_«ïöb‰`A‘ .*Ï©¸]GaÒÿî¸ãüêNëş"`”æ0¡ûg°D!Ú£N|¡M6ğ ò-™”ªä¯1näš­ù¨U -¬“pWTÅÉğµoµ†¯CM¾6ñU3@«ó3Ãÿƒ'|#ß9.—G{©%{“DÄì9‚mk}Ş®¶J ª¬šğR˜îÁBYŠ/Û”4½L¥-+·”CŸZWªrd¿rÄD?U&edÖÂ«=f0n4±ñ¨]é³X¯Ğ¡3†Ã<yA¶Ô.›wıü=ç8øk†d,dÛÓH¤Ø÷?¸+cânq´’¹»×¹ k­}i³Ø7×s¥œ˜kHã©ÛrP¶c]:²[ßÔG([¤Æ‚¸ÁœZ1^#ÕÂ¸9âê£œZCPtÉ!ÚéJÈ¸m`¢Íœûù!Ğ}¤1(‡EvP¾Åû]T)‹Ç`k÷ÒÕü¾8ÙJp¶—ûâÁ,‘Æa£ÈosÌ«Úür+Ò‡Ä§<˜LpÙ{¤YÈÈ¼LDI]n&M?Œ¯|ùˆüÂ=ú‹¾aFİ~–UG¾ƒş ÉwZ8\ê÷ù#‘«>7Wûz½!QãêP…h¨Õm æwñ€šOå‰İí_Ãüdzâl¯|¯¯Š¾ ›·ìáòtÉ¹ø²¬ÒÆä„{Axc…÷Çí-—6eUOÆÔÑPi:ÃxÙô†#¯"“g+Sa½2pĞn§é·†ı††3P[Õò:ì»Áº‹x“õ¡»ƒ“@u*í7NX°w¸½ÿÁ†oĞÉ`[g½£İ²õ¶J·@,DüÈ‰S‰ShJo®GøÅÙ@ègb6.A™¿f_À¹%ÃLGÜ
-endstreamendobj7 0 obj[6 0 R 5 0 R]endobj35 0 obj<</CreationDate(D:20121211181905-05'00')/Creator(Adobe Illustrator CS5)/ModDate(D:20121211181905-06'00')/Producer(Adobe PDF library 9.90)/Title(ht_magento-REST-API_verify_view-coupon-codesMock)>>endobjxref
+endstreamendobj7 0 obj[6 0 R 5 0 R]endobj35 0 obj<</CreationDate(D:20121211181905-05'00')/Creator(Adobe Illustrator CS5)/ModDate(D:20121211181905-06'00')/Producer(Adobe PDF library 9.90)/Title(ht_openmage-REST-API_verify_view-coupon-codesMock)>>endobjxref
 0 36
 0000000000 65535 f
 0000000016 00000 n

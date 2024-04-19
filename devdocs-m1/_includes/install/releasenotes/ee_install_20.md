@@ -1,27 +1,27 @@
 
 
-## Install the Magento software
+## Install the Openmage software
 
 See one of the following sections:
 
-*	[Get Magento Commerce using Composer](#install-rc-composer)
-*	[Get Magento Commerce using a compressed archive](#get-zip)
+*	[Get Openmage Commerce using Composer](#install-rc-composer)
+*	[Get Openmage Commerce using a compressed archive](#get-zip)
 *	[Complete the installation](#install-complete)
 
-### Get Magento Commerce using Composer {#install-rc-composer}
+### Get Openmage Commerce using Composer {#install-rc-composer}
 {:.no_toc}
 
-This software is available from `repo.magento.com`. Before installing the Magento Commerce software using Composer, familiarize yourself with the Composer [metapackage]({{page.baseurl}}/install-gde/prereq/integrator_install.html), then run:
+This software is available from `repo.openmage.com`. Before installing the Openmage Commerce software using Composer, familiarize yourself with the Composer [metapackage]({{page.baseurl}}/install-gde/prereq/integrator_install.html), then run:
 
-	composer create-project --repository=https://repo.magento.com/ magento/project-enterprise-edition=<version> <installation directory name>
+	composer create-project --repository=https://repo.openmage.com/ openmage/project-enterprise-edition=<version> <installation directory name>
 
 where `<version>` matches the version you want (for example, `2.0.10`)
 
-For example, to install 2.0.10 in the `magento2` directory:
+For example, to install 2.0.10 in the `openmage2` directory:
 
-	composer create-project --repository=https://repo.magento.com/ magento/project-enterprise-edition=2.0.10 magento2
+	composer create-project --repository=https://repo.openmage.com/ openmage/project-enterprise-edition=2.0.10 openmage2
 
-### Get Magento Commerce using a compressed archive {#get-zip}
+### Get Openmage Commerce using a compressed archive {#get-zip}
 {:.no_toc}
 
 {% include install/releasenotes/get-ee-software_zip.md %}
@@ -32,7 +32,7 @@ For example, to install 2.0.10 in the `magento2` directory:
 After you get the Commerce software:
 
 1.	[Set file system ownership and permissions]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html).
-2.	Install the Magento software:
+2.	Install the Openmage software:
 
 	*	[Web Setup Wizard]({{ page.baseurl }}/install-gde/install/web/install-web.html)
 	*	[Command line]({{ page.baseurl }}/install-gde/install/cli/install-cli.html)

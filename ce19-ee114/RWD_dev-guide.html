@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/common/css/stylesheet-fonts.css" type="text/css" charset="utf-8">
     <link rel="icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
-    <title>Magento Community Edition (CE) 1.9 and Magento Enterprise Edition (EE) 1.14 Responsive Web Design Developer's
+    <title>Openmage Community Edition (CE) 1.9 and Openmage Enterprise Edition (EE) 1.14 Responsive Web Design Developer's
         Guide</title>
 
 </head>
@@ -20,13 +20,13 @@
 <img src="{{ site.baseurl }}/guides/m1x/images/m1xheader.png" width="1024" alt="header"/>
 {% include m1x/eol_message.html %}
 
-<!-- Title: Magento Community Edition (CE) 1.9 and Magento Enterprise Edition (EE) 1.14 Responsive Web Design Developer's Guide-->
+<!-- Title: Openmage Community Edition (CE) 1.9 and Openmage Enterprise Edition (EE) 1.14 Responsive Web Design Developer's Guide-->
 <!-- URL: ee114-ce19-rwd-dev-guide -->
 
 
 <div id="content">
 
-    <h1>Magento Community Edition (CE) 1.9 and Magento Enterprise Edition (EE) 1.14 Responsive Web Design Developer's
+    <h1>Openmage Community Edition (CE) 1.9 and Openmage Enterprise Edition (EE) 1.14 Responsive Web Design Developer's
         Guide</h1>
     <p><em>by Erik Hansen</em></p>
     <p><a href="{{ site.m1xgithuburl }}/ce19-ee114/RWD_dev-guide.html" target="_blank">Edit this page on
@@ -39,7 +39,7 @@
             <li><a href="#support">Supported Devices and Browsers</a></li>
             <li><a href="#changes">Understanding the Changes in the Responsive Theme</a></li>
             <li><a href="#compass-install">Installing Compass and Sass</a></li>
-            <li><a href="#disable-cache">Disabling the Magento Cache</a></li>
+            <li><a href="#disable-cache">Disabling the Openmage Cache</a></li>
             <li><a href="#theme">Copying Files to Create Your Custom Theme</a></li>
             <li><a href="#customizing-theme">Responsive Theme Reference</a></li>
             <li><a href="#remove-sample-content">Removing Sample Data Assets</a></li>
@@ -49,17 +49,17 @@
     </div>
 
     <h2 id="intro">Introduction</h2>
-    <p>Magento Enterprise Edition 1.14 and Magento Community Edition 1.9 come with a new theme named <tt>rwd</tt> that
+    <p>Openmage Enterprise Edition 1.14 and Openmage Community Edition 1.9 come with a new theme named <tt>rwd</tt> that
         implements <a href="http://en.wikipedia.org/wiki/Responsive_web_design" target="_blank">Responsive Web Design
             (RWD) practices</a>. This guide discusses what you need to know when customizing your own responsive theme.
     </p>
-    <p>Magento CE's and EE's responsive theme uses a number of new technologies:</p>
+    <p>Openmage CE's and EE's responsive theme uses a number of new technologies:</p>
     <ul>
         <li><a href="http://compass-style.org/" target="_blank">Sass/Compass</a>: A CSS pre-compiler that provides
             organizable, reusable CSS.
         </li>
         <li><a href="http://jquery.com/" target="_blank">jQuery</a>: Used for all custom JavaScript in the responsive
-            theme. jQuery operates in <tt>noConflict()</tt> mode so it doesn't conflict with Magento's existing
+            theme. jQuery operates in <tt>noConflict()</tt> mode so it doesn't conflict with Openmage's existing
             JavaScript library.
         </li>
         <li>Additional JavaScript libraries discussed in more detail in <a href="#customize-theme-js">Working With
@@ -78,7 +78,7 @@
         </li>
         <li><a href="http://compass-style.org/" target="_blank">Compass</a></li>
     </ul>
-    <p>The new responsive theme code is contained in the following directories (relative to your Magento installation
+    <p>The new responsive theme code is contained in the following directories (relative to your Openmage installation
         directory):</p>
     <ul>
         <li><tt>app/design/frontend/rwd</tt></li>
@@ -92,7 +92,7 @@
     </ul>
 
     <h3 id="intro-audience">Intended Audience</h3>
-    <p>This guide assumes that you have a good understanding of Magento frontend development and Responsive Web Design
+    <p>This guide assumes that you have a good understanding of Openmage frontend development and Responsive Web Design
         techniques.</p>
 
     <h3 id="intro-assumptions">Documentation Conventions and Assumptions</h3>
@@ -101,17 +101,17 @@
     <h4 id="intro-convention">Documentation Conventions</h4>
     <p>This guide uses the names <tt>custompackage</tt> and <tt>customtheme</tt> for the design package and theme. When
         you build your own responsive theme, use a more descriptive name, such as the name of your company.</p>
-    <p>The variable value <tt>[your Magento install dir]</tt> refers to the directory in which you installed Magento CE
+    <p>The variable value <tt>[your Openmage install dir]</tt> refers to the directory in which you installed Openmage CE
         or EE. Typical values follow:</p>
     <ul>
-        <li>Ubuntu: <tt>/var/www/magento</tt></li>
-        <li>CentOS: <tt>/var/www/html/magento</tt></li>
+        <li>Ubuntu: <tt>/var/www/openmage</tt></li>
+        <li>CentOS: <tt>/var/www/html/openmage</tt></li>
     </ul>
 
     <h4 id="intro-assumption">Assumption: How You Customize CSS</h4>
     <p>You have two choices to write your custom CSS styles:</p>
     <ul>
-        <li>Write CSS in the Sass stylesheets using the same structure that the Magento responsive theme uses. This
+        <li>Write CSS in the Sass stylesheets using the same structure that the Openmage responsive theme uses. This
             approach requires setting up a Compass compiler, but is <em>strongly</em> recommended. This guide assumes
             you'll use this approach.
         </li>
@@ -140,14 +140,14 @@
         <li>Place order by SKU <em>(EE only)</em></li>
     </ul>
     <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
-                                        width="40"><span><strong>Note</strong>: Magento still supports other non-responsive themes as well. You don't need to use this guide to customize those themes. For more information, see the <a
-            href="http://info.magento.com/rs/magentocommerce/images/MagentoDesignGuide.pdf" target="_blank">Designer's Guide to Magento</a>.
+                                        width="40"><span><strong>Note</strong>: Openmage still supports other non-responsive themes as well. You don't need to use this guide to customize those themes. For more information, see the <a
+            href="http://info.openmage.com/rs/openmagecommerce/images/OpenmageDesignGuide.pdf" target="_blank">Designer's Guide to Openmage</a>.
     </span>
     </div>
 
 
     <h2 id="support">Supported Devices and Browsers</h2>
-    <p>Magento's responsive theme was developed with full support for the following devices and browsers:</p>
+    <p>Openmage's responsive theme was developed with full support for the following devices and browsers:</p>
     <ul>
         <li>Windows:
             <ul>
@@ -187,7 +187,7 @@
     <p>A number of the core layout files (<tt>catalog.xml</tt>, <tt>customer.xml</tt>) were slightly modified to account
         for responsive changes. There are only a few notable changes to the layout files:</p>
     <ul>
-        <li><tt><a href="#intro-convention">[your Magento install dir]</a>/app/design/frontend/rwd/default/layout/page.xml</tt>
+        <li><tt><a href="#intro-convention">[your Openmage install dir]</a>/app/design/frontend/rwd/default/layout/page.xml</tt>
             was modified to include all of the new responsive assets.
         </li>
         <li>Because two and three column layouts collapse to a single column on smaller viewports, all content in the
@@ -198,31 +198,31 @@
         </li>
     </ul>
 
-    <h3 id="changes-ee">Using the New Theme/Layout Structure&mdash;<em>Magento EE only</em></h3>
-    <p>If you've worked with a previous version of Magento EE, you're aware that the <tt>enterprise/default</tt> theme
+    <h3 id="changes-ee">Using the New Theme/Layout Structure&mdash;<em>Openmage EE only</em></h3>
+    <p>If you've worked with a previous version of Openmage EE, you're aware that the <tt>enterprise/default</tt> theme
         contains copies of <em>many</em> of the layout and template files from <tt>base/default</tt>&mdash;some with
         very minor changes. This is not an optimal approach because as it results in duplicated content.</p>
-    <p>The Magento EE responsive theme's <tt>rwd/enterprise</tt> directory includes only template and layout files that
-        contain Magento EE-only features.</p>
+    <p>The Openmage EE responsive theme's <tt>rwd/enterprise</tt> directory includes only template and layout files that
+        contain Openmage EE-only features.</p>
     <p>Instead of copying layout files as the <tt>enterprise/default</tt> theme does, <tt>rwd/enterprise</tt> isolates
-        changes in their own layout files in <tt>[your Magento install
+        changes in their own layout files in <tt>[your Openmage install
             dir]app/design/frontend/rwd/enterprise/layout/enterprise</tt></p>
     <p>The <tt>rwd/enterprise</tt> theme replaces the <tt>enterprise/default</tt> theme and contains <em>far</em> fewer
         files than its predecessor (156 compared to 280). This new approach makes it easier for you to see what
-        functionality is unique to Magento EE.</p>
+        functionality is unique to Openmage EE.</p>
 
-    <h3 id="changes-fallback">Changes to Magento Theme Fallback</h3>
-    <p>Magento CE 1.9 and EE 1.14 both introduce a theme configuration file named <tt>theme.xml</tt>. This file allows
+    <h3 id="changes-fallback">Changes to Openmage Theme Fallback</h3>
+    <p>Openmage CE 1.9 and EE 1.14 both introduce a theme configuration file named <tt>theme.xml</tt>. This file allows
         theme developers to specify a parent theme which results in a more predictable and useful fallback than earlier
         versions.</p>
-    <p>For more information, see <a href="http://alanstorm.com/magento_parent_child_themes" target="_blank">Alan Storm's
+    <p>For more information, see <a href="http://alanstorm.com/openmage_parent_child_themes" target="_blank">Alan Storm's
         Parent/Child Theme article</a>.</p>
 
     <h2 id="compass-install">Installing Compass and Sass</h2>
     <p>Sass is a powerful CSS pre-compiler that extends CSS supports variables, mixins, and placeholders. Compass is a
         library for Sass that adds hundreds of useful mixins and functions to Sass&mdash;everything from color blending
         to sprite generation.</p>
-    <p>Because the new Magento responsive theme uses the Compass library to compile its Sass files into CSS, you must
+    <p>Because the new Openmage responsive theme uses the Compass library to compile its Sass files into CSS, you must
         install Compass in your development environment in any of the following ways:</p>
     <ul>
         <li><a href="http://compass-style.org/install" target="_blank">Command line</a></li>
@@ -239,20 +239,20 @@
         </li>
     </ul>
 
-    <!-- <p>To learn more about how to configure your development environment to compile with Compass, read this Configure a Compass Compiler for Magento RWD Theme guide.</p>
+    <!-- <p>To learn more about how to configure your development environment to compile with Compass, read this Configure a Compass Compiler for Openmage RWD Theme guide.</p>
      -->
-    <h2 id="disable-cache">Disabling the Magento Cache</h2>
-    <p>A good practice during development on Magento is to disable Magento's cache. Although doing this adversely
+    <h2 id="disable-cache">Disabling the Openmage Cache</h2>
+    <p>A good practice during development on Openmage is to disable Openmage's cache. Although doing this adversely
         impacts performance, it frees you from having to manually clear the cache when you make changes to files or
         configuration settings that are being cached.</p>
     <p>You should always enable the cache in a production environment.</p>
     <p>To disable the cache:</p>
     <ol>
-        <li>Log in to the Magento Admin Panel as an administrator.</li>
+        <li>Log in to the Openmage Admin Panel as an administrator.</li>
         <li>Click <strong>System</strong> > <strong>Configuration</strong> > <strong>Cache Management</strong>.</li>
         <li>On the Cache Management page, click <strong>Select All</strong>.<br/>
             <strong>Note</strong>: The <strong>Page Cache</strong> option at the bottom of the list is available only in
-            Magento EE.
+            Openmage EE.
         </li>
         <li>From the <strong>Actions</strong> list in the upper right corner of the page, click <strong>Disable</strong>.
         </li>
@@ -272,36 +272,36 @@
         <li><a href="#theme-structure">Step 1: Creating a Directory Structure for Your Responsive Theme</a></li>
         <li><a href="#theme-copyfiles">Step 2: Copying Files For Your Theme</a></li>
         <li><a href="#theme-compass">Step 3: Configuring a Compass Watcher</a></li>
-        <li><a href="#theme-admin">Step 4: Configuring Magento to Load Your Theme</a></li>
+        <li><a href="#theme-admin">Step 4: Configuring Openmage to Load Your Theme</a></li>
         <li><a href="#theme-verify">Step 5: Verifying Your Custom Theme</a></li>
         <li><a href="#theme-admin-trouble">Troubleshooting Theme Configuration</a></li>
     </ul>
 
     <h3 id="theme-structure">Step 1: Creating a Directory Structure for Your Responsive Theme</h3>
-    <p>You'll do your responsive theme development using a copy of the responsive theme provided with Magento CE and EE.
+    <p>You'll do your responsive theme development using a copy of the responsive theme provided with Openmage CE and EE.
         This section discusses how to create new top-level directories for your theme and to copy files to those
         directories.</p>
     <p>The <tt>rwd/default</tt> theme falls back directly to the <tt>base/default</tt> theme, so themes in the <tt>default</tt>
         package will never be included as a part of the fallback chain.</p>
     <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
-                                        width="40"><span><strong>Note</strong>: <em>Magento EE only.</em> The <tt>enterprise/default</tt> theme is completely replaced by <tt>rwd/enterprise</tt> and therefore, <tt>enterprise/default</tt> is not included as a part of the fallback chain.
+                                        width="40"><span><strong>Note</strong>: <em>Openmage EE only.</em> The <tt>enterprise/default</tt> theme is completely replaced by <tt>rwd/enterprise</tt> and therefore, <tt>enterprise/default</tt> is not included as a part of the fallback chain.
     </span>
     </div>
 
-    <!-- <p>Magento CE 1.9 and Magento EE 1.14 have a new theme fallback structure that provides infinite levels of fallback. Learn more about this fallback structure in the <a href="#" style="color: red;">Magento Infinite Theme Fallback Structure</a> article.</p>
+    <!-- <p>Openmage CE 1.9 and Openmage EE 1.14 have a new theme fallback structure that provides infinite levels of fallback. Learn more about this fallback structure in the <a href="#" style="color: red;">Openmage Infinite Theme Fallback Structure</a> article.</p>
      -->
     <p>The top-level directories you'll need are:</p>
     <ul>
-        <li><tt>[your Magento install dir]/app/design/frontend/custompackage/customtheme</tt></li>
-        <li><tt>[your Magento install dir]/skin/frontend/custompackage/customtheme</tt></li>
+        <li><tt>[your Openmage install dir]/app/design/frontend/custompackage/customtheme</tt></li>
+        <li><tt>[your Openmage install dir]/skin/frontend/custompackage/customtheme</tt></li>
     </ul>
     <p>To create those directories and to add your theme configuration:</p>
     <ol>
-        <li>Using a command shell, log in to your Magento host as a user with privileges to write to the web server
+        <li>Using a command shell, log in to your Openmage host as a user with privileges to write to the web server
             docroot. (Typically, this is the web server user.)
         </li>
         <li>Enter the following commands in the order shown:
-            <pre>cd <a href="#intro-convention">[your Magento install dir]</a>
+            <pre>cd <a href="#intro-convention">[your Openmage install dir]</a>
 mkdir -p app/design/frontend/custompackage/customtheme
 mkdir -p skin/frontend/custompackage/customtheme</pre>
         </li>
@@ -313,9 +313,9 @@ cd app/design/frontend/custompackage/customtheme/etc</pre>
             there:
             <pre>vim theme.xml</pre>
         </li>
-        <li id="themexml"><tt>theme.xml</tt> must have different contents for Magento CE or Magento EE:
+        <li id="themexml"><tt>theme.xml</tt> must have different contents for Openmage CE or Openmage EE:
             <ul>
-                <li>Magento CE:
+                <li>Openmage CE:
                     <pre>
                         <code>
 &lt;?xml version="1.0"?&gt;
@@ -325,7 +325,7 @@ cd app/design/frontend/custompackage/customtheme/etc</pre>
                         </code>
                     </pre>
                 </li>
-                <li>Magento EE:
+                <li>Openmage EE:
                     <pre>
                         <code>
 &lt;?xml version="1.0"?&gt;
@@ -337,7 +337,7 @@ cd app/design/frontend/custompackage/customtheme/etc</pre>
                 </li>
                 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-important.png"
                                                     alt="important" align="left"
-                                                    width="40"><span><strong>Important</strong>: It's very important you have a <tt>theme.xml</tt> in the <tt>app/design/frontend/custompackage/customtheme/etc</tt> directory with exactly the contents shown. Failure to configure <tt>theme.xml</tt> correctly prevents Magento from loading your theme.</span>
+                                                    width="40"><span><strong>Important</strong>: It's very important you have a <tt>theme.xml</tt> in the <tt>app/design/frontend/custompackage/customtheme/etc</tt> directory with exactly the contents shown. Failure to configure <tt>theme.xml</tt> correctly prevents Openmage from loading your theme.</span>
                 </div>
 
             </ul>
@@ -346,7 +346,7 @@ cd app/design/frontend/custompackage/customtheme/etc</pre>
 
     <h3 id="theme-copyfiles">Step 2: Copying Files For Your Theme</h3>
     <p>Use the following commands to copy files for your custom theme:</p>
-    <pre>cd <a href="#intro-convention">[your Magento install dir]</a>
+    <pre>cd <a href="#intro-convention">[your Openmage install dir]</a>
 cp -R skin/frontend/rwd/default/images skin/frontend/custompackage/customtheme
 cp -R skin/frontend/rwd/default/scss skin/frontend/custompackage/customtheme
         <!-- cp skin/frontend/rwd/default/scss/config.rb skin/frontend/custompackage/customtheme --></pre>
@@ -369,10 +369,10 @@ cp -R skin/frontend/rwd/default/scss skin/frontend/custompackage/customtheme
             Watchers</a>.
         </li>
         <li>Using following commands:
-            <pre>cd <a href="#intro-convention">[your Magento install dir]</a><em>/custom-theme-dir</em>/scss
+            <pre>cd <a href="#intro-convention">[your Openmage install dir]</a><em>/custom-theme-dir</em>/scss
 compass watch .</pre>
-            For example, if Magento is installed in <tt>/var/www/html/magento</tt>, enter:
-            <pre>cd /var/www/html/magento/skin/frontend/custompackage/customtheme/scss
+            For example, if Openmage is installed in <tt>/var/www/html/openmage</tt>, enter:
+            <pre>cd /var/www/html/openmage/skin/frontend/custompackage/customtheme/scss
 compass watch .</pre>
         </li>
     </ul>
@@ -395,12 +395,12 @@ compass watch .</pre>
     </p>
     <pre>Nothing to compile. If you're trying to start a new project, you have left off the directory argument.</pre>
     <p>Enter the following commands to verify you have <tt>config.rb</tt> in the correct location:</p>
-    <pre>cd <a href="#intro-convention">[your Magento install dir]</a>
+    <pre>cd <a href="#intro-convention">[your Openmage install dir]</a>
 ls skin/frontend/custompackage/customtheme/scss</pre>
     <p>If there is no <tt>config.rb</tt> in that location, enter the following command:</p>
     <pre>cp skin/frontend/rwd/default/scss/config.rb skin/frontend/custompackage/customtheme/scss</pre>
     <p>Compass requires a <tt>config.rb</tt> file located in the directory from which you run this command. The sample
-        provided with Magento CE and EE follows:</p>
+        provided with Openmage CE and EE follows:</p>
         <pre><code>
 # note: this should never truly be referenced since we are using relative assets
 http_path = "/skin/frontend/rwd/default/"
@@ -416,10 +416,10 @@ environment = :production
     <p>After correcting the issue, try the <tt>compass watch</tt> commands discussed in <a href="#theme-compass">Step 3:
         Configuring a Compass Watcher</a>.</p>
 
-    <h3 id="theme-admin">Step 4: Configuring Magento to Load Your Theme</h3>
-    <p>This section discusses how to configure Magento to load your new theme.</p>
+    <h3 id="theme-admin">Step 4: Configuring Openmage to Load Your Theme</h3>
+    <p>This section discusses how to configure Openmage to load your new theme.</p>
     <ol>
-        <li>Log in to the Magento Admin Panel as an administrator.</li>
+        <li>Log in to the Openmage Admin Panel as an administrator.</li>
         <li>Click <strong>System</strong> > <strong>Configuration</strong> > GENERAL > <strong>Design</strong>.</li>
         <li>In the right pane, click <strong>Package</strong> to expand it.</li>
         <li>In the <strong>Current Package Name</strong> field, enter <tt>custompackage</tt></li>
@@ -436,13 +436,13 @@ environment = :production
             <ol>
                 <li>Click <strong>System</strong> > <strong>Configuration</strong> > <strong>Cache Management</strong>.
                 </li>
-                <li>At the top of the page, click <strong>Flush Magento Cache</strong>.</li>
+                <li>At the top of the page, click <strong>Flush Openmage Cache</strong>.</li>
             </ol>
         </li>
     </ol>
 
     <h3 id="theme-verify">Step 5: Verifying Your Custom Theme</h3>
-    <p>To verify that Magento loads your theme:</p>
+    <p>To verify that Openmage loads your theme:</p>
     <ol>
         <li>Navigate to your web store in a web browser.</li>
         <li>View the web page source.</li>
@@ -471,9 +471,9 @@ environment = :production
     <p><em>Description</em>: Most likely an issue with <tt>theme.xml</tt>. You can confirm this by viewing the page
         source and searching for <tt>styles.css</tt>. If <tt>styles.css</tt> is loading from a path similar to the
         following, <tt>theme.xml</tt> is most likely not loading.</p>
-    <pre>http://www.example.com/magento/skin/frontend/base/default/css/styles.css</pre>
+    <pre>http://www.example.com/openmage/skin/frontend/base/default/css/styles.css</pre>
     <p><em>Solution</em>: Enter the following command:</p>
-    <pre>cat <a href="#intro-convention">[your Magento install dir]</a>/app/design/frontend/custompackage/customtheme/etc/theme.xml</pre>
+    <pre>cat <a href="#intro-convention">[your Openmage install dir]</a>/app/design/frontend/custompackage/customtheme/etc/theme.xml</pre>
     <p>If the error <tt>No such file or directory</tt> displays, check your directory paths and create
         <tt>theme.xml</tt> as discussed in <a href="#theme-copyfiles">Step 2: Copying Files For Your Theme</a>.</p>
     <p>If you have a <tt>theme.xml</tt>, check to make sure it's configured <em>exactly</em> as shown <a
@@ -530,17 +530,17 @@ environment = :production
     <h3 id="customizing-theme-prelim">Basic Recommendations for Development</h3>
     <p>We recommend you do the following things when you start developing your responsive theme:</p>
     <ul>
-        <li>Edit <tt>[your Magento install dir]/skin/frontend/custompackage/customtheme/scss/config.rb</tt> to change
+        <li>Edit <tt>[your Openmage install dir]/skin/frontend/custompackage/customtheme/scss/config.rb</tt> to change
             <tt>environment = &#58;production</tt> to <tt>environment = &#58;development</tt>.<br/>
             For more information about this setting, see <a
                     href="http://compass-style.org/help/documentation/configuration-reference/" target="_blank">Compass
                 Configuration Reference</a>.
         </li>
-        <li>Disable the Magento cache as discussed in <a href="#disable-cache">Disabling Magento's Cache</a>.</li>
+        <li>Disable the Openmage cache as discussed in <a href="#disable-cache">Disabling Openmage's Cache</a>.</li>
     </ul>
 
     <h3 id="customizing-theme-sass-struct">Understanding the Sass Structure</h3>
-    <p>In previous versions of Magento, all CSS styles were grouped into a massive <tt>styles.css</tt> file that was
+    <p>In previous versions of Openmage, all CSS styles were grouped into a massive <tt>styles.css</tt> file that was
         cumbersome and difficult to navigate. The CSS in the responsive theme is organized into individual files
         referred to as <em>Sass partials</em>.</p>
     <p>When Compass compiles the Sass partials, the output is a set of CSS files that are loaded by the browser: <tt>styles-ie8.css</tt>
@@ -648,8 +648,8 @@ environment = :production
             other stylesheets. The files imported by <tt>framework.scss</tt> do not output any CSS on their own. Because
             of that, this file can be imported by other Sass files that are intended to compile directly to CSS
             files.<br/>
-            For example, in Magento EE, the <tt>skin/frontend/rwd/enterprise/scss/enterprise.scss</tt> file imports <tt>skin/frontend/rwd/default/scss/_framework.scss</tt>
-            so the Magento EE partials can use the common variables, mixins, and so on imported by
+            For example, in Openmage EE, the <tt>skin/frontend/rwd/enterprise/scss/enterprise.scss</tt> file imports <tt>skin/frontend/rwd/default/scss/_framework.scss</tt>
+            so the Openmage EE partials can use the common variables, mixins, and so on imported by
             <tt>framework.scss</tt>.
             <ul>
                 <li><tt>scss/_var.scss</tt>: Contains variables like breakpoints, spacing, colors, and font styles that
@@ -675,7 +675,7 @@ environment = :production
                     the one, two, or three column layouts.
                 </li>
                 <li><tt>scss/module/</tt>: Partials that contain styles grouped by module. While the correlation between
-                    these module files and Magento core modules is close, it is not a 1:1 relationship. For example, the
+                    these module files and Openmage core modules is close, it is not a 1:1 relationship. For example, the
                     <tt>_product-list.scss</tt> file contains styles for both the <tt>Mage_Catalog</tt> and <tt>Mage_CatalogSearch</tt>
                     modules.
                 </li>
@@ -689,7 +689,7 @@ environment = :production
     </ul>
 
     <h3 id="customze-theme-sass-partials">Adding Your Own Sass Partials</h3>
-    <p>To customize styles for an existing Magento theme, you should edit existing Sass partials. However, if you are
+    <p>To customize styles for an existing Openmage theme, you should edit existing Sass partials. However, if you are
         building a highly custom theme, you will likely want to create new partial files to contain styles for new
         functionality that you are introducing. Here is how to do that:</p>
     <ol>
@@ -764,16 +764,16 @@ $mq-fixed-value: 1024px;</pre>
         navigation.</p>
 
     <h3 id="customize-theme-images">Working With Images</h3>
-    <p>There are very few images in the responsive theme compared to the other Magento themes because CSS3 is used
+    <p>There are very few images in the responsive theme compared to the other Openmage themes because CSS3 is used
         whenever possible to accomplish a visual effect.</p>
 
     <h4 id="customize-theme-images-logo">Working With the Header Logo</h4>
     <p>The responsive theme enables you to specify two different logos: one optimized for small screens (narrower than
         770px) and the other for large screens. Place your two logo files in <tt>skin/frontend/custompackage/customtheme/images</tt>
-        and specify the path to both logos in the Magento Admin Panel:</p>
+        and specify the path to both logos in the Openmage Admin Panel:</p>
 
     <ol>
-        <li>Log in to the Magento Admin Panel as an administrator.</li>
+        <li>Log in to the Openmage Admin Panel as an administrator.</li>
         <li>Click <strong>System</strong> > <strong>Configuration</strong> > GENERAL > <strong>Design</strong>.</li>
         <li>In the right pane, click <strong>Header</strong> to expand it.</li>
         <li>In the <strong>Logo Image Src</strong> field, enter the path of your primary logo. For example: <tt>images/logo.png</tt>.
@@ -786,7 +786,7 @@ $mq-fixed-value: 1024px;</pre>
             <ol>
                 <li>Click <strong>System</strong> > <strong>Configuration</strong> > <strong>Cache Management</strong>.
                 </li>
-                <li>At the top of the page, click <strong>Flush Magento Cache</strong>.</li>
+                <li>At the top of the page, click <strong>Flush Openmage Cache</strong>.</li>
             </ol>
         </li>
     </ol>
@@ -815,7 +815,7 @@ $mq-fixed-value: 1024px;</pre>
             Used to determine whether images are fully loaded on the product detail page before activating zoom.
         </li>
         <li><a href="http://jquery.malsup.com/cycle2/" title="Cycle2 Documentation"
-               target="_blank">jquery.cycle2.min.js</a>: Powers the rotating banners on the homepage (requires Magento's
+               target="_blank">jquery.cycle2.min.js</a>: Powers the rotating banners on the homepage (requires Openmage's
             sample data). This library can be removed if you aren't using the sample data. If you want to implement
             slide shows, <a href="http://www.owlgraphic.com/owlcarousel" target="_blank">Owl Carousel</a> is recommended
             over Cycle2, as it has true swipe support and has more options.
@@ -840,7 +840,7 @@ $mq-fixed-value: 1024px;</pre>
     </ul>
 
     <h2 id="remove-sample-content">Removing Sample Data Assets</h2>
-    <p>The responsive theme includes several assets that are intended to power Magento's sample data. We recommend you
+    <p>The responsive theme includes several assets that are intended to power Openmage's sample data. We recommend you
         remove them before you build your custom theme.</p>
     <ol>
         <li>Remove the following files and directories:
@@ -933,7 +933,7 @@ scaffold-forms.scss
 _custom_core.scss
 _framework.scss</pre>
         </li>
-        <li>If you're familiar with Magento theme development and you did <em>not</em> already copy Sass partials, copy
+        <li>If you're familiar with Openmage theme development and you did <em>not</em> already copy Sass partials, copy
             <em>only</em> the Sass partials you want to override from <tt>rwd/default</tt> to <tt>skin/frontend/custompackage/customtheme/scss</tt>.
         </li>
     </ul>
@@ -974,11 +974,11 @@ add_import_path &quot;../../../rwd/default/scss&quot;</pre>
     </ol>
 
     <h3 id="scaffold-forms">Scaffold Forms</h3>
-    <p>The Magento responsive theme ships with <tt>skin/frontend/rwd/default/scss/scaffold-forms.scss</tt> that has
+    <p>The Openmage responsive theme ships with <tt>skin/frontend/rwd/default/scss/scaffold-forms.scss</tt> that has
         styles that cause the labels of long forms (for example, the Billing Information step of checkout) to display to
         the left of their associated input on larger viewports (as opposed to on top). This layout is intended to make
         long forms seem less intimidating to users.</p>
-    <p>However, these styles are not currently implemented because the Magento responsive theme must work well with
+    <p>However, these styles are not currently implemented because the Openmage responsive theme must work well with
         internationalization (where the length of labels can vary greatly, thereby impacting the scaffold form
         layout).</p>
     <p>It's up to you whether or not to use these styles. To do so, move <tt>skin/frontend/rwd/default/scss/scaffold-forms.scss</tt>
@@ -994,7 +994,7 @@ add_import_path &quot;../../../rwd/default/scss&quot;</pre>
     </span>
     </div>
 
-    <p>Magento does not resize the main product photo on product detail pages, so you must implement high-resolution
+    <p>Openmage does not resize the main product photo on product detail pages, so you must implement high-resolution
         support in your responsive theme. You must be careful with this if you have very large product photos because it
         could drastically impact performance.</p>
     <p>To constrain the size of your main product photo, open <tt>app/design/frontend/rwd/default/template/catalog/product/view/media.phtml</tt>
@@ -1005,10 +1005,10 @@ add_import_path &quot;../../../rwd/default/scss&quot;</pre>
 
     <h2 id="help">Getting Help With Your Theme</h2>
     <p>If you encounter issues building a custom responsive theme, you can post your question on the community <a
-            href="http://magento.stackexchange.com/questions/ask" target="_blank">magento.stackexchange.com</a> site and
+            href="http://openmage.stackexchange.com/questions/ask" target="_blank">openmage.stackexchange.com</a> site and
         tag it with <tt>rwd-theme</tt>.</p>
-    <p>To browse the list of questions, see <a href="http://magento.stackexchange.com/questions/tagged/rwd-theme"
-                                               target="_blank">http://magento.stackexchange.com/questions/tagged/rwd-theme</a>.
+    <p>To browse the list of questions, see <a href="http://openmage.stackexchange.com/questions/tagged/rwd-theme"
+                                               target="_blank">http://openmage.stackexchange.com/questions/tagged/rwd-theme</a>.
     </p>
 </div>
 </body>

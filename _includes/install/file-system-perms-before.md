@@ -1,15 +1,15 @@
 ## Set pre-installation file system ownership and permissions {#perms-over}
 
-This topic discusses how to set read-write permissions for the web server group before you install the Magento software. This is necessary so the Setup Wizard or command line can write files to the Magento file system.
+This topic discusses how to set read-write permissions for the web server group before you install the Openmage software. This is necessary so the Setup Wizard or command line can write files to the Openmage file system.
 
 The procedure you use is different, depending on whether you use [shared hosting](#perms-shared) and have one user or if you use a [private server](#perms-private) and have two users.
 
 {:.bs-callout .bs-callout-info}
-If you're using a Magento version*earlier than* 2.0.6, see [Appendix&mdash;Magento file system ownership and appendix (legacy)]({{ page.baseurl }}/install-gde/install/legacy-file-system-perms.html) instead.
+If you're using a Openmage version*earlier than* 2.0.6, see [Appendix&mdash;Openmage file system ownership and appendix (legacy)]({{ page.baseurl }}/install-gde/install/legacy-file-system-perms.html) instead.
 
 ## Set permissions for shared hosting (one user) {#perms-shared}
 
-This section discusses how to set pre-installation permissions if you log in to the Magento server as the same user that also runs the web server. This type of setup is common in shared hosting environments.
+This section discusses how to set pre-installation permissions if you log in to the Openmage server as the same user that also runs the web server. This type of setup is common in shared hosting environments.
 
 {% collapsible To set ownership and permissions for a one-user system: %}
 {% include install/file-system-perms-oneuser.md %}
@@ -23,7 +23,7 @@ This section discusses how to set ownership and permissions for your own server 
 {% include install/file-system-perms-twouser.md %}
 {% endcollapsible %}
 
-## Switch to the Magento file system owner {#install-update-depend-user-switch}
+## Switch to the Openmage file system owner {#install-update-depend-user-switch}
 
 After you've performed the other tasks in this topic, enter one of the following commands to switch to that user:
 
@@ -32,4 +32,4 @@ After you've performed the other tasks in this topic, enter one of the following
 
 For example,
 
-	su magento_user
+	su openmage_user

@@ -1,4 +1,4 @@
-## Step 2: Add a Database   {#instgde-install-magento-web-step2}
+## Step 2: Add a Database   {#instgde-install-openmage-web-step2}
 
 1.	Enter the following information:
 
@@ -14,22 +14,22 @@
 	</tr>
 	<tr>
 		<td>Database Server Username</td>
-		<td>Enter the username of the Magento database instance owner.</td>
+		<td>Enter the username of the Openmage database instance owner.</td>
 	</tr>
 	<tr>
 		<td>Database Server Password</td>
-		<td>Enter the Magento database user's password, if any. Leave this field blank if you did not configure a password.</td>
+		<td>Enter the Openmage database user's password, if any. Leave this field blank if you did not configure a password.</td>
 	</tr>
 	<tr>
 		<td>Database Name</td>
-		<td>Enter the Magento database instance name.</td>
+		<td>Enter the Openmage database instance name.</td>
 	</tr>
 	<tr>
 		<td>Table prefix</td>
-		<td><p>Use only if you're installing the Magento database tables in a database instance that has Magento tables in it already.</p>
-		<p>In that case, use a prefix to identify the Magento tables for this installation. Some customers have more than one Magento instance running on a server with all tables in the same database.</p>
+		<td><p>Use only if you're installing the Openmage database tables in a database instance that has Openmage tables in it already.</p>
+		<p>In that case, use a prefix to identify the Openmage tables for this installation. Some customers have more than one Openmage instance running on a server with all tables in the same database.</p>
 		<p>The prefix can be a maximum of five characters in length. It must begin with a letter and can include only letters, numbers, and underscore characters.</p>
-		<p>This option enables those customers to share the database server with more than one Magento installation.</p></td>
+		<p>This option enables those customers to share the database server with more than one Openmage installation.</p></td>
 	</tr>
 	</tbody>
 	</table>

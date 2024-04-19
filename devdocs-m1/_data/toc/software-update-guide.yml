@@ -1,7 +1,7 @@
 label: Software Update Guide
 pages:
 
-    - label: Upgrade the Magento application and modules
+    - label: Upgrade the Openmage application and modules
       url: /comp-mgr/bk-compman-upgrade-guide.html
 
     - label: Prerequisites
@@ -21,7 +21,7 @@ pages:
         - label: Update and upgrade checklist
           url: /comp-mgr/prereq/prereq_compman-checklist.html
 
-    - label: Magento Marketplace example
+    - label: Openmage Marketplace example
       url: /comp-mgr/marketplace/marketplace.html
 
     - label: Run the Component Manager
@@ -123,7 +123,7 @@ pages:
           url: /comp-mgr/install-extensions/b2b-installation.html
           exclude_versions: ["2.1"]
 
-    - label: Upgrade from Magento Open Source to Magento Commerce
+    - label: Upgrade from Openmage Open Source to Openmage Commerce
       url: /comp-mgr/upgrader/ce-ee-upgrade-start.html
 
     - label: Command-line upgrade
@@ -201,8 +201,8 @@ pages:
         - label: Troubleshoot backups
           url: /comp-mgr/trouble/cman/tshoot_backup.html
 
-        - label: Error upgrading from Magento Open Source to Magento Commerce
+        - label: Error upgrading from Openmage Open Source to Openmage Commerce
           url: /comp-mgr/trouble/cman/ce-ee-upgrade.html
 
-        - label: magento/theme-doc-blank failure
+        - label: openmage/theme-doc-blank failure
           url: /comp-mgr/trouble/cman/doc.html

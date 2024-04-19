@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/common/css/stylesheet-fonts.css" type="text/css" charset="utf-8">
     <link rel="icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
-    <title>Magento Enterprise Edition (EE) 1.13 Benchmarking Guide</title>
+    <title>Openmage Enterprise Edition (EE) 1.13 Benchmarking Guide</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 <img src="{{ site.baseurl }}/guides/m1x/images/m1xheader.png" width="1024" alt="header"/>
 {% include m1x/eol_message.html %}
 <div id="content">
-    <h1>Magento Enterprise Edition (EE) 1.13 Benchmarking Guide</h1>
+    <h1>Openmage Enterprise Edition (EE) 1.13 Benchmarking Guide</h1>
 
     <!--TableOfContents:Begin-->
     <div class="toc"><h4 class="toc">Contents</h4>
@@ -35,21 +35,21 @@
     <h3><!--TableOfContentsAnchor:Begin--><a name="Section_1"></a><!--TableOfContentsAnchor:End-->Customer Needs and
         Expectations</h3>
 
-    <p>The focus of the Magento Enterprise Edition 1.13 release is performance and scalability. The benchmarking results
+    <p>The focus of the Openmage Enterprise Edition 1.13 release is performance and scalability. The benchmarking results
         presented here demonstrate that we have addressed the following concerns:</p>
 
     <ol>
         <li>The eCommerce landscape is changing, and merchants must provide customers with an online shopping experience
             that meets their performance expectations
         </li>
-        <li>As merchants grow their businesses and increasingly larger enterprise merchants are adopting Magento,
-            Magento Enterprise Edition must scale to handle increased traffic volume and larger catalogs
+        <li>As merchants grow their businesses and increasingly larger enterprise merchants are adopting Openmage,
+            Openmage Enterprise Edition must scale to handle increased traffic volume and larger catalogs
         </li>
     </ol>
 
-    <h3><!--TableOfContentsAnchor:Begin--><a name="Section_1.1"></a><!--TableOfContentsAnchor:End-->Magento's Plan</h3>
+    <h3><!--TableOfContentsAnchor:Begin--><a name="Section_1.1"></a><!--TableOfContentsAnchor:End-->Openmage's Plan</h3>
 
-    <p>We identified the following areas for enhancement in Magento Enterprise Edition 1.13:</p>
+    <p>We identified the following areas for enhancement in Openmage Enterprise Edition 1.13:</p>
 
     <ul>
         <li>Improve indexing for catalogs of all sizes</li>
@@ -59,13 +59,13 @@
         <li>Enable merchants to serve heavier traffic volume without need to purchase additional hardware</li>
     </ul>
 
-    <h3><!--TableOfContentsAnchor:Begin--><a name="Section_1.2"></a><!--TableOfContentsAnchor:End-->What Magento
+    <h3><!--TableOfContentsAnchor:Begin--><a name="Section_1.2"></a><!--TableOfContentsAnchor:End-->What Openmage
         Accomplished</h3>
 
-    <p>Magento Enterprise Edition 1.13 delivers the following improvements over Magento Enterprise Edition 1.12:</p>
+    <p>Openmage Enterprise Edition 1.13 delivers the following improvements over Openmage Enterprise Edition 1.12:</p>
 
     <ul>
-        <li>Incremental re-indexing has been introduced with Magento Enterprise Edition 1.13, and scenarios where
+        <li>Incremental re-indexing has been introduced with Openmage Enterprise Edition 1.13, and scenarios where
             full-re-indexing was required have been limited. This means that operations that previously took hours can
             now be completed in minutes
         </li>
@@ -75,10 +75,10 @@
     </ul>
 
     <ul>
-        <li>33% improvement in orders per day that can be processed on the same hardware configuration as Magento
+        <li>33% improvement in orders per day that can be processed on the same hardware configuration as Openmage
             Enterprise Edition 1.12
         </li>
-        <li>31% improvement in page views per day supported on the same hardware configuration on Magento Enterprise
+        <li>31% improvement in page views per day supported on the same hardware configuration on Openmage Enterprise
             Edition 1.12
         </li>
     </ul>
@@ -88,11 +88,11 @@
 
     <p>Before we introduce you to the benchmarks, an overview of our multi-node benchmarking facility is in order. We
         started with a basic multi-node cluster with load balancer and caching and separate DB node, and installed
-        Apache. This is a familiar hardware configuration for the Magento developer community. Once provisioned, we
-        installed both Magento Enterprise Edition 1.13 and Magento Enterprise Edition 1.12 on the cluster to compare
+        Apache. This is a familiar hardware configuration for the Openmage developer community. Once provisioned, we
+        installed both Openmage Enterprise Edition 1.13 and Openmage Enterprise Edition 1.12 on the cluster to compare
         their performance.</p>
 
-    <p>This is a representation of the multi-node Magento Enterprise Edition 1.12/1.13 installation used for performance
+    <p>This is a representation of the multi-node Openmage Enterprise Edition 1.12/1.13 installation used for performance
         testing. It consists of four physical nodes, three of which are virtualized.</p>
 
     <figure>
@@ -171,24 +171,24 @@
     <h2><!--TableOfContentsAnchor:Begin--><a name="Section_4"></a><!--TableOfContentsAnchor:End-->Benchmarking Results
     </h2>
 
-    <p>These benchmarks were generated during extensive testing of our multi-node configuration running Magento
+    <p>These benchmarks were generated during extensive testing of our multi-node configuration running Openmage
         Enterprise Edition 1.13 described above. Our configuration was modeled after what a commercial hosting partner
-        would put into production, and the results reflect accurate gains over Magento Enterprise Edition 1.12.</p>
+        would put into production, and the results reflect accurate gains over Openmage Enterprise Edition 1.12.</p>
 
     <p>The duration of the test sessions is 72 seconds, which significantly stresses the multi-node configuration.</p>
 
     <h3><!--TableOfContentsAnchor:Begin--><a name="Section_4.1"></a><!--TableOfContentsAnchor:End-->Incremental
         Re-indexing</h3>
 
-    <p>In Magento Enterprise Edition 1.12, any change to a product would result in a full re-index. Magento Enterprise
+    <p>In Openmage Enterprise Edition 1.12, any change to a product would result in a full re-index. Openmage Enterprise
         Edition 1.13 introduces a new feature--incremental re-indexing. With incremental re-indexing, only those items
         that were changed or added will be re-indexed, reducing the processing time to a fraction of what was required
         before.</p>
 
-    <p>Take the example of a merchant with a catalog containing 500,000 products. In Magento Enterprise Edition 1.12,
-        any change to a product would result in a full re-index operation. In Magento Enterprise Edition 1.13,
+    <p>Take the example of a merchant with a catalog containing 500,000 products. In Openmage Enterprise Edition 1.12,
+        any change to a product would result in a full re-index operation. In Openmage Enterprise Edition 1.13,
         incremental re-indexing means the merchant will only re-index items that were changed. The test focused on
-        measuring the improvements provided by the incremental re-indexing feature in Magento Enterprise Edition 1.13.
+        measuring the improvements provided by the incremental re-indexing feature in Openmage Enterprise Edition 1.13.
         The table below compares improvements to common admin actions, such as changing a product description, prices or
         inventory. </p>
 
@@ -199,8 +199,8 @@
     <h3><!--TableOfContentsAnchor:Begin--><a name="Section_4.2"></a><!--TableOfContentsAnchor:End-->Full Re-indexing
     </h3>
 
-    <p>As part of the benchmarking effort, we also measured the improvements in the full re-indexing feature on Magento
-        Enterprise Edition 1.13, where indexing a 500,000-item catalog was 53% faster than Magento Enterprise Edition
+    <p>As part of the benchmarking effort, we also measured the improvements in the full re-indexing feature on Openmage
+        Enterprise Edition 1.13, where indexing a 500,000-item catalog was 53% faster than Openmage Enterprise Edition
         1.12. Faster re-indexing means less load on the system and that changes to the catalog propagate faster to the
         storefront.</p>
 
@@ -218,21 +218,21 @@
     <h3><!--TableOfContentsAnchor:Begin--><a name="Section_4.3"></a><!--TableOfContentsAnchor:End-->Individual
         Re-indexers</h3>
 
-    <p>The Magento Enterprise Edition 1.13 indexer component contains a number of individual indexers such as Product
-        Flat Data and Product Price. When a Magento admin changes the price of a product, it is only necessary to
+    <p>The Openmage Enterprise Edition 1.13 indexer component contains a number of individual indexers such as Product
+        Flat Data and Product Price. When a Openmage admin changes the price of a product, it is only necessary to
         execute the Product Price indexer for pricing changes to propagate to the frontend. The completion times of
-        these individual indexers were measured in the benchmark environment for Magento Enterprise Edition 1.13 and
-        Magento Enterprise Edition 1.12.</p>
+        these individual indexers were measured in the benchmark environment for Openmage Enterprise Edition 1.13 and
+        Openmage Enterprise Edition 1.12.</p>
 
-    <p>This section presents the results for full re-index completion times for the individual indexers in Magento
-        Enterprise Edition 1.13 compared to Magento Enterprise Edition 1.12.</p>
+    <p>This section presents the results for full re-index completion times for the individual indexers in Openmage
+        Enterprise Edition 1.13 compared to Openmage Enterprise Edition 1.12.</p>
 
     <figure>
         <img src="{{ site.baseurl }}/guides/m1x/images/2183-1.13_Benchmark_Report_Individual_Reindexing_r1v1.png">
     </figure>
 
     <ul>
-        <li>URL Rewrite failed to run in Magento Enterprise Edition 1.12 but takes only 0.15 sec in Magento Enterprise
+        <li>URL Rewrite failed to run in Openmage Enterprise Edition 1.12 but takes only 0.15 sec in Openmage Enterprise
             Edition 1.13
         </li>
         <li>Catalog description: 500,000 products, 2000 categories, one storefront</li>
@@ -240,8 +240,8 @@
 
     <h3><!--TableOfContentsAnchor:Begin--><a name="Section_4.4"></a><!--TableOfContentsAnchor:End-->Page Load Times</h3>
 
-    <p>When Magento Enterprise Edition 1.12 and Magento Enterprise Edition 1.13 were compared, with both running on our
-        multi-node benchmarking configuration, Magento Enterprise Edition 1.13 loaded pages 65% faster than Magento
+    <p>When Openmage Enterprise Edition 1.12 and Openmage Enterprise Edition 1.13 were compared, with both running on our
+        multi-node benchmarking configuration, Openmage Enterprise Edition 1.13 loaded pages 65% faster than Openmage
         Enterprise Edition 1.12.</p>
 
     <p>Guest checkout and registered user checkout are two flows that are crucial to storefront operation. This section
@@ -250,7 +250,7 @@
     <h4><!--TableOfContentsAnchor:Begin--><a name="Section_4.4.1"></a><!--TableOfContentsAnchor:End-->Guest Checkout
         Flow Page Load Times</h4>
 
-    <p>In the guest checkout flow pages, Magento Enterprise Edition 1.13 provides a substantial decrease in load times
+    <p>In the guest checkout flow pages, Openmage Enterprise Edition 1.13 provides a substantial decrease in load times
         over its predecessor, most of the time more than twice as fast.</p>
 
     <figure>
@@ -273,8 +273,8 @@
         page views per day and orders per day.</p>
 
     <p>During our testing, which simulated a storefront running at peak hours, EE 1.13 executed 33% more orders and 31%
-        more page views than Magento Enterprise Edition 1.12 on the multi-node benchmarking configuration. Notably,
-        Magento Enterprise Edition 1.13 served 47K pages during the test run (10 minutes).</p>
+        more page views than Openmage Enterprise Edition 1.12 on the multi-node benchmarking configuration. Notably,
+        Openmage Enterprise Edition 1.13 served 47K pages during the test run (10 minutes).</p>
 
     <figure>
         <img src="{{ site.baseurl }}/guides/m1x/images/2186-1.13_Benchmark_Report_Page_Views_r2v1.png">
@@ -304,7 +304,7 @@
 
     <h2><!--TableOfContentsAnchor:Begin--><a name="Section_5"></a><!--TableOfContentsAnchor:End-->Conclusion</h2>
 
-    <p>Magento Enterprise Edition 1.13 was engineered for performance--and clearly delivers on the goal as measured by
+    <p>Openmage Enterprise Edition 1.13 was engineered for performance--and clearly delivers on the goal as measured by
         important metrics. </p>
 
     <ul>
@@ -316,7 +316,7 @@
             checkout can significantly improve your customers’ shopping experience and customer satisfaction, and
             potentially improve your conversion rate.
         </li>
-        <li>Faster page load times means Magento Enterprise Edition 1.13 can support more page views per day and more
+        <li>Faster page load times means Openmage Enterprise Edition 1.13 can support more page views per day and more
             orders per day, potentially increasing your conversion rate.
         </li>
     </ul>
@@ -330,7 +330,7 @@
 
     This benchmark report presented analysis of the results produced by the Gatling load generator tool. In this
     appendix, you can see the actual results reported by Gatling. The results were obtained under the following test
-    setup, which was designed to push Magento to its limit.
+    setup, which was designed to push Openmage to its limit.
 
     <hr>
     <table>
@@ -354,7 +354,7 @@
     <hr>
 
     CPU utilization is high because session duration was set to 72 seconds for the test. Session duration was set to a
-    low value to increase the active load on Magento. A typical e-commerce site will see session durations of five
+    low value to increase the active load on Openmage. A typical e-commerce site will see session durations of five
     minutes or more. Preliminary experiments by the benchmark team have confirmed that using a five-minute session
     duration reduces the CPU utilization to 50-60%.
 
@@ -364,7 +364,7 @@
             <td></td>
         </tr>
         <tr>
-            <td><strong>Magento EE v1.13</strong></td>
+            <td><strong>Openmage EE v1.13</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -784,7 +784,7 @@
             <td></td>
         </tr>
         <tr>
-            <td><strong>Magento EE v1.12</strong></td>
+            <td><strong>Openmage EE v1.12</strong></td>
             <td></td>
             <td></td>
             <td></td>

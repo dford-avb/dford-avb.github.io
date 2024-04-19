@@ -1,6 +1,6 @@
 ---
 layout: m1x_rest
-title: Introduction to the Magento 1.x REST API
+title: Introduction to the Openmage 1.x REST API
 ---
 
 
@@ -60,12 +60,12 @@ title: Introduction to the Magento 1.x REST API
     and receive responses. The interaction is performed via the HTTP protocol. An advantage of such an approach is the
     wide usage of HTTP. That is why REST API can be used practically for any programming language.</p>
 
-<p>Common characteristics of Magento REST API resources are as follows: (<b>magentohost</b> is your domain)</p>
+<p>Common characteristics of Openmage REST API resources are as follows: (<b>openmagehost</b> is your domain)</p>
 
 <ul>
-    <li>You access the resource by sending an HTTP request to the Magento API server. The server replies with a response
+    <li>You access the resource by sending an HTTP request to the Openmage API server. The server replies with a response
         that contains either the data you requested, or the status indicator, or even both.</li>
-    <li>All resources are located at <a href="https://magentohost/api/rest/">https://magentohost/api/rest/</a>.</li>
+    <li>All resources are located at <a href="https://openmagehost/api/rest/">https://openmagehost/api/rest/</a>.</li>
     <li>All resources may return different HTTP status codes (e.g., HTTP Status Code 200 for success response or HTTP
         Status Code 400 for the bad request).</li>
     <li>You request a particular resource by adding a particular path to the base URL that specifies the resource.</li>
@@ -74,7 +74,7 @@ title: Introduction to the Magento 1.x REST API
 
 <h3><a name="RESTAPIIntroduction-OverallCapabilities"></a>Overall Capabilities</h3>
 
-<p>Magento REST API allows managing a number of features, namely:</p>
+<p>Openmage REST API allows managing a number of features, namely:</p>
 
 <ul>
     <li>Managing customers.</li>
@@ -88,8 +88,8 @@ title: Introduction to the Magento 1.x REST API
 
 <h3><a name="RESTAPIIntroduction-Authentication"></a>Authentication</h3>
 
-<p>Magento REST API uses 3-legged <a href="http://tools.ietf.org/html/rfc5849">OAuth 1.0a</a> protocol to authenticate
-    the application to access the Magento service.</p>
+<p>Openmage REST API uses 3-legged <a href="http://tools.ietf.org/html/rfc5849">OAuth 1.0a</a> protocol to authenticate
+    the application to access the Openmage service.</p>
 
 
 <h3><a name="RESTAPIIntroduction-OutputFormats"></a>Output Formats</h3>
@@ -98,7 +98,7 @@ title: Introduction to the Magento 1.x REST API
 
 <h3><a name="RESTAPIIntroduction-HTTPVerbs"></a>HTTP Verbs</h3>
 
-<p>HTTP verbs are used to manage the state of resources. In Magento REST API, there are four verbs used to manage
+<p>HTTP verbs are used to manage the state of resources. In Openmage REST API, there are four verbs used to manage
     resources: GET, POST, PUT, and DELETE. You can get the contents of the data using HTTP GET, delete the data using
     HTTP DELETE, and create or update the data using POST/PUT.</p>
 
@@ -106,38 +106,38 @@ title: Introduction to the Magento 1.x REST API
 
 <p>All URLs in REST API have the following base URL.&nbsp;</p>
 
-<p>http://magentohost/api/rest/</p>
+<p>http://openmagehost/api/rest/</p>
 
 
 <p><b>Example</b></p>
 
-<p>Supposing, you want to retrieve the list of customers from Magento. To do this, you need to use the GET HTTP method.
+<p>Supposing, you want to retrieve the list of customers from Openmage. To do this, you need to use the GET HTTP method.
     The GET request to retrieve the list of customers will look as follows:</p>
 
 <div class="panel" style="border-width: 1px;">
     <div class="panelContent">
-        <p>http://magentohost/api/rest/customers</p>
+        <p>http://openmagehost/api/rest/customers</p>
     </div>
 </div>
 
 <p>where</p>
 
 <ul>
-    <li>http://magentohost/api/rest/ &#45; endpoint</li>
+    <li>http://openmagehost/api/rest/ &#45; endpoint</li>
     <li>/customers - action URL</li>
 </ul>
 
 
 <h3><a name="RESTAPIIntroduction-RESTResources"></a>REST Resources</h3>
 
-<p>The Magento REST API allows you to manage customers, customer addresses, sales orders, inventory, and products. REST
+<p>The Openmage REST API allows you to manage customers, customer addresses, sales orders, inventory, and products. REST
     API is organized into the following categories:</p>
 
 <h5><a name="RESTAPIIntroduction-Products"></a>Products</h5>
 
 <ul>
     <li>Retrieve the list of products, create, update, and delete a product.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/products</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/products</li>
 </ul>
 
 
@@ -146,7 +146,7 @@ title: Introduction to the Magento 1.x REST API
 <ul>
     <li>Retrieve the list of categories assigned to a product, assign, and unassign the category to/from the specific
         product.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/products/:productId/categories</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/products/:productId/categories</li>
 </ul>
 
 
@@ -155,7 +155,7 @@ title: Introduction to the Magento 1.x REST API
 <ul>
     <li>Retrieve the list of images assigned to a product, add, update, and remove an image to/from the specific
         product.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/products/:productId/images</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/products/:productId/images</li>
 </ul>
 
 
@@ -164,7 +164,7 @@ title: Introduction to the Magento 1.x REST API
 <ul>
     <li>Retrieve the list of websites assigned to a product, assign, and unassign a website to/from the specific
         product.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/products/:productId/websites</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/products/:productId/websites</li>
 </ul>
 
 
@@ -172,7 +172,7 @@ title: Introduction to the Magento 1.x REST API
 
 <ul>
     <li>Retrieve the list of customers, create, delete a customer, and update the customer information.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/customers</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/customers</li>
 </ul>
 
 
@@ -180,7 +180,7 @@ title: Introduction to the Magento 1.x REST API
 
 <ul>
     <li>Retrieve the list of customer addresses, create, update, and delete the customer address.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/customers/:customerId/addresses</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/customers/:customerId/addresses</li>
 </ul>
 
 
@@ -188,7 +188,7 @@ title: Introduction to the Magento 1.x REST API
 
 <ul>
     <li>Retrieve the list of stock items and update required stock items.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/stockitems</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/stockitems</li>
 </ul>
 
 
@@ -196,7 +196,7 @@ title: Introduction to the Magento 1.x REST API
 
 <ul>
     <li>Retrieve the list of sales orders as well as the specific order information.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/orders</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/orders</li>
 </ul>
 
 
@@ -204,7 +204,7 @@ title: Introduction to the Magento 1.x REST API
 
 <ul>
     <li>Retrieve order items for the specific order.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/orders/:orderId/items</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/orders/:orderId/items</li>
 </ul>
 
 
@@ -212,7 +212,7 @@ title: Introduction to the Magento 1.x REST API
 
 <ul>
     <li>Retrieve information on order billing and shipping addresses for the specific order.<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/orders/:orderid/addresses</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/orders/:orderid/addresses</li>
 </ul>
 
 
@@ -220,7 +220,7 @@ title: Introduction to the Magento 1.x REST API
 
 <ul>
     <li>Retrieve order comments for the specific order<br />
-        <b>Resource Structure</b>: http://magentohost/api/rest/orders/:orderid/comments</li>
+        <b>Resource Structure</b>: http://openmagehost/api/rest/orders/:orderid/comments</li>
 </ul>
 
 
@@ -229,8 +229,8 @@ title: Introduction to the Magento 1.x REST API
 <p>These steps are required for utilizing REST API resources:</p>
 
 <ol>
-    <li>Set up permissions for REST resource operations from Magento Admin Panel.</li>
-    <li>Configure the attributes for different users types in Magento Admin Panel. There are 3 different types of users
+    <li>Set up permissions for REST resource operations from Openmage Admin Panel.</li>
+    <li>Configure the attributes for different users types in Openmage Admin Panel. There are 3 different types of users
         in accessing the data: Admin, Customer, and Guest. Admin is the backend logged in user, Customer is the fronted
         logged in user, and Guest is a non-logged in fronted user.</li>
 </ol>
@@ -240,8 +240,8 @@ title: Introduction to the Magento 1.x REST API
     Application</h3>
 
 <ol>
-    <li>Register the third-party application (Consumer) in Magento Admin Panel.</li>
-    <li>The third-party application will utilize the provided consumer credentials to call Magento store for getting the
+    <li>Register the third-party application (Consumer) in Openmage Admin Panel.</li>
+    <li>The third-party application will utilize the provided consumer credentials to call Openmage store for getting the
         access token to access the data.</li>
 </ol>
 
@@ -260,23 +260,23 @@ title: Introduction to the Magento 1.x REST API
         <div>
             <pre class="theme: Default; brush: php; gutter: false">&lt;?php
 /**
-* Example of simple product POST using Admin account via Magento REST API. OAuth authorization is used.
+* Example of simple product POST using Admin account via Openmage REST API. OAuth authorization is used.
 * 
 * This file is a stand-alone OAuth client PHP file, which handles everything with the OAuth three-legged authentication. 
 * It uses PHP session to persist the current authentication state (step), the OAuth request token with its secret 
 * and the OAuth access token with its secret. 
 * 
-* Create this file oauth_admin.php in your Magento 1.x instance root folder to run this oauth authentication example.         
+* Create this file oauth_admin.php in your Openmage 1.x instance root folder to run this oauth authentication example.         
 * 
 * oauth_admin.php
 * 
 */
 
 $callbackUrl = "http://yourhost/oauth_admin.php";
-$temporaryCredentialsRequestUrl = "http://magentohost/oauth/initiate?oauth_callback=" . urlencode($callbackUrl);
-$adminAuthorizationUrl = 'http://magentohost/admin/oauth_authorize';
-$accessTokenRequestUrl = 'http://magentohost/oauth/token';
-$apiUrl = 'http://magentohost/api/rest';
+$temporaryCredentialsRequestUrl = "http://openmagehost/oauth/initiate?oauth_callback=" . urlencode($callbackUrl);
+$adminAuthorizationUrl = 'http://openmagehost/admin/oauth_authorize';
+$accessTokenRequestUrl = 'http://openmagehost/oauth/token';
+$apiUrl = 'http://openmagehost/api/rest';
 $consumerKey = 'yourconsumerkey';
 $consumerSecret = 'yourconsumersecret';
 
@@ -351,22 +351,22 @@ try {
         <div>
             <pre class="theme: Default; brush: php; gutter: false">&lt;?php
 /**
-* Example of products list retrieve using Customer account via Magento REST API. OAuth authorization is used
+* Example of products list retrieve using Customer account via Openmage REST API. OAuth authorization is used
 * 
 * This file is a stand-alone Oauth client PHP file, which handles everything with the Oauth three-legged authentication. 
 * It uses PHP session to persist the current authentication state (step), the oauth request token with its secret 
 * and the oauth access token with its secret. 
 * 
-* Create this file oauth_customer in your Magento 1.x instance root folder to run this oauth authentication example.         
+* Create this file oauth_customer in your Openmage 1.x instance root folder to run this oauth authentication example.         
 * 
 * oauth_customer.php
 * 
 */ 
 $callbackUrl = "http://yourhost/oauth_customer.php";
-$temporaryCredentialsRequestUrl = "http://magentohost/oauth/initiate?oauth_callback=" . urlencode($callbackUrl);
-$adminAuthorizationUrl = 'http://magentohost/oauth/authorize';
-$accessTokenRequestUrl = 'http://magentohost/oauth/token';
-$apiUrl = 'http://magentohost/api/rest';
+$temporaryCredentialsRequestUrl = "http://openmagehost/oauth/initiate?oauth_callback=" . urlencode($callbackUrl);
+$adminAuthorizationUrl = 'http://openmagehost/oauth/authorize';
+$accessTokenRequestUrl = 'http://openmagehost/oauth/token';
+$apiUrl = 'http://openmagehost/api/rest';
 $consumerKey = 'yourconsumerkey';
 $consumerSecret = 'yourconsumersecret';
 
@@ -426,7 +426,7 @@ try {
 <ol>
     <li>Use the <a href="https://addons.mozilla.org/en-US/firefox/addon/restclient/">REST Client</a> that is a Firefox
         add-on. In the REST Client, in the <b>Method</b> drop-down list, select the <b>GET</b> option.</li>
-    <li>In the URL field, enter the following URL: http://magentohost/api/rest/products?limit=2.</li>
+    <li>In the URL field, enter the following URL: http://openmagehost/api/rest/products?limit=2.</li>
     <li>Click <b>Send</b>. Information about the products will be displayed in the response body. Example in the XML
         format is as follows:</li>
 </ol>
@@ -437,7 +437,7 @@ try {
     <div class="codeContent panelContent">
         <div>
             <pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;entity_id&gt;16&lt;/entity_id&gt;
     &lt;type_id&gt;simple&lt;/type_id&gt;
@@ -456,7 +456,7 @@ Compact and stylish, the 2610 features a candybar design sporting a bright 128 x
     &lt;final_price_with_tax&gt;149.99&lt;/final_price_with_tax&gt;
     &lt;final_price_without_tax&gt;149.99&lt;/final_price_without_tax&gt;
     &lt;is_saleable&gt;1&lt;/is_saleable&gt;
-    &lt;image_url&gt;http://magentohost/imageulr/nokia.jpg&lt;/image_url&gt;
+    &lt;image_url&gt;http://openmagehost/imageulr/nokia.jpg&lt;/image_url&gt;
   &lt;/data_item&gt;
   &lt;data_item&gt;
     &lt;entity_id&gt;17&lt;/entity_id&gt;
@@ -474,9 +474,9 @@ The BlackBerry 8100 Pearl sports a large 240 x 260 screen that supports over 65,
     &lt;final_price_with_tax&gt;349.99&lt;/final_price_with_tax&gt;
     &lt;final_price_without_tax&gt;349.99&lt;/final_price_without_tax&gt;
     &lt;is_saleable&gt;1&lt;/is_saleable&gt;
-    &lt;image_url&gt;http://magentohost/imageulr/blackberry.jpg&lt;/image_url&gt;
+    &lt;image_url&gt;http://openmagehost/imageulr/blackberry.jpg&lt;/image_url&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
         </div>
     </div>
 </div>
@@ -489,7 +489,7 @@ The BlackBerry 8100 Pearl sports a large 240 x 260 screen that supports over 65,
 
 <div class="panel" style="border-width: 1px;">
     <div class="panelContent">
-        <p>http://magentohost/api/rest/products?page=2&amp;limit=20</p>
+        <p>http://openmagehost/api/rest/products?page=2&amp;limit=20</p>
     </div>
 </div>
 

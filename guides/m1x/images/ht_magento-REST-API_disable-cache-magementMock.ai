@@ -8,7 +8,7 @@
          <dc:format>application/pdf</dc:format>
          <dc:title>
             <rdf:Alt>
-               <rdf:li xml:lang="x-default">ht_magento-REST-API_disable-cache-magementMock</rdf:li>
+               <rdf:li xml:lang="x-default">ht_openmage-REST-API_disable-cache-magementMock</rdf:li>
             </rdf:Alt>
          </dc:title>
       </rdf:Description>
@@ -61,7 +61,7 @@
                <rdf:li rdf:parseType="Resource">
                   <stMfs:linkForm>EmbedByReference</stMfs:linkForm>
                   <stMfs:reference rdf:parseType="Resource">
-                     <stRef:filePath>C:\subversion\dev-docs\Magento\images\cache_management.png</stRef:filePath>
+                     <stRef:filePath>C:\subversion\dev-docs\Openmage\images\cache_management.png</stRef:filePath>
                   </stMfs:reference>
                </rdf:li>
             </rdf:Seq>
@@ -2219,7 +2219,7 @@ endstreamendobj5 0 obj<</Intent 18 0 R/Name(Background)/Type/OCG/Usage 19 0 R
 %%BoundingBox: -207 -436 856 -210
 %%HiResBoundingBox: -207 -435.7217 855.6172 -210
 %%DocumentProcessColors: Cyan Magenta Yellow Black
-%%DocumentFiles:C:\subversion\dev-docs\Magento\images\cache_management.png
+%%DocumentFiles:C:\subversion\dev-docs\Openmage\images\cache_management.png
 %AI5_FileFormat 11.0
 %AI12_BuildNumber: 399
 %AI3_ColorUsage: Color
@@ -4558,7 +4558,7 @@ u]å,şò&ŞÛb#ûËo;¿VOÃk™ºU?–\¥z¸,„òk“¥_ÒÕü,Ó}™K£Ä»i”×Yòo"Uü¤¥G»’oñ“Ï0¦i
 ?¨tÌù¨P»rê¸ÿbYğh´gf8›Q•öivĞ ÁT6×‹‹ë0ãõ‡¸P¸Ç?şî‚Òõ‚—Ö©ª¹ªõT{#:î%Í§Ê#‡Çm§ z$´£•^e¡å)—¯JìâÔY4@fåÓ|­9á_
 HÍ?Ì›Œ»ÌMv¶Êâ«CQ<Ûÿ L¥?hĞ×ğNĞóİÉ¤†öd*JÚeaóİwFğ‡¸€Ä_ß¨ Ù±¹uÏó¹€OÌƒgíö¦â”6út5Õ2V\oØÜ„íûm¥ûó·\,¶óRÕÕ‹¢7%ë‚œ4{<Âß‘9Ê‡ák†%Ğ¹8£ûø†9‹3‹vØy6ï å’bDµl§Lú,>!åÚX£Ú ö ŒRîéõ¢\/	şğÏ	J5JîuÇ§Ó…®VP\ì±û\«6UvMo»PĞ6;Öp~–©üà)qŸˆ’Tú£Ze9÷&§3ëkptvjw	æR«pô†dÊËçÒpÈîìM!±17%!+(^Ô·"F.ñÈaF®†ìÇçÂÆÿx•öó~Á$ãxØ—nn»Ä^¿§õ~¾ŒemæëÉª¾‘I÷$]£Äîî#Àa~®v˜›Ö5¶ˆO²²„Ym™Z5ÁèfÑŸQœ#‘½è¼'†€Æ÷H.˜~÷Xq:ÎƒiŞ4²ß§:İ§ßKû…ÛD€ï¼ÿ‡ Ì»ÁİîçÂzÍmwè(gİ˜½½zîë›­Ï_…µ6riùH:KÉÙ¸æ¢uÕapÁ‚¹šäj¨ĞÌ¾RfN×[´Øûô©eÓ“ëŠIÛÂNÄU`³êŸİ³¾Çl…ûßüäôYt'Ì~&Oì"yÅÒ«ê;ÔÚAÆãÏñcót6lçrâè®e†öN×!©´ß7`f­ ã%/ß,.ñ&Ê‹ÏÃ
 È³çÚ½êq…Üí3cÇË<Sw»0å
-endstreamendobj7 0 obj[6 0 R 5 0 R]endobj35 0 obj<</CreationDate(D:20121119110852-05'00')/Creator(Adobe Illustrator CS5)/ModDate(D:20121119110852-06'00')/Producer(Adobe PDF library 9.90)/Title(ht_magento-REST-API_disable-cache-magementMock)>>endobjxref
+endstreamendobj7 0 obj[6 0 R 5 0 R]endobj35 0 obj<</CreationDate(D:20121119110852-05'00')/Creator(Adobe Illustrator CS5)/ModDate(D:20121119110852-06'00')/Producer(Adobe PDF library 9.90)/Title(ht_openmage-REST-API_disable-cache-magementMock)>>endobjxref
 0 36
 0000000000 65535 f
 0000000016 00000 n

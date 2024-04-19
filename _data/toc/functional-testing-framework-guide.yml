@@ -13,8 +13,8 @@ pages:
         - label: Adjust configuration
           url: /mtf/mtf_quickstart/mtf_quickstart_config.html
 
-        - label: Prepare Magento application
-          url: /mtf/mtf_quickstart/mtf_quickstart_magento.html
+        - label: Prepare Openmage application
+          url: /mtf/mtf_quickstart/mtf_quickstart_openmage.html
 
         - label: Prepare environment for test run
           url: /mtf/mtf_quickstart/mtf_quickstart_environment.html
@@ -104,4 +104,4 @@ pages:
       url: /mtf/troubleshooting.html
 
     - label: Changelog
-      url: https://github.com/magento/mtf/blob/develop/CHANGELOG.md
+      url: https://github.com/openmage/mtf/blob/develop/CHANGELOG.md

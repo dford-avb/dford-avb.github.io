@@ -3,7 +3,7 @@ The following steps provide an example of accessing a database:
 1.  SSH to the integration environment.
 
     ```bash
-    magento-cloud ssh
+    openmage-cloud ssh
     ```
 
 1.  Find the database login information:

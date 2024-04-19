@@ -30,7 +30,7 @@ title: Catalog Product Types
 <h5><a name="MAPI-ProductTypes-Example1.Retrievingtheproducttypes"></a>Example 1. Retrieving the product types</h5>
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: java; gutter: false">$proxy = new SoapClient('http://magentohost/api/soap/?wsdl');
+		<pre class="theme: Default; brush: java; gutter: false">$proxy = new SoapClient('http://openmagehost/api/soap/?wsdl');
 $sessionId = $proxy-&gt;login('apiUser', 'apiKey');
 $types = $proxy-&gt;call($sessionId, 'product_type.list');
 
@@ -39,4 +39,4 @@ var_dump($types);</pre>
 </div></div>
 
 				    
-Create the Magento file system owner                   			    
+Create the Openmage file system owner                   			    

@@ -8,7 +8,7 @@
          <dc:format>application/pdf</dc:format>
          <dc:title>
             <rdf:Alt>
-               <rdf:li xml:lang="x-default">ht_magento-solr_catalog-searchMock.png</rdf:li>
+               <rdf:li xml:lang="x-default">ht_openmage-solr_catalog-searchMock.png</rdf:li>
             </rdf:Alt>
          </dc:title>
       </rdf:Description>
@@ -61,7 +61,7 @@
                <rdf:li rdf:parseType="Resource">
                   <stMfs:linkForm>EmbedByReference</stMfs:linkForm>
                   <stMfs:reference rdf:parseType="Resource">
-                     <stRef:filePath>C:\subversion\MageDevDocs\Knowledge-Base\images\ht_magento-solr_catalog-search.png</stRef:filePath>
+                     <stRef:filePath>C:\subversion\MageDevDocs\Knowledge-Base\images\ht_openmage-solr_catalog-search.png</stRef:filePath>
                   </stMfs:reference>
                </rdf:li>
             </rdf:Seq>
@@ -2253,13 +2253,13 @@ endstreamendobj86 0 obj<</AIS false/BM/Normal/CA 1.0/OP false/OPM 1/SA true/S
 %%Creator: Adobe Illustrator(R) 15.0
 %%AI8_CreatorVersion: 16.0.3
 %%For: (Johnson, Steven) ()
-%%Title: (ht_magento-solr_catalog-searchMock.png.ai)
+%%Title: (ht_openmage-solr_catalog-searchMock.png.ai)
 %%CreationDate: 5/16/2014 7:41 AM
 %%Canvassize: 16383
 %%BoundingBox: 59 -554 516 -23
 %%HiResBoundingBox: 59 -553.1836 515.6934 -23
 %%DocumentProcessColors: Cyan Magenta Yellow Black
-%%DocumentFiles:C:\subversion\MageDevDocs\Knowledge-Base\images\ht_magento-solr_catalog-search.png
+%%DocumentFiles:C:\subversion\MageDevDocs\Knowledge-Base\images\ht_openmage-solr_catalog-search.png
 %AI5_FileFormat 11.0
 %AI12_BuildNumber: 691
 %AI3_ColorUsage: Color
@@ -4623,7 +4623,7 @@ _o2m³ŞìRxÍš5_³»5¥±kÿ µTÿçäf3Ã|5KÛ¾·ŸÃÇÛd¶…Û²®NÎó‘´?LüsÇèlv=,.—k*ˆñMW+Öõ.¼U½Î
 áN+åYMl–æÃU¿èš[¶X«:‹‚´†vyŞòmVÿæÂZ³”£Öj?›¬éúY-ü³šUmf}â’dşÈqv~_İ?ç‹Ğ9õà¼ÆÅ¶2¨Ö¹U¾oøæÜ½°õN·0¬[­šq-«’}ìr!8<KB×Ò@aÍÈH^™.ˆ\hËé&§ÙØ“êÙa}×!˜–FãçİGÄsPuŸ¹&İGW‘·v·šSì~É	>1v¿"È/HÜôuö'Èœ•û¤Î·ƒí :QRƒ¸s4¶óÆ2+3µŞôÕ/_„-İiQ\ög›ÂšlóÊ¤±Ï©|áV}ƒ`÷3~Vî7<în†ë¿>ØıÆXÇqt9­—‘õ|Ø}OŸÂ2“Ær@áG²!U#¨×™¡^$¨2¿ v[ÅÓl¾jéŒÌvƒªz–;´²õìq\Ú×~Ñ1ßÍÂztç;ÙŞ(;8M«÷øÇî–ÍIæª®¦™"Äs˜0š
 ¨wb—ÈëÚ]Ã¾SU ğ™ßC½FÕL°r Jš‹\‚wêµêµ3‡‹ä_;” ‹üEz5é@wpãğ,$ Ìe
  n–« 2³ u ò<ŒŸŸ]ë­ks›O‚c¾_J°m…ñèÖc'è	–ë×4D1Œ™Â%ì‡±XË%ÈŸäû‹<ûÿ #z¢sæa ¾f×r¢sİ¨ ¸ØnşÄÌ hë. 4.íTí0/€ O°©†ñûÖãN'èÌ,—	®Û0ö‘¤è}:ù…	Â8  Bİ6€°jòŸb<Ç­4V=D³¥é_|+6ù…$7À—H¶L ¤FåÓ‰Ô×‘°M<"× Æø#€Ü› s Hs ZŞê?W³ÊõÇ	!·”ÕÎ	4@k,J U ´É÷CtWñ+9¦EŒr÷/çßwöÿÄA¬½ĞD`!•HİÍò	´@T¬IŸHn£ øı>XÎ= <a ·oE wŠíàJ2;€“Y#€«…]ÚH†
-endstreamendobj6 0 obj<</Intent 20 0 R/Name(Layer 1)/Type/OCG/Usage 21 0 R>>endobj7 0 obj<</Intent 22 0 R/Name(Shapes)/Type/OCG/Usage 23 0 R>>endobj8 0 obj<</Intent 24 0 R/Name(Text)/Type/OCG/Usage 25 0 R>>endobj43 0 obj<</Intent 56 0 R/Name(Layer 1)/Type/OCG/Usage 57 0 R>>endobj44 0 obj<</Intent 58 0 R/Name(Shapes)/Type/OCG/Usage 59 0 R>>endobj45 0 obj<</Intent 60 0 R/Name(Text)/Type/OCG/Usage 61 0 R>>endobj60 0 obj[/View/Design]endobj61 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj58 0 obj[/View/Design]endobj59 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj56 0 obj[/View/Design]endobj57 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj24 0 obj[/View/Design]endobj25 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj22 0 obj[/View/Design]endobj23 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj20 0 obj[/View/Design]endobj21 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj82 0 obj[81 0 R 80 0 R 79 0 R]endobj113 0 obj<</CreationDate(D:20121027104400-05'00')/Creator(Adobe Illustrator CS5)/ModDate(D:20140516074154-05'00')/Producer(Adobe PDF library 9.90)/Title(ht_magento-solr_catalog-searchMock.png)>>endobjxref
+endstreamendobj6 0 obj<</Intent 20 0 R/Name(Layer 1)/Type/OCG/Usage 21 0 R>>endobj7 0 obj<</Intent 22 0 R/Name(Shapes)/Type/OCG/Usage 23 0 R>>endobj8 0 obj<</Intent 24 0 R/Name(Text)/Type/OCG/Usage 25 0 R>>endobj43 0 obj<</Intent 56 0 R/Name(Layer 1)/Type/OCG/Usage 57 0 R>>endobj44 0 obj<</Intent 58 0 R/Name(Shapes)/Type/OCG/Usage 59 0 R>>endobj45 0 obj<</Intent 60 0 R/Name(Text)/Type/OCG/Usage 61 0 R>>endobj60 0 obj[/View/Design]endobj61 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj58 0 obj[/View/Design]endobj59 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj56 0 obj[/View/Design]endobj57 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj24 0 obj[/View/Design]endobj25 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj22 0 obj[/View/Design]endobj23 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj20 0 obj[/View/Design]endobj21 0 obj<</CreatorInfo<</Creator(Adobe Illustrator 15.0)/Subtype/Artwork>>>>endobj82 0 obj[81 0 R 80 0 R 79 0 R]endobj113 0 obj<</CreationDate(D:20121027104400-05'00')/Creator(Adobe Illustrator CS5)/ModDate(D:20140516074154-05'00')/Producer(Adobe PDF library 9.90)/Title(ht_openmage-solr_catalog-searchMock.png)>>endobjxref
 0 114
 0000000004 65535 f
 0000000016 00000 n

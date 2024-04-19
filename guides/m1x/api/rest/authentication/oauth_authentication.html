@@ -31,9 +31,9 @@ title: Authentication
 
 <h2><a name="OAuthAuthentication-Introduction"></a>Introduction</h2>
 
-<p>In most cases, the third-party application must be authenticated to use the Magento API. But users never reveal their credentials to the application to preserve their privacy. So, the question is as follows: how is your application going to authenticate users if it does not know user credentials. OAuth is the solution.</p>
+<p>In most cases, the third-party application must be authenticated to use the Openmage API. But users never reveal their credentials to the application to preserve their privacy. So, the question is as follows: how is your application going to authenticate users if it does not know user credentials. OAuth is the solution.</p>
 
-<p>Magento authentication is based on OAuth, an open standard for secure API authentication. OAuth is a token-passing mechanism that allows users to control which applications have access to their data without revealing their passwords or other credentials.</p>
+<p>Openmage authentication is based on OAuth, an open standard for secure API authentication. OAuth is a token-passing mechanism that allows users to control which applications have access to their data without revealing their passwords or other credentials.</p>
 
 <p>The OAuth concept lies in three basic elements that can be easily described in the following picture:</p>
 
@@ -53,7 +53,7 @@ title: Authentication
 
 <h2><a name="OAuthAuthentication-WhyDoYouNeedOAuth%3F"></a>Why Do You Need OAuth?</h2>
 
-<p>Magento uses OAuth to allow access to its data. You need to use OAuth if you want to use any of the following Magento APIs:</p>
+<p>Openmage uses OAuth to allow access to its data. You need to use OAuth if you want to use any of the following Openmage APIs:</p>
 
 <ul>
 	<li>Products</li>
@@ -71,12 +71,12 @@ and a lot more</li>
 
 <p>There are some definitions you need to get familiar with before you start using OAuth. These are as follows:</p>
 <ul>
-	<li><b>User</b> &#45; A customer who has an account with Magento and can use the services via the Magento API.</li>
-	<li><b>Consumer</b> &#45; A third-party application that uses OAuth to access the Magento API. This application must be registered in the Magento system to receive the Consumer Key and Consumer Secret.</li>
-	<li><b>Consumer Key</b> &#45; A value used by the Consumer to identify itself with Magento.</li>
+	<li><b>User</b> &#45; A customer who has an account with Openmage and can use the services via the Openmage API.</li>
+	<li><b>Consumer</b> &#45; A third-party application that uses OAuth to access the Openmage API. This application must be registered in the Openmage system to receive the Consumer Key and Consumer Secret.</li>
+	<li><b>Consumer Key</b> &#45; A value used by the Consumer to identify itself with Openmage.</li>
 	<li><b>Consumer Secret</b> &#45; A secret used by the Consumer to guarantee the ownership of the Consumer Key. This value is not passed in requests.</li>
 	<li><b>Request Token</b> &#45; A value used by the Consumer to obtain authorization from the User (when needed). The Request Token is exchanged for an Access Token when permission is granted.</li>
-	<li><b>Access Token</b> &#45; A value used by the Consumer to call Magento APIs on behalf of the User.</li>
+	<li><b>Access Token</b> &#45; A value used by the Consumer to call Openmage APIs on behalf of the User.</li>
 </ul>
 
 
@@ -92,12 +92,12 @@ and a lot more</li>
 
 <img src="{{ site.baseurl }}/guides/m1x/images/rest_oauth2.png" alt=""/>
 
-<p>The application that requires access to data is known as the Consumer and Magento is the Service Provider.</p>
+<p>The application that requires access to data is known as the Consumer and Openmage is the Service Provider.</p>
 
 
 <h3><a name="OAuthAuthentication-RegisteringanApplication"></a>Registering an Application</h3>
 
-<p>Before starting to make API requests, you need to register the application. After the registration, you will receive the Consumer Key that will identify you in Magento. Also, you will receive a Consumer Secret. This secret will be used when requesting for a Request Token.</p>
+<p>Before starting to make API requests, you need to register the application. After the registration, you will receive the Consumer Key that will identify you in Openmage. Also, you will receive a Consumer Secret. This secret will be used when requesting for a Request Token.</p>
 
 <p>You can register your application by selecting <b>System</b> &gt; <b>Web Services</b> &gt; <b>REST - OAuth Consumers</b> and clicking <b>Add New</b> in the Admin Panel.</p>
 
@@ -120,7 +120,7 @@ and a lot more</li>
 
 <h4><a name="OAuthAuthentication-GettinganUnauthorizedRequestToken"></a>Getting an Unauthorized Request Token</h4>
 
-<p>The first step to authenticate the user is to retrieve a Request Token from Magento. This is a temporary token that will be exchanged for the Access Token.</p>
+<p>The first step to authenticate the user is to retrieve a Request Token from Openmage. This is a temporary token that will be exchanged for the Access Token.</p>
 
 
 
@@ -162,7 +162,7 @@ and a lot more</li>
 
 <h4><a name="OAuthAuthentication-UserAuthorization"></a>User Authorization</h4>
 
-<p>The second step is to request user authorization. After receiving the Request Token from Magento, the application provides an authorization page to the user. The only required parameter for this step is the Request Token (oauth_token value) received from the previous step. The endpoint is followed by an oauth_token parameter with the value set to the oauth_token value.</p>
+<p>The second step is to request user authorization. After receiving the Request Token from Openmage, the application provides an authorization page to the user. The only required parameter for this step is the Request Token (oauth_token value) received from the previous step. The endpoint is followed by an oauth_token parameter with the value set to the oauth_token value.</p>
 
 <p>After this, the user is asked to enter their credentials and authorize. When the user is granted the access, he/she is redirected to the URL specified in the oauth_callback parameter. This URL is followed by two parameters:</p>
 <ul>
@@ -249,7 +249,7 @@ and a lot more</li>
 
 <h2><a name="OAuthAuthentication-OAuthErrorCodes"></a>OAuth Error Codes</h2>
 
-<p>When the third-party application performs invalid requests to Magento, the following errors related to OAuth can occur:</p>
+<p>When the third-party application performs invalid requests to Openmage, the following errors related to OAuth can occur:</p>
 
 
 <table><tbody>
@@ -351,11 +351,11 @@ and a lot more</li>
 {% highlight PHP %}
 <?php
 /**
- * Example of retrieving the products list using Admin account via Magento REST API. OAuth authorization is used
+ * Example of retrieving the products list using Admin account via Openmage REST API. OAuth authorization is used
  * Preconditions:
  * 1. Install php oauth extension
  * 2. If you were authorized as a Customer before this step, clear browser cookies for 'yourhost'
- * 3. Create at least one product in Magento
+ * 3. Create at least one product in Openmage
  * 4. Configure resource permissions for Admin REST user for retrieving all product data for Admin
  * 5. Create a Consumer
  */
@@ -413,11 +413,11 @@ try {
 <div>
 		<pre class="theme: Default; brush: php; gutter: false">&lt;?php
 /**
- * Example of retrieving the products list using Customer account via Magento REST API. OAuth authorization is used
+ * Example of retrieving the products list using Customer account via Openmage REST API. OAuth authorization is used
  * Preconditions:
  * 1. Install php oauth extension
  * 2. If you were authorized as an Admin before this step, clear browser cookies for 'yourhost'
- * 3. Create at least one product in Magento and enable it for viewing in the frontend
+ * 3. Create at least one product in Openmage and enable it for viewing in the frontend
  * 4. Configure resource permissions for Customer REST user for retrieving all product data for Customer
  * 5. Create a Consumer
  */

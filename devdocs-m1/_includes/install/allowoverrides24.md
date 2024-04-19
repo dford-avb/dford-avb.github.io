@@ -1,6 +1,6 @@
 Use this section to enable Apache 2.4 rewrites and specify a setting for the [distributed configuration file, `.htaccess`](http://httpd.apache.org/docs/current/howto/htaccess.html)
 
-Magento uses server rewrites and `.htaccess` to provide directory-level instructions for Apache.
+Openmage uses server rewrites and `.htaccess` to provide directory-level instructions for Apache.
 
 {:.bs-callout .bs-callout-info}
 Failure to enable these settings typically results in no styles displaying on your storefront or Admin.
@@ -11,7 +11,7 @@ Failure to enable these settings typically results in no styles displaying on yo
     a2enmod rewrite
     ```
 
-1.  To enable Magento to use the distributed `.htaccess` configuration file, see the guidelines in the [Apache 2.4 documentation](http://httpd.apache.org/docs/current/mod/mod_rewrite.html).
+1.  To enable Openmage to use the distributed `.htaccess` configuration file, see the guidelines in the [Apache 2.4 documentation](http://httpd.apache.org/docs/current/mod/mod_rewrite.html).
 
     Note that in Apache 2.4, the server's default site configuration file is `/etc/apache2/sites-available/000-default.conf`.
 
@@ -34,4 +34,4 @@ Failure to enable these settings typically results in no styles displaying on yo
 
     {:.bs-callout .bs-callout-info}
     -   If you upgraded from an earlier Apache version, first look for `<Directory "/var/www/html">` or `<Directory "/var/www">` in `000-default.conf`.
-    -   You must change the value of `AllowOverride` in the directive for the directory to which you expect to install the Magento software. For example, to install in the web server docroot, edit the directive in `<Directory /var/www>`.
+    -   You must change the value of `AllowOverride` in the directive for the directory to which you expect to install the Openmage software. For example, to install in the web server docroot, edit the directive in `<Directory /var/www>`.

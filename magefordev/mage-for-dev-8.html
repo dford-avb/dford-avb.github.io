@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/common/css/stylesheet-fonts.css" type="text/css" charset="utf-8">
     <link rel="icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
-    <title>Magento for Developers: Part 8&mdash;Varien Data Collections</title>
+    <title>Openmage for Developers: Part 8&mdash;Varien Data Collections</title>
 
 </head>
 
@@ -17,13 +17,13 @@
 {% include m1x/eol_message.html %}
 
 <div id="content">
-<h1>Magento for Developers: Part 8&mdash;Varien Data Collections</h1>
-<p><em>by Alan Storm</em>, updated for Magento 1.12</p>
+<h1>Openmage for Developers: Part 8&mdash;Varien Data Collections</h1>
+<p><em>by Alan Storm</em>, updated for Openmage 1.12</p>
 <p><a href="{{ site.m1xgithuburl }}/magefordev/mage-for-dev-8.html" target="_blank">Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
 
 
-<!-- Magento for Developers: Part 8&mdash;Varien Data Collections -->
-<!-- magento-for-dev-part-8-varien-data-collections 
+<!-- Openmage for Developers: Part 8&mdash;Varien Data Collections -->
+<!-- openmage-for-dev-part-8-varien-data-collections 
 
 <style type="text/css">
 #kb-entry .series {float: right; width: 175px; margin-left: 10px; font-size: 12px; }
@@ -34,12 +34,12 @@
 
 <h5>Other articles in this series:</h5>
 <ul>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-1.html">Part 1&mdash;Introduction to Magento</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-2.html">Part 2&mdash;The Magento Config</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-3.html">Part 3&mdash;Magento Controller Dispatch</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-4.html">Part 4&mdash;Magento Layouts, Blocks and Templates</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-5.html">Part 5&mdash;Magento Models and ORM Basics</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-6.html">Part 6&mdash;Magento Setup Resources</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-1.html">Part 1&mdash;Introduction to Openmage</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-2.html">Part 2&mdash;The Openmage Config</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-3.html">Part 3&mdash;Openmage Controller Dispatch</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-4.html">Part 4&mdash;Openmage Layouts, Blocks and Templates</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-5.html">Part 5&mdash;Openmage Models and ORM Basics</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-6.html">Part 6&mdash;Openmage Setup Resources</a>
 <li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-7.html">Part 7&mdash;Advanced ORM: Entity Attribute Value</a>
 <li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-8.html">Part 8&mdash;Varien Data Collections</a>
 </ul>
@@ -60,7 +60,7 @@ $collection[] = 'bar';
 
 <p>While this is still galling to a certain type of software developer, as you don't have access to low level implementation details, you do have the ability to create array-like Objects with methods that encapsulate specific functionality.  You can also setup rules to offer a level of type safety by only allowing certain kinds of Objects into your Collection.</p>
 
-<p>It should come as no surprise that Magento offers you a number of these Collections.  In fact, every Model object that follows the Magento interfaces gets a Collection type for free.  Understanding how these Collections work is a key part to being an effective Magento programmer.  We're going to take a look at Magento Collections, starting from the bottom and working our way up.  Set up a <a href="http://alanstorm.com/magento_controller_hello_world">controller action</a> where you can run arbitrary code, and let's get started.</p>
+<p>It should come as no surprise that Openmage offers you a number of these Collections.  In fact, every Model object that follows the Openmage interfaces gets a Collection type for free.  Understanding how these Collections work is a key part to being an effective Openmage programmer.  We're going to take a look at Openmage Collections, starting from the bottom and working our way up.  Set up a <a href="http://alanstorm.com/openmage_controller_hello_world">controller action</a> where you can run arbitrary code, and let's get started.</p>
 
 <h2 id="a-collection-of-things">A Collection of Things</h2>
 
@@ -81,7 +81,7 @@ $thing_3->setLastName('The Dog');
 $thing_3->setAge(7);
 </pre>
 
-<p>The <tt>Varien_Object</tt> class defines the object all Magento Models inherit from.  This is a common pattern in object oriented systems, and ensures you'll always have a way to easily add methods/functionally to <strong>every</strong> object in your system without having to edit every class file.</p>
+<p>The <tt>Varien_Object</tt> class defines the object all Openmage Models inherit from.  This is a common pattern in object oriented systems, and ensures you'll always have a way to easily add methods/functionally to <strong>every</strong> object in your system without having to edit every class file.</p>
 
 <p>Any Object that extends from <tt>Varien_Object</tt> has magic getter and setters that can be used to set data properties. Give this a try</p>
 
@@ -117,7 +117,7 @@ $collection_of_things
     ->addItem($thing_3);
 </pre>
 
-<p>The <tt>Varien_Data_Collection</tt> is the Collection that most Magento data Collections inherit from.  Any method you can call on a <tt>Varien_Data_Collection</tt> you can call on Collections higher up the chain (We'll see more of this later)</p>
+<p>The <tt>Varien_Data_Collection</tt> is the Collection that most Openmage data Collections inherit from.  Any method you can call on a <tt>Varien_Data_Collection</tt> you can call on Collections higher up the chain (We'll see more of this later)</p>
 
 <p>What can we do with a Collection?  For one, with can use <tt>foreach</tt> to iterate over it</p>
 
@@ -143,7 +143,7 @@ var_dump($collection_of_things->getLastItem()->getData());
 
 <pre>var_dump($collection_of_things->getColumnValues('name'));</pre>
 
-<p>The team at Magento have even given us some rudimentary filtering capabilities.</p>
+<p>The team at Openmage have even given us some rudimentary filtering capabilities.</p>
 
 <pre>var_dump($collection_of_things->getItemsByColumnValue('name','Spot'));</pre>
 
@@ -152,7 +152,7 @@ var_dump($collection_of_things->getLastItem()->getData());
 <h2 id="model-collections">Model Collections</h2>
 <p>So, this is an interesting exercise, but why do we care? </p>
 
-<p>We care because all of Magento's built in data Collections inherit from this object.  That means if you have, say, a product Collection you can do the same sort of things.  Let's take a look </p>
+<p>We care because all of Openmage's built in data Collections inherit from this object.  That means if you have, say, a product Collection you can do the same sort of things.  Let's take a look </p>
 
 <pre>
 public function testAction()
@@ -162,11 +162,11 @@ public function testAction()
 }
 </pre>
 
-<p>Most Magento Model objects have a method named <tt>getCollection</tt> which will return a collection that, by default, is initialized to return every Object of that type in the system.</p>
+<p>Most Openmage Model objects have a method named <tt>getCollection</tt> which will return a collection that, by default, is initialized to return every Object of that type in the system.</p>
 
-<p><strong>A Quick Note:</strong>  Magento's Data Collections contain a lot of complicated logic that handles when to use an index or cache, as well as the logic for the EAV entity system.  Successive method calls to the same Collection over its life can often result in unexpected behavior.  Because of that, all the of the following examples are wrapped in a single method action.  I'd recommend doing the same while you're experimenting.  Also, <a href="http://xdebug.org/">XDebug's</a> <tt>var_dump</tt> is a godsend when working with Magento Objects and Collections, as it will (usually) intelligently short circuit showing hugely recursive Objects, but still display a useful representation of the Object structure to you.</p>
+<p><strong>A Quick Note:</strong>  Openmage's Data Collections contain a lot of complicated logic that handles when to use an index or cache, as well as the logic for the EAV entity system.  Successive method calls to the same Collection over its life can often result in unexpected behavior.  Because of that, all the of the following examples are wrapped in a single method action.  I'd recommend doing the same while you're experimenting.  Also, <a href="http://xdebug.org/">XDebug's</a> <tt>var_dump</tt> is a godsend when working with Openmage Objects and Collections, as it will (usually) intelligently short circuit showing hugely recursive Objects, but still display a useful representation of the Object structure to you.</p>
 
-<p>The products Collection, as well as many other Magento Collections, also have the <tt>Varien_Data_Collection_Db</tt> class in their ancestor chain. This gives us a lot of useful methods.  For example, if you want to see the select statement your Collection is using</p>
+<p>The products Collection, as well as many other Openmage Collections, also have the <tt>Varien_Data_Collection_Db</tt> class in their ancestor chain. This gives us a lot of useful methods.  For example, if you want to see the select statement your Collection is using</p>
 
 <pre>
 public function testAction()
@@ -187,7 +187,7 @@ object(Varien_Db_Select)[94]
 ...
 </pre>
 
-<p>Whoops! Since Magento is using the <tt>Zend</tt> database abstraction layer, your Select is also an Object.  Let's see that as a more useful string. </p>
+<p>Whoops! Since Openmage is using the <tt>Zend</tt> database abstraction layer, your Select is also an Object.  Let's see that as a more useful string. </p>
 
 <pre>
 public function testAction()
@@ -214,7 +214,7 @@ AS `e` INNER JOIN `catalog_product_index_price` AS `price_index` ON price_index.
 price_index.website_id = '1' AND price_index.customer_group_id = 0'
 </pre>
 
-<p>The discrepancy depends on which attributes you're selecting, as well as the aforementioned indexing and cache.  If you've been following along with the other articles in this series,  you know that many Magento models (including the Product Model) use an <a href="http://en.wikipedia.org/wiki/EAV">EAV</a> system.  By default, a EAV Collection will not include all of an Object's attributes.  You can add them all by using the addAttributeToSelect method</p>
+<p>The discrepancy depends on which attributes you're selecting, as well as the aforementioned indexing and cache.  If you've been following along with the other articles in this series,  you know that many Openmage models (including the Product Model) use an <a href="http://en.wikipedia.org/wiki/EAV">EAV</a> system.  By default, a EAV Collection will not include all of an Object's attributes.  You can add them all by using the addAttributeToSelect method</p>
 
 <pre>
 $collection_of_products = Mage::getModel('catalog/product')
@@ -243,7 +243,7 @@ $collection_of_products = Mage::getModel('catalog/product')
 
 <h2 id="lazy-loading">Lazy Loading</h2>
 
-<p>One thing that will trip up PHP developers new to Magento's ORM system is <strong>when</strong> Magento makes its database calls.  When you're writing literal SQL, or even when you're using a basic ORM system, SQL calls are often made immediately when instantiating an Object.</p>
+<p>One thing that will trip up PHP developers new to Openmage's ORM system is <strong>when</strong> Openmage makes its database calls.  When you're writing literal SQL, or even when you're using a basic ORM system, SQL calls are often made immediately when instantiating an Object.</p>
 
 <pre>
 $model = new Customer();
@@ -251,14 +251,14 @@ $model = new Customer();
 echo 'Done'; //execution continues
 </pre>
 
-<p>Magento doesn't work that way.  Instead, the concept of <a href="http://en.wikipedia.org/wiki/Lazy_loading">Lazy Loading</a> is used.  In simplified terms, Lazy loading means that no SQL calls are made until the client-programmer needs to access the data.  That means when you do something something like this</p>
+<p>Openmage doesn't work that way.  Instead, the concept of <a href="http://en.wikipedia.org/wiki/Lazy_loading">Lazy Loading</a> is used.  In simplified terms, Lazy loading means that no SQL calls are made until the client-programmer needs to access the data.  That means when you do something something like this</p>
 
 <pre>
 $collection_of_products = Mage::getModel('catalog/product')
     ->getCollection();
 </pre>
 
-<p>Magento actually hasn't gone out to the database yet.  You can safely add attributes later</p>
+<p>Openmage actually hasn't gone out to the database yet.  You can safely add attributes later</p>
 
 <pre>
 $collection_of_products = Mage::getModel('catalog/product')
@@ -266,9 +266,9 @@ $collection_of_products = Mage::getModel('catalog/product')
 $collection_of_products->addAttributeToSelect('meta_title');
 </pre>
 
-<p>and not have to worry that Magento is making a database query each time a new attribute is added.  The database query will not be made until you attempt to access an item in the Collection.</p>
+<p>and not have to worry that Openmage is making a database query each time a new attribute is added.  The database query will not be made until you attempt to access an item in the Collection.</p>
 
-<p>In general, try not to worry too much about the implementation details in your day to day work.  It's good to know that there's s SQL backend and Magento is doing SQLy things, but when you're coding up a feature try to forget about it, and just treat the objects as block boxes that do what you need.  </p>
+<p>In general, try not to worry too much about the implementation details in your day to day work.  It's good to know that there's s SQL backend and Openmage is doing SQLy things, but when you're coding up a feature try to forget about it, and just treat the objects as block boxes that do what you need.  </p>
 
 <h2 id="filtering-database-collections">Filtering Database Collections</h2>
 
@@ -370,7 +370,7 @@ WHERE (IF(_table_meta_title.value_id>0, _table_meta_title.value, _table_meta_tit
 
 <p>As you can see, the second parameter is a PHP Array.  Its key is <tt>eq</tt>, which stands for <em>equals</em>.  The value for this key is <tt>n2610</tt>, which is the value we're filtering on.</p>
 
-<p>Magento has a number of these english language like filters that will bring a <a href="http://www.shlomifish.org/lecture/Perl/Newbies/lecture1/conditionals/string.html">tear of remembrance</a> (and perhaps pain) to any old perl developers in the audience.</p>
+<p>Openmage has a number of these english language like filters that will bring a <a href="http://www.shlomifish.org/lecture/Perl/Newbies/lecture1/conditionals/string.html">tear of remembrance</a> (and perhaps pain) to any old perl developers in the audience.</p>
 
 <p>Listed below are all the filters, along with an example of their SQL equivalents.</p>
 
@@ -465,7 +465,7 @@ public function testAction
 
 <h2 id="and-or-or">AND or OR, or is that OR and AND?</h2>
 
-<p>Finally, we come to the boolean operators.  It's the rare moment where we're only filtering by one attribute.  Fortunately, Magento's Collections have us covered.  You can chain together multiple calls to <tt>addFieldToFilter</tt> to get a number of "AND" queries.</p>
+<p>Finally, we come to the boolean operators.  It's the rare moment where we're only filtering by one attribute.  Fortunately, Openmage's Collections have us covered.  You can chain together multiple calls to <tt>addFieldToFilter</tt> to get a number of "AND" queries.</p>
 
 <pre>
 function testAction()
@@ -520,4 +520,4 @@ public function testAction()
 
 <h2 id="wrap-up">Wrap Up</h2>
 
-<p>You're now a Magento developer walking around with some serious firepower.  Without having to write a single line of SQL you now know how to query Magento for any Model your store or application might need. </p>
+<p>You're now a Openmage developer walking around with some serious firepower.  Without having to write a single line of SQL you now know how to query Openmage for any Model your store or application might need. </p>

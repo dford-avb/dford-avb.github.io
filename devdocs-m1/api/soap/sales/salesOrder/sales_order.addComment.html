@@ -88,7 +88,7 @@ title: Add Comment
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$client = new SoapClient('http://magentohost/api/soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$client = new SoapClient('http://openmagehost/api/soap/?wsdl');
 
 // If somestuff requires API authentication,
 // then get a session token
@@ -107,7 +107,7 @@ var_dump($result);
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/v2_soap/?wsdl'); // TODO : change url
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/v2_soap/?wsdl'); // TODO : change url
 $sessionId = $proxy-&gt;login('apiUser', 'apiKey'); // TODO : change login and pwd if necessary
 
 $result = $proxy-&gt;salesOrderAddComment($sessionId, '200000004', 'processing');
@@ -121,7 +121,7 @@ var_dump($result);</pre>
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/v2_soap/?wsdl'); 
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/v2_soap/?wsdl'); 
 
 $sessionId = $proxy-&gt;login((object)array('username' =&gt; 'apiUser', 'apiKey' =&gt; 'apiKey')); 
  

@@ -39,7 +39,7 @@ JSON responses on this page contributed by Tim Reynolds
 
 <p>Allows you to create and retrieve customers.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/customers<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/customers<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-Customers-HTTPMethod-GET-customers"></a>HTTP Method: GET /customers</h5>
@@ -53,14 +53,14 @@ JSON responses on this page contributed by Tim Reynolds
 <em>No Parameters</em></p>
 
 <p><b>Example</b></p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/customers</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/customers</td></tr></table></div>
 
 <p><b>Response Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;entity_id&gt;2&lt;/entity_id&gt;
     &lt;website_id&gt;1&lt;/website_id&gt;
@@ -83,12 +83,12 @@ JSON responses on this page contributed by Tim Reynolds
     &lt;lastname&gt;Hickey&lt;/lastname&gt;
     &lt;created_in&gt;Admin&lt;/created_in&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
 <p><b>response example: json</b></p>
-<div class='panelmacro'><table class='infomacro'><tr><td>get http://magentohost/api/rest/customers</td></tr></table></div>
+<div class='panelmacro'><table class='infomacro'><tr><td>get http://openmagehost/api/rest/customers</td></tr></table></div>
 
 <p><b>response body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelcontent">
@@ -234,24 +234,24 @@ JSON responses on this page contributed by Tim Reynolds
 </tbody></table>
 
 
-<p><b>Notes</b>: The list of parameters may change depending on the attributes settings in <b>Customers</b> &gt; <b>Attributes</b> &gt; <b>Manage Customer Attributes</b> page in Magento Admin Panel. For example, a required status of the <b>middlename</b> attribute (Middle Name/Initial) may be changed to 'YES". Please note that managing customer attributes is available only in Magento Enterprise Edition.</p>
+<p><b>Notes</b>: The list of parameters may change depending on the attributes settings in <b>Customers</b> &gt; <b>Attributes</b> &gt; <b>Manage Customer Attributes</b> page in Openmage Admin Panel. For example, a required status of the <b>middlename</b> attribute (Middle Name/Initial) may be changed to 'YES". Please note that managing customer attributes is available only in Openmage Enterprise Edition.</p>
 
 <p><b>Example</b>:</p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://magentohost/api/rest/customers</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/customers</td></tr></table></div>
 
 <p><b>Request Body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
     &lt;firstname&gt;Earl&lt;/firstname&gt;
     &lt;lastname&gt;Hickey&lt;/lastname&gt;
     &lt;password&gt;123123q&lt;/password&gt;
     &lt;email&gt;earl@example.com&lt;/email&gt;
     &lt;website_id&gt;1&lt;/website_id&gt;
     &lt;group_id&gt;1&lt;/group_id&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -273,13 +273,13 @@ If the customer was created successfully, we receive <b>Response HTTP Code</b> =
 
 <p>Allows you to manage existing customers.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/customers/:customerId<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/customers/:customerId<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-Customers-HTTPMethod-GET-customers--customerId"></a>HTTP Method: GET /customers/:customerId</h5>
 
 <p><b>Description</b>: Allows you to retrieve information on an existing customer.<br/>
-<b>Notes:</b>: The list of attributes that will be returned for customers is configured in the Magento Admin Panel. The Customer user type has access only to his/her own information. Also, Admin can add additional non-system customer attributes by selecting <b>Customers</b> &gt; <b>Attributes</b> &gt; <b>Manage Customer Attributes</b>. If these attributes are set as visible on frontend, they will be returned in the response. Also, custom attributes will be returned in the response only after the customer information is updated in the Magento Admin Panel or the specified custom attribute is updated via API (see the PUT method below). Please note that managing customer attributes is available only in Magento Enterprise Edition.</p>
+<b>Notes:</b>: The list of attributes that will be returned for customers is configured in the Openmage Admin Panel. The Customer user type has access only to his/her own information. Also, Admin can add additional non-system customer attributes by selecting <b>Customers</b> &gt; <b>Attributes</b> &gt; <b>Manage Customer Attributes</b>. If these attributes are set as visible on frontend, they will be returned in the response. Also, custom attributes will be returned in the response only after the customer information is updated in the Openmage Admin Panel or the specified custom attribute is updated via API (see the PUT method below). Please note that managing customer attributes is available only in Openmage Enterprise Edition.</p>
 
 <p><b>Authentication</b>: Admin, Customer<br/>
 <b>Default Format</b>: XML<br/>
@@ -287,14 +287,14 @@ If the customer was created successfully, we receive <b>Response HTTP Code</b> =
 <em>No Parameters</em></p>
 
 <p><b>Example</b>:</p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/customers/2</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/customers/2</td></tr></table></div>
 
 <p><b>Response Body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;entity_id&gt;2&lt;/entity_id&gt;
   &lt;website_id&gt;1&lt;/website_id&gt;
   &lt;email&gt;test@example.com&lt;/email&gt;
@@ -305,12 +305,12 @@ If the customer was created successfully, we receive <b>Response HTTP Code</b> =
   &lt;firstname&gt;john&lt;/firstname&gt;
   &lt;lastname&gt;Doe&lt;/lastname&gt;
   &lt;last_logged_in&gt;2012-03-22 14:15:56&lt;/last_logged_in&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
 <p><b>response example: json</b></p>
-<div class='panelmacro'><table class='infomacro'><tr><td>get <a href="http://magentohost/api/rest/customers">http://magentohost/api/rest/customers/141</a></td></tr></table></div>
+<div class='panelmacro'><table class='infomacro'><tr><td>get <a href="http://openmagehost/api/rest/customers">http://openmagehost/api/rest/customers/141</a></td></tr></table></div>
 
 <p><b>response body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelcontent">
@@ -340,7 +340,7 @@ If the customer was created successfully, we receive <b>Response HTTP Code</b> =
 <h5><a name="RESTAPI-Resource-Customers-HTTPMethod-PUT-customers--customerId"></a>HTTP Method: PUT /customers/:customerId</h5>
 
 <p><b>Description</b>: Allows you to update an existing customer.<br/>
-<b>Notes</b>: The list of attributes that will be updated for customer is configured in the Magento Admin Panel. The Customer user type has access only to his/her own information. </p>
+<b>Notes</b>: The list of attributes that will be updated for customer is configured in the Openmage Admin Panel. The Customer user type has access only to his/her own information. </p>
 
 <p><b>Authentication</b>: Admin, Customer<br/>
 <b>Default Format</b>: XML<br/>
@@ -348,19 +348,19 @@ If the customer was created successfully, we receive <b>Response HTTP Code</b> =
 You must specify only those parameters which you want to update. Parameters that are not defined in the request body will preserve the previous values. The website_id and created_in attributes are not allowed for updating.</p>
 
 <p><b>Example</b>:</p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://magentohost/api/rest/customers/2</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://openmagehost/api/rest/customers/2</td></tr></table></div>
 
 <p><b>Request Body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
     &lt;firstname&gt;Earl&lt;/firstname&gt;
     &lt;lastname&gt;Hickey&lt;/lastname&gt;
     &lt;email&gt;customerss@example.com&lt;/email&gt;
     &lt;group_id&gt;1&lt;/group_id&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -376,7 +376,7 @@ You must specify only those parameters which you want to update. Parameters that
 <em>No Parameters</em></p>
 
 <p><b>Example</b>:</p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://magentohost/api/rest/customers/2</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://openmagehost/api/rest/customers/2</td></tr></table></div>
 
 
 		    

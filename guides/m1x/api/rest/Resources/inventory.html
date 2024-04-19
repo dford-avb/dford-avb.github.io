@@ -43,12 +43,12 @@ title: Inventory
 
 <p>Allows you to manage existing stock items. Inventory management is available only for Admin.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/stockitems<br/> <b>Version</b>: 1</p>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/stockitems<br/> <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-StockItems-HTTPMethod-GET-stockitems"></a>HTTP Method: GET /stockitems</h5>
 
 <p><b>Description</b>: Allows you to retrieve the list of existing stock items.<br/>
-    <b>Notes</b>: The list of attributes that will be returned for stock items is configured in the Magento Admin Panel.
+    <b>Notes</b>: The list of attributes that will be returned for stock items is configured in the Openmage Admin Panel.
 </p>
 
 <p><b>Authentication</b>: Admin<br/>
@@ -61,7 +61,7 @@ title: Inventory
 <div class='panelMacro'>
     <table class='infoMacro'>
         <tr>
-            <td>GET http://magentohost/api/rest/stockitems</td>
+            <td>GET http://openmagehost/api/rest/stockitems</td>
         </tr>
     </table>
 </div>
@@ -72,7 +72,7 @@ title: Inventory
             <div class="codeContent panelContent">
                 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;item_id&gt;1&lt;/item_id&gt;
     &lt;qty&gt;100.0000&lt;/qty&gt;
@@ -117,7 +117,7 @@ title: Inventory
     &lt;stock_status_changed_auto&gt;1&lt;/stock_status_changed_auto&gt;
     &lt;enable_qty_increments&gt;0&lt;/enable_qty_increments&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@ title: Inventory
 <div class='panelMacro'>
     <table class='infoMacro'>
         <tr>
-            <td>GET http://magentohost/api/rest/stockitems</td>
+            <td>GET http://openmagehost/api/rest/stockitems</td>
         </tr>
     </table>
 </div>
@@ -335,7 +335,7 @@ title: Inventory
 <div class='panelMacro'>
     <table class='infoMacro'>
         <tr>
-            <td>PUT http://magentohost/api/rest/stockitems</td>
+            <td>PUT http://openmagehost/api/rest/stockitems</td>
         </tr>
     </table>
 </div>
@@ -347,7 +347,7 @@ title: Inventory
             <div class="codeContent panelContent">
                 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item item_id="157"&gt;
     &lt;product_id&gt;262&lt;/product_id&gt;
     &lt;stock_id&gt;1&lt;/stock_id&gt;
@@ -371,7 +371,7 @@ title: Inventory
     &lt;qty&gt;110.0000&lt;/qty&gt;
     &lt;min_qty&gt;0.0000&lt;/min_qty&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
                 </div>
             </div>
         </div>
@@ -385,7 +385,7 @@ title: Inventory
             <div class="codeContent panelContent">
                 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;success&gt;
     &lt;data_item&gt;
       &lt;message&gt;Resource updated successful.&lt;/message&gt;
@@ -410,7 +410,7 @@ title: Inventory
       &lt;item_id&gt;153&lt;/item_id&gt;
     &lt;/data_item&gt;
   &lt;/error&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
                 </div>
             </div>
         </div>
@@ -423,11 +423,11 @@ title: Inventory
 <h4><a name="RESTAPI-Resource-StockItems-URI--stockitems--id"></a>URI: /stockitems/:id</h4>
 
 <p>Allows you to update, delete, or retrieve information on a single stock item.<br/>
-    <b>Notes</b>: The list of attributes that will be returned for stock items is configured in the Magento Admin Panel.
+    <b>Notes</b>: The list of attributes that will be returned for stock items is configured in the Openmage Admin Panel.
 </p>
 
 <p><b>URL Structure</b>: <a
-        href="http://magentohost/api/rest/stockitems/:id">http://magentohost/api/rest/stockitems/:id</a><br/>
+        href="http://openmagehost/api/rest/stockitems/:id">http://openmagehost/api/rest/stockitems/:id</a><br/>
     <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-StockItems-HTTPMethod-GET-stockitems--id"></a>HTTP Method : GET /stockitems/:id</h5>
@@ -441,7 +441,7 @@ title: Inventory
 <div class='panelMacro'>
     <table class='infoMacro'>
         <tr>
-            <td>GET http://magentohost/api/rest/stockitems/1</td>
+            <td>GET http://openmagehost/api/rest/stockitems/1</td>
         </tr>
     </table>
 </div>
@@ -453,7 +453,7 @@ title: Inventory
             <div class="codeContent panelContent">
                 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;item_id&gt;1&lt;/item_id&gt;
   &lt;product_id&gt;1&lt;/product_id&gt;
   &lt;stock_id&gt;1&lt;/stock_id&gt;
@@ -479,7 +479,7 @@ title: Inventory
   &lt;use_config_enable_qty_inc&gt;1&lt;/use_config_enable_qty_inc&gt;
   &lt;enable_qty_increments&gt;0&lt;/enable_qty_increments&gt;
   &lt;is_decimal_divided&gt;1&lt;/is_decimal_divided&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
                 </div>
             </div>
         </div>
@@ -492,7 +492,7 @@ title: Inventory
 <div class='panelMacro'>
     <table class='infoMacro'>
         <tr>
-            <td>GET http://magentohost/api/rest/stockitems/157
+            <td>GET http://openmagehost/api/rest/stockitems/157
             </td>
         </tr>
     </table>
@@ -526,7 +526,7 @@ title: Inventory
 <div class='panelMacro'>
     <table class='infoMacro'>
         <tr>
-            <td>PUT http://magentohost/api/rest/stockitems/1</td>
+            <td>PUT http://openmagehost/api/rest/stockitems/1</td>
         </tr>
     </table>
 </div>
@@ -538,9 +538,9 @@ title: Inventory
             <div class="codeContent panelContent">
                 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;qty&gt;99&lt;/qty&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
                 </div>
             </div>
         </div>
@@ -553,7 +553,7 @@ title: Inventory
 <div class='panelMacro'>
     <table class='infoMacro'>
         <tr>
-            <td>PUT http://magentohost/api/rest/stockitems/1</td>
+            <td>PUT http://openmagehost/api/rest/stockitems/1</td>
         </tr>
     </table>
 </div>

@@ -5,11 +5,11 @@ title: Testing REST Resources
 
 <p>Three steps are required for utilizing REST API resources:</p>
 <ul>
-	<li><a href="http://www.magentocommerce.com/api/rest/authentication/oauth_authentication.html"
+	<li><a href="http://www.openmagecommerce.com/api/rest/authentication/oauth_authentication.html"
 			title="OAuth Authentication">Authenticate the user</a> (receive the access token for further steps);</li>
-	<li>Configure the <a href="http://www.magentocommerce.com/api/rest/permission_settings/roles_configuration.html"
+	<li>Configure the <a href="http://www.openmagecommerce.com/api/rest/permission_settings/roles_configuration.html"
 			title="REST Roles Configuration">permissions for operations</a> and <a
-			href="http://www.magentocommerce.com/api/rest/permission_settings/attributes_configuration.html"
+			href="http://www.openmagecommerce.com/api/rest/permission_settings/attributes_configuration.html"
 			title="REST Attributes Configuration">attributes</a> for the type of the user;</li>
 	<li>Make an API call.</li>
 </ul>
@@ -48,9 +48,9 @@ title: Testing REST Resources
 		<img src="{{ site.baseurl }}/guides/m1x/images/rest_test1.png" style="border: 1px solid black" /></li>
 	<li>In the OAuth window, on the Signature for the request tab, fill in the following fields:<br />
 		<ul>
-			<li><b>Consumer key</b>: Enter the <b>Key</b> value provided when you created the consumer in Magento Admin Panel.
+			<li><b>Consumer key</b>: Enter the <b>Key</b> value provided when you created the consumer in Openmage Admin Panel.
 			</li>
-			<li><b>Consumer secret</b>: Enter the <b>Secret</b> value provided when you created the consumer in Magento Admin
+			<li><b>Consumer secret</b>: Enter the <b>Secret</b> value provided when you created the consumer in Openmage Admin
 				Panel.</li>
 			<li><b>Access token</b>: Enter the oauth_token value received when you authenticated the application.</li>
 			<li><b>Access token secret</b>: Enter the oauth_token_secret value received when you authenticated the
@@ -95,9 +95,9 @@ title: Testing REST Resources
 
 <ol>
 	<li>From the <b>Method</b> drop-down list, select the <b>GET</b> option.</li>
-	<li>In the <b>URL</b> field, enter the following URL: http://magentohost/api/rest/products. You can limit the number
+	<li>In the <b>URL</b> field, enter the following URL: http://openmagehost/api/rest/products. You can limit the number
 		of products returned in the response. To set the limit to 4, enter the following URL:
-		http://magentohost/api/rest/products?limit=4</li>
+		http://openmagehost/api/rest/products?limit=4</li>
 	<li>Click <b>Send</b>. Information about all products will be displayed in the response body. Example is as
 		follows:<br />
 		<img src="{{ site.baseurl }}/guides/m1x/images/rest_test6.png" style="border: 1px solid black" /></li>
@@ -126,9 +126,9 @@ title: Testing REST Resources
 	<li>Fill in the following data:<br />
 		<img src="{{ site.baseurl }}/guides/m1x/images/rest_test10.png" style="border: 1px solid black" />
 		<ul>
-			<li><b>Consumer key</b>: Enter the <b>Key</b> value provided when you created the consumer in Magento Admin Panel.
+			<li><b>Consumer key</b>: Enter the <b>Key</b> value provided when you created the consumer in Openmage Admin Panel.
 			</li>
-			<li><b>Consumer secret</b>: Enter the <b>Secret</b> value provided when you created the consumer in Magento Admin
+			<li><b>Consumer secret</b>: Enter the <b>Secret</b> value provided when you created the consumer in Openmage Admin
 				Panel.</li>
 			<li><b>Access Token</b>: Enter the oauth_token value received when you authenticated the application.</li>
 			<li><b>Access Token Secret</b>: Enter the oauth_token_secret value received when you authenticated the
@@ -150,7 +150,7 @@ title: Testing REST Resources
 
 <ol>
 	<li>In the <b>Method</b> group of options, select the <b>GET</b> option.</li>
-	<li>In the URL field, enter the following URL: http://magentohost/api/rest/customers.</li>
+	<li>In the URL field, enter the following URL: http://openmagehost/api/rest/customers.</li>
 	<li>Click <b>Send request</b>. Information about all customers will be displayed in the response body. Note that only
 		Admin type of the user can retrieve the list of customers. Example is as follows:<br />
 		<img src="{{ site.baseurl }}/guides/m1x/images/rest_test11.png" style="border: 1px solid black" /></li>
@@ -161,7 +161,7 @@ title: Testing REST Resources
 
 <ol>
 	<li>In the <b>Method</b> group of options, select the <b>POST</b> option.</li>
-	<li>In the URL field, enter the following URL: http://magentohost/api/rest/customers/:id/addresses where the ":id"
+	<li>In the URL field, enter the following URL: http://openmagehost/api/rest/customers/:id/addresses where the ":id"
 		value is the customer ID in the system.</li>
 	<li>In the <b>Body</b> table, on the <b>Raw input</b> tab, enter the data required for customer address creation.</li>
 	<li>Click <b>Send request</b>. If the address is created, the 200 OK HTTP status code will be returned. Example is as

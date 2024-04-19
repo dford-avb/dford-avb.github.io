@@ -28,7 +28,7 @@ where
 	*	Setting up cron: the web server user or another user.
 
 		In this example, we use the web server user but the choice of user is up to you.
-	*	Setting up Elasticsearch: the user is named `magento_elasticsearch` in this example
+	*	Setting up Elasticsearch: the user is named `openmage_elasticsearch` in this example
 
 *	`<password file name>` must be a hidden file (starts with `.`) and should reflect the name of the user. See the examples later in this section for details.
 
@@ -46,7 +46,7 @@ You must set up authentication for only one user for cron; in this example, we u
 You must set up authentication for two users: one with access to nginx and one with access to Elasticsearch. To create password files for these users, enter the following commands:
 
 	mkdir -p /usr/local/apache/password
-	htpasswd -c /usr/local/apache/password/.htpasswd_elasticsearch magento_elasticsearch
+	htpasswd -c /usr/local/apache/password/.htpasswd_elasticsearch openmage_elasticsearch
 
 #### Add additional users
 

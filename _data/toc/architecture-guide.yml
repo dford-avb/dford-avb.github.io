@@ -66,7 +66,7 @@ pages:
         - label: Module dependency types
           url: /architecture/archi_perspectives/components/modules/mod_depend_types.html
 
-    - label: Magento Framework
+    - label: Openmage Framework
       url: /architecture/archi_perspectives/framework.html
 
     - label: Third-party libraries
@@ -75,8 +75,8 @@ pages:
     - label: GDPR compliance
       include_versions: ["2.1", "2.2", "2.3"]
       children:
-        - label: Magento 2.x
-          url:  /architecture/gdpr/magento-2x.html
+        - label: Openmage 2.x
+          url:  /architecture/gdpr/openmage-2x.html
 
-        - label: Magento 1.x
-          url:  /architecture/gdpr/magento-1x.html
+        - label: Openmage 1.x
+          url:  /architecture/gdpr/openmage-1x.html

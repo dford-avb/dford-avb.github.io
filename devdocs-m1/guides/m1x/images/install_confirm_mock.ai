@@ -61,7 +61,7 @@
                <rdf:li rdf:parseType="Resource">
                   <stMfs:linkForm>EmbedByReference</stMfs:linkForm>
                   <stMfs:reference rdf:parseType="Resource">
-                     <stRef:filePath>C:\subversion\dev-docs\Magento\ee-sp-performance\images\install_confirm.png</stRef:filePath>
+                     <stRef:filePath>C:\subversion\dev-docs\Openmage\ee-sp-performance\images\install_confirm.png</stRef:filePath>
                   </stMfs:reference>
                </rdf:li>
             </rdf:Seq>
@@ -2228,7 +2228,7 @@ endstreamendobj51 0 obj<</AIS false/BM/Normal/CA 1.0/OP false/OPM 1/SA true/S
 %%BoundingBox: 39 -580 754 -213
 %%HiResBoundingBox: 39 -579.7041 753.6611 -213
 %%DocumentProcessColors: Cyan Magenta Yellow Black
-%%DocumentFiles:C:\subversion\dev-docs\Magento\ee-sp-performance\images\install_confirm.png
+%%DocumentFiles:C:\subversion\dev-docs\Openmage\ee-sp-performance\images\install_confirm.png
 %AI5_FileFormat 11.0
 %AI12_BuildNumber: 399
 %AI3_ColorUsage: Color

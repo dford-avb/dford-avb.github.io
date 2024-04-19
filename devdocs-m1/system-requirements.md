@@ -1,9 +1,9 @@
 ---
 layout: m1x
-title: System Requirements for Magento Enterprise Edition and Community Edition (Current Shipping Versions)
+title: System Requirements for Openmage Enterprise Edition and Community Edition (Current Shipping Versions)
 ---
 
-Magento requires a LAMP or LNMP stack.
+Openmage requires a LAMP or LNMP stack.
 
 #### Operating System
 
@@ -16,20 +16,20 @@ Linux x86-64
 
 #### Database
 
-*	Magento EE 1.14.3 and later:
+*	Openmage EE 1.14.3 and later:
 	*	MySQL 5.7 (Oracle or Percona)
-*	Earlier Magento versions:
+*	Earlier Openmage versions:
 	*	MySQL 5.6 (Oracle or Percona)
 
 #### PHP
 
-*	Magento EE 1.14.4.0 and later:
+*	Openmage EE 1.14.4.0 and later:
 	*	PHP 7.2.x
-*	Magento CE 1.9.2 and later, Magento EE 1.14.2 - EE 1.14.3.10:
+*	Openmage CE 1.9.2 and later, Openmage EE 1.14.2 - EE 1.14.3.10:
 	*	PHP 5.6.x
 	*   PHP 5.4.x
 	*   PHP 5.5.x
-*	Earlier Magento versions:
+*	Earlier Openmage versions:
 	*   PHP 5.4.x
 	*   PHP 5.5.x
 
@@ -38,7 +38,7 @@ Linux x86-64
 *   A valid security certificate is required for HTTPS.
 *   Self-signed SSL certificates are not supported.
 
-#### Magento can utilize the following technologies:
+#### Openmage can utilize the following technologies:
 
 *   [Redis]({{ site.baseurl }}/guides/m1x/ce18-ee113/using_redis.html)
     
@@ -50,4 +50,4 @@ Linux x86-64
  
 *   Apache Solr
 
-    [Solr search](http://merch.docs.magento.com/ee/user_guide/search_seo/search-configuration-solr.html) can be used as a search provider for Magento Enterprise Edition (EE) only
+    [Solr search](http://merch.docs.openmage.com/ee/user_guide/search_seo/search-configuration-solr.html) can be used as a search provider for Openmage Enterprise Edition (EE) only

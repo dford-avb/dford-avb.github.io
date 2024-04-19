@@ -37,26 +37,26 @@ title: Sales Orders
 
 <p>Allows you to retrieve information on existing order/orders.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/orders<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/orders<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-SalesOrders-HTTPMethod-GET-orders"></a>HTTP Method: GET /orders</h5>
 
 <p><b>Description</b>: Allows you to retrieve the list of existing orders. Each order contains the following information: general order information, information on ordered items, order comments, and order addresses (both billing and shipping).<br/>
-The list of attributes that will be returned for the order is configured in the Magento Admin Panel.</p>
+The list of attributes that will be returned for the order is configured in the Openmage Admin Panel.</p>
 
 <p><b>Authentication</b>: Admin, Customer, Guest<br/>
 <b>Default Format</b>: XML</p>
 
 <p><b>Response Example: XML</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/orders</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/orders</td></tr></table></div>
 
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item_1&gt;
     &lt;customer_id&gt;3&lt;/customer_id&gt;
     &lt;base_discount_amount&gt;0.0000&lt;/base_discount_amount&gt;
@@ -204,7 +204,7 @@ The list of attributes that will be returned for the order is configured in the 
       &lt;/data_item&gt;
     &lt;/order_items&gt;
   &lt;/data_item_2&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -229,9 +229,9 @@ The list of attributes that will be returned for the order is configured in the 
 <h4><a name="RESTAPI-Resource-SalesOrders-URI--orders--id"></a>URI: /orders/:id</h4>
 
 <p>Allows you to retrieve information on a single order.<br/>
-The list of attributes that will be returned for the order is configured in the Magento Admin Panel.</p>
+The list of attributes that will be returned for the order is configured in the Openmage Admin Panel.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/orders/:id<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/orders/:id<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-SalesOrders-HTTPMethod-GET-orders--id"></a>HTTP Method: GET /orders/:id</h5>
@@ -242,13 +242,13 @@ The list of attributes that will be returned for the order is configured in the 
 
 <p><b>Response Example: XML</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/orders/32</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/orders/32</td></tr></table></div>
 
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;customer_id&gt;3&lt;/customer_id&gt;
   &lt;base_discount_amount&gt;0.0000&lt;/base_discount_amount&gt;
   &lt;base_shipping_amount&gt;0.0000&lt;/base_shipping_amount&gt;
@@ -342,7 +342,7 @@ The list of attributes that will be returned for the order is configured in the 
       &lt;base_row_total_incl_tax&gt;5412.5000&lt;/base_row_total_incl_tax&gt;
     &lt;/data_item&gt;
   &lt;/order_items&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>

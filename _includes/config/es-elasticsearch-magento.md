@@ -1,14 +1,14 @@
-This section discusses the minimum settings you must choose to test Elasticsearch with Magento 2. For additional details about configuring Elasticsearch, see the [{{site.data.var.ee}} User Guide](http://docs.magento.com/m2/ee/user_guide/catalog/search-elasticsearch.html).
+This section discusses the minimum settings you must choose to test Elasticsearch with Openmage 2. For additional details about configuring Elasticsearch, see the [{{site.data.var.ee}} User Guide](http://docs.openmage.com/m2/ee/user_guide/catalog/search-elasticsearch.html).
 
-To configure Magento to use Elasticsearch:
+To configure Openmage to use Elasticsearch:
 
-1.	Log in to the Magento Admin as an administrator.
+1.	Log in to the Openmage Admin as an administrator.
 2.	Click **Stores** > Settings > **Configuration** > **Catalog** > **Catalog** > **Catalog Search**.
-3.	From the **Search Engine** list, click **Elasticsearch** or **Elasticsearch 5.0+** as the following figure shows. (The **Elasticsearch 5.0+** option is not available for Magento 2.1.)
+3.	From the **Search Engine** list, click **Elasticsearch** or **Elasticsearch 5.0+** as the following figure shows. (The **Elasticsearch 5.0+** option is not available for Openmage 2.1.)
 
 	![]({{ site.baseurl }}/common/images/elastic_choose-in-admin.png){:width="650px"}
 
-4.	The following table discusses only the configuration options required to test the connection with Magento.
+4.	The following table discusses only the configuration options required to test the connection with Openmage.
 
 	Unless you changed Elasticsearch server settings, the defaults should work. Skip to the next step.
 
@@ -29,7 +29,7 @@ To configure Magento to use Elasticsearch:
 	</tr>
 	<tr>
 		<td>Elasticsearch Index Prefix</td>
-		<td>Enter the Elasticsearch index prefix. If you use a single Elasticsearch instance for more than one Magento installation (Staging and Production environments), you must specify a unique prefix for each installation. Otherwise, you can use the default prefix <code>magento2</code>.</td>
+		<td>Enter the Elasticsearch index prefix. If you use a single Elasticsearch instance for more than one Openmage installation (Staging and Production environments), you must specify a unique prefix for each installation. Otherwise, you can use the default prefix <code>openmage2</code>.</td>
 	</tr>
 	<tr>
 		<td>Enable Elasticsearch HTTP Auth</td>
@@ -48,17 +48,17 @@ One of the following displays:
 	</tr>
 	<tr>
 		<td><img src="{{ site.baseurl }}/common/images/elastic_test-success.png"></td>
-		<td>Magento successfully connected to the Elasticsearch server. Continue with <a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-config-apache.html">Configure Apache and Elasticsearch</a> or <a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-config-nginx.html">Configure nginx and Elasticsearch</a>.</td>
+		<td>Openmage successfully connected to the Elasticsearch server. Continue with <a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-config-apache.html">Configure Apache and Elasticsearch</a> or <a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-config-nginx.html">Configure nginx and Elasticsearch</a>.</td>
 	</tr>
 	<tr>
 		<td><img src="{{ site.baseurl }}/common/images/elastic_test-fail.png"></td>
 		<td><p>Try the following:</p>
 			<ul>
 				<li>Make sure the Elasticsearch server is running.</li>
-				<li>If the Elasticsearch server is on a different host from Magento, log in to the Magento server and ping the Elasticsearch host. Resolve network connectivity issues and test the connection again.</li>
+				<li>If the Elasticsearch server is on a different host from Openmage, log in to the Openmage server and ping the Elasticsearch host. Resolve network connectivity issues and test the connection again.</li>
 				<li>Examine the command window in which you started Elasticsearch for stack traces and exceptions. You must resolve those before you continue.<br />
 	In particular, make sure you started Elasticsearch as a user with <code>root</code> privileges.</li>
-<li>Make sure that <a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-overview.html#firewall-selinux">UNIX firewall and SELinux</a> are both disabled, or set up rules to enable Elasticsearch and Magento to communicate with each other.</li>
+<li>Make sure that <a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-overview.html#firewall-selinux">UNIX firewall and SELinux</a> are both disabled, or set up rules to enable Elasticsearch and Openmage to communicate with each other.</li>
 	<li>Verify the value of the <strong>Elasticsearch Server Hostname</strong> field. Make sure the server is available. You can try the server's IP address instead.</li>
 	<li>Use the command <code>netstat -an | grep <em>listen-port</em></code> command to verify that the port specified in the <strong>Elasticsearch Server Port</strong> field is not being used by another process.<br />
 	For example, to see if Elasticsearch is running on its default port, use the following command:
@@ -71,7 +71,7 @@ One of the following displays:
 
 ### Reindexing catalog search and refreshing the full page cache {#es-reindex}
 
-After you change Magento's Elasticsearch configuration, you must reindex the catalog search index and refresh the full page cache using the Admin or command line.
+After you change Openmage's Elasticsearch configuration, you must reindex the catalog search index and refresh the full page cache using the Admin or command line.
 
 To refresh the cache using the Admin:
 
@@ -81,20 +81,20 @@ To refresh the cache using the Admin:
 		The following figure shows an example.<br />
 		![]({{ site.baseurl }}/common/images/solr_refresh-cache.png){:width="600px"}
 
-To clean the cache using the command line, use the [`magento cache:clean`]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean) command.
+To clean the cache using the command line, use the [`openmage cache:clean`]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean) command.
 
 To reindex using the command line:
 
-1.	Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
+1.	Log in to your Openmage server as, or switch to, the [Openmage file system owner]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
 2.	Enter any of the following commands:
 
 	Enter the following command to reindex the catalog search index only:
 
-		php <your Magento install dir>/bin/magento indexer:reindex catalogsearch_fulltext
+		php <your Openmage install dir>/bin/openmage indexer:reindex catalogsearch_fulltext
 
 	Enter the following command to reindex all indexers:
 
-		php <your Magento install dir>/bin/magento indexer:reindex
+		php <your Openmage install dir>/bin/openmage indexer:reindex
 
 3.	Wait while the reindexing completes.
 

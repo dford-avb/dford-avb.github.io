@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/common/css/stylesheet-fonts.css" type="text/css" charset="utf-8">
   <link rel="icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
-  <title>Magento Enterprise Edition (EE) Release Notes (1.13 and later)</title>
+  <title>Openmage Enterprise Edition (EE) Release Notes (1.13 and later)</title>
 
 </head>
 
-<!-- Title: Installing Sample Data for Magento Community Edition (CE) -->
-<!-- URL: installing-sample-data-archive-for-magento-ce -->
+<!-- Title: Installing Sample Data for Openmage Community Edition (CE) -->
+<!-- URL: installing-sample-data-archive-for-openmage-ce -->
 
 <body>
   
@@ -22,40 +22,40 @@
   <img src="{{ site.baseurl }}/guides/m1x/images/m1xheader.png" width="1024" alt="header" />
   {% include m1x/eol_message.html %}
 
-  <!-- Title: Magento Enterprise Edition (EE) Release Notes (1.13 and later) -->
+  <!-- Title: Openmage Enterprise Edition (EE) Release Notes (1.13 and later) -->
   <!-- URL: ee113-later-release-notes -->
-  <h1>Magento Enterprise Edition (EE) Release Notes (1.13 and later)</h1>
+  <h1>Openmage Enterprise Edition (EE) Release Notes (1.13 and later)</h1>
 
   <div class="toc">
     <h4>Table of Contents</h4>
     <p>These Release Notes contain the following information:</p>
     <ul>
-      <li><a href="#patches">Patches for Multiple Magento EE Versions</a></li>
-      <li><a href="#ee1131-11310">Magento EE 1.13.1.0 Release Notes</a></li>
-      <li><a href="#ee113-11302">Magento EE 1.13.0.2 Release Notes</a></li>
-      <li><a href="#ee113-11300">Magento EE 1.13.0.0 Release Notes</a></li>
+      <li><a href="#patches">Patches for Multiple Openmage EE Versions</a></li>
+      <li><a href="#ee1131-11310">Openmage EE 1.13.1.0 Release Notes</a></li>
+      <li><a href="#ee113-11302">Openmage EE 1.13.0.2 Release Notes</a></li>
+      <li><a href="#ee113-11300">Openmage EE 1.13.0.0 Release Notes</a></li>
       <!-- <li><a href="#thanks">Thanks</a></li> -->
     </ul>
   </div>
 
-  <h2 id="patches">Patches for Multiple Magento EE Versions</h2>
-  <p>Magento has the following patches available for multiple Magento EE versions.</p>
+  <h2 id="patches">Patches for Multiple Openmage EE Versions</h2>
+  <p>Openmage has the following patches available for multiple Openmage EE versions.</p>
 
   <ul class="level1">
-    <li><a href="#ee113-patches-connect-general">General Magento Connect Patches</a></li>
-    <li><a href="#ee113-patches-soap">Magento Install Page Displays After SOAP v2 Index Page Refresh</a></li>
-    <li><a href="#ee113-patches-multi-admins">Multiple Simultaneous Magento Administrators</a></li>
+    <li><a href="#ee113-patches-connect-general">General Openmage Connect Patches</a></li>
+    <li><a href="#ee113-patches-soap">Openmage Install Page Displays After SOAP v2 Index Page Refresh</a></li>
+    <li><a href="#ee113-patches-multi-admins">Multiple Simultaneous Openmage Administrators</a></li>
     <!-- <li><a href="#ee113-patches-solr-index">Solr Search Results and Indexing</a></li>
  -->
     <li><a href="#discover-fix">Discover Card Validation Patch Available</a></li>
     <li><a href="#php54">PHP 5.4 Patch Available</a></li>
-    <li><a href="#ee113-patches-how-to-get">How to get Patches for Magento EE</a></li>
+    <li><a href="#ee113-patches-how-to-get">How to get Patches for Openmage EE</a></li>
   </ul>
   <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
       width="40"><span><strong>Note</strong>: Some of the patches discussed in this section have
       <code>EE_1.14.0.1</code> in the name. These patches were all tested against EE 1.13.x as well.</div>
 
-  <h3 id="ee113-patches-connect-general">General Magento Connect Patches</h3>
+  <h3 id="ee113-patches-connect-general">General Openmage Connect Patches</h3>
   <p><em>Patch name</em>: PATCH_SUPEE-3941_EE_1.14.0.1_v1-2014-08-12-12-10-06.sh</p>
   <ul class="level1">
     <li>
@@ -65,36 +65,36 @@
     </li>
     <li>
       <!-- <a href="https://jira.corp.x.com/browse/MPERF-4558" target="_blank">MPERF-4558</a>, <a href="https://jira.corp.x.com/browse/APPSTORE-4589" target="_blank">APPSTORE-4589</a>  -->To
-      improve security, Magento Connect now uses HTTPS by default to download extensions, rather than FTP. </li>
+      improve security, Openmage Connect now uses HTTPS by default to download extensions, rather than FTP. </li>
     <li>
       <!-- <a href="https://jira.corp.x.com/browse/MPERF-4558" target="_blank">MPERF-4558</a>, <a href="https://jira.corp.x.com/browse/APPSTORE-4557" target="_blank">APPSTORE-4557</a>  -->Extension
       developers can now create an extensions with a dash character in the name. Merchants can install those extensions
       without issues.</li>
     <li>
-      <!-- <a href="https://jira.corp.x.com/browse/MPERF-4558" target="_blank">MPERF-4558</a>, <a href="https://jira.corp.x.com/browse/APPSTORE-4575" target="_blank">APPSTORE-4575</a>  -->Magento
+      <!-- <a href="https://jira.corp.x.com/browse/MPERF-4558" target="_blank">MPERF-4558</a>, <a href="https://jira.corp.x.com/browse/APPSTORE-4575" target="_blank">APPSTORE-4575</a>  -->Openmage
       administrators who attempt to install an extension with insufficient file system privileges are now informed.
-      Typically, the Magento Admin Panel runs as the web server user. If this user has insufficient privileges to the
-      <em>your Magento install dir</em><code>/app/code/community</code> directory structure, the Magento administrator
-      sees an error message in the Magento Connect Manager.<br />
+      Typically, the Openmage Admin Panel runs as the web server user. If this user has insufficient privileges to the
+      <em>your Openmage install dir</em><code>/app/code/community</code> directory structure, the Openmage administrator
+      sees an error message in the Openmage Connect Manager.<br />
       To set file system permissions appropriately, see <a
         href="{{ site.m1xgdeurl }}/install/installer-privileges_after.html#extensions" target="_blank">After You Install
-        Magento: Recommended File System Ownership and Privileges</a>.</li>
+        Openmage: Recommended File System Ownership and Privileges</a>.</li>
   </ul>
 
-  <h3 id="ee113-patches-soap">Magento Install Page Displays After SOAP v2 Index Page Refresh</h3>
+  <h3 id="ee113-patches-soap">Openmage Install Page Displays After SOAP v2 Index Page Refresh</h3>
   <p><em>Patch name</em>: PATCH_SUPEE-3762_EE_1.14.0.1_v1.sh.
     <!-- <a href="https://jira.corp.x.com/browse/SUPEE-3762" target="_blank">SUPEE-3762</a>  -->Refreshing the SOAP v2
-    index page (<code>http://<em>your-magento-host-name</em>/index.php/api/v2_soap/index/</code>) results in all
-    administrators and customers viewing the Magento installation page.</p>
+    index page (<code>http://<em>your-openmage-host-name</em>/index.php/api/v2_soap/index/</code>) results in all
+    administrators and customers viewing the Openmage installation page.</p>
 
-  <h3 id="ee113-patches-multi-admins">Multiple Simultaneous Magento Administrators</h3>
+  <h3 id="ee113-patches-multi-admins">Multiple Simultaneous Openmage Administrators</h3>
   <p><em>Patch name</em>: PATCH_SUPEE-3819_EE_1.14.0.1_v1.sh.
-    <!-- <a href="https://jira.corp.x.com/browse/SUPEE-3819" target="_blank">SUPEE-3819</a>  -->Multiple Magento
+    <!-- <a href="https://jira.corp.x.com/browse/SUPEE-3819" target="_blank">SUPEE-3819</a>  -->Multiple Openmage
     administrators can simultaneously add new products; or edit descriptions, edit prices, or edit stock quantities of
     existing products without causing deadlocks, key violations, or critical data errors. Together with applying the
     patch, you must set all indexers to Update when scheduled as follows:</p>
   <ol>
-    <li>Log in to the Magento Admin Panel as an administrator.</li>
+    <li>Log in to the Openmage Admin Panel as an administrator.</li>
     <li>Click <strong>System</strong> > <strong>Configuration</strong>.</li>
     <li>In the left navigation bar, from the ADVANCED group, click <strong>Index Management</strong>.</li>
     <li>Expand <strong>Indexing Options</strong>.</li>
@@ -106,15 +106,15 @@
 <p><em>Patch name</em>: PATCH_SUPEE-3630_EE_1.13.x-1.14.x_v1.sh. -->
   <!-- <a href="https://jira.corp.x.com/browse/MPERF-5050" target="_blank">MPERF-5050</a>, <a href="https://jira.corp.x.com/browse/SUPEE-3630" target="_blank">SUPEE-3630</a>  -->
   <!-- After applying this patch, your search engine returns search results to users on the web store while reindexing is underway. We recommend you install this patch if you're using the Solr search engine. <em>This patch can result in slower performance if you're using the default MySQL Full Text search engine</em>.</p> -->
-  <!-- <p>To get this patch, <a href="https://www.magentocommerce.com/products/customer/account/login/" target="_blank">contact Magento Support</a>.</p> -->
+  <!-- <p>To get this patch, <a href="https://www.openmagecommerce.com/products/customer/account/login/" target="_blank">contact Openmage Support</a>.</p> -->
 
   <h3 id="discover-fix">Discover Card Validation Patch Available</h3>
-  <p>Magento has fixed an issue that prevented some Discover credit cards from validating properly. The issue was that
+  <p>Openmage has fixed an issue that prevented some Discover credit cards from validating properly. The issue was that
     certain Discover credit card number ranges were not recognized as being valid. As a result of the fix, all Discover
     cards should validate properly.</p>
   <p>The issue affects EE versions 1.9.1.1 through 1.13.1.0.</p>
   <p>To get a fix for the issue, see <a href="{{ site.m1xgdeurl }}/other/discover-card-validation.html"
-      target="_blank">Discover credit card validation issue: Magento EE 1.9.1.1&ndash;1.13.1.0 and CE
+      target="_blank">Discover credit card validation issue: Openmage EE 1.9.1.1&ndash;1.13.1.0 and CE
       1.4.2.0&ndash;1.8.1.0</a>.</p>
   <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-important.png" alt="important"
       align="left" width="40"><span><strong>Important</strong>: This is <em>not</em> a security threat. No data has been
@@ -123,29 +123,29 @@
 
 
   <h3 id="php54">PHP 5.4 Patch Available</h3>
-  <p>You can use PHP 5.4 with Magento EE versions 11.0.0.0&ndash;1.13.1.0.</p>
+  <p>You can use PHP 5.4 with Openmage EE versions 11.0.0.0&ndash;1.13.1.0.</p>
   <p>To get the patch, see <a href="{{ site.m1xgdeurl }}/other/php5.4_patch.html" target="_blank">Getting the PHP 5.4
-      patch for Magento Enterprise Edition (EE) and Community Edition (CE)</a>.</p>
+      patch for Openmage Enterprise Edition (EE) and Community Edition (CE)</a>.</p>
   <p>For more information about PHP 5.4, see <a href="http://www.php.net/manual/en/migration54.changes.php"
       target="_blank">the PHP migration page</a> and <a href="http://php.net/ChangeLog-5.php#5.4.0" target="_blank">the
       PHP changelog</a>.</p>
 
-  <h3 id="ee113-patches-how-to-get">How to get Patches for Magento EE</h3>
-  <p>This section discusses how to get patches referenced in these Release Notes. Magento has other patches available
-    from the EE support portal and the <a href="https://partners.magento.com" target="_blank">partner portal</a>; you
+  <h3 id="ee113-patches-how-to-get">How to get Patches for Openmage EE</h3>
+  <p>This section discusses how to get patches referenced in these Release Notes. Openmage has other patches available
+    from the EE support portal and the <a href="https://partners.openmage.com" target="_blank">partner portal</a>; you
     can use the following instructions to install any of those patches as well.</p>
-  <p>To get patches for Magento EE:</p>
+  <p>To get patches for Openmage EE:</p>
   <ol>
-    <li>Log in to <a href="http://www.magentocommerce.com" target="_blank">www.magentocommerce.com</a>.</li>
+    <li>Log in to <a href="http://www.openmagecommerce.com" target="_blank">www.openmagecommerce.com</a>.</li>
     <li>In the left pane, click <strong>Downloads</strong>.</li>
-    <li>In the right pane, click <strong>Magento Enterprise Edition</strong>.</li>
+    <li>In the right pane, click <strong>Openmage Enterprise Edition</strong>.</li>
     <li>Follow the prompts on your screen to download a patch for your version of EE.</li>
     <li>Apply the patch as discussed in <a href="{{ site.m1xgdeurl }}/other/ht_install-patches.html" target="_blank">How
-        to Apply and Revert Magento Patches</a>.</li>
+        to Apply and Revert Openmage Patches</a>.</li>
   </ol>
 
 
-  <h2 id="ee1131-11310">Magento EE 1.13.1.0 Release Notes</h2>
+  <h2 id="ee1131-11310">Openmage EE 1.13.1.0 Release Notes</h2>
   <p>
     <p>See the following sections for information about changes in this release:</p>
     <ul>
@@ -156,15 +156,15 @@
       <li><a href="#11310-changes-upgrade-issue">Potential Issue After Upgrading to EE 1.13.1.0</a></li>
       <li><a href="#11310-changes">Changes in This Release</a></li>
       <li><a href="#tax-11310">Tax Calculation Fixes</a></li>
-      <li><a href="#ee113-11310-fixes">Fixes in Magento EE 1.13.1.0</a></li>
+      <li><a href="#ee113-11310-fixes">Fixes in Openmage EE 1.13.1.0</a></li>
     </ul>
 
     <h3 id="ee1131-113100-hilites">Highlights</h3>
-    <p>Magento EE 1.13.1.0 helps advance overall product quality and ease operations by providing significant tax
+    <p>Openmage EE 1.13.1.0 helps advance overall product quality and ease operations by providing significant tax
       calculation improvements, a wide range of bug fixes, and several security enhancements.</p>
 
     <h4>Tax Calculation Improvements</h4>
-    <p>EE 1.13.1.0 resolves Value Added Tax (VAT) and Fixed Product Tax (FPT) issues so that Magento administrators can
+    <p>EE 1.13.1.0 resolves Value Added Tax (VAT) and Fixed Product Tax (FPT) issues so that Openmage administrators can
       create invoices and credit memos to give merchants merchants access to accurate and consistent tax calculations
       and displays. We've also addressed:</p>
     <ul>
@@ -177,44 +177,44 @@
     <h4>Functional Improvements</h4>
     <p>EE 1.13.1.0 includes bug fixes across important feature areas, including the shopping cart, checkout, content
       management system, and product import and export function. Many of these updates came from a hackathon held with
-      Magento community developers, which demonstrates the vitality of our development community and their powerful
+      Openmage community developers, which demonstrates the vitality of our development community and their powerful
       ability to help us advance the platform.</p>
 
     <h4>Security Enhancements</h4>
     <p>EE 1.13.1.0 includes several security enhancements that were identified through our rigorous security assessment
-      process. Magento complements its own comprehensive internal testing with quarterly penetration testing by expert
+      process. Openmage complements its own comprehensive internal testing with quarterly penetration testing by expert
       consultants and actively works with the development community to identify security issues in order to harden the
       platform against potential threats. </p>
 
     <h3 id="ee1131-113100-security">Security Enhancements</h3>
-    <p>Magento addressed the following security issues:</p>
+    <p>Openmage addressed the following security issues:</p>
     <ul>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-858" target="_blank">MPERF-858</a>)  -->Improved the
         password hashing algorithm.<br />
-        Magento thanks Bjorn Kraus for contributing to this fix.</li>
+        Openmage thanks Bjorn Kraus for contributing to this fix.</li>
       <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-781" target="_blank">MPERF-781</a>) Resolved issues with persistent cookies in the web store.<br />
-Magento thanks iSEC Security Consultants for contributing to this fix.</li> -->
+Openmage thanks iSEC Security Consultants for contributing to this fix.</li> -->
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1920" target="_blank">MPERF-1920</a>, <a href="https://jira.corp.x.com/browse/MPERF-1898">MPERF-1898</a>)  -->Resolved
         issues that could have resulted in Cross-Site Request Forgery (CSRF) in the web store.
         <!-- <br />
-Magento thanks iSEC Security Consultants for contributing to this fix. For more information about preventing these attacks, see the <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet" target="_blank">Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet</a>. -->
+Openmage thanks iSEC Security Consultants for contributing to this fix. For more information about preventing these attacks, see the <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet" target="_blank">Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet</a>. -->
       </li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1175" target="_blank">MPERF-1175</a>)  -->Resolved potential
         issues when issuing Return Materials Authorizations (RMAs).<br />
-        Magento thanks Ivan Chepurnyi for contributing to this fix.</li>
+        Openmage thanks Ivan Chepurnyi for contributing to this fix.</li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-373" target="_blank">MPERF-373</a>)  -->Resolved a session
         fixation issue when registering a user with the web store.
         <!-- <br />
-Magento thanks iSEC Security Consultants for contributing to this fix. -->
+Openmage thanks iSEC Security Consultants for contributing to this fix. -->
       </li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2120" target="_blank">MPERF-2120</a>)  -->Resolved a <a
           href="#ce18-1800security-advisory">cross-site scripting (XSS) issue reported in EE 1.13.0.0</a>.<br />
-        Magento thanks Myke Hines, Fox, and Opteros for contributing to this fix.</li>
+        Openmage thanks Myke Hines, Fox, and Opteros for contributing to this fix.</li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2123" target="_blank">MPERF-2123</a>)  -->Resolved issues
         with the expiration of file-based user sessions.</li>
@@ -223,7 +223,7 @@ Magento thanks iSEC Security Consultants for contributing to this fix. -->
         that could have resulted in <a href="https://en.wikipedia.org/wiki/File_inclusion_vulnerability"
           target="_blank">Remote File Inclusion (RFI)</a> vulnerabilities.
         <!-- <br />
-Magento thanks Ralf Zimmermann for contributing to this fix. -->
+Openmage thanks Ralf Zimmermann for contributing to this fix. -->
       </li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2121" target="_blank">MPERF-2121</a>, <a href="https://jira.corp.x.com/browse/MPERF-2122" target="_blank">MPERF-2122</a>, <a href="https://jira.corp.x.com/browse/MPERF-2118">MPERF-2118</a>)  -->Addressed
@@ -232,16 +232,16 @@ Magento thanks Ralf Zimmermann for contributing to this fix. -->
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2156" target="_blank">MPERF-2156</a>)  -->Closed a potential
         loophole that enables another user to possibly access personal information when viewing billing
         agreements.<br />
-        Magento thanks Darryl Adie and Ampersand Commerce for contributing to this fix.</li>
+        Openmage thanks Darryl Adie and Ampersand Commerce for contributing to this fix.</li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2119" target="_blank">MPERF-2119</a>)  -->Resolved a remote
-        code execution vulnerability that enabled an attacker to delete files and directories on the Magento
-        installation. (The attack required access to the Admin Panel as a Magento administrator.)</li>
+        code execution vulnerability that enabled an attacker to delete files and directories on the Openmage
+        installation. (The attack required access to the Admin Panel as a Openmage administrator.)</li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1904" target="_blank">MPERF-1904</a>)  -->Fixed the security
         settings for the <code>frontend</code> cookie to protect user sessions.
         <!-- <br />
-Magento thanks Binary Anvil for contributing to this fix. -->
+Openmage thanks Binary Anvil for contributing to this fix. -->
       </li>
 
     </ul>
@@ -254,14 +254,14 @@ Magento thanks Binary Anvil for contributing to this fix. -->
     <p><strong>Symptom</strong>: After completing the upgrade, when you log in to the Admin Panel and click
       <strong>System</strong> > <strong>Configuration</strong>, a fatal error similar to the following displays in your
       browser:</p>
-    <pre>Class 'Mage_Googlecheckout_Helper_Data' not found in /var/www/html/magento/app/Mage.php on line 547</pre>
+    <pre>Class 'Mage_Googlecheckout_Helper_Data' not found in /var/www/html/openmage/app/Mage.php on line 547</pre>
     <!-- <p><strong>Description</strong>: TBD -->
     <p><strong>Solution</strong>:</p>
     <ol>
       <li>Close the Admin Panel browser window.</li>
       <li>As a user with <code>root</code> privileges, delete all files <em>except</em> <code>config.xml</code> from the
         following directory:<br />
-        <pre><em>magento-install-dir</em>/app/code/core/Mage/GoogleCheckout/etc</pre>
+        <pre><em>openmage-install-dir</em>/app/code/core/Mage/GoogleCheckout/etc</pre>
       </li>
       <li>When you log back in to the Admin Panel, everything works as expected.<br />
         If you're still encountering errors, see <a href="{{ site.m1xgdeurl }}/install/installing.html#help"
@@ -275,8 +275,8 @@ Magento thanks Binary Anvil for contributing to this fix. -->
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2534" target="_blank">MPERF-2534</a>)  -->EE's Payment
         Bridge module has been updated to the latest version.<br />
         For more information, see <a
-          href="http://www.magentocommerce.com/blog/comments/magento-secure-payment-bridge-for-magento-enterprise-edition-113-available"
-          target="_blank">this Magento blog post</a>.</li>
+          href="http://www.openmagecommerce.com/blog/comments/openmage-secure-payment-bridge-for-openmage-enterprise-edition-113-available"
+          target="_blank">this Openmage blog post</a>.</li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1822" target="_blank">MPERF-1822</a>)  -->A tax
         configuration option for Fixed Product Tax (FPT) has changed. This option is in the Admin Panel at
@@ -296,10 +296,10 @@ Magento thanks Binary Anvil for contributing to this fix. -->
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1902" target="_blank">MPERF-1902</a>)  -->You can now
         specify a 0% tax rate. (In the Admin Panel, click <strong>Sales</strong> > <strong>Tax</strong> > <strong>Manage
           Tax Zones & Rates.</strong>).<br />
-        For more information, see the <a href="http://www.magentocommerce.com/resources/magento-user-guide"
-          target="_blank">Magento User Guide</a>.</li>
+        For more information, see the <a href="http://www.openmagecommerce.com/resources/openmage-user-guide"
+          target="_blank">Openmage User Guide</a>.</li>
       <li>
-        <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1857" target="_blank">MPERF-1857</a>)  -->Magento changed
+        <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1857" target="_blank">MPERF-1857</a>)  -->Openmage changed
         its recommended setting for <strong>System</strong> > <strong>Configuration</strong> > SALES >
         <strong>Tax</strong> > <strong>Calculation Settings</strong>, option <strong>Apply Discount On Prices</strong>
         as follows:
@@ -311,7 +311,7 @@ Magento thanks Binary Anvil for contributing to this fix. -->
         </ul>
       </li>
       <li>
-        <!-- (<a href="https://jira.corp.x.com/browse/MPERF-TBD" target="_blank">MPERF-TBD</a>)  -->Magento strongly
+        <!-- (<a href="https://jira.corp.x.com/browse/MPERF-TBD" target="_blank">MPERF-TBD</a>)  -->Openmage strongly
         recommends all merchants set <strong>Apply Customer Tax</strong> to <strong>After Discount</strong>, regardless
         of all other tax-related settings. This avoids issues with calculating the total product price.</li>
 
@@ -330,8 +330,8 @@ Magento thanks Binary Anvil for contributing to this fix. -->
         This makes it easier for you to browse your stores and understand which websites, store views, and stores are
         associated with each other. The updated Manage Stores page also displays the root category for each store and
         the code for each website and store view.<br />
-        Magento thanks Fabrizio Branca for contributing to this fix. For more information, see <a
-          href="http://www.fabrizio-branca.de/magento-website-store-groups-store-views.html" target="_blank">Fabrizio's
+        Openmage thanks Fabrizio Branca for contributing to this fix. For more information, see <a
+          href="http://www.fabrizio-branca.de/openmage-website-store-groups-store-views.html" target="_blank">Fabrizio's
           blog post</a>.</li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-3221" target="_blank">MPERF-3221</a>)  -->For the DHL
@@ -360,7 +360,7 @@ Magento thanks Binary Anvil for contributing to this fix. -->
     </ul>
 
     <h4 id="tax-11310-general">General Tax Notes</h4>
-    <p>The following general fixes were made to Magento tax configuration and calculations:</p>
+    <p>The following general fixes were made to Openmage tax configuration and calculations:</p>
     <ul>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1911" target="_blank">MPERF-1911</a>)  -->Canadian customers
@@ -430,7 +430,7 @@ Magento thanks Binary Anvil for contributing to this fix. -->
         rounding issue in the tax detail display in the shopping cart when more than one tax rule is used.</li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1868" target="_blank">MPERF-1868</a>)  -->Resolved an issue
-        reported on <a href="http://stackoverflow.com/questions/13529580/magento-tax-rounding-issue"
+        reported on <a href="http://stackoverflow.com/questions/13529580/openmage-tax-rounding-issue"
           target="_blank">stackoverflow</a> where a calculation error resulted from the following configuration:<br />
         <strong>System</strong> > <strong>Configuration</strong> > SALES > <strong>Tax</strong> > <strong>Calculation
           Settings</strong>, option <strong>Tax Calculation Method Based On</strong> set to <strong>Total</strong><br />
@@ -461,7 +461,7 @@ Magento thanks Binary Anvil for contributing to this fix. -->
     </ul>
 
     <h4 id="tax-11310-display">Display Issues</h4>
-    <p>The following issues relate to the incorrect display of tax information in the Admin Panel or in your Magento web
+    <p>The following issues relate to the incorrect display of tax information in the Admin Panel or in your Openmage web
       store:</p>
     <ul>
       <li>
@@ -547,7 +547,7 @@ Magento thanks Binary Anvil for contributing to this fix. -->
 
     </ul>
 
-    <h3 id="ee113-11310-fixes">Fixes in Magento EE 1.13.1.0</h3>
+    <h3 id="ee113-11310-fixes">Fixes in Openmage EE 1.13.1.0</h3>
     <p>Fixes in this release can be divided into the following categories:</p>
     <li><a href="#ee113-11310-cart">Shopping Cart and Checkout Fixes</a></li>
     <li><a href="#ee113-11310-import">Import and Export Fixes</a></li>
@@ -578,7 +578,7 @@ Magento thanks Binary Anvil for contributing to this fix. -->
         subcategory names display correctly. Before the issue was resolved, subcategory names that were significantly
         longer than the category name did not display properly.</li>
       <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2361" target="_blank">MPERF-2361</a>) Resolved an issue where <code>Mage_Adminhtml_CustomerController->viewCartAction</code> falsely displayed <code>There are no items in customer's shopping cart at the moment</code> in the customer's shoppign cart view.<br />
-Magento thanks Johnathan David Froeming for contributing to this fix. Link to the <a href="https://github.com/magento/bugathon_march_2013/pull/259" target="_blank">GitHub pull request</a>.</li>  -->
+Openmage thanks Johnathan David Froeming for contributing to this fix. Link to the <a href="https://github.com/openmage/bugathon_march_2013/pull/259" target="_blank">GitHub pull request</a>.</li>  -->
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2350" target="_blank">MPERF-2350</a>)  -->If a customer adds
         more than one product that requires products to be purchased in increments, only the products that meet the
@@ -586,15 +586,15 @@ Magento thanks Johnathan David Froeming for contributing to this fix. Link to th
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2340" target="_blank">MPERF-2340</a>)  -->Scheduled payments
         work properly.<br />
-        Magento thanks Sylvain Raye for contributing to this fix. </li>
+        Openmage thanks Sylvain Raye for contributing to this fix. </li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2341" target="_blank">MPERF-2341</a>)  -->If a bundled or
         configurable product is out of stock, it's no longer available to check out.<br />
-        Magento thanks Francesco Marangi for contributing to this fix. </li>
+        Openmage thanks Francesco Marangi for contributing to this fix. </li>
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2356" target="_blank">MPERF-2356</a>)  -->Placing an order
         in the Admin Panel correctly sets the order status to Pending.<br />
-        Magento thanks GitHub user elframan for contributing to this fix. </li>
+        Openmage thanks GitHub user elframan for contributing to this fix. </li>
 
 
     </ul>
@@ -607,7 +607,7 @@ Magento thanks Johnathan David Froeming for contributing to this fix. Link to th
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2337" target="_blank">MPERF-2337</a>)  -->You can now export
         a shipment to CSV after printing its shipping label.<br />
-        Magento thanks Florinel Chis for contributing to this fix. </li>
+        Openmage thanks Florinel Chis for contributing to this fix. </li>
 
     </ul>
 
@@ -632,7 +632,7 @@ Magento thanks Johnathan David Froeming for contributing to this fix. Link to th
       payment method now allows line items with a negative value. </li>
     <li>
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2264" target="_blank">MPERF-2264</a>)  -->You can now use the
-      GSI Payment Service with Magento Payment Bridge.</li>
+      GSI Payment Service with Openmage Payment Bridge.</li>
     <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2633" target="_blank">MPERF-2633</a>) PayPal's Payflow Pro Gateway now uses the fields  -->
     <li>Made the following fixes to eWay Direct:
       <ul>
@@ -674,7 +674,7 @@ Magento thanks Johnathan David Froeming for contributing to this fix. Link to th
   <ul>
     <li>
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-872" target="_blank">MPERF-872</a>)  -->Resolved issues that
-      caused spurious errors in the Magento exception log:<br />
+      caused spurious errors in the Openmage exception log:<br />
       <code>'Zend_Date_Exception' with message 'Invalid year, it must be between -10000 and 10000'</code></li>
     <li>
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-748" target="_blank">MPERF-748</a>)  -->Merging CMS pages no
@@ -705,63 +705,63 @@ Magento thanks Johnathan David Froeming for contributing to this fix. Link to th
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-736" target="_blank">MPERF-736</a>)  -->Back-in-stock e-mails
       contain the correct content.</li>
     <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2357" target="_blank">MPERF-2357</a>) You can now use the <code>$file</code> variable in installation scripts without errors.<br />
-Magento thanks Fabian Blechschmidt Schrank for contributing to this fix. Link to the <a href="https://github.com/magento/bugathon_march_2013/issues/244" target="_blank">GitHub issue</a>.</li> -->
-    <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2358" target="_blank">MPERF-2358</a>) Fixed issues with Magento's use of the Zend TwoLevels backend cache.<br />
-Magento thanks Rouven Alexander Rieker for contributing to this fix. Link to <a href="https://github.com/magento/bugathon_march_2013/pull/247" target="_blank">GitHub pull request</a> for more information.</li> -->
+Openmage thanks Fabian Blechschmidt Schrank for contributing to this fix. Link to the <a href="https://github.com/openmage/bugathon_march_2013/issues/244" target="_blank">GitHub issue</a>.</li> -->
+    <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2358" target="_blank">MPERF-2358</a>) Fixed issues with Openmage's use of the Zend TwoLevels backend cache.<br />
+Openmage thanks Rouven Alexander Rieker for contributing to this fix. Link to <a href="https://github.com/openmage/bugathon_march_2013/pull/247" target="_blank">GitHub pull request</a> for more information.</li> -->
     <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2359" target="_blank">MPERF-2359</a>) The database cache backend now deletes cache tags when deleting the corresponding cache entry.<br />
-Magento thanks Fabrizio Branca for contrinbuting to this fix.</li> -->
+Openmage thanks Fabrizio Branca for contrinbuting to this fix.</li> -->
     <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2360" target="_blank">MPERF-2360</a>) Fixed the definition of the store ID in <code>sendPasswortResetConfirmationEmail()</code> to specify the current store's ID.<br />
-Magento thanks Dominik Weber for contributing to this fix.</li> -->
+Openmage thanks Dominik Weber for contributing to this fix.</li> -->
     <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2361" target="_blank">MPERF-2361</a>) <code>Mage_Page_Block_Html_Header->getIsHomePage</code> returns <code>true</code> when the URL has GET parameters. For example, the following now returns <code>true</code>:<br />
 <code>http://domain.com/?hoge=hoge //Mage_Page_Block_Html_Header->getIsHomePage</code><br />
-Magento thanks Johnathan David Froeming for contributing to this fix. Link to the <a href="https://github.com/magento/bugathon_march_2013/pull/259" target="_blank">GitHub pull request</a>.</li> -->
+Openmage thanks Johnathan David Froeming for contributing to this fix. Link to the <a href="https://github.com/openmage/bugathon_march_2013/pull/259" target="_blank">GitHub pull request</a>.</li> -->
     <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2339" target="_blank">MPERF-2339</a>) Products sort correctly using a custom attribute.<br />
-Magento thanks Vinai Kopp for contributing to this fix. Link to the <a href="https://github.com/magento/bugathon_march_2013/issues/58" target="_blank">GitHub issue</a>.</li> -->
+Openmage thanks Vinai Kopp for contributing to this fix. Link to the <a href="https://github.com/openmage/bugathon_march_2013/issues/58" target="_blank">GitHub issue</a>.</li> -->
     <li>
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2336" target="_blank">MPERF-2336</a>)  -->You can now manage
       product ratings and reviews from the Admin Panel as well as from the web store.<br />
-      Magento thanks Fabian Blechschmidt Schrank for contributing to this fix. </li>
+      Openmage thanks Fabian Blechschmidt Schrank for contributing to this fix. </li>
     <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2342" target="_blank">MPERF-2342</a>) When you create an order using the Admin Panel, the values for the default shipping address and default billing address display properly.<br />
 For example, if you clear the <strong>Same as Billing Address</strong> checkbox, the default shipping address displays.<br />
-Magento thanks TBD for contributing to this fix. Link to the <a href="https://github.com/magento/bugathon_march_2013/issues/115" target="_blank">GitHub issue</a>.</li> -->
+Openmage thanks TBD for contributing to this fix. Link to the <a href="https://github.com/openmage/bugathon_march_2013/issues/115" target="_blank">GitHub issue</a>.</li> -->
     <li>
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2354" target="_blank">MPERF-2354</a>)  -->Resolved an issue
       with <code>Mage_Page_Block_Template_Links::addLinkBlock</code> to enable you to sort an array of results by
       position.<br />
-      Magento thanks Benjamin Marks for contributing to this fix. </li>
+      Openmage thanks Benjamin Marks for contributing to this fix. </li>
 
   </ul>
 
-  <h2 id="ee113-11302">Magento EE 1.13.0.2 Release Notes</h2>
-  <p>In response to customer feedback about EE 1.13.0.0 and EE 1.13.0.1, Magento has modified the functionality to
+  <h2 id="ee113-11302">Openmage EE 1.13.0.2 Release Notes</h2>
+  <p>In response to customer feedback about EE 1.13.0.0 and EE 1.13.0.1, Openmage has modified the functionality to
     smooth the migration path from earlier EE versions and support duplicate category URL keys.</p>
   <p>See the following sections for a discussion of changes in this release:</p>
   <ul>
-    <li><a href="#ee113-11302-seo">Search Engine Optimization in Magento EE 1.13.0.2</a></li>
+    <li><a href="#ee113-11302-seo">Search Engine Optimization in Openmage EE 1.13.0.2</a></li>
     <li><a href="#ee113-11302-known">Known Issue in EE 1.13.0.2</a></li>
     <li><a href="#ee113-11302-patches">Patch Available for EE 1.13.0.2</a></li>
     <li><a href="#ee113-11302-changes">Changes in EE 1.13.0.2</a></li>
-    <li><a href="#ee113-11302-fixes">Fixes in Magento EE 1.13.0.2</a></li>
+    <li><a href="#ee113-11302-fixes">Fixes in Openmage EE 1.13.0.2</a></li>
   </ul>
 
   <p><strong>Important</strong>: </p>
   <ul>
-      <li>Perform <em>all</em> new installations and upgrades to Magento EE 1.13.0.2&mdash;<em>not to Magento EE
+      <li>Perform <em>all</em> new installations and upgrades to Openmage EE 1.13.0.2&mdash;<em>not to Openmage EE
           1.13.0.0 or 1.13.0.1</em>&mdash;to avoid issues with missing products on your web store due to duplicate URL
         key issues during the upgrade.</li>
       <li>The upgrade to EE 1.13.0.2 involves tasks not required for other EE upgrades. For more information, see <a
           href="{{ site.m1xgdeurl }}/install/installing_upgrade_landing.html#ee1300-11301-upgrade-to-ee11302-start"
-          target="_blank">Important Information About Upgrading to Magento Enterprise Edition (EE) 1.13.0.2</a>.</li>
+          target="_blank">Important Information About Upgrading to Openmage Enterprise Edition (EE) 1.13.0.2</a>.</li>
     </ul>
   
 
-  <h3 id="ee113-11302-seo">Search Engine Optimization in Magento EE 1.13.0.2</h3>
+  <h3 id="ee113-11302-seo">Search Engine Optimization in Openmage EE 1.13.0.2</h3>
   <p>This section discusses how search engine optimization (SEO) works in EE 1.13.0.2. This section is <em>not</em>
     intended to be a tutorial on SEO.</p>
   <p>See one of the following for more information:</p>
   <ul>
     <li><a href="#ee113-11302-seo-ee112-compare">Comparing EE 1.13.0.2 with EE 1.12.0.2</li>
-    <li><a href="#ee113-11302-seo-uniqueness-rules">URL Key Uniqueness Rules in Magento EE 1.13.0.2</a></li>
+    <li><a href="#ee113-11302-seo-uniqueness-rules">URL Key Uniqueness Rules in Openmage EE 1.13.0.2</a></li>
     <li><a href="#ee113-11302-seo-key-examples">URL Key Examples</a></li>
     <li><a href="#ee113-11302-seo-prioritize">Prioritizing URL Resolution</a></li>
     <li><a href="#ee113-11302-seo-moreinfo">For More Information about SEO</a></li>
@@ -804,7 +804,7 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
   <p id="chained-redirects"><strong>No more chained redirects</strong></p>
   <dl>
     <dt><em>Description:</em></dt>
-    <dd>Magento addressed the indexer issue that resulted in suffixes being silently added to products with duplicate
+    <dd>Openmage addressed the indexer issue that resulted in suffixes being silently added to products with duplicate
       URL keys. In EE 1.13.0.2, duplicate URL keys are not allowed.</dd>
     <dt><em>Benefit:</em></dt>
     <dd>Search engines recognize the canonical URL, which improves the product's weighting in search results. (All of
@@ -851,7 +851,7 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
 <p>Canonical meta tags are disabled by default in EE 1.13.0.2 and are required for this to work. (To enable these features in the Admin Panel, click <strong>System</strong> > <strong>Configuration</strong> > CATALOG > <strong>Catalog</strong> > <strong>Search Engine Optimizations</strong>. Enable both of the following options: <strong>Use Canonical Link Meta Tag For Categories</strong> and <strong>Use Canonical Link Meta Tag For Products</strong>.)</p></dd>
 </dl> -->
 
-  <h4 id="ee113-11302-seo-uniqueness-rules">URL Key Uniqueness Rules in Magento EE 1.13.0.2</h4>
+  <h4 id="ee113-11302-seo-uniqueness-rules">URL Key Uniqueness Rules in Openmage EE 1.13.0.2</h4>
   <p>The following entities can be indexed and therefore have a requirement for URL key uniqueness:</p>
   <ul>
     <li>Categories</li>
@@ -999,7 +999,7 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
     <li>Product - Redirect - Category</li>
     <li>Product - Category - Redirect</li>
   </ul>
-  <p>In the event no URL key matches your priority setting, Magento continues through the priorities in order until a
+  <p>In the event no URL key matches your priority setting, Openmage continues through the priorities in order until a
     match is found.</p>
   <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
       width="40"><span><strong>Note</strong>: CMS URL keys are always prioritized last.</div>
@@ -1008,8 +1008,8 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
   <h4 id="ee113-11302-seo-moreinfo">For More Information about SEO</h4>
   <p>For more information about SEO, see:</p>
   <ul>
-    <li><a href="http://yoast.com/articles/magento-seo/" target="_blank">Magento SEO</a></li>
-    <li><a href="http://www.magentocommerce.com/boards/viewforum/81/" target="_blank">Magento SEO forum</a></li>
+    <li><a href="http://yoast.com/articles/openmage-seo/" target="_blank">Openmage SEO</a></li>
+    <li><a href="http://www.openmagecommerce.com/boards/viewforum/81/" target="_blank">Openmage SEO forum</a></li>
     <li><a href="http://searchengineland.com/guide/what-is-seo" target="_blank">SearchEnglineLand&mdash;What is Search
         Engine Optimization?</a></li>
     <li><a
@@ -1031,7 +1031,7 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
 
   <h3 id="ee113-11302-patches">Patch Available for EE 1.13.0.2</h3>
   <p>The United States Postal Service (USPS) changed the names of their Priority and Express shipping options in their
-    API on Sunday, July 28, 2013. Magento has a patch available; however, this patch is not included in new EE 1.13.0.2
+    API on Sunday, July 28, 2013. Openmage has a patch available; however, this patch is not included in new EE 1.13.0.2
     installations.</p>
   <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
       width="40"><span><strong>Note</strong>: If you applied the patch before you upgraded to EE 1.13.0.2, you don't
@@ -1039,8 +1039,8 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
 
   <p>For new EE 1.13.0.2 installations to continue utilizing USPS Priority <em>and</em> Express mail methods, you must
     install the patch we've created to address the issue.</p>
-  <p>Get the patch from the EE support portal by logging in to <a href="http://www.magentocommerce.com"
-      target="_blank">magentocommerce.com</a>.</p>
+  <p>Get the patch from the EE support portal by logging in to <a href="http://www.openmagecommerce.com"
+      target="_blank">openmagecommerce.com</a>.</p>
 
   <h3 id="ee113-11302-changes">Changes in EE 1.13.0.2</h3>
   <ul>
@@ -1085,7 +1085,7 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
           and you create a new product with the name <code>Product1</code> and the product has an ID of 500, the new
           product's URL key is <code>product1-500</code>.<br />
           <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note"
-              align="left" width="40"><span><strong>Note</strong>: To avoid having Magento specify a URL key for you,
+              align="left" width="40"><span><strong>Note</strong>: To avoid having Openmage specify a URL key for you,
               you can enter one yourself. Make sure the URL key you specify is unique among all products, including
               products across store views.</div>
         </li>
@@ -1118,7 +1118,7 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
         </li>
       </ul>
 
-      <h3 id="ee113-11302-fixes">Fixes in Magento EE 1.13.0.2</h3>
+      <h3 id="ee113-11302-fixes">Fixes in Openmage EE 1.13.0.2</h3>
       <p>This section discusses fixes made in EE 1.13.0.2.</p>
       <ul>
         <li>
@@ -1137,14 +1137,14 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
         </li>
         <li>
           <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2575" target="_blank">MPERF-2575</a>)  -->You can now
-          install or upgrade to EE 1.13.0.2 if your Magento database had a table prefix (for example, all tables start
+          install or upgrade to EE 1.13.0.2 if your Openmage database had a table prefix (for example, all tables start
           with <code>mage_</code> because you specified a tables prefix during installation).</li>
         <li>Resolved the following upgrade issues:
           <ul>
             <li>
               <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2471" target="_blank">MPERF-2471</a>).  -->After
               upgrading from an earlier version like EE 1.12.0.2, errors such as the following no longer display in the
-              Magento exception log:
+              Openmage exception log:
               <code>SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry</code></li>
 
             <li>
@@ -1153,8 +1153,8 @@ Magento thanks TBD for contributing to this fix. Link to the <a href="https://gi
               <!-- https://jira.corp.x.com/browse/MPERF-1778 -->
             </li>
             <!-- <li>{<a href="https://jira.corp.x.com/browse/MPERF-1744" target="_blank">MPERF-1744</a>) One issue affected a custom URL key assigned to a product that was associated with different store views. After upgrading, the product is viewable on the web store on all store views and, in addition, a new URL key is created for the product. https://jira.corp.x.com/browse/MPERF-1744 <br />
-In EE 1.13.0.1 and later, URL keys are globally unique among all stores&mdash;not just unique in a particular store. You can create products and categories with the same name; Magento assigns duplicates a unique URL key.<br />
-For example, if you already have a category named <strong>Apparel</strong> > <strong>Women's</strong> > <strong>Shoes</strong> and you add another category named <strong>Apparel</strong> > <strong>Men's</strong> > <strong>Shoes</strong>, Magento creates a unique URL key for the second category. The URL key is the category name separated from its ID by a dash character (for example, <code>shoes-42</code>). https://jira.corp.x.com/browse/MPERF-1744 </li>-->
+In EE 1.13.0.1 and later, URL keys are globally unique among all stores&mdash;not just unique in a particular store. You can create products and categories with the same name; Openmage assigns duplicates a unique URL key.<br />
+For example, if you already have a category named <strong>Apparel</strong> > <strong>Women's</strong> > <strong>Shoes</strong> and you add another category named <strong>Apparel</strong> > <strong>Men's</strong> > <strong>Shoes</strong>, Openmage creates a unique URL key for the second category. The URL key is the category name separated from its ID by a dash character (for example, <code>shoes-42</code>). https://jira.corp.x.com/browse/MPERF-1744 </li>-->
           </ul>
         </li>
         <li>Resolved the following issues with URL keys in store views:
@@ -1267,7 +1267,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
         </li>
       </ul>
 
-      <h2 id="ee113-11300">Magento EE 1.13.0.0 Release Notes</h2>
+      <h2 id="ee113-11300">Openmage EE 1.13.0.0 Release Notes</h2>
       <p>See the following sections for information about changes in this release:</p>
       <ul>
         <li><a href="#ee113-11300-highlights">Highlights</a></li>
@@ -1291,8 +1291,8 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
         <li>
           <!-- EE -->Additional option of using Redis NoSQL for cache and session storage in multi-host deployments
           (recommended for new deployments)<br />
-          To set up and use Redis with Magento, see <a href="{{ site.baseurl }}/guides/m1x/ce18-ee113/using_redis.html"
-            target="_blank">Using Redis with Magento Community Edition (CE) and Enterprise Edition (EE)</a>.</li>
+          To set up and use Redis with Openmage, see <a href="{{ site.baseurl }}/guides/m1x/ce18-ee113/using_redis.html"
+            target="_blank">Using Redis with Openmage Community Edition (CE) and Enterprise Edition (EE)</a>.</li>
         <li>
           <!-- EE -->Full page caching now invalidates only pages that are affected by product or category changes</li>
         <li>Optimized cache adapters for single-server systems</li>
@@ -1301,10 +1301,10 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
 
       <h3 id="ce18-1800security">Security Enhancements</h3>
       <ul>
-        <li>The Magento Admin Panel and web stores no longer allow web browsers to store usernames or passwords.</li>
-        <li>The Magento web store has additional Cross Site Request Forgery (CSRF) protections, meaning an imposter can
+        <li>The Openmage Admin Panel and web stores no longer allow web browsers to store usernames or passwords.</li>
+        <li>The Openmage web store has additional Cross Site Request Forgery (CSRF) protections, meaning an imposter can
           no longer impersonate a newly registered customer and perform actions on the customer's behalf.</li>
-        <li>In earlier versions, Magento was vulnerable to a session fixation attack during the registration process.
+        <li>In earlier versions, Openmage was vulnerable to a session fixation attack during the registration process.
           After logging in to their account, a registered user's session ID did not change. Therefore, if an attacker
           had knowledge of an unauthorized session ID and if that user successfully registers, the attacker was able to
           take over the newly registered account.<br />
@@ -1315,23 +1315,23 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
 
       <!-- EE -->
       <h3 id="ce18-1800security-advisory">Security Advisory</h3>
-      <p>Magento has identified a potential vulnerability that might affect you if both of the following are true:</p>
+      <p>Openmage has identified a potential vulnerability that might affect you if both of the following are true:</p>
       <ul>
-        <li>Your store uses custom code that calls Magento full page caching functions</li>
+        <li>Your store uses custom code that calls Openmage full page caching functions</li>
         <li>You enabled the <strong>Use SID on Frontend</strong> configuration option<br />
           (In the Admin Panel, <strong>System</strong> > <strong>Configuration</strong> > WEB > <strong>Session
             Validation Settings</strong>, <strong>Use SID on Frontend</strong>.)</li>
       </ul>
       <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note"
           align="left" width="40"><span><strong>Note</strong>: The potential vulnerability exists <em>only</em> if both
-          of the preceding are true. Default Magento installations or installations that enable <strong>Use SID on
+          of the preceding are true. Default Openmage installations or installations that enable <strong>Use SID on
             Frontend</strong> but have no custom code with full page caching are at no risk.</div>
 
-      <p>If both of the preceding are true, Magento can be subjected to <a
+      <p>If both of the preceding are true, Openmage can be subjected to <a
           href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)" target="_blank">cross-site scripting</a>
         (XSS) attacks&mdash;a type of injection issue, which means that malicious code is injected into otherwise
         trusted websites, generally in the form of a browser-side script.</p>
-      <p><em>Issue</em>: Magento is subject to XSS attacks because the SID cookie value is not sanitized by default.</p>
+      <p><em>Issue</em>: Openmage is subject to XSS attacks because the SID cookie value is not sanitized by default.</p>
       <p><em>Suggested solution</em>: Either disable <strong>Use SID on Frontend</strong> or <a
           href="http://stackoverflow.com/questions/4213686/best-practice-for-php-output"
           target="_blank">output-encode</a> any usage of the SID cookie value before using it or passing it as a
@@ -1351,17 +1351,17 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
       <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-4587" target="_blank">Bug link</a>)-->
 
       <h3 id="ee113-11300-limitation">Upgrade Limitation</h3>
-      <p>Magento EE 1.13&mdash;unlike earlier versions&mdash;does not allow duplicate URL keys for products or
+      <p>Openmage EE 1.13&mdash;unlike earlier versions&mdash;does not allow duplicate URL keys for products or
         categories. An issue has been identified that causes problems during upgrades if you already have duplicate URL
-        keys. The issue is being addressed; until a solution is announced, Magento recommends you test your upgrade but
+        keys. The issue is being addressed; until a solution is announced, Openmage recommends you test your upgrade but
         do not try to deploy it to a production environment.</p>
       For more information about upgrading in a development environment, see <a
         href="{{ site.m1xgdeurl }}/install/installing_upgrade_landing.html" target="_blank">Upgrading to and Verifying
-        Magento Community Edition (CE) 1.8 and Enterprise Edition (EE) 1.13</a>.
+        Openmage Community Edition (CE) 1.8 and Enterprise Edition (EE) 1.13</a>.
 
       <h3 id="ee113-11300-improvements">Performance Improvements</h3>
       <ul>
-        <li>Limited the way Magento performs large database lookups.
+        <li>Limited the way Openmage performs large database lookups.
           <!-- (<a href="https://jira.corp.x.com/browse/MPERF-425" target="_blank">Bug link</a>)</li> -->
           <!-- <li>Product save time has been improved. (<a href="https://jira.corp.x.com/browse/SUPEE-318" target="_blank">Bug link</a>)</li> -->
         <li>Checkout performance improvements achieved by:
@@ -1379,13 +1379,13 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
         <li>You can load a large number of tax codes (35,000 or so) without impacting performance.
           <!-- (<a href="https://jira.corp.x.com/browse/MPERF-620" target="_blank">Bug link</a>) -->
         </li>
-        <!-- EE -- Look on Wiki <li>Magento uses <a href="http://en.wikipedia.org/wiki/Materialized_view" target="_blank">Materialized Views</a> for database access, which dramatically reduces processing time and overhead.</li> -->
+        <!-- EE -- Look on Wiki <li>Openmage uses <a href="http://en.wikipedia.org/wiki/Materialized_view" target="_blank">Materialized Views</a> for database access, which dramatically reduces processing time and overhead.</li> -->
         <li>
-          <!-- EE -->Magento uses <a href="http://dev.mysql.com/doc/refman/5.0/en/triggers.html" target="_blank">MySQL
+          <!-- EE -->Openmage uses <a href="http://dev.mysql.com/doc/refman/5.0/en/triggers.html" target="_blank">MySQL
             database triggers</a> to improve access to the database during reindexing.</li>
       </ul>
   </ul>
-  <p>For more information, see <a href="{{ site.m1xgdeurl }}/ce18-ee113/EE113-benchmark.html" target="_blank">Magento
+  <p>For more information, see <a href="{{ site.m1xgdeurl }}/ce18-ee113/EE113-benchmark.html" target="_blank">Openmage
       Enterprise Edition 1.13 Benchmarking</a></p>
 
   <h3 id="ce18-1800tax">Tax Calculation Fixes</h3>
@@ -1399,15 +1399,15 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
   </ul>
 
   <h4 id="ce18-1800tax-general">General Tax Notes</h4>
-  <p>The following general fixes were made to Magento tax configuration and calculations:</p>
+  <p>The following general fixes were made to Openmage tax configuration and calculations:</p>
   <ul>
-    <li>Based on Magento testing and merchant experience, certain tax configuration settings have been determined to be
+    <li>Based on Openmage testing and merchant experience, certain tax configuration settings have been determined to be
       susceptible to rounding issues and can be confusing to buyers. To help you avoid issues with those settings,
       warning messages display in the Admin Panel if you attempt to save such a configuration.<br />
-      Administrative users can choose to dismiss the messages and can still save the configuration; however, Magento
+      Administrative users can choose to dismiss the messages and can still save the configuration; however, Openmage
       strongly recommends you change the configuration in a way recommended by the details displayed in the
       message.<br />
-      For details, see the <a href="http://www.magentocommerce.com/resources/magento-user-guide" target="_blank">Magento
+      For details, see the <a href="http://www.openmagecommerce.com/resources/openmage-user-guide" target="_blank">Openmage
         User Guide</a>.<br />
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-404" target="_blank">Bug link</a>) -->
     </li>
@@ -1416,7 +1416,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
         <li>The calculation formula is:
           <code>Sub item price = Sub item base price * Applicable tiered price adjustment or discount, then rounded
             Bundle price = Sum (round(sub item price * qty))</code></li>
-        <li>When non-integer quantities are multiplied by a product price, Magento rounds the resulting subtotal is as
+        <li>When non-integer quantities are multiplied by a product price, Openmage rounds the resulting subtotal is as
           follows:
           <code>round(unit price * non-integer quantity)</code></li>
       </ul>
@@ -1424,7 +1424,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
     <li>All product price information on which taxation is based are rounded to two digits of precision regardless of
       how many digits of precision have been loaded into the database (for example, $10.24 instead of $10.2385). This
       situation can occur when certain integrations enable third-party applications to send four-digit precision prices
-      to Magento. <br />
+      to Openmage. <br />
       Starting with this release those additional digits will have no impact on customer facing prices. Forcing two
       digits of precision enables more exact calculations involving Fixed Product Tax (FPT), discounts, and
       taxes&mdash;among other concerns.
@@ -1439,7 +1439,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
       </ul>
     </li>
   </ul>
-  <p>For details, see the <a href="http://www.magentocommerce.com/resources/magento-user-guide" target="_blank">Magento
+  <p>For details, see the <a href="http://www.openmagecommerce.com/resources/openmage-user-guide" target="_blank">Openmage
       User Guide</a>.</p>
   <!-- <p>(<a href="https://jira.corp.x.com/browse/MPERF-410" target="_blank">Bug link</a>)</p> -->
 
@@ -1512,7 +1512,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
   </ul>
 
   <h4 id="ce18-1800tax-display">Display Fixes</h4>
-  <p>The following issues relate to the incorrect display of tax information in the Admin Panel or in your Magento web
+  <p>The following issues relate to the incorrect display of tax information in the Admin Panel or in your Openmage web
     store:</p>
   <ul>
     <li>Row Subtotal displays correctly in the shopping cart when:
@@ -1549,7 +1549,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
   </ul>
 
   <h3 id="ce18-1800api">API Fixes</h3>
-  <p>The following are fixed in the Magento SOAP v2.0 APIs (with exceptions noted):</p>
+  <p>The following are fixed in the Openmage SOAP v2.0 APIs (with exceptions noted):</p>
   <ul>
     <li>Requesting a product using a call like the following returns the product with the specified numeric SKU value
       (<code>8888</code> in the following example):
@@ -1557,62 +1557,62 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
       <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-5017" target="_blank">Bug link</a>) -->
     </li>
     <li>Order status is changed correctly using <a
-        href="http://www.magentocommerce.com/api/soap/sales/salesOrder/sales_order.addComment.html"
+        href="http://www.openmagecommerce.com/api/soap/sales/salesOrder/sales_order.addComment.html"
         target="_blank"><code>salesOrderAddComment</code></a>.
       <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-6895" target="_blank">Bug link</a>)-->
     </li>
-    <li>The <a href="http://www.magentocommerce.com/api/soap/checkout/cartProduct/cart_product.moveToCustomerQuote.html"
+    <li>The <a href="http://www.openmagecommerce.com/api/soap/checkout/cartProduct/cart_product.moveToCustomerQuote.html"
         target="_blank"><code>shoppingCartProductMoveToCustomerQuote</code></a> method works properly.
       <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-7068" target="_blank">Bug link</a>) -->
     </li>
     <li>You can now use <code>from</code>-<code>to</code> complex filters to perform "window" filtration on a single
       field. For example, you can use <code>from</code> and <code>to</code> on the <code>created_at</code> return a list
-      of sales orders using the <a href="http://www.magentocommerce.com/api/soap/sales/salesOrder/sales_order.list.html"
+      of sales orders using the <a href="http://www.openmagecommerce.com/api/soap/sales/salesOrder/sales_order.list.html"
         target="_blank"><code>salesOrderList</code></a>.
       <!--(<a href="https://jira.corp.x.com/browse/MSSUP-3843" target="_blank">Bug link</a>) -->
     </li>
-    <li>When you use the SOAP API v.2.0 with <a href="http://www.magentocommerce.com/api/soap/wsi_compliance.html"
+    <li>When you use the SOAP API v.2.0 with <a href="http://www.openmagecommerce.com/api/soap/wsi_compliance.html"
         target="_blank">WS-I Compliance</a> enabled to retrieve sales orders information, the server responds with the
       correct <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.13"
         target="_blank">Content-Length</a> header.
       <!--(<a href="https://jira.corp.x.com/browse/SUP-4766" target="_blank">Bug link</a>) -->
     </li>
     <li>The <code>productGetSpecialPrice</code> method returns special price information for a product, whether or not
-      <a href="http://www.magentocommerce.com/api/soap/wsi_compliance.html" target="_blank">WS-I Compliance</a> is
+      <a href="http://www.openmagecommerce.com/api/soap/wsi_compliance.html" target="_blank">WS-I Compliance</a> is
       enabled.
       <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-6360" target="_blank">Bug link</a>) -->
     </li>
-    <li>The <a href="http://www.magentocommerce.com/api/soap/checkout/cartPayment/cart_payment.list.html"
+    <li>The <a href="http://www.openmagecommerce.com/api/soap/checkout/cartPayment/cart_payment.list.html"
         target="_blank"><code>shoppingCartPaymentList</code></a> method returns the list of the available payment
       methods for the shopping cart appropriately. The following error is no longer returned:
       <code>SOAP-ERROR: Encoding: object has no 'code' property in <em>name</em></code>
       <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-6456" target="_blank">Bug link</a>) -->
     </li>
     <li>The following issues with <a href="http://www.w3.org/TR/wsdl" target="_blank">WSDL</a> and <a
-        href="http://www.magentocommerce.com/api/soap/wsi_compliance.html" target="_blank">WS-I Compliance</a> are
+        href="http://www.openmagecommerce.com/api/soap/wsi_compliance.html" target="_blank">WS-I Compliance</a> are
       resolved:
       <ul>
         <li>The <code>productAttributeAddOption</code> and <a
-            href="http://www.magentocommerce.com/api/soap/catalog/catalogProductAttribute/product_attribute.update.html"
+            href="http://www.openmagecommerce.com/api/soap/catalog/catalogProductAttribute/product_attribute.update.html"
             target="_blank"><code>catalogProductAttributeUpdate</code></a> methods are now supported when WS-I
           Compliance is enabled.
           <!--(<a href="https://jira.corp.x.com/browse/MAGETWO-6362" target="_blank">Bug link</a>, <a href="https://jira.corp.x.com/browse/MAGETWO-6490" target="_blank">Bug link</a>) -->
         </li>
         <li>The WSDL declaration for <a
-            href="http://www.magentocommerce.com/api/soap/sales/salesOrderCreditMemo/sales_order_creditmemo.create.html"
+            href="http://www.openmagecommerce.com/api/soap/sales/salesOrderCreditMemo/sales_order_creditmemo.create.html"
             target="_blank"><code>salesOrderCreditmemoCreate</code></a> is now correct; that is, it matches the code.
           <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-6681" target="_blank">Bug link</a>) -->
         </li>
-        <li>You can now add a C# web reference in Microsoft Visual Studio 2010 using the Magento WSDL. <br />
+        <li>You can now add a C# web reference in Microsoft Visual Studio 2010 using the Openmage WSDL. <br />
           For example, this command no longer fails:<br />
-          <code>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin> wsdl /out:Magento.cs /v
-            http://magentohost/api/v2_soap/?wsdl</code>
+          <code>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin> wsdl /out:Openmage.cs /v
+            http://openmagehost/api/v2_soap/?wsdl</code>
           <!-- <br />
  (<a href="https://jira.corp.x.com/browse/MAGETWO-6354" target="_blank">Bug link</a>) -->
         </li>
-        <li>The <a href="http://www.magentocommerce.com/api/soap/wsi_compliance.html" target="_blank">WS-I
+        <li>The <a href="http://www.openmagecommerce.com/api/soap/wsi_compliance.html" target="_blank">WS-I
             Compliance</a> mode WSDL now includes <a
-            href="http://www.magentocommerce.com/api/soap/catalog/catalogProduct/catalogProduct.html"
+            href="http://www.openmagecommerce.com/api/soap/catalog/catalogProduct/catalogProduct.html"
             target="_blank"><code>catalogProductAttributeInfo</code></a>.
           <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-6362" target="_blank">Bug link</a>) -->
         </li>
@@ -1718,7 +1718,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
     <li>You can now specify weight units in kilograms (kg) using the FedEx shipping method.
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-837" target="_blank">Bug link</a>) -->
     </li>
-    <li>FedEx shipping rates are now consistent with Magento discounted rates.
+    <li>FedEx shipping rates are now consistent with Openmage discounted rates.
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-852" target="_blank">Bug link</a>) -->
     </li>
     <li>Fixed issues with United Parcel Service (UPS) shipping rates.
@@ -1731,7 +1731,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
     <li>UPS shipping labels have the word <code>SAMPLE</code> printed on them only when you request a sample label.
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-856" target="_blank">Bug link</a>) -->
     </li>
-    <li>Changes made to United States Post Office (USPS) APIs and rates have been incorporated in Magento.
+    <li>Changes made to United States Post Office (USPS) APIs and rates have been incorporated in Openmage.
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-717" target="_blank">Bug link</a>) -->
     </li>
     <li>You can now process a return materials authorization (RMA) for an order that was shipped to multiple addresses.
@@ -1761,7 +1761,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
       <!-- NEW, EE -->With both flat index options enabled and set to update on save, mass attribute updates now display
       properly in your web store.<br />
       For more information about flat catalog options, see the <a
-        href="http://www.magentocommerce.com/resources/magento-user-guide" target="_blank">Magento User Guide</a>.
+        href="http://www.openmagecommerce.com/resources/openmage-user-guide" target="_blank">Openmage User Guide</a>.
       <!-- https://jira.corp.x.com/browse/MPERF-1589 -->
     </li>
     <li>
@@ -1873,7 +1873,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
     <li>Security issues with Authorize.net payments have been resolved.
       <!-- (<a href="https://jira.corp.x.com/browse/MPI-297" target="_blank">Bug link</a>) -->
     </li>
-    <li>Magento conforms to the latest version of the PayPal Instant Payment Notification (IPN) guidelines.
+    <li>Openmage conforms to the latest version of the PayPal Instant Payment Notification (IPN) guidelines.
       <!-- (<a href="https://jira.corp.x.com/browse/MPI-716" target="_blank">Bug link</a>) -->
     </li>
     <li>The contents of a shopping cart are unaffected by canceling a PayPal payment.
@@ -1888,7 +1888,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
     <li>Payflow Link and Payments Advance now capture IPN transactions properly.
       <!-- (<a href="https://jira.corp.x.com/browse/SAASDEV-6090" target="_blank">Bug link</a>) -->
     </li>
-    <li>Special characters (such as e-mail addresses) are now handled properly by the Magento Payflow API integration.
+    <li>Special characters (such as e-mail addresses) are now handled properly by the Openmage Payflow API integration.
       <!-- (<a href="https://jira.corp.x.com/browse/MPI-604" target="_blank">Bug link</a>) -->
     </li>
     <li>Resolved errors with orders placed using the Website Payments Pro payment method.
@@ -1898,7 +1898,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
       <!-- (<a href="https://jira.corp.x.com/browse/MPI-673" target="_blank">Bug link</a>) -->
     </li>
     <li>Any PayPal Name-Value Pair (NVP) payment method no longer automatically refunds an order when a chargeback is
-      initiated. Magento now allows the dispute to be resolved before taking the appropriate action.<br />
+      initiated. Openmage now allows the dispute to be resolved before taking the appropriate action.<br />
       PayPal NVP payment methods include: PayPal Payments Pro (including PayPal Payments Pro Hosted), Payments Standard,
       and all Payflow methods.
       <!-- (<a href="https://jira.corp.x.com/browse/MPI-633" target="_blank">Bug link</a>) -->
@@ -1925,7 +1925,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
       <!-- (<a href="https://jira.corp.x.com/browse/MPI-1375" target="_blank">Bug link</a>) -->
     </li>
     <li>The order status Suspected Fraud is now supported by PayPal Payments Pro (hosted) when PayPal fraud protection
-      is enabled. Using the Magento Admin Panel, the merchant can also accept or deny any Suspected Fraud orders and
+      is enabled. Using the Openmage Admin Panel, the merchant can also accept or deny any Suspected Fraud orders and
       have that decision applied to the PayPal transaction.
       <!-- (<a href="https://jira.corp.x.com/browse/SAASDEV-6469" target="_blank">Bug link</a>, <a href="https://jira.corp.x.com/browse/MPERF-1391" target="_blank">Bug link</a>) -->
     </li>
@@ -1933,7 +1933,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
       <!-- NEW -->When sending payments in the United Kingdom, PayPal Payments Pro (hosted) now sends the value for
       <code>state</code> correctly. (Before the fix, <code>city</code> was sent as the value for <code>state</code>.)
       <!--https://jira.corp.x.com/browse/MPI-889 -->
-    <li>Using the Ogone payment method, transactions display in the Magento Admin Panel after you capture them.
+    <li>Using the Ogone payment method, transactions display in the Openmage Admin Panel after you capture them.
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1689 target="_blank">Bug link</a>) -->
     </li>
     <li>When an administrator places an order and uses PSi Gate, then cancels the order, the PSi Gate gateway displays
@@ -1943,9 +1943,9 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
     <li>The following fields related to PayPal's Payflow Pro Gateway payment method are now implemented properly:
       <ul>
         <li><a href="https://cms.paypal.com/cms_content/GB/en_GB/files/developer/PP_PayflowPro_Guide.pdf"
-            target="_blank"><code>[custref]</code></a> is the Magento customer's ID</li>
+            target="_blank"><code>[custref]</code></a> is the Openmage customer's ID</li>
         <li><a href="http://www.paypalobjects.com/en_US/ebook/PP_NVPAPI_DeveloperGuide/Appx_fieldreference.html"
-            target="_blank"><code>[INVNUM]</code></a> is Magento's order number</li>
+            target="_blank"><code>[INVNUM]</code></a> is Openmage's order number</li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-631" target="_blank">Bug link</a>) -->
     </li>
   </ul>
@@ -2000,7 +2000,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
       been resolved.
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1343" target="_blank">Bug link</a>) -->
     </li>
-    <li>Rolling back after a backup now works properly. (The Magento backup and rollback options are available in the
+    <li>Rolling back after a backup now works properly. (The Openmage backup and rollback options are available in the
       Admin Panel in <strong>System</strong> > <strong>Tools</strong> > <strong>Backup</strong>.)
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1676" target="_blank">Bug link</a>) -->
     </li>
@@ -2014,8 +2014,8 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
       <strong>Configuration</strong> > <strong>CATALOG</strong> > <strong>Catalog</strong> > <strong>Layered
         Navigation</strong>. From the <strong>Price Navigation Step Calculation</strong> list, click
       <strong>Manual</strong>.)<br />
-      For more information about using the Solr search engine with Magento EE, see the <a
-        href="http://www.magentocommerce.com/resources/magento-user-guide" target="_blank">Magento User Guide</a>.
+      For more information about using the Solr search engine with Openmage EE, see the <a
+        href="http://www.openmagecommerce.com/resources/openmage-user-guide" target="_blank">Openmage User Guide</a>.
       <!-- https://jira.corp.x.com/browse/MPERF-1627 -->
     </li>
     <li>You can now save a category with the option <strong>Available Product Listing Sort By: Best value or
@@ -2042,7 +2042,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
           <!-- (<a href="https://jira.corp.x.com/browse/MPERF-86" target="_blank">Bug link</a>) -->
         </li>
         <li>
-          <!-- EE --><code><em>magento-install-dir</em>/app/code/core/Enterprise/PageCache/Model/Config.php</code> was
+          <!-- EE --><code><em>openmage-install-dir</em>/app/code/core/Enterprise/PageCache/Model/Config.php</code> was
           modified to enable you to set specific lifetimes for certain blocks.
           <!-- (<a href="https://jira.corp.x.com/browse/SUP-4974" target="_blank">Bug link</a>) -->
         </li>
@@ -2099,7 +2099,7 @@ For example, if you already have a category named <strong>Apparel</strong> > <st
   </ul>
   <p>
     <!-- EE -->For more information about indexing changes, see the <a
-      href="http://www.magentocommerce.com/resources/magento-user-guide" target="_blank">Magento User Guide</a>.</p>
+      href="http://www.openmagecommerce.com/resources/openmage-user-guide" target="_blank">Openmage User Guide</a>.</p>
 
 
 

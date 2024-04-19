@@ -47,7 +47,7 @@
     - label: Migration Guide
       url: /migration/bk-migration-guide.html
 
-    - label: Magento Commerce (Cloud) Guide
+    - label: Openmage Commerce (Cloud) Guide
       url: /cloud/bk-cloud.html
 
     - label: Release Information
@@ -100,14 +100,14 @@
         - label: Admin Style Guide
           url: /design-styleguide/bk-styleguide.html
 
-        - label: Magento PWA Documentation Site
-          url: https://magento-research.github.io/pwa-studio/
+        - label: Openmage PWA Documentation Site
+          url: https://openmage-research.github.io/pwa-studio/
           include_versions: ['2.3']
 
     - label: API
       children:
 
-        - label: Get Started with Magento Web APIs
+        - label: Get Started with Openmage Web APIs
           url: /get-started/bk-get-started-api.html
 
         - label: REST API Reference
@@ -124,14 +124,14 @@
           url: /marketplace/eqp/api.html
           exclude_versions: ['2.0']
 
-        - label: Magento BI Import REST API
+        - label: Openmage BI Import REST API
           url: https://developers.rjmetrics.com/
           exclude_versions: ['2.0']
 
 - label: Testing
   children:
 
-    - label: Magento Testing Guide
+    - label: Openmage Testing Guide
       url: /test/testing.html
 
     - label: Functional Acceptance Testing (MFTF)
@@ -171,7 +171,7 @@
       exclude_versions: ['2.0', '2.1', '2.2']
 
     - label: Order Management
-      url: http://omsdocs.magento.com/en/
+      url: http://omsdocs.openmage.com/en/
 
     - label: Payment Integrations
       url: /payments-integrations/bk-payments-integrations.html
@@ -194,6 +194,6 @@
     - label: Customize Checkout
       url: /howdoi/checkout/checkout_overview.html
 
-    - label: Magento Support
+    - label: Openmage Support
       url: /community/resources/support.html
       versionless: true

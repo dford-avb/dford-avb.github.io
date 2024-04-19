@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/common/css/stylesheet-fonts.css" type="text/css" charset="utf-8">
     <link rel="icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
-    <title>Magento for Developers: Part 5&mdash;Magento Models and ORM Basics</title>
+    <title>Openmage for Developers: Part 5&mdash;Openmage Models and ORM Basics</title>
 
 </head>
 
@@ -18,13 +18,13 @@
 {% include m1x/eol_message.html %}
 
 <div id="content">
-<h1>Magento for Developers: Part 5&mdash;Magento Models and ORM Basics</h1>
-<p><em>by Alan Storm</em>, updated for Magento 1.12</p>
+<h1>Openmage for Developers: Part 5&mdash;Openmage Models and ORM Basics</h1>
+<p><em>by Alan Storm</em>, updated for Openmage 1.12</p>
 <p><a href="{{ site.m1xgithuburl }}/magefordev/mage-for-dev-5.html" target="_blank">Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
 
 
-<!-- Magento for Developers: Part 5&mdash;Magento Models and ORM Basics -->
-<!-- magento-for-dev-part-5-magento-models-and-orm-basics 
+<!-- Openmage for Developers: Part 5&mdash;Openmage Models and ORM Basics -->
+<!-- openmage-for-dev-part-5-openmage-models-and-orm-basics 
 
 <style type="text/css">
 #kb-entry .series {float: right; width: 175px; margin-left: 10px; font-size: 12px; }
@@ -34,18 +34,18 @@
 
 <h5>Other articles in this series:</h5>
 <ul>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-1.html">Part 1&mdash;Introduction to Magento</a></li>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-2.html">Part 2&mdash;The Magento Config</a></li>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-3.html">Part 3&mdash;Magento Controller Dispatch</a></li>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-4.html">Part 4&mdash;Magento Layouts, Blocks and Templates</a></li>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-5.html">Part 5&mdash;Magento Models and ORM Basics</a></li>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-6.html">Part 6&mdash;Magento Setup Resources</a></li>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-1.html">Part 1&mdash;Introduction to Openmage</a></li>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-2.html">Part 2&mdash;The Openmage Config</a></li>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-3.html">Part 3&mdash;Openmage Controller Dispatch</a></li>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-4.html">Part 4&mdash;Openmage Layouts, Blocks and Templates</a></li>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-5.html">Part 5&mdash;Openmage Models and ORM Basics</a></li>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-6.html">Part 6&mdash;Openmage Setup Resources</a></li>
 <li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-7.html">Part 7&mdash;Advanced ORM: Entity Attribute Value</a></li>
 <li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-8.html">Part 8&mdash;Varien Data Collections</a></li>
 </ul>
 </div>
 
-<p class="para1">The implementation of a "Models Tier" is a huge part of any MVC framework. It represents the data of your application, and most applications are useless without data. Magento Models play an even bigger role, as they typically contain the "Business Logic" that's often relegated to the Controller or Helper methods in other PHP MVC frameworks.</p>
+<p class="para1">The implementation of a "Models Tier" is a huge part of any MVC framework. It represents the data of your application, and most applications are useless without data. Openmage Models play an even bigger role, as they typically contain the "Business Logic" that's often relegated to the Controller or Helper methods in other PHP MVC frameworks.</p>
 
 <h2>Traditional PHP MVC Models</h2>
 
@@ -57,25 +57,25 @@
 
 <p>This definition of ORM should suffice for now, but like everything Computer Science these days, the strict definition of ORM has blurred over the years. It's beyond the scope of this article to settle that dispute, but suffice it say we're generalizing a bit.</p>
 
-<h2>Magento Models</h2>
+<h2>Openmage Models</h2>
 
-<p>It should be no surprise that Magento takes the ORM approach. While the Zend Framework SQL abstractions are available, most of your data access will be via the built in Magento Models, and Models you build yourself. It should also come as no surprise that Magento has a highly flexible, highly abstract, concept of what a Model is.</p>
+<p>It should be no surprise that Openmage takes the ORM approach. While the Zend Framework SQL abstractions are available, most of your data access will be via the built in Openmage Models, and Models you build yourself. It should also come as no surprise that Openmage has a highly flexible, highly abstract, concept of what a Model is.</p>
 
-<h3>Anatomy of a Magento Model</h3>
+<h3>Anatomy of a Openmage Model</h3>
 
-<p>Most Magento Models can be categorized in one of two ways. There's a basic, ActiveRecord-like/one-object-one-table Model, and there's also an Entity Attribute Value (EAV) Model. Each Model also gets a Model Collection. Collections are PHP objects used to hold a number of individual Magento Model instances. The Magento team has implemented the PHP Standard Library interfaces of IteratorAggregate and Countable to allow each Model type to have it's own collection type. If you're not familiar with the PHP Standard Library, think of Model Collections as arrays that also have methods attached.</p>
+<p>Most Openmage Models can be categorized in one of two ways. There's a basic, ActiveRecord-like/one-object-one-table Model, and there's also an Entity Attribute Value (EAV) Model. Each Model also gets a Model Collection. Collections are PHP objects used to hold a number of individual Openmage Model instances. The Openmage team has implemented the PHP Standard Library interfaces of IteratorAggregate and Countable to allow each Model type to have it's own collection type. If you're not familiar with the PHP Standard Library, think of Model Collections as arrays that also have methods attached.</p>
 
-<p>Magento Models don't contain any code for connecting to the database. Instead, each Model uses a <tt>modelResource</tt> class, that is used to communicate with the database server (via one read and one write adapter object). By decoupling the logical Model and the code that talks to the database, it's theoretically possible to write new resource classes for a different database schemas and platforms while keeping your Models themselves untouched. </p>
+<p>Openmage Models don't contain any code for connecting to the database. Instead, each Model uses a <tt>modelResource</tt> class, that is used to communicate with the database server (via one read and one write adapter object). By decoupling the logical Model and the code that talks to the database, it's theoretically possible to write new resource classes for a different database schemas and platforms while keeping your Models themselves untouched. </p>
 
 <h2>Enable developer mode</h2>
-<p>Something you should do in development&mdash;but <em>never</em> in production&mdash;is to enable Magento's <em>developer mode</em> which, among other things, displays exceptions in your browser. It's useful for debugging your code.</p>
+<p>Something you should do in development&mdash;but <em>never</em> in production&mdash;is to enable Openmage's <em>developer mode</em> which, among other things, displays exceptions in your browser. It's useful for debugging your code.</p>
 <p>Enable developer mode in any of the following ways:</p>
-<ul><li><a href="https://magento2.atlassian.net/wiki/display/m1wiki/How+to+Configure+a+Magento+1.x+Error+Page#display_errors_on_the_same_page_developer_mode">developer mode</a></li>
-    <li>Edit the <code>.htaccess</code> in the Magento root directory file to add <code>SetEnv MAGE_IS_DEVELOPER_MODE "true"</code></li>
+<ul><li><a href="https://openmage2.atlassian.net/wiki/display/m1wiki/How+to+Configure+a+Openmage+1.x+Error+Page#display_errors_on_the_same_page_developer_mode">developer mode</a></li>
+    <li>Edit the <code>.htaccess</code> in the Openmage root directory file to add <code>SetEnv MAGE_IS_DEVELOPER_MODE "true"</code></li>
 </ul>
 <h2>Creating a Basic Model</h2>
 
-<p>To begin, we're going to create a basic Magento Model. PHP MVC tradition insists we model a weblog post. The steps we'll need to take are</p>
+<p>To begin, we're going to create a basic Openmage Model. PHP MVC tradition insists we model a weblog post. The steps we'll need to take are</p>
 
 <ol>
 <li>Create a new "Weblog" module</li>
@@ -91,9 +91,9 @@
 
 <h3>Create a Weblog Module</h3>
 
-<p>You should be an old hat at creating empty modules at this point, so we'll skip the details and assume you can create an empty module named Weblog. After you've done that, we'll setup a route for an index Action Controller with an action named "testModel". As always, the following examples assume a Package Name of "Magentotutorial".</p>
+<p>You should be an old hat at creating empty modules at this point, so we'll skip the details and assume you can create an empty module named Weblog. After you've done that, we'll setup a route for an index Action Controller with an action named "testModel". As always, the following examples assume a Package Name of "Openmagetutorial".</p>
 
-<p>In `Magentotutorial/Weblog/etc/config.xml`, setup the following route</p>
+<p>In `Openmagetutorial/Weblog/etc/config.xml`, setup the following route</p>
 
 <pre>
 &lt;frontend>
@@ -101,7 +101,7 @@
         &lt;weblog>
             &lt;use>standard&lt;/use>
             &lt;args>
-                &lt;module&gt;Magentotutorial_Weblog&lt;/module&gt;
+                &lt;module&gt;Openmagetutorial_Weblog&lt;/module&gt;
                 &lt;frontName>weblog&lt;/frontName>
             &lt;/args>
         &lt;/weblog>
@@ -111,14 +111,14 @@
 
 <p>And then add the following Action Controller in </p>
 <pre>
-class Magentotutorial_Weblog_IndexController extends Mage_Core_Controller_Front_Action {
+class Openmagetutorial_Weblog_IndexController extends Mage_Core_Controller_Front_Action {
     public function testModelAction() {
         echo 'Setup!';
     }
 }
 </pre>
 
-<p>at <tt>Magentotutorial/Weblog/controllers/IndexController.php</tt>. Clear your Magento cache and load the following URL to ensure everything's been setup correctly.</p>
+<p>at <tt>Openmagetutorial/Weblog/controllers/IndexController.php</tt>. Clear your Openmage cache and load the following URL to ensure everything's been setup correctly.</p>
 
 <pre>http://example.com/weblog/index/testModel</pre>
 
@@ -126,7 +126,7 @@ class Magentotutorial_Weblog_IndexController extends Mage_Core_Controller_Front_
 
 <h3>Creating the Database Table</h3>
 
-<p>Magento has a system for automatically creating and changing your database schemas, but for the time being we'll just manually create a table for our Model.</p>
+<p>Openmage has a system for automatically creating and changing your database schemas, but for the time being we'll just manually create a table for our Model.</p>
 
 <p>Using the command-line or your favorite MySQL GUI application, create a table with the following schema</p>
 <pre>
@@ -154,11 +154,11 @@ CREATE TABLE `blog_posts` (
 <li>Add an "entity" table configuration to our Model Resource.</li>
 </ol>
 
-<p>When you instantiate a Model in Magento, you make a call like this</p>
+<p>When you instantiate a Model in Openmage, you make a call like this</p>
 
 <pre>$model = Mage::getModel('weblog/blogpost');</pre>
 
-<p>The first part of the URI you pass into get Model is the <a href="http://alanstorm.com/2009/img/magento-book/weblogGetModel.png">Model Group Name</a>. Because it is a good idea to follow conventions, this should be the (lowercase) name of your module, or to be safeguarded against conflicts use the packagename and modulename (also in lowercase). The second part of the URI is the lowercase version of your Model name.</p>
+<p>The first part of the URI you pass into get Model is the <a href="http://alanstorm.com/2009/img/openmage-book/weblogGetModel.png">Model Group Name</a>. Because it is a good idea to follow conventions, this should be the (lowercase) name of your module, or to be safeguarded against conflicts use the packagename and modulename (also in lowercase). The second part of the URI is the lowercase version of your Model name.</p>
 
 <p>So, let's add the following XML to our module's `config.xml`.</p>
 <pre>
@@ -166,7 +166,7 @@ CREATE TABLE `blog_posts` (
     &lt;!-- ... -->
     &lt;models>
         &lt;weblog>
-            &lt;class>Magentotutorial_Weblog_Model&lt;/class>
+            &lt;class>Openmagetutorial_Weblog_Model&lt;/class>
             &lt;!--
             need to create our own resource, can't just
             use core_resource
@@ -180,7 +180,7 @@ CREATE TABLE `blog_posts` (
 
 <p>The outer &lt;weblog /&gt; tag is your Group Name, which should match your module name. &lt;class /&gt; is the BASE name all Models in the weblog group will have, also called <strong>Class Prefix</strong>. The &lt;resourceModel /&gt; tag indicates which Resource Model that weblog group Models should use. We talk more about this later on in this page. For now, remember your Group Name and the literal string "resource".</p>
 
-<p>So, we're not done yet, but let's see what happens if we clear our Magento cache and attempt to instantiate a blogpost Model. In your `testModelAction` method, use the following code</p>
+<p>So, we're not done yet, but let's see what happens if we clear our Openmage cache and attempt to instantiate a blogpost Model. In your `testModelAction` method, use the following code</p>
 <pre>
     public function testModelAction() {
         $blogpost = Mage::getModel('weblog/blogpost');
@@ -191,20 +191,20 @@ CREATE TABLE `blog_posts` (
 <p>and reload your page. You should see an error like the following:</p>
 
 <pre>
-include(Magentotutorial/Weblog/Model/Blogpost.php) [function.include]: failed to open stream: No such file or directory
+include(Openmagetutorial/Weblog/Model/Blogpost.php) [function.include]: failed to open stream: No such file or directory
 </pre>
 
-<p>By attempting to retrieve a <tt>weblog/blogpost</tt> Model, you told Magento to instantiate a class with the name</p>
+<p>By attempting to retrieve a <tt>weblog/blogpost</tt> Model, you told Openmage to instantiate a class with the name</p>
 
 <pre>
-Magentotutorial_Weblog_Model_Blogpost
+Openmagetutorial_Weblog_Model_Blogpost
 </pre>
 
-<p>Magento is trying to __autoload include this Model, but can't find the file. Let's create it! Create the following class at the following location</p>
+<p>Openmage is trying to __autoload include this Model, but can't find the file. Let's create it! Create the following class at the following location</p>
 
-<pre>File: app/code/local/Magentotutorial/Weblog/Model/Blogpost.php</pre>
+<pre>File: app/code/local/Openmagetutorial/Weblog/Model/Blogpost.php</pre>
 <pre>
-class Magentotutorial_Weblog_Model_Blogpost extends Mage_Core_Model_Abstract
+class Openmagetutorial_Weblog_Model_Blogpost extends Mage_Core_Model_Abstract
 {
     protected function _construct()
     {
@@ -225,7 +225,7 @@ class Magentotutorial_Weblog_Model_Blogpost extends Mage_Core_Model_Abstract
 &lt;resourceModel&gt;weblog_resource&lt;/resourceModel&gt;
 </pre>
 
-<p>The value in &lt;resourceModel /&gt; will be used to instantiate a Model Resource class. Although you'll never need to call it yourself, when any Model in the weblog group needs to talk to the database, Magento will make the following method call to get the Model resource</p>
+<p>The value in &lt;resourceModel /&gt; will be used to instantiate a Model Resource class. Although you'll never need to call it yourself, when any Model in the weblog group needs to talk to the database, Openmage will make the following method call to get the Model resource</p>
 
 <pre>
 Mage::getResourceModel('weblog/blogpost');
@@ -247,7 +247,7 @@ weblog_resource/blogpost
     &lt;models>
         &lt;!-- ... -->
         &lt;weblog_resource>
-            &lt;class>Magentotutorial_Weblog_Model_Resource&lt;/class>
+            &lt;class>Openmagetutorial_Weblog_Model_Resource&lt;/class>
         &lt;/weblog_resource>
     &lt;/models>
 &lt;/global>
@@ -272,19 +272,19 @@ public function testModelAction() {
 }
 </pre>
 
-<p>And then load the following URL in your browser (after clearing your Magento cache)</p>
+<p>And then load the following URL in your browser (after clearing your Openmage cache)</p>
 
 <pre>http://example.com/weblog/index/testModel/id/1</pre>
 
 <p>You should see an exception something like the following</p>
 
-<pre>Warning: include(Magentotutorial/Weblog/Model/Resource/Blogpost.php) [function.include]: failed to open stream: No such file ....</pre>
+<pre>Warning: include(Openmagetutorial/Weblog/Model/Resource/Blogpost.php) [function.include]: failed to open stream: No such file ....</pre>
 
 <p>As you've likely intuited, we need to add a resource class for our Model. <strong>Every</strong> Model has its own resource class. Add the following class at the following location</p>
 
-<pre>File: app/code/local/Magentotutorial/Weblog/Model/Resource/Blogpost.php</pre>
+<pre>File: app/code/local/Openmagetutorial/Weblog/Model/Resource/Blogpost.php</pre>
 <pre>
-class Magentotutorial_Weblog_Model_Resource_Blogpost extends Mage_Core_Model_Resource_Db_Abstract{
+class Openmagetutorial_Weblog_Model_Resource_Blogpost extends Mage_Core_Model_Resource_Db_Abstract{
     protected function _construct()
     {
         $this->_init('weblog/blogpost', 'blogpost_id');
@@ -296,13 +296,13 @@ class Magentotutorial_Weblog_Model_Resource_Blogpost extends Mage_Core_Model_Res
 
 <pre>Can't retrieve entity config: weblog/blogpost</pre>
 
-<p>Another exception! When we use the Model URI <tt>weblog/blogpost</tt>, we're telling Magento we want the Model Group <tt>weblog</tt>, and the <tt>blogpost</tt> <em>Entity</em>. In the context of simple Models that extend <tt>Mage_Core_Model_Resource_Db_Abstract</tt>, an entity corresponds to a table. In this case, the table named <tt>blog_post</tt> that we created above. Let's add that entity to our XML config.</p>
+<p>Another exception! When we use the Model URI <tt>weblog/blogpost</tt>, we're telling Openmage we want the Model Group <tt>weblog</tt>, and the <tt>blogpost</tt> <em>Entity</em>. In the context of simple Models that extend <tt>Mage_Core_Model_Resource_Db_Abstract</tt>, an entity corresponds to a table. In this case, the table named <tt>blog_post</tt> that we created above. Let's add that entity to our XML config.</p>
 
 <pre>
     &lt;models>
         &lt;!-- ... --->
         &lt;weblog_resource>
-            &lt;class>Magentotutorial_Weblog_Model_Resource&lt;/class>
+            &lt;class>Openmagetutorial_Weblog_Model_Resource&lt;/class>
             &lt;entities>
                 &lt;blogpost>
                     &lt;table>blog_posts&lt;/table>
@@ -314,7 +314,7 @@ class Magentotutorial_Weblog_Model_Resource_Blogpost extends Mage_Core_Model_Res
 
 <p>We've added a new &lt;entities /&gt; section to the resource Model section of our config. This, in turn, has a section named after our entity (&lt;blogpost /&gt;) that specifies the name of the database table we want to use for this Model.</p>
 
-<p>Clear your Magento cache, cross your fingers, reload the page and ...</p>
+<p>Clear your Openmage cache, cross your fingers, reload the page and ...</p>
 
 <pre>Loading the blogpost with an ID of 1
 
@@ -326,15 +326,15 @@ array
   'timestamp' => string '2009-07-02 16:12:30' (length=19)
 </pre>
 
-<p>Eureka! We've managed to extract our data and, more importantly, completely configure a Magento Model.</p>
+<p>Eureka! We've managed to extract our data and, more importantly, completely configure a Openmage Model.</p>
 
 <h2>Basic Model Operations</h2>
 
-<p>All Magento Models inherit from the Varien_Object class. This class is part of the Magento system library and <strong>not</strong> part of any Magento core module. You can find this object at</p>
+<p>All Openmage Models inherit from the Varien_Object class. This class is part of the Openmage system library and <strong>not</strong> part of any Openmage core module. You can find this object at</p>
 
 <pre>lib/Varien/Object.php</pre>
 
-<p>Magento Models store their data in a protected _data property. The Varien_Object class gives us several methods we can use to extract this data. You've already seen <tt>getData</tt>, which will return an array of key/value pairs. This method can also be passed a string key to get a specific field.</p>
+<p>Openmage Models store their data in a protected _data property. The Varien_Object class gives us several methods we can use to extract this data. You've already seen <tt>getData</tt>, which will return an array of key/value pairs. This method can also be passed a string key to get a specific field.</p>
 
 <pre>
 $model->getData();
@@ -359,9 +359,9 @@ if($model->hasBlogpostId()){...}
 
 <p>For this reason, you'll want to name all your database columns with lower case characters and use underscores to separate characters. </p>
 
-<h2>CRUD, the Magento Way</h2>
+<h2>CRUD, the Openmage Way</h2>
 
-<p>Magento Models support the basic Create, Read, Update, and Delete functionality of CRUD with <tt>load</tt>, <tt>save</tt>, and <tt>delete</tt> methods. You've already seen the load method in action. When passed a single parameter, the load method will return a record whose id field (set in the Model's resource) matches the passed in value.</p>
+<p>Openmage Models support the basic Create, Read, Update, and Delete functionality of CRUD with <tt>load</tt>, <tt>save</tt>, and <tt>delete</tt> methods. You've already seen the load method in action. When passed a single parameter, the load method will return a record whose id field (set in the Model's resource) matches the passed in value.</p>
 
 <pre>$blogpost-&gt;load(1);</pre>
 
@@ -406,7 +406,7 @@ public function deleteFirstPostAction() {
 
 <h2>Model Collections</h2>
 
-<p>So, having a single Model is useful, but sometimes we want to grab list of Models. Rather than returning a simple array of Models, each Magento Model type has a unique collection object associated with it. These objects implement the PHP IteratorAggregate and Countable interfaces, which means they can be passed to the <tt>count</tt> function, and used in <tt>for each</tt> constructs.</p>
+<p>So, having a single Model is useful, but sometimes we want to grab list of Models. Rather than returning a simple array of Models, each Openmage Model type has a unique collection object associated with it. These objects implement the PHP IteratorAggregate and Countable interfaces, which means they can be passed to the <tt>count</tt> function, and used in <tt>for each</tt> constructs.</p>
 
 <p>We'll cover Collections in full in a later article, but for now let's look at basic setup and usage. Add the following action method to your Controller, and load it in your browser.</p>
 
@@ -426,7 +426,7 @@ public function showAllBlogPostsAction() {
 
 <p>and you should see a (by now) familiar exception.</p>
 
-<pre>Warning: include(Magentotutorial/Weblog/Model/Resource/Blogpost/Collection.php) [function.include]: failed to open stream</pre>
+<pre>Warning: include(Openmagetutorial/Weblog/Model/Resource/Blogpost/Collection.php) [function.include]: failed to open stream</pre>
 
 <p>You're not surprised, are you? We need to add a PHP class file that defines our Blogpost collection. Every Model has a protected property named <tt>_resourceCollectionName</tt> that contains a URI that's used to identify our collection.</p>
 
@@ -434,14 +434,14 @@ public function showAllBlogPostsAction() {
   protected '_resourceCollectionName' =&gt; string 'weblog/blogpost_collection'
 </pre>
 
-<p>By default, this is the same URI that's used to identify our Resource Model, with the string "_collection" appended to the end. Magento considers Collections part of the Resource, so this URI is converted into the class name.</p>
+<p>By default, this is the same URI that's used to identify our Resource Model, with the string "_collection" appended to the end. Openmage considers Collections part of the Resource, so this URI is converted into the class name.</p>
 
-<pre>Magentotutorial_Weblog_Model_Resource_Blogpost_Collection</pre>
+<pre>Openmagetutorial_Weblog_Model_Resource_Blogpost_Collection</pre>
 
 <p>Add the following PHP class at the following location</p>
-<pre>File: app/code/local/Magentotutorial/Weblog/Model/Resource/Blogpost/Collection.php</pre>
+<pre>File: app/code/local/Openmagetutorial/Weblog/Model/Resource/Blogpost/Collection.php</pre>
 <pre>
-class Magentotutorial_Weblog_Model_Resource_Blogpost_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract {
+class Openmagetutorial_Weblog_Model_Resource_Blogpost_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract {
     protected function _construct()
     {
             $this->_init('weblog/blogpost');
@@ -453,6 +453,6 @@ class Magentotutorial_Weblog_Model_Resource_Blogpost_Collection extends Mage_Cor
 
 <h2>Wrapup</h2>
 
-<p>Congratulations, you've created and configured your first Magento Model. In a later article we'll take a look at Magento's Entity Attribute Value Models (EAV), which expand on what we've learned here.</p>
+<p>Congratulations, you've created and configured your first Openmage Model. In a later article we'll take a look at Openmage's Entity Attribute Value Models (EAV), which expand on what we've learned here.</p>
 
 </html>

@@ -1,17 +1,17 @@
-1.  Log in to your development system as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
+1.  Log in to your development system as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Openmage file system owner{% endglossarytooltip %}.
 
 1.  Enter the following commands in the order shown:
 
     ```bash
-    cd <Magento root dir>
-    php bin/magento app:config:dump
+    cd <Openmage root dir>
+    php bin/openmage app:config:dump
     ```
 
-    For example, if Magento is installed in `/var/www/html/magento2`, enter:
+    For example, if Openmage is installed in `/var/www/html/openmage2`, enter:
 
     ```bash
-    cd /var/www/html/magento2
-    php bin/magento app:config:dump
+    cd /var/www/html/openmage2
+    php bin/openmage app:config:dump
     ```
 
 1.  If you use Git, enter the following command to confirm that `app/etc/config.php` was updated:

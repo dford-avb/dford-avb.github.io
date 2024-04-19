@@ -75,7 +75,7 @@ pages:
         - label: Package a component
           url: /extension-dev-guide/package/package_module.html
 
-        - label: Upload your component to the Magento Marketplace
+        - label: Upload your component to the Openmage Marketplace
           url: /extension-dev-guide/package/package_mktpl.html
 
     - label: Validate
@@ -115,7 +115,7 @@ pages:
         - label: How to add CLI commands
           url: /extension-dev-guide/cli-cmds/cli-howto.html
 
-    - label: Staging (Magento Commerce only)
+    - label: Staging (Openmage Commerce only)
       include_versions: ["2.1","2.2", "2.3"]
       url: /extension-dev-guide/staging.html
 

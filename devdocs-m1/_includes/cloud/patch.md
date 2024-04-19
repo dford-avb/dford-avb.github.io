@@ -15,7 +15,7 @@ There are two types of patches:
 
 *   [Custom patches](#cloud-patch-custom)
 
-    Custom patches can be provided by Magento to address a specific issue you raised in a Support ticket. Third-party module / extension developers can also provide a custom patch.
+    Custom patches can be provided by Openmage to address a specific issue you raised in a Support ticket. Third-party module / extension developers can also provide a custom patch.
 
     Copy custom patches to the `m2-hotfixes` directory and test them on your locally. After successfully testing them, push the patches to the remote server.
 
@@ -34,10 +34,10 @@ Back up your Integration environment database and code:
 
 1.  Enter the following command to make a local backup of the remote database:
 
-        magento-cloud db:dump
+        openmage-cloud db:dump
 2.  Enter the following command to back up code and media:
 
-        php bin/magento setup:backup --code [--media]
+        php bin/openmage setup:backup --code [--media]
 
     You can optionally omit `[--media]` if you have a large number of static files that are already in source control.
 
@@ -64,7 +64,7 @@ Verify other changes you're going to submit to source control before you start t
 
 ### Upgrade the patch
 
-1.  Change to your Magento base directory and enter the following command:
+1.  Change to your Openmage base directory and enter the following command:
 
         composer update
 
@@ -78,7 +78,7 @@ Verify other changes you're going to submit to source control before you start t
 
     `git add -A` is required to add all changed files to source control because of the way Composer marshals base packages.
 
-    The files Composer marshals belong to the new version of Magento, to overwrite the outdated version of those same files. Currently, marshaling is disabled in {{site.data.var.ee}}, so you must add the marshaled files to source control.
+    The files Composer marshals belong to the new version of Openmage, to overwrite the outdated version of those same files. Currently, marshaling is disabled in {{site.data.var.ee}}, so you must add the marshaled files to source control.
 
 5.  Wait for deployment to complete.
 
@@ -98,20 +98,20 @@ We recommend you test a patch in the `master` branch.
 
 To test a general patch on your local system:
 
-1.	On your local system, enter the following commands as the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html):
+1.	On your local system, enter the following commands as the [Openmage file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html):
 
 		cd <project root dir>
-		magento-cloud environment:checkout master
+		openmage-cloud environment:checkout master
 		git pull origin master
 		composer update
 2.	Apply the patch locally:
 
-		git apply vendor/magento/magento-cloud-configuration/patches/<patch file name>
-3.	Clean the Magento cache:
+		git apply vendor/openmage/openmage-cloud-configuration/patches/<patch file name>
+3.	Clean the Openmage cache:
 
-		php <Magento project root dir>/bin/magento cache:clean
+		php <Openmage project root dir>/bin/openmage cache:clean
 
-	You can also clean the cache using the [Magento Admin](http://docs.magento.com/m2/ee/user_guide/system/cache-management.html).
+	You can also clean the cache using the [Openmage Admin](http://docs.openmage.com/m2/ee/user_guide/system/cache-management.html).
 4.	Thoroughly test your local system to make sure the patch doesn't have unexpected side-affects.
 5.	After testing the patch, push it to the remote server and deploy it:
 
@@ -124,19 +124,19 @@ After you've successfully tested a patch locally and on your integration environ
 
 1.  Open an SSH connection to your staging or production server:
 
-    *   Staging: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
-    *   Production: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
+    *   Staging: `ssh -A <project ID>_stg@<project ID>.ent.openmage.cloud`
+    *   Production: `ssh -A <project ID>@<project ID>.ent.openmage.cloud`
 2.	Enter the following commands:
 
-		<Magento project root dir>/composer update
+		<Openmage project root dir>/composer update
 2.	Apply the patch locally:
 
-		git apply vendor/magento/magento-cloud-configuration/patches/<patch file name>
-3.	Clean the Magento cache:
+		git apply vendor/openmage/openmage-cloud-configuration/patches/<patch file name>
+3.	Clean the Openmage cache:
 
-		php <Magento project root dir>/bin/magento cache:clean
+		php <Openmage project root dir>/bin/openmage cache:clean
 
-	You can also clean the cache using the [Magento Admin](http://docs.magento.com/m2/ee/user_guide/system/cache-management.html).
+	You can also clean the cache using the [Openmage Admin](http://docs.openmage.com/m2/ee/user_guide/system/cache-management.html).
 3.	Thoroughly test your local system to make sure the patch doesn't have unexpected side-affects.
 4.	After testing the patch, push it to the remote server and deploy it:
 
@@ -159,21 +159,21 @@ We recommend you test a patch locally in the `master` branch.
 
 To test a custom patch on your local system:
 
-1.	On your local system, enter the following command as the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html) if you haven't done so already:
+1.	On your local system, enter the following command as the [Openmage file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html) if you haven't done so already:
 
-		mkdir <Magento project root dir>/m2-hotfixes
+		mkdir <Openmage project root dir>/m2-hotfixes
 3.	Copy the patch file to that directory.
 2.	Apply the patch locally:
 
-		cd <Magento project root dir>
-		magento-cloud environment:checkout master
+		cd <Openmage project root dir>
+		openmage-cloud environment:checkout master
 		git pull origin master
-		git apply <Magento project root dir>/m2-hotfixes/<patch file name>
-3.	Clean the Magento cache:
+		git apply <Openmage project root dir>/m2-hotfixes/<patch file name>
+3.	Clean the Openmage cache:
 
-		php <Magento project root dir>/bin/magento cache:clean
+		php <Openmage project root dir>/bin/openmage cache:clean
 
-	You can also clean the cache using the [Magento Admin](http://docs.magento.com/m2/ee/user_guide/system/cache-management.html).
+	You can also clean the cache using the [Openmage Admin](http://docs.openmage.com/m2/ee/user_guide/system/cache-management.html).
 4.	After testing the patch, push it to the remote server and deploy it:
 
 		git add -A && git commit -m "Apply patch"
@@ -185,11 +185,11 @@ After you've successfully tested a custom patch locally and on your integration 
 
 1.  Open an SSH connection to your staging or production server:
 
-    *   Staging: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
-    *   Production: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
+    *   Staging: `ssh -A <project ID>_stg@<project ID>.ent.openmage.cloud`
+    *   Production: `ssh -A <project ID>@<project ID>.ent.openmage.cloud`
 2.	On your staging or production system, enter the following command if you haven't done so already:
 
-		mkdir <Magento project root dir>/m2-hotfixes
+		mkdir <Openmage project root dir>/m2-hotfixes
 3.	Copy the patch file to that directory.
 
 	We suggest using the following command:
@@ -209,12 +209,12 @@ After you've successfully tested a custom patch locally and on your integration 
 	For additional options, see the [rsync man page](http://linux.die.net/man/1/rsync).
 2.	Apply the patch:
 
-		git apply <Magento project root dir>/m2-hotfixes/<patch file name>
-3.	Clean the Magento cache:
+		git apply <Openmage project root dir>/m2-hotfixes/<patch file name>
+3.	Clean the Openmage cache:
 
-		php <Magento project root dir>/bin/magento cache:clean
+		php <Openmage project root dir>/bin/openmage cache:clean
 
-	You can also clean the cache using the [Magento Admin](http://docs.magento.com/m2/ee/user_guide/system/cache-management.html).
+	You can also clean the cache using the [Openmage Admin](http://docs.openmage.com/m2/ee/user_guide/system/cache-management.html).
 4.	After testing the patch, push it to the remote server and deploy it:
 
 		git add -A && git commit -m "Apply patch"

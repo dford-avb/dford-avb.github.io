@@ -26,7 +26,7 @@ title: Order Comments
 
 <p>Allows you to retrieve information about comments of the required order.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/orders/:orderid/comments<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/orders/:orderid/comments<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-OrderComments-HTTPMethod-GET"></a>HTTP Method: GET</h5>
@@ -40,14 +40,14 @@ title: Order Comments
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/orders/33/comments</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/orders/33/comments</td></tr></table></div>
 
 <p><b>Response Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;created_at&gt;2012-03-09 11:20:49&lt;/created_at&gt;
     &lt;comment&gt;&lt;/comment&gt;
@@ -62,7 +62,7 @@ title: Order Comments
     &lt;is_visible_on_front&gt;1&lt;/is_visible_on_front&gt;
     &lt;status&gt;pending&lt;/status&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -75,19 +75,19 @@ title: Order Comments
 
 <p><b>Example:</b></p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/orders/33/comments</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/orders/33/comments</td></tr></table></div>
 
 <p><b>Response Body:</b></p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;created_at&gt;2012-03-09 11:21:32&lt;/created_at&gt;
     &lt;comment&gt;This is a new order for John Doe.&lt;/comment&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>

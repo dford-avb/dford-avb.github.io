@@ -214,7 +214,7 @@ title: Downloadable Link Add
 <h5><a name="product_downloadable_link.add-RequestExampleSOAPV1"></a>Request Example SOAP V1</h5>
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/soap/?wsdl');
 $sessionId = $proxy-&gt;login('apiUser', 'apiKey');
 $filesPath = '/var/www/ws/tests/WebService/etc/Modules/Downloadable/Product/Link';
 $downloadableProductId = 'downloadable_demo_product';
@@ -233,14 +233,14 @@ $items = array(
                 array(
                     'filename' =&gt; 'files/test.txt',
                 ),
-                'url' =&gt; 'http://www.magentocommerce.com/img/logo.gif',
+                'url' =&gt; 'http://www.openmagecommerce.com/img/logo.gif',
             ),
             'type' =&gt; 'file',
             'file' =&gt;
             array(
                 'filename' =&gt; 'files/test.txt',
             ),
-            'link_url' =&gt; 'http://www.magentocommerce.com/img/logo.gif',
+            'link_url' =&gt; 'http://www.openmagecommerce.com/img/logo.gif',
         ),
         'sample' =&gt; array(
             'title' =&gt; 'Test sample file',
@@ -248,7 +248,7 @@ $items = array(
             'file' =&gt; array(
                 'filename' =&gt; 'files/image.jpg',
             ),
-            'sample_url' =&gt; 'http://www.magentocommerce.com/img/logo.gif',
+            'sample_url' =&gt; 'http://www.openmagecommerce.com/img/logo.gif',
             'sort_order' =&gt; '3',
         )
     ),
@@ -264,13 +264,13 @@ $items = array(
                 'file' =&gt; array(
                     'filename' =&gt; 'files/book.pdf',
                 ),
-                'url' =&gt; 'http://www.magentocommerce.com/img/logo.gif',
+                'url' =&gt; 'http://www.openmagecommerce.com/img/logo.gif',
             ),
             'type' =&gt; 'url',
             'file' =&gt; array(
                 'filename' =&gt; 'files/song.mp3',
             ),
-            'link_url' =&gt; 'http://www.magentocommerce.com/img/logo.gif',
+            'link_url' =&gt; 'http://www.openmagecommerce.com/img/logo.gif',
         ),
         'sample' =&gt; array(
             'title' =&gt; 'Test sample url',
@@ -278,7 +278,7 @@ $items = array(
             'file' =&gt; array(
                 'filename' =&gt; 'files/image.jpg',
             ),
-            'sample_url' =&gt; 'http://www.magentocommerce.com/img/logo.gif',
+            'sample_url' =&gt; 'http://www.openmagecommerce.com/img/logo.gif',
             'sort_order' =&gt; '3',
         )
     )
@@ -314,7 +314,7 @@ foreach ($items as $item) {
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/v2_soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/v2_soap/?wsdl');
 
 $sessionId = $proxy-&gt;login((object)array('username' =&gt; 'apiUser', 'apiKey' =&gt; 'apiKey'));
 
@@ -333,7 +333,7 @@ var_dump($result-&gt;result);</pre>
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/v2_soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/v2_soap/?wsdl');
 
 $sessionId = $proxy-&gt;login((object)array('username' =&gt; 'apiUser', 'apiKey' =&gt; 'apiKey'));
 

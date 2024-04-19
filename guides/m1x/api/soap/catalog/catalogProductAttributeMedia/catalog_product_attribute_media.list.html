@@ -128,7 +128,7 @@ title: Media List
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$client = new SoapClient('http://magentohost/api/soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$client = new SoapClient('http://openmagehost/api/soap/?wsdl');
 
 // If somestuff requires API authentication,
 // then get a session token
@@ -147,7 +147,7 @@ var_dump($result);
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/v2_soap/?wsdl'); // TODO : change url
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/v2_soap/?wsdl'); // TODO : change url
 $sessionId = $proxy-&gt;login('apiUser', 'apiKey'); // TODO : change login and pwd if necessary
 
 $result = $proxy-&gt;catalogProductAttributeMediaList($sessionId, '2');
@@ -161,7 +161,7 @@ var_dump($result);</pre>
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/v2_soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/v2_soap/?wsdl');
 
 $sessionId = $proxy-&gt;login((object)array('username' =&gt; 'apiUser', 'apiKey' =&gt; 'apiKey'));
 
@@ -182,7 +182,7 @@ var_dump($result-&gt;result);</pre>
       'label' =&gt; string '' (length=0)
       'position' =&gt; string '1' (length=1)
       'exclude' =&gt; string '0' (length=1)
-      'url' =&gt; string 'http://magentopath/blackberry8100_2.jpg' (length=71)
+      'url' =&gt; string 'http://openmagepath/blackberry8100_2.jpg' (length=71)
       'types' =&gt;
         array
           0 =&gt; string 'image' (length=5)

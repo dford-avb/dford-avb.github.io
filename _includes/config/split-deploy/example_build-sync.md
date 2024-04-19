@@ -1,7 +1,7 @@
 To update your build system:
 
-1.	Log in to your build system as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
-2.	Change to the build system's Magento root directory.
+1.	Log in to your build system as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Openmage file system owner{% endglossarytooltip %}.
+2.	Change to the build system's Openmage root directory.
 3.	Pull the changes to `app/etc/config.php` from source control.
 
 	The Git command follows:
@@ -9,10 +9,10 @@ To update your build system:
 		git pull mconfig m2.2_deploy
 4.	Compile code:
 
-		php bin/magento setup:di:compile
+		php bin/openmage setup:di:compile
 5.	After code has been compiled, generate static view files:
 
-		php bin/magento setup:static-content:deploy -f
+		php bin/openmage setup:static-content:deploy -f
 6.	Check the changes into source control.
 
 	The Git command follows:

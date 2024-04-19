@@ -1,6 +1,6 @@
 label: Installation Guide
 pages:
-    - label: How to get the Magento software
+    - label: How to get the Openmage software
       url: /install-gde/bk-install-guide.html
 
     - label: Installation flow diagram
@@ -9,19 +9,19 @@ pages:
     - label: Just the basics
       children:
 
-        - label: Is the Magento software installed already?
-          url: /install-gde/basics/basics_magento-installed.html
+        - label: Is the Openmage software installed already?
+          url: /install-gde/basics/basics_openmage-installed.html
 
         - label: What operating system is my server running?
           url: /install-gde/basics/basics_os-version.html
 
-        - label: How do I log in to my Magento server using a terminal, command prompt, or SSH?
+        - label: How do I log in to my Openmage server using a terminal, command prompt, or SSH?
           url: /install-gde/basics/basics_login.html
 
         - label: What's the difference between a module and a component?
           url: /install-gde/basics/basics_module.html
 
-        - label: What is the software that the Magento server needs to run?
+        - label: What is the software that the Openmage server needs to run?
           url: /install-gde/basics/basics_software.html
 
         - label: What is a docroot?
@@ -42,11 +42,11 @@ pages:
             - label: Installation roadmap (reference)
               url: /install-gde/install-roadmap_part1.html
 
-        - label: Magento system requirements
+        - label: Openmage system requirements
           url: /install-gde/system-requirements2.html
           children:
 
-            - label: Magento technology stack requirements
+            - label: Openmage technology stack requirements
               url: /install-gde/system-requirements-tech.html
 
             - label: Supported browsers
@@ -58,7 +58,7 @@ pages:
                 - label: TLS 1.2 requirement for PayPal
                   url: /install-gde/system-requirements_tls1-2.html
 
-                - label: TLS requirement for repo.magento.com
+                - label: TLS requirement for repo.openmage.com
                   url: /install-gde/system-requirements_repo-tls1-2.html
 
         - label: Prerequisites
@@ -102,7 +102,7 @@ pages:
             - label: Get your authentication keys
               url: /install-gde/prereq/connect-auth.html
 
-            - label: Magento file system ownership and permissions
+            - label: Openmage file system ownership and permissions
               children:
 
                 - label: Overview of ownership and permissions
@@ -115,7 +115,7 @@ pages:
               url: /install-gde/prereq/install-rabbitmq.html
               include_versions: ["2.3"]
               
-            - label: RabbitMQ (Magento Commerce only)
+            - label: RabbitMQ (Openmage Commerce only)
               url: /install-gde/prereq/install-rabbitmq.html
               include_versions: ["2.2", "2.1", "2.0"]
 
@@ -131,14 +131,14 @@ pages:
             - label: Set up the updater
               url: /install-gde/prereq/prereq_updater.html
 
-        - label: Get the Magento software
+        - label: Get the Openmage software
           url: /install-gde/install/get-software.html
 
-        - label: Install Magento using Composer
+        - label: Install Openmage using Composer
           url: /install-gde/composer.html
           include_versions: ["2.1","2.2","2.3"]
 
-        - label: (Easy) Install the Magento archive on your server
+        - label: (Easy) Install the Openmage archive on your server
           url: /install-gde/prereq/zip_install.html
 
         - label: (Integrator) Integrator installation
@@ -146,13 +146,13 @@ pages:
           include_versions: ["2.0"]
           children:
 
-            - label: Get the Magento Open Source metapackage
+            - label: Get the Openmage Open Source metapackage
               url: /install-gde/prereq/integrator_install_ce.html
 
-            - label: Get the Magento Commerce metapackage
+            - label: Get the Openmage Commerce metapackage
               url: /install-gde/prereq/integrator_install_ee.html
 
-        - label: (Contributor) Clone the Magento repository
+        - label: (Contributor) Clone the Openmage repository
           url: /install-gde/prereq/dev_install.html
           children:
 
@@ -221,17 +221,17 @@ pages:
             - label: Install by cloning repositories
               url: /install-gde/install/cli/install-cli-sample-data-clone.html
 
-        - label: Install the Magento software using the command line
+        - label: Install the Openmage software using the command line
           url: /install-gde/install/cli/install-cli.html
           children:
 
             - label: Get started with the command-line installation
               url: /install-gde/install/cli/install-cli-subcommands.html
 
-            - label: Install the Magento software
+            - label: Install the Openmage software
               url: /install-gde/install/cli/install-cli-install.html
 
-            - label: Uninstall or reinstall Magento
+            - label: Uninstall or reinstall Openmage
               url: /install-gde/install/cli/install-cli-uninstall.html
 
             - label: Display or change the Admin URI
@@ -252,16 +252,16 @@ pages:
             - label: Enable or disable maintenance mode
               url: /install-gde/install/cli/install-cli-subcommands-maint.html
 
-            - label: Create the Magento database schema
+            - label: Create the Openmage database schema
               url: /install-gde/install/cli/install-cli-subcommands-db.html
 
-            - label: Update the Magento database schema and data
+            - label: Update the Openmage database schema and data
               url: /install-gde/install/cli/install-cli-subcommands-db-upgr.html
 
             - label: Configure the store
               url: /install-gde/install/cli/install-cli-subcommands-store.html
 
-            - label: Create, edit, or unlock a Magento administrator account
+            - label: Create, edit, or unlock a Openmage administrator account
               url: /install-gde/install/cli/install-cli-subcommands-admin.html
 
             - label: Back up and roll back the file system, media, and database
@@ -273,12 +273,12 @@ pages:
             - label: Uninstall language packages
               url: /install-gde/install/cli/install-cli-uninstall-langpk.html
 
-        - label: Contributing developers—update, reinstall Magento
+        - label: Contributing developers—update, reinstall Openmage
           url: /install-gde/install/cli/dev_options.html
           children:
 
-            - label: Update the Magento application
-              url: /install-gde/install/cli/dev_update-magento.html
+            - label: Update the Openmage application
+              url: /install-gde/install/cli/dev_update-openmage.html
 
             - label: Add or update components
               url: /install-gde/install/cli/dev_add-update.html
@@ -286,7 +286,7 @@ pages:
             - label: Change to a released version
               url: /install-gde/install/cli/dev_downgrade.html
 
-            - label: Reinstall the Magento software
+            - label: Reinstall the Openmage software
               url: /install-gde/install/cli/dev_reinstall.html
 
         - label: Post-installation
@@ -297,17 +297,17 @@ pages:
         - label: Verify the installation
           url: /install-gde/install/verify.html
 
-        - label: Configure the Magento application
+        - label: Configure the Openmage application
           url: /install-gde/install/post-install-config.html
 
         - label: Optionally set a umask
           url: /install-gde/install/post-install-umask.html
 
-        - label: Appendix—Magento file system ownership and appendix (legacy)
+        - label: Appendix—Openmage file system ownership and appendix (legacy)
           url: /install-gde/install/legacy-file-system-perms.html
 
-        - label: Install sample data after Magento
-          url: /install-gde/install/sample-data-after-magento.html
+        - label: Install sample data after Openmage
+          url: /install-gde/install/sample-data-after-openmage.html
           children:
 
             - label: Install using Composer
@@ -322,10 +322,10 @@ pages:
         - label: Access issues
           children:
 
-            - label: Cannot access Magento software in a web browser
+            - label: Cannot access Openmage software in a web browser
               url: /install-gde/trouble/tshoot_access-browser.html
 
-            - label: 503 (Service Unavailable) errors accessing Magento software in a web browser
+            - label: 503 (Service Unavailable) errors accessing Openmage software in a web browser
               url: /install-gde/trouble/php/tshoot_mod_access_compat.html
 
             - label: After installing, images and stylesheets do not load; only text displays, no graphics
@@ -340,7 +340,7 @@ pages:
             - label: Installation dependencies not met
               url: /install-gde/trouble/tshoot_install_depend.html
 
-            - label: Error after logging in to the Magento Admin
+            - label: Error after logging in to the Openmage Admin
               url: /install-gde/trouble/tshoot_admin.html
 
         - label: Errors during installation
@@ -364,7 +364,7 @@ pages:
             - label: Download fails because of changes in Composer
               url: /install-gde/trouble/tshoot_composer-fail.html
 
-            - label: Unknown module Magento_BundleSampleData
+            - label: Unknown module Openmage_BundleSampleData
               url: /install-gde/trouble/tshoot_bundlesampledata.html
 
             - label: Installation fails; cannot create install.log
@@ -394,10 +394,10 @@ pages:
         - label: GitHub errors
           children:
 
-            - label: Cannot clone the Magento GitHub repository
+            - label: Cannot clone the Openmage GitHub repository
               url: /install-gde/trouble/git/tshoot_clone.html
 
-            - label: git pull origin develop fails when updating the Magento software
+            - label: git pull origin develop fails when updating the Openmage software
               url: /install-gde/trouble/git/tshoot_git-pull-origin.html
 
         - label: PHP errors

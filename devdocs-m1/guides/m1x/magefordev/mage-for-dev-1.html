@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/common/css/stylesheet-fonts.css" type="text/css" charset="utf-8">
     <link rel="icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="{{ site.baseurl }}/common/css/favicon.ico" type="image/x-icon">
-    <title>Magento for Developers: Part 1&mdash;Introduction to Magento</title>
+    <title>Openmage for Developers: Part 1&mdash;Introduction to Openmage</title>
 
 </head>
-<!-- Magento for Developers: Part 1&mdash;Introduction to Magento -->
-<!-- magento-for-dev-part-1-introduction-to-magento -->
+<!-- Openmage for Developers: Part 1&mdash;Introduction to Openmage -->
+<!-- openmage-for-dev-part-1-introduction-to-openmage -->
 
 <img src="{{ site.baseurl }}/guides/m1x/images/m1xheader.png" width="1024" alt="header" />
 {% include m1x/eol_message.html %}
@@ -22,8 +22,8 @@
 <div id="top"></div>
 
 <div id="content">
-<h1>Magento for Developers: Part 1&mdash;Introduction to Magento</h1>
-<p><em>by Alan Storm</em>, updated for Magento 1.12</p>
+<h1>Openmage for Developers: Part 1&mdash;Introduction to Openmage</h1>
+<p><em>by Alan Storm</em>, updated for Openmage 1.12</p>
 <p><a href="{{ site.m1xgithuburl }}/magefordev/mage-for-dev-1.html" target="_blank">Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
 
 <!-- <style type="text/css">
@@ -33,21 +33,21 @@
 <div class="r-box-rss series"> -->
 <h4>Other articles in this series:</h4>
 <ul>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-1.html">Part 1&mdash;Introduction to Magento</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-2.html">Part 2&mdash;The Magento Config</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-3.html">Part 3&mdash;Magento Controller Dispatch</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-4.html">Part 4&mdash;Magento Layouts, Blocks and Templates</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-5.html">Part 5&mdash;Magento Models and ORM Basics</a>
-<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-6.html">Part 6&mdash;Magento Setup Resources</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-1.html">Part 1&mdash;Introduction to Openmage</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-2.html">Part 2&mdash;The Openmage Config</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-3.html">Part 3&mdash;Openmage Controller Dispatch</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-4.html">Part 4&mdash;Openmage Layouts, Blocks and Templates</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-5.html">Part 5&mdash;Openmage Models and ORM Basics</a>
+<li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-6.html">Part 6&mdash;Openmage Setup Resources</a>
 <li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-7.html">Part 7&mdash;Advanced ORM: Entity Attribute Value</a>
 <li><a href="{{ site.m1xgdeurl }}/magefordev/mage-for-dev-8.html">Part 8&mdash;Varien Data Collections</a>
 </ul>
 
-<p class="para1">What is Magento?  It's the most powerful online eCommerce platform in the universe and is changing the face of eCommerce forever. :-)</p>
+<p class="para1">What is Openmage?  It's the most powerful online eCommerce platform in the universe and is changing the face of eCommerce forever. :-)</p>
 
-<p>Of course, you already know that.  What you may not realize is Magento's also an object-oriented PHP Framework that can be used to develop modern, dynamic web applications that tap into Magento's powerful eCommerce features.</p>
+<p>Of course, you already know that.  What you may not realize is Openmage's also an object-oriented PHP Framework that can be used to develop modern, dynamic web applications that tap into Openmage's powerful eCommerce features.</p>
 
-<p>This is the first in a series of articles in which we're going to go on a whirlwind tour of Magento's programming framework features. Don't worry if you don't follow everything immediately. As you study the system more everything in this article will start to make sense, and you'll soon be the envy of your colleagues stuck working with more primitive PHP systems.</p>
+<p>This is the first in a series of articles in which we're going to go on a whirlwind tour of Openmage's programming framework features. Don't worry if you don't follow everything immediately. As you study the system more everything in this article will start to make sense, and you'll soon be the envy of your colleagues stuck working with more primitive PHP systems.</p>
 
 <h4>In this article...</h4>
 <ul><li><a href="#1" title="Code Organized in Modules">Code Organized in Modules</a>
@@ -62,28 +62,28 @@
 <li><a href="#10" title="Wrap Up">Wrap Up</a>
 </ul>
 
-<p>Or for the more visually oriented <a href="{{ site.baseurl }}/guides/m1x/images/Magento_MVC.pdf">Magento_MVC.pdf</a>.</p>
+<p>Or for the more visually oriented <a href="{{ site.baseurl }}/guides/m1x/images/Openmage_MVC.pdf">Openmage_MVC.pdf</a>.</p>
 
 <hr/>
 <a name="1"></a>
 <h2>Code Organized in Modules</h2>
 
-<p>Magento organizes its code into individual Modules. In a typical PHP <a href="http://en.wikipedia.org/wiki/Model–view–controller" target="_new"><b>Model-View-Controller (MVC)</b></a> application, all the Controllers will be in one folder, all the Models in another, etc.  In Magento, files are grouped together based on functionality, which are called <b>modules</b> in Magento.</p>
+<p>Openmage organizes its code into individual Modules. In a typical PHP <a href="http://en.wikipedia.org/wiki/Model–view–controller" target="_new"><b>Model-View-Controller (MVC)</b></a> application, all the Controllers will be in one folder, all the Models in another, etc.  In Openmage, files are grouped together based on functionality, which are called <b>modules</b> in Openmage.</p>
 
-<h4>Magento's Code</h4>
-<p>For example, you'll find Controllers, Models, Helpers, Blocks, etc. related to Magento's checkout functionality in</p>
+<h4>Openmage's Code</h4>
+<p>For example, you'll find Controllers, Models, Helpers, Blocks, etc. related to Openmage's checkout functionality in</p>
 <pre>app/code/core/Mage/Checkout</pre>
 
-<p>You'll find Controllers, Models, Helpers, Blocks, etc. related to Magento's Google Checkout functionality in</p>
+<p>You'll find Controllers, Models, Helpers, Blocks, etc. related to Openmage's Google Checkout functionality in</p>
 <pre>app/code/core/Mage/GoogleCheckout</pre>
 
 <h4>Your Code</h4>
-<p>When you want to customize or extend Magento, rather than editing core files directly, or even placing your new Controllers, Models, Helpers, Blocks, etc. next to Magento code, you'll create your own Modules in</p>
+<p>When you want to customize or extend Openmage, rather than editing core files directly, or even placing your new Controllers, Models, Helpers, Blocks, etc. next to Openmage code, you'll create your own Modules in</p>
 <pre>app/code/local/Package/Modulename</pre>
 
-<p><b>Package</b> (also often referred to as a <b>Namespace</b>) is a unique name that identifies your company or organization. The intent is that each member of the world-wide Magento community will use their own Package name when creating modules in order to avoid colliding with another user's code.  </p>
+<p><b>Package</b> (also often referred to as a <b>Namespace</b>) is a unique name that identifies your company or organization. The intent is that each member of the world-wide Openmage community will use their own Package name when creating modules in order to avoid colliding with another user's code.  </p>
 
-<p>When you create a new Module, you need to tell Magento about it.  This is done by adding an XML file to the folder:</p>
+<p>When you create a new Module, you need to tell Openmage about it.  This is done by adding an XML file to the folder:</p>
 <pre>app/etc/modules</pre>
 
 <p>There are two kinds of files in this folder, the first enables an individual Module, and is named in the form:</p>
@@ -95,13 +95,13 @@
 <a name="2"></a>
 <h2>Configuration-Based MVC</h2>
 
-<p>Magento is a <b>configuration-based</b> MVC system.  The alternative to this would a <b>convention-based</b> MVC system.</p>
+<p>Openmage is a <b>configuration-based</b> MVC system.  The alternative to this would a <b>convention-based</b> MVC system.</p>
 
 <p>In a convention-based MVC system, if you wanted to add, say, a new Controller or maybe a new Model, you'd just create the file/class, and the system would pick it up automatically.</p>
 
-<p>In a configuration-based system, like Magento, in addition to adding the new file/class to the codebase, you often need to explicitly tell the system about the new class, or new group of classes. In Magento, each Module has a file named <tt>config.xml</tt>. This file contains all the relevant configuration for a Magento Module.  At runtime, all these files are loaded into one large configuration tree.</p>
+<p>In a configuration-based system, like Openmage, in addition to adding the new file/class to the codebase, you often need to explicitly tell the system about the new class, or new group of classes. In Openmage, each Module has a file named <tt>config.xml</tt>. This file contains all the relevant configuration for a Openmage Module.  At runtime, all these files are loaded into one large configuration tree.</p>
 
-<p>For example, want to use Models in your custom Module?  You'll need to add some code to <tt>config.xml</tt> that tells Magento you want to use Models, as well as what the base class name for all your Models should be.</p>
+<p>For example, want to use Models in your custom Module?  You'll need to add some code to <tt>config.xml</tt> that tells Openmage you want to use Models, as well as what the base class name for all your Models should be.</p>
 
 <pre>
     &lt;models>
@@ -110,12 +110,12 @@
         &lt;/packagename>
     &lt;/models>
 </pre>    
-<p>The same goes for Helpers, Blocks, Routes for your Controllers, Event Handlers, and more. Almost anytime you want to tap into the power of the Magento system, you'll need to make some change or addition to your config file.</p>
+<p>The same goes for Helpers, Blocks, Routes for your Controllers, Event Handlers, and more. Almost anytime you want to tap into the power of the Openmage system, you'll need to make some change or addition to your config file.</p>
 
 <a name="3"></a>
 <h2>Controllers</h2>
 
-<p>In any PHP system, the main PHP entry point remains a PHP file.  Magento is no different, and that file is <tt>index.php</tt>.</p>
+<p>In any PHP system, the main PHP entry point remains a PHP file.  Openmage is no different, and that file is <tt>index.php</tt>.</p>
 
 <p>However, you never CODE in index.php. In an MVC system, index.php will contain code/calls to code that does the following:</p>
 <ol>
@@ -124,18 +124,18 @@
 <li><p>Instantiates the Controller class and calls the Action method (called dispatching)</p></li>
 </ol>
 
-<p>This means the <strong>practical</strong> entry point in Magento (or any MVC-based system) is a method in a Controller file. Consider the following URL:</p>
+<p>This means the <strong>practical</strong> entry point in Openmage (or any MVC-based system) is a method in a Controller file. Consider the following URL:</p>
 
 <pre>http://example.com/catalog/category/view/id/25</pre>
 
 <p>Each portion of the path after the server name is parsed as follows.</p>
 
 <h4>Front Name - <tt>catalog</tt></h4>
-<p>The first portion of the URL is called the front name.  This, more or less, tells magento which Module it can find a Controller in. In the above example, the front name is <em>catalog</em>, which corresponds to the Module located at:</p>
+<p>The first portion of the URL is called the front name.  This, more or less, tells openmage which Module it can find a Controller in. In the above example, the front name is <em>catalog</em>, which corresponds to the Module located at:</p>
 <pre>app/code/core/Mage/Catalog</pre>
 
 <h4>Controller Name - <tt>category</tt></h4>
-<p>The second portion of the URL tells Magento which Controller it should use.  Each Module with Controllers has a special folder named 'controllers' which contains all the Controllers for a module. In the above example, the URL portion category is translated into the Controller file</p>
+<p>The second portion of the URL tells Openmage which Controller it should use.  Each Module with Controllers has a special folder named 'controllers' which contains all the Controllers for a module. In the above example, the URL portion category is translated into the Controller file</p>
 <pre>app/code/core/Mage/Catalog/controllers/CategoryController.php</pre>
 
 <p>Which looks like</p>
@@ -145,7 +145,7 @@ class Mage_Catalog_CategoryController extends Mage_Core_Controller_Front_Action
 }
 </pre>
 
-<p>All Controllers in the Magento cart application extend from Mage_Core_Controller_Front_Action.</p>
+<p>All Controllers in the Openmage cart application extend from Mage_Core_Controller_Front_Action.</p>
 
 <h4>Action Name - <tt>view</tt></h4>
 
@@ -188,21 +188,21 @@ class Mage_Catalog_CategoryController extends Mage_Core_Controller_Front_Action
 <tt>&lt;frontName&gt;catalog&lt;/frontName&gt;
 </tt>
 
-<p>This is what links a Module with a URL frontname.  Most Magento core Modules choose a frontname that is the same as their Module name, but this is not required.  </p>
+<p>This is what links a Module with a URL frontname.  Most Openmage core Modules choose a frontname that is the same as their Module name, but this is not required.  </p>
 
 
 <h3>Multiple Routers</h3>
 
-<p>The routing described above is for the Magento cart application (often called the frontend).  If Magento doesn't find a valid Controller/Action for a URL, it tries again, this time using a second set of Routing rules for the Admin application.  If Magento doesn't find a valid <strong>Admin</strong> Controller/Action, it uses a special Controller named <tt>Mage_Cms_IndexController</tt>.</p>
+<p>The routing described above is for the Openmage cart application (often called the frontend).  If Openmage doesn't find a valid Controller/Action for a URL, it tries again, this time using a second set of Routing rules for the Admin application.  If Openmage doesn't find a valid <strong>Admin</strong> Controller/Action, it uses a special Controller named <tt>Mage_Cms_IndexController</tt>.</p>
 
-<p>The CMS Controller checks Magento's content Management system to see if there's any content that should be loaded.  If it finds some, it loads it, otherwise the user will be presented with a 404 page.  </p>
+<p>The CMS Controller checks Openmage's content Management system to see if there's any content that should be loaded.  If it finds some, it loads it, otherwise the user will be presented with a 404 page.  </p>
 
-<p>For example, the main magento "index" page is one that uses the CMS Controller, which can often throw newcomers for a loop.</p>
+<p>For example, the main openmage "index" page is one that uses the CMS Controller, which can often throw newcomers for a loop.</p>
 
 <a name="4"></a>
 <h2>Context-Based URI Model Loading</h2>
 
-<p>Now that we're in our Action method entry point, we'll want to start instantiating classes that do things.  Magento offers a special way to instantiate Models, Helpers and Blocks using static factory methods on the global Mage class. For example:</p>
+<p>Now that we're in our Action method entry point, we'll want to start instantiating classes that do things.  Openmage offers a special way to instantiate Models, Helpers and Blocks using static factory methods on the global Mage class. For example:</p>
 
 <pre>
 Mage::getModel('catalog/product');
@@ -231,9 +231,9 @@ Mage_Catalog_Helper_Product
 
 
 <a name="5"></a>
-<h2>Magento Models</h2>
+<h2>Openmage Models</h2>
 
-<p>Magento, like most frameworks these days, offers an Object Relational Mapping (ORM) system. ORMs get you out of the business of writing SQL and allow you to manipulate a datastore purely through PHP code. For example:</p>
+<p>Openmage, like most frameworks these days, offers an Object Relational Mapping (ORM) system. ORMs get you out of the business of writing SQL and allow you to manipulate a datastore purely through PHP code. For example:</p>
 
 <pre>
 $model = Mage::getModel('catalog/product')-&gt;load(27);
@@ -243,7 +243,7 @@ $model-&gt;setPrice($price)-&gt;setSku('SK83293432');
 $model-&gt;save();
 </pre>
 
-<p>In the above example we're calling the methods "getPrice" and "setPrice" on our Product.  However, the Mage_Catalog_Model_Product class has no methods with these names. That's because Magento's ORM uses PHP's magic <em>__call</em> method to implement getters and setters.</p>
+<p>In the above example we're calling the methods "getPrice" and "setPrice" on our Product.  However, the Mage_Catalog_Model_Product class has no methods with these names. That's because Openmage's ORM uses PHP's magic <em>__call</em> method to implement getters and setters.</p>
 
 <p>Calling the method <tt>$product-&gt;getPrice();</tt> will "get" the Model attribute "price".</p>
 
@@ -254,9 +254,9 @@ $model-&gt;save();
 <p>You'll also notice it's possible to chain together several calls to the  set method: </p>
 <tt>$model-&gt;setPrice($price)-&gt;setSku('SK83293432');</tt>
 
-<p>That's because each set method returns an instance of the Model.  This is a pattern you'll see used in much of the Magento codebase.</p>
+<p>That's because each set method returns an instance of the Model.  This is a pattern you'll see used in much of the Openmage codebase.</p>
 
-<p>Magento's ORM also contains a way to query for multiple Objects via a Collections interface.  The following would get us a collection of all products that cost $5.00</p>
+<p>Openmage's ORM also contains a way to query for multiple Objects via a Collections interface.  The following would get us a collection of all products that cost $5.00</p>
 
 <pre>
 $products_collection = Mage::getModel('catalog/product')
@@ -265,7 +265,7 @@ $products_collection = Mage::getModel('catalog/product')
 ->addFieldToFilter('price','5.00');
 </pre>
 
-<p>Again, you'll notice Magento's implemented a chaining interface here.  Collections use the PHP Standard Library to implement Objects that have array like properties.</p>
+<p>Again, you'll notice Openmage's implemented a chaining interface here.  Collections use the PHP Standard Library to implement Objects that have array like properties.</p>
 
 <pre>
 foreach($products_collection as $product)
@@ -274,14 +274,14 @@ foreach($products_collection as $product)
 }
 </pre>
 
-<p>You may be wondering what the "addAttributeToSelect" method is for. Magento has two broad types of Model objects. One is a traditional "One Object, One Table" Active Record style Model.  When you instantiate these Models, all attributes are automatically selected.</p>
+<p>You may be wondering what the "addAttributeToSelect" method is for. Openmage has two broad types of Model objects. One is a traditional "One Object, One Table" Active Record style Model.  When you instantiate these Models, all attributes are automatically selected.</p>
 
-<p>The second type of Model is an Entity Attribute Value (EAV) Model.  EAV Models spread data across several different tables in the database.  This gives the Magento system the flexibility to offer its flexible product attribute system without having to do a schema change each time you add an attribute.  When creating a collection of EAV objects, Magento is conservative in the number of columns it will query for, so you can use addAttributeToSelect to get the columns you want, or addAttributeToSelect('*') to get all columns. </p>
+<p>The second type of Model is an Entity Attribute Value (EAV) Model.  EAV Models spread data across several different tables in the database.  This gives the Openmage system the flexibility to offer its flexible product attribute system without having to do a schema change each time you add an attribute.  When creating a collection of EAV objects, Openmage is conservative in the number of columns it will query for, so you can use addAttributeToSelect to get the columns you want, or addAttributeToSelect('*') to get all columns. </p>
 
 <a name="6"></a>
 <h2>Helpers</h2>
 
-<p>Magento's Helper classes contain utility methods that will allow you to perform common tasks on objects and variables. For example:</p>>
+<p>Openmage's Helper classes contain utility methods that will allow you to perform common tasks on objects and variables. For example:</p>>
 <tt>$helper = Mage::helper('catalog');</tt>
 
 <p>You'll notice we've left off the second part of the grouped class name.  Each Module has a default Data Helper class.  The following is equivalent to the above:</p>
@@ -289,7 +289,7 @@ foreach($products_collection as $product)
 
 <p>Most Helpers inherit form Mage_Core_Helper_Abstract, which gives you several useful methods by default.</p>
 <pre>
-$translated_output =  $helper-&gt;__('Magento is Great'); //gettext style translations
+$translated_output =  $helper-&gt;__('Openmage is Great'); //gettext style translations
 if($helper-&gt;isModuleOutputEnabled()): //is output for this module on or off?
 </pre>
 
@@ -305,7 +305,7 @@ if($helper-&gt;isModuleOutputEnabled()): //is output for this module on or off?
 <li>The system would then load our view inside that outer layout</li>
 </ol>
 
-<p>However, if you look at a typical Magento Controller action, you don't see any of this:</p>
+<p>However, if you look at a typical Openmage Controller action, you don't see any of this:</p>
 
 <pre>
 /**
@@ -333,11 +333,11 @@ $this-&gt;loadLayout();
 $this-&gt;renderLayout();
 </pre>
 
-<p>So, the "V" in Magento's MVC already differs from what you're probably used to, in that you need to explicitly kick off rendering the layout.</p>
+<p>So, the "V" in Openmage's MVC already differs from what you're probably used to, in that you need to explicitly kick off rendering the layout.</p>
 
-<p>The layout itself also differs.  A Magento Layout is an object that contains a nested/tree collection of "Block" objects. Each Block object will render a specific bit of HTML.  Block objects do this through a combination of PHP code, and including PHP .phtml template files.</p>
+<p>The layout itself also differs.  A Openmage Layout is an object that contains a nested/tree collection of "Block" objects. Each Block object will render a specific bit of HTML.  Block objects do this through a combination of PHP code, and including PHP .phtml template files.</p>
 
-<p>Blocks objects are meant to interact with the Magento system to retrieve data from Models, while the phtml template files will produce the HTML needed for a page.</p>
+<p>Blocks objects are meant to interact with the Openmage system to retrieve data from Models, while the phtml template files will produce the HTML needed for a page.</p>
 
 <p>For example, the page header Block <tt>app/code/core/Mage/Page/Block/Html/Head.php</tt> uses the head.phtml file <tt>page/html/head.phtml</tt>.</p>
 
@@ -350,17 +350,17 @@ $this->loadLayout();
 $this->renderLayout();
 </pre>
 
-<p>Magento will load up a Layout with a skeleton site structure.  There will be Structure Blocks to give you your <tt>html</tt>, <tt>head</tt>, and <tt>body</tt>, as well as HTML to setup single or multiple columns of Layout. Additionally, there will be a few Content Blocks for the navigation, default welcome message, etc.</p>
+<p>Openmage will load up a Layout with a skeleton site structure.  There will be Structure Blocks to give you your <tt>html</tt>, <tt>head</tt>, and <tt>body</tt>, as well as HTML to setup single or multiple columns of Layout. Additionally, there will be a few Content Blocks for the navigation, default welcome message, etc.</p>
 
 <p>"Structure" and "Content" are arbitrary designations in the Layout system.  A Block doesn't programmatically know if it's Structure or Content, but it's useful to think of a Block as one or the other.</p>
 
-<p>To add Content to this Layout you need to tell the Magento system something like</p>
+<p>To add Content to this Layout you need to tell the Openmage system something like</p>
 
-<pre>"Hey, Magento, add these additional Blocks under the "content" Block of the skeleton"</pre>
+<pre>"Hey, Openmage, add these additional Blocks under the "content" Block of the skeleton"</pre>
 
 or
 
-<pre>"Hey, Magento, add these additional Blocks under the "left column" Block of the skeleton"</pre>
+<pre>"Hey, Openmage, add these additional Blocks under the "left column" Block of the skeleton"</pre>
 
 <p>This can be done programmatically in a Controller action</p>
 
@@ -411,7 +411,7 @@ public function indexAction()
 <a name="8"></a>
 <h2>Observers</h2>
 
-<p>Like any good object-oriented system, Magento implements an Event/Observer pattern for end users to hook into.  As certain actions happen during a Page request (a Model is saved, a user logs in, etc.), Magento will issue an event signal. </p>
+<p>Like any good object-oriented system, Openmage implements an Event/Observer pattern for end users to hook into.  As certain actions happen during a Page request (a Model is saved, a user logs in, etc.), Openmage will issue an event signal. </p>
 
 <p>When creating your own Modules, you can "listen" for these events.  Say you wanted to get an email every time a certain customer logged into the store.  You could listen for the "customer_login" event (setup in config.xml)</p>
 
@@ -446,7 +446,7 @@ class Packagename_Mymodule_Model_Observer
 <a name="9"></a>
 <h2>Class Overrides</h2>
 
-<p>Finally, the Magento System offers you the ability to replace Model, Helper and Block classes from the core modules with your own.  This is a feature that's similar to "Duck Typing" or "Monkey Patching" in a language like Ruby or Python.</p>
+<p>Finally, the Openmage System offers you the ability to replace Model, Helper and Block classes from the core modules with your own.  This is a feature that's similar to "Duck Typing" or "Monkey Patching" in a language like Ruby or Python.</p>
 
 <p>Here's an example to help you understand.  The Model class for a product is <tt>Mage_Catalog_Model_Product</tt>.</p>
 
@@ -456,7 +456,7 @@ class Packagename_Mymodule_Model_Observer
 
 <p>This is a factory pattern.  </p>
 
-<p>What Magento's class override system does is allow you to tell the system</p>
+<p>What Openmage's class override system does is allow you to tell the system</p>
 
 <pre>"Hey, whenever anyone asks for a catalog/product, instead of giving them a Mage_Catalog_Model_Product,
 give them a Packagename_Modulename_Model_Foobazproduct instead".</pre>
@@ -501,7 +501,7 @@ class Packagename_Modulename_Model_Foobazproduct extends Mage_Catalog_Model_Prod
 <a name="10"></a>
 <h2>Wrap Up</h2>
 
-<p>We hope you've enjoyed this whirlwind tour of some of the features the Magento eCommerce system offers to developers.  It can be a little overwhelming at first, especially if this is your first experience with a modern, object-oriented PHP system. If you start to get frustrated, take a deep breath, remind yourself that this is new, and new things are hard, but at the end of the day it's just a different way of coding.  Once you get over the learning curve you'll find yourself loath to return to other, less powerful systems.</p>
+<p>We hope you've enjoyed this whirlwind tour of some of the features the Openmage eCommerce system offers to developers.  It can be a little overwhelming at first, especially if this is your first experience with a modern, object-oriented PHP system. If you start to get frustrated, take a deep breath, remind yourself that this is new, and new things are hard, but at the end of the day it's just a different way of coding.  Once you get over the learning curve you'll find yourself loath to return to other, less powerful systems.</p>
 
 </div>
 </html>

@@ -5,7 +5,7 @@ pages:
       url: /contributor-guide/contributing.html
 
       children:
-        - label: Magento Definition of Done
+        - label: Openmage Definition of Done
           url: /contributor-guide/contributing_dod.html
 
         - label: Backward compatible development

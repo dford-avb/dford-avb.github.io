@@ -61,7 +61,7 @@
                <rdf:li rdf:parseType="Resource">
                   <stMfs:linkForm>EmbedByReference</stMfs:linkForm>
                   <stMfs:reference rdf:parseType="Resource">
-                     <stRef:filePath>C:\Docs\_github-working\private\Magento\_bash\new_devdocs_internal\devdocs_internal\common\images\cman_initial-page_base.png</stRef:filePath>
+                     <stRef:filePath>C:\Docs\_github-working\private\Openmage\_bash\new_devdocs_internal\devdocs_internal\common\images\cman_initial-page_base.png</stRef:filePath>
                   </stMfs:reference>
                </rdf:li>
             </rdf:Seq>
@@ -3452,7 +3452,7 @@ endstreamendobj803 0 obj<</AIS false/BM/Normal/CA 1.0/OP false/OPM 1/SA true/
 %%BoundingBox: -63 -564 761 29
 %%HiResBoundingBox: -62.751 -563.9053 760.7773 28.1294
 %%DocumentProcessColors: Cyan Magenta Yellow Black
-%%DocumentFiles:C:\Docs\_github-working\private\Magento\_bash\new_devdocs_internal\devdocs_internal\common\images\cman_initial-page_base.png
+%%DocumentFiles:C:\Docs\_github-working\private\Openmage\_bash\new_devdocs_internal\devdocs_internal\common\images\cman_initial-page_base.png
 %AI5_FileFormat 12.0
 %AI12_BuildNumber: 691
 %AI3_ColorUsage: Color

@@ -204,12 +204,12 @@ pages:
         - label: Template Literals
           url: /ui_comp_guide/concepts/ui_comp_template_literals.html
 
-        - label: Magento custom Knockout.js bindings
+        - label: Openmage custom Knockout.js bindings
           url: /ui_comp_guide/concepts/knockout-bindings.html
 
-        - label: Magento binding syntax
+        - label: Openmage binding syntax
           include_versions: ["2.2","2.3"]
-          url: /ui_comp_guide/concepts/magento-bindings.html
+          url: /ui_comp_guide/concepts/openmage-bindings.html
 
         - label: About the uiClass library
           url: /ui_comp_guide/concepts/ui_comp_uiclass_concept.html

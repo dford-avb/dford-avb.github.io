@@ -1,7 +1,7 @@
 ### Release Lines
 {:.no_toc}
 
-Release line labels indicate the specific Magento release lines affected by the issue or PR. For example, if working on a fix for 2.2.6, you would apply the Release Line: 2.2. This effectively includes all releases in this line.
+Release line labels indicate the specific Openmage release lines affected by the issue or PR. For example, if working on a fix for 2.2.6, you would apply the Release Line: 2.2. This effectively includes all releases in this line.
 
 * `Release Line: 2.1`
 * `Release Line: 2.2`
@@ -49,7 +49,7 @@ Example labels:
 ### Components
 {:.no_toc}
 
-Component labels indicate the components affected by the Pull Request. To learn more about available components and assigned architects, see [Magento Components Assignment](https://github.com/magento/magento2/wiki/Magento-Components-Assignment).
+Component labels indicate the components affected by the Pull Request. To learn more about available components and assigned architects, see [Openmage Components Assignment](https://github.com/openmage/openmage2/wiki/Openmage-Components-Assignment).
 
 Example labels:
 
@@ -62,7 +62,7 @@ For edge cases, `Component: Other` and `Component: Multiple` may be used.
 ### Events
 {:.no_toc}
 
-Event labels mark recommended issues and submitted PRs for a specific event. Events may include Contribution Days, Hackathons, Imagine, special events like Smashtoberfest, and others. Contributors and Maintainers can easily locate code when attending those events. Some events may also have a [Community Engineering Slack](https://magentocommeng.slack.com) channel using the same label.
+Event labels mark recommended issues and submitted PRs for a specific event. Events may include Contribution Days, Hackathons, Imagine, special events like Smashtoberfest, and others. Contributors and Maintainers can easily locate code when attending those events. Some events may also have a [Community Engineering Slack](https://openmagecommeng.slack.com) channel using the same label.
 
 Example labels:
 
@@ -77,14 +77,14 @@ General labels include a variety of tasks and definitions for pull requests and 
 
 * `good first issue` - Indicates a good issue for first-time contributors.
 * `help wanted` - Indicates the creator or author needs help with a decision, advice for resolving, and so on.
-* `triage wanted` - Indicates the issues are under triage. See this information to learn more about the [Triage Wanted program](https://github.com/magento/magento2/wiki/Triage-Wanted).
+* `triage wanted` - Indicates the issues are under triage. See this information to learn more about the [Triage Wanted program](https://github.com/openmage/openmage2/wiki/Triage-Wanted).
 
 ### Issue Resolution Status
 {:.no_toc}
 
-Labels applied to issues through verification and completion. For details on the process, see [GitHub Issues Processing Workflow](https://github.com/magento/magento2/wiki/GitHub-Issues-Processing-Workflow).
+Labels applied to issues through verification and completion. For details on the process, see [GitHub Issues Processing Workflow](https://github.com/openmage/openmage2/wiki/GitHub-Issues-Processing-Workflow).
 
-* `Issue: Format is not valid` - Gate 1 failed. Automatic verification by the Automated Contributor Assistant failed and the issue needs updates. The [format](https://github.com/magento/magento2/tree/2.3-develop/.github/ISSUE_TEMPLATE) of the issue description and minimum required information is not provided: Preconditions, Steps to Reproduce, Actual Result, Expected Result. Previous label `G1 Failed`.
+* `Issue: Format is not valid` - Gate 1 failed. Automatic verification by the Automated Contributor Assistant failed and the issue needs updates. The [format](https://github.com/openmage/openmage2/tree/2.3-develop/.github/ISSUE_TEMPLATE) of the issue description and minimum required information is not provided: Preconditions, Steps to Reproduce, Actual Result, Expected Result. Previous label `G1 Failed`.
 * `Issue: Format is valid` - Gate 1 passed. Automatic verification by the Automated Contributor Assistant passed for all issue content. Previous label `G1 Passed`.
 * `Issue: Clear Description` - Gate 2 passed. The Community Engineering Team has confirmed that this issue contains the minimum required information to reproduce. Previous label `G2 Passed`.
 * `Issue: Cannot Reproduce` - Gate 3 failed. The issue could not be reproduced or validated. Previous label `Cannot Reproduce`.
@@ -96,7 +96,7 @@ Labels applied to issues through verification and completion. For details on the
 * `Fixed in 2.1.x` - The issue has been fixed in one of the 2.1.x releases or in 2.1-develop branch and will be available with the upcoming patch release.
 * `Fixed in 2.2.x` - The issue has been fixed in one of the 2.2.x releases or in 2.2-develop branch and will be available with the upcoming patch release.
 * `Fixed in 2.3.x` - The issue has been fixed in one of the 2.3.x releases or in 2.3-develop branch and will be available with the upcoming patch release.
-* `non-issue` - A described behavior in the issue description is valid and shouldn't be changed in Magento code base.
+* `non-issue` - A described behavior in the issue description is valid and shouldn't be changed in Openmage code base.
 
 ### DevDocs
 {:.no_toc}

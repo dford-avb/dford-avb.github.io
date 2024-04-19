@@ -35,14 +35,14 @@ title: Products
 
 <p>Allows you to retrieve the list of all products with detailed information.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/products<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/products<br/>
 <b>Version</b>: 1</p>
 
 
 <h5><a name="RESTAPI-Resource-Products-HTTPMethod-GET-products"></a>HTTP Method: GET /products</h5>
 
 <p><b>Description</b>: Allows you to retrieve the list of all products with detailed information.<br/>
-<b>Notes</b>: The list of attributes that will be returned in the response is configured in the Magento Admin Panel. The list of attributes differs for each type of user.</p>
+<b>Notes</b>: The list of attributes that will be returned in the response is configured in the Openmage Admin Panel. The list of attributes differs for each type of user.</p>
 
 
 <p><b>Authentication</b>: Admin<br/>
@@ -52,7 +52,7 @@ title: Products
 
 
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products</td></tr></table></div>
 
 <p><b>Response Example: XML</b></p>
 
@@ -60,7 +60,7 @@ title: Products
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;entity_id&gt;1&lt;/entity_id&gt;
     &lt;type_id&gt;simple&lt;/type_id&gt;
@@ -103,7 +103,7 @@ title: Products
     &lt;special_to_date&gt;2012-03-24 00:00:00&lt;/special_to_date&gt;
     &lt;description&gt;Black sunglasses&lt;/description&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -127,7 +127,7 @@ title: Products
 
 
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products</td></tr></table></div>
 
 <p><b>Response Example: XML</b></p>
 
@@ -135,7 +135,7 @@ title: Products
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;entity_id&gt;1&lt;/entity_id&gt;
     &lt;type_id&gt;simple&lt;/type_id&gt;
@@ -151,7 +151,7 @@ title: Products
     &lt;final_price_with_tax&gt;1000&lt;/final_price_with_tax&gt;
     &lt;final_price_without_tax&gt;1000&lt;/final_price_without_tax&gt;
     &lt;is_saleable&gt;1&lt;/is_saleable&gt;
-    &lt;image_url&gt;http://magentohost/media/catalog/product/cache/0/image/9df78eab33525d08d6e5fb8d27136e95/1/2/wedding_dress.jpg&lt;/image_url&gt;
+    &lt;image_url&gt;http://openmagehost/media/catalog/product/cache/0/image/9df78eab33525d08d6e5fb8d27136e95/1/2/wedding_dress.jpg&lt;/image_url&gt;
   &lt;/data_item&gt;
   &lt;data_item&gt;
     &lt;entity_id&gt;2&lt;/entity_id&gt;
@@ -168,9 +168,9 @@ title: Products
     &lt;final_price_with_tax&gt;300&lt;/final_price_with_tax&gt;
     &lt;final_price_without_tax&gt;300&lt;/final_price_without_tax&gt;
     &lt;is_saleable&gt;1&lt;/is_saleable&gt;
-    &lt;image_url&gt;http://magentohost/media/catalog/product/cache/0/image/9df78eab33525d08d6e5fb8d27136e95/a/l/sunglasses-1.jpg&lt;/image_url&gt;
+    &lt;image_url&gt;http://openmagehost/media/catalog/product/cache/0/image/9df78eab33525d08d6e5fb8d27136e95/a/l/sunglasses-1.jpg&lt;/image_url&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -180,7 +180,7 @@ title: Products
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: java; gutter: false">{"1":{"entity_id":"1","type_id":"simple","sku":"dress_test","description":"White wedding dress","short_description":"dress","meta_keyword":"white, dress","name":"Wedding dress","meta_title":"dress","meta_description":"A nice wedding dress","regular_price_with_tax":1500,"regular_price_without_tax":1500,"final_price_with_tax":1000,"final_price_without_tax":1000,"is_saleable":"1","image_url":"http:\/\/magentohost\/media\/catalog\/product\/cache\/0\/image\/9df78eab33525d08d6e5fb8d27136e95\/1\/2\/wedding_dress.jpg"},"2":{"entity_id":"2","type_id":"simple","sku":"black_sunglasses","description":"Black sunglasses","short_description":"Black sunglasses","meta_keyword":"sunglasses, black","name":"Sunglasses","meta_title":"sunglasses","meta_description":"black sunglasses","regular_price_with_tax":500,"regular_price_without_tax":500,"final_price_with_tax":300,"final_price_without_tax":300,"is_saleable":"1","image_url":"http:\/\/magentohost\/media\/catalog\/product\/cache\/0\/image\/9df78eab33525d08d6e5fb8d27136e95\/a\/l\/sunglasses-1.jpg"}}</pre>
+		<pre class="theme: Default; brush: java; gutter: false">{"1":{"entity_id":"1","type_id":"simple","sku":"dress_test","description":"White wedding dress","short_description":"dress","meta_keyword":"white, dress","name":"Wedding dress","meta_title":"dress","meta_description":"A nice wedding dress","regular_price_with_tax":1500,"regular_price_without_tax":1500,"final_price_with_tax":1000,"final_price_without_tax":1000,"is_saleable":"1","image_url":"http:\/\/openmagehost\/media\/catalog\/product\/cache\/0\/image\/9df78eab33525d08d6e5fb8d27136e95\/1\/2\/wedding_dress.jpg"},"2":{"entity_id":"2","type_id":"simple","sku":"black_sunglasses","description":"Black sunglasses","short_description":"Black sunglasses","meta_keyword":"sunglasses, black","name":"Sunglasses","meta_title":"sunglasses","meta_description":"black sunglasses","regular_price_with_tax":500,"regular_price_without_tax":500,"final_price_with_tax":300,"final_price_without_tax":300,"is_saleable":"1","image_url":"http:\/\/openmagehost\/media\/catalog\/product\/cache\/0\/image\/9df78eab33525d08d6e5fb8d27136e95\/a\/l\/sunglasses-1.jpg"}}</pre>
 		</div>
 </div></div>
 </div></div>
@@ -192,7 +192,7 @@ title: Products
 
 <p>In the following example, product with ID=4 has position equal to 7 and the product with ID=3 has position equal to 1. The list of products, therefore, is sorted by the product position in the category.</p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products?category_id=5</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products?category_id=5</td></tr></table></div>
 
 <p><b>Response Example: XML</b></p>
 
@@ -200,7 +200,7 @@ title: Products
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;data_item&gt;
     &lt;entity_id&gt;4&lt;/entity_id&gt;
     &lt;attribute_set_id&gt;4&lt;/attribute_set_id&gt;
@@ -217,7 +217,7 @@ title: Products
     &lt;weight&gt;1.0000&lt;/weight&gt;
     &lt;price&gt;550.0000&lt;/price&gt;
   &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -718,7 +718,7 @@ title: Products
 
 
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://magentohost/api/rest/products</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/products</td></tr></table></div>
 
 <p><b>Request Example: JSON</b></p>
 
@@ -783,7 +783,7 @@ title: Products
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;attribute_set_id&gt;4&lt;/attribute_set_id&gt;
   &lt;type_id&gt;simple&lt;/type_id&gt;
   &lt;sku&gt;test_dress&lt;/sku&gt;
@@ -797,7 +797,7 @@ title: Products
   &lt;tax_class_id&gt;7&lt;/tax_class_id&gt;
   &lt;description&gt;dress&lt;/description&gt;
   &lt;short_description&gt;Wedding dress&lt;/short_description&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -806,15 +806,15 @@ title: Products
 
 <h4><a name="RESTAPI-Resource-Products-URI--products--id"></a>URI: /products/:id</h4>
 
-<p>Allows you to retrieve, update, and delete a specified product in Magento.</p>
+<p>Allows you to retrieve, update, and delete a specified product in Openmage.</p>
 
-<p><b>URL Structure</b>: http://magentohost/api/rest/products/:id<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/products/:id<br/>
 <b>Version</b>: 1</p>
 
 <h5><a name="RESTAPI-Resource-Products-HTTPMethod-GET-products--id"></a>HTTP Method: GET /products/:id</h5>
 
 <p><b>Description</b>: Allows you to retrieve information on a required simple product.<br/>
-<b>Notes</b>: The list of attributes that will be returned in the response is configured in the Magento Admin Panel. The list of attributes differs for each type of user.</p>
+<b>Notes</b>: The list of attributes that will be returned in the response is configured in the Openmage Admin Panel. The list of attributes differs for each type of user.</p>
 
 
 <p><b>Authentication</b>: Admin<br/>
@@ -823,7 +823,7 @@ title: Products
 <em>No Parameters</em></p>
 
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products/8</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products/8</td></tr></table></div>
 
 
 <p><b>Response Example: XML</b></p>
@@ -832,7 +832,7 @@ title: Products
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;entity_id&gt;8&lt;/entity_id&gt;
   &lt;attribute_set_id&gt;4&lt;/attribute_set_id&gt;
   &lt;type_id&gt;simple&lt;/type_id&gt;
@@ -886,7 +886,7 @@ title: Products
     &lt;is_decimal_divided&gt;0&lt;/is_decimal_divided&gt;
     &lt;use_config_enable_qty_increments&gt;1&lt;/use_config_enable_qty_increments&gt;
   &lt;/stock_data&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -909,7 +909,7 @@ title: Products
 <em>No Parameters</em></p>
 
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://magentohost/api/rest/products/8</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/products/8</td></tr></table></div>
 
 
 <p><b>Response Example: XML</b></p>
@@ -918,7 +918,7 @@ title: Products
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;entity_id&gt;1&lt;/entity_id&gt;
   &lt;type_id&gt;simple&lt;/type_id&gt;
   &lt;sku&gt;dress_test&lt;/sku&gt;
@@ -935,12 +935,12 @@ title: Products
   &lt;final_price_with_tax&gt;1000&lt;/final_price_with_tax&gt;
   &lt;final_price_without_tax&gt;1000&lt;/final_price_without_tax&gt;
   &lt;is_saleable&gt;1&lt;/is_saleable&gt;
-  &lt;image_url&gt;http://magento/media/catalog/product/cache/0/image/9df78eab33525d08d6e5fb8d27136e95/1/2/wedding_dress.jpg&lt;/image_url&gt;
-  &lt;url&gt;http://magento/index.php/catalog/product/view/id/1/s/dress/&lt;/url&gt;
-  &lt;buy_now_url&gt;http://magento/index.php/checkout/cart/add/uenc/aHR0cDovLzEyNy4wLjAuMS9Tb3VyY2VzL2FwaS9yZXN0L3Byb2R1Y3RzLzE,/product/1/&lt;/buy_now_url&gt;
+  &lt;image_url&gt;http://openmage/media/catalog/product/cache/0/image/9df78eab33525d08d6e5fb8d27136e95/1/2/wedding_dress.jpg&lt;/image_url&gt;
+  &lt;url&gt;http://openmage/index.php/catalog/product/view/id/1/s/dress/&lt;/url&gt;
+  &lt;buy_now_url&gt;http://openmage/index.php/checkout/cart/add/uenc/aHR0cDovLzEyNy4wLjAuMS9Tb3VyY2VzL2FwaS9yZXN0L3Byb2R1Y3RzLzE,/product/1/&lt;/buy_now_url&gt;
   &lt;total_reviews_count&gt;0&lt;/total_reviews_count&gt;
   &lt;has_custom_options&gt;&lt;/has_custom_options&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -950,7 +950,7 @@ title: Products
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: java; gutter: false">{"entity_id":"1","type_id":"simple","sku":"dress_test","name":"Wedding dress","meta_title":"dress","meta_description":"A nice wedding dress","description":"White wedding dress","short_description":"dress","meta_keyword":"white, dress","tier_price":[],"is_in_stock":"1","regular_price_with_tax":1500,"regular_price_without_tax":1500,"final_price_with_tax":1000,"final_price_without_tax":1000,"is_saleable":"1","image_url":"http:\/\/magento\/media\/catalog\/product\/cache\/0\/image\/9df78eab33525d08d6e5fb8d27136e95\/1\/2\/wedding_dress.jpg","url":"http:\/\/magento\/index.php\/catalog\/product\/view\/id\/1\/s\/dress\/","buy_now_url":"http:\/\/magento\/index.php\/checkout\/cart\/add\/uenc\/aHR0cDovLzEyNy4wLjAuMS9Tb3VyY2VzL2FwaS9yZXN0L3Byb2R1Y3RzLzE,\/product\/1\/","total_reviews_count":"0","has_custom_options":false}</pre>
+		<pre class="theme: Default; brush: java; gutter: false">{"entity_id":"1","type_id":"simple","sku":"dress_test","name":"Wedding dress","meta_title":"dress","meta_description":"A nice wedding dress","description":"White wedding dress","short_description":"dress","meta_keyword":"white, dress","tier_price":[],"is_in_stock":"1","regular_price_with_tax":1500,"regular_price_without_tax":1500,"final_price_with_tax":1000,"final_price_without_tax":1000,"is_saleable":"1","image_url":"http:\/\/openmage\/media\/catalog\/product\/cache\/0\/image\/9df78eab33525d08d6e5fb8d27136e95\/1\/2\/wedding_dress.jpg","url":"http:\/\/openmage\/index.php\/catalog\/product\/view\/id\/1\/s\/dress\/","buy_now_url":"http:\/\/openmage\/index.php\/checkout\/cart\/add\/uenc\/aHR0cDovLzEyNy4wLjAuMS9Tb3VyY2VzL2FwaS9yZXN0L3Byb2R1Y3RzLzE,\/product\/1\/","total_reviews_count":"0","has_custom_options":false}</pre>
 		</div>
 </div></div>
 </div></div>
@@ -967,8 +967,8 @@ title: Products
 <em>Enter only those parameters which you want to update.</em></p>
 
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://magentohost/api/rest/products/8<br/>
-PUT for specific store http://magentohost/api/rest/products/8/store/3</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://openmagehost/api/rest/products/8<br/>
+PUT for specific store http://openmagehost/api/rest/products/8/store/3</td></tr></table></div>
 
 <p><b>Request Example: JSON</b></p>
 
@@ -1002,7 +1002,7 @@ PUT for specific store http://magentohost/api/rest/products/8/store/3</td></tr><
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: java; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;attribute_set_id&gt;4&lt;/attribute_set_id&gt;
   &lt;type_id&gt;simple&lt;/type_id&gt;
   &lt;sku&gt;wedding dress&lt;/sku&gt;
@@ -1016,7 +1016,7 @@ PUT for specific store http://magentohost/api/rest/products/8/store/3</td></tr><
   &lt;tax_class_id&gt;7&lt;/tax_class_id&gt;
   &lt;description&gt;dress&lt;/description&gt;
   &lt;meta_keyword&gt;dress, wedding&lt;/meta_keyword&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 </div></div>
@@ -1033,7 +1033,7 @@ PUT for specific store http://magentohost/api/rest/products/8/store/3</td></tr><
 <b>Parameters</b>: <em>no parameters</em><br/>
 <b>Request Example</b>:</p>
 
-<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://magentohost/api/rest/products/1</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://openmagehost/api/rest/products/1</td></tr></table></div>
 
 
 

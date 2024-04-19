@@ -323,7 +323,7 @@ title: Create Attribute
 <div>
 		<pre class="theme: Default; brush: php; gutter: false">&lt;?php
 
-$client = new SoapClient('http://magentohost/api/soap/?wsdl');
+$client = new SoapClient('http://openmagehost/api/soap/?wsdl');
 
 // If some stuff requires API authentication,
 // then get a session token
@@ -374,7 +374,7 @@ var_dump ($result);
 		<pre class="theme: Default; brush: php; gutter: false">&lt;?php
 //ini_set("soap.wsdl_cache_enabled", 0);
 
-$client = new SoapClient('http://magentohost/api/v2_soap/?wsdl');
+$client = new SoapClient('http://openmagehost/api/v2_soap/?wsdl');
 
 //V2
 $session = $client-&gt;login('apiUser', 'apiKey');
@@ -421,4 +421,4 @@ var_dump ($orders);
 </div></div>
 
 				    
-Create the Magento file system owner                   			    
+Create the Openmage file system owner                   			    

@@ -61,7 +61,7 @@
                <rdf:li rdf:parseType="Resource">
                   <stMfs:linkForm>EmbedByReference</stMfs:linkForm>
                   <stMfs:reference rdf:parseType="Resource">
-                     <stRef:filePath>C:\Docs\_github-working\private\Magento\_bash\devdocs_internal\common\images\upgr_step1.png</stRef:filePath>
+                     <stRef:filePath>C:\Docs\_github-working\private\Openmage\_bash\devdocs_internal\common\images\upgr_step1.png</stRef:filePath>
                   </stMfs:reference>
                </rdf:li>
             </rdf:Seq>
@@ -2995,7 +2995,7 @@ endstreamendobj560 0 obj<</AIS false/BM/Normal/CA 1.0/OP false/OPM 1/SA true/
 %%BoundingBox: -118 -563 837 -21
 %%HiResBoundingBox: -117.6709 -562.9795 836.71 -21.4668
 %%DocumentProcessColors: Cyan Magenta Yellow Black
-%%DocumentFiles:C:\Docs\_github-working\private\Magento\_bash\devdocs_internal\common\images\upgr_step1.png
+%%DocumentFiles:C:\Docs\_github-working\private\Openmage\_bash\devdocs_internal\common\images\upgr_step1.png
 %AI5_FileFormat 12.0
 %AI12_BuildNumber: 691
 %AI3_ColorUsage: Color

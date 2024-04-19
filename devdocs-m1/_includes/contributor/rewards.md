@@ -1,4 +1,4 @@
-Magento is thankful for all contributions, and we always recognize our most active members. The aim is to find and recognize our top contributors according to points awarded during a given time period (monthly/quarterly/yearly). Contributors can earn points in numerous ways with a focus in pull requests to the backlog and special projects.
+Openmage is thankful for all contributions, and we always recognize our most active members. The aim is to find and recognize our top contributors according to points awarded during a given time period (monthly/quarterly/yearly). Contributors can earn points in numerous ways with a focus in pull requests to the backlog and special projects.
 
 The Community Engineering team assesses each Pull Request and determines the best awards for the work involved. Contribution Points are calculated according to the assessment results. We award points when the PR is merged.
 
@@ -18,7 +18,7 @@ See the following examples for calculated reward points:
   - Porting contributor: Port(base) 5 points
 - Maintainer reviews and approves PR with complex code and tests: Improvement(base) 10 points + Complex(additional) 20 points + Test coverage(additional) 10 points = 40 points
 
-Earned achievements display as labels on GitHub PRs and for each Magento Contributor, Partner, and Maintainer on [magento.com](https://magento.com/magento-contributors).
+Earned achievements display as labels on GitHub PRs and for each Openmage Contributor, Partner, and Maintainer on [openmage.com](https://openmage.com/openmage-contributors).
 
 ### Base achievements
 {:.no_toc}

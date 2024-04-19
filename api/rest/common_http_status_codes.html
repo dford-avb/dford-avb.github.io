@@ -13,7 +13,7 @@ title: Common HTTP Status Codes
 
 <p>HTTP status codes are an essential part of the REST concept. You can get familiar with all of them on <a href="http://en.wikipedia.org/wiki/List_of_http_status_codes">Wikipedia</a>.</p>
 
-<p>The Magento API attempts to return appropriate HTTP status codes for all requests. Any information is returned in the form of a standard HTTP response with an HTTP status code describing the error and the body message.</p>
+<p>The Openmage API attempts to return appropriate HTTP status codes for all requests. Any information is returned in the form of a standard HTTP response with an HTTP status code describing the error and the body message.</p>
 
 <h2><a name="CommonHTTPStatusCodes-HTTPStatusCodes"></a>HTTP Status Codes</h2>
 
@@ -72,11 +72,11 @@ Resource internal error. </td>
 
 <h2><a name="CommonHTTPStatusCodes-ErrorMessages"></a>Error Messages</h2>
 
-<p>When the Magento API returns an error message, it returns it in your requested format. For example, an error in the XML format might look like the following:</p>
+<p>When the Openmage API returns an error message, it returns it in your requested format. For example, an error in the XML format might look like the following:</p>
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
 		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;openmage_api&gt;
   &lt;messages&gt;
     &lt;error&gt;
       &lt;data_item&gt;
@@ -85,7 +85,7 @@ Resource internal error. </td>
       &lt;/data_item&gt;
     &lt;/error&gt;
   &lt;/messages&gt;
-&lt;/magento_api&gt;</pre>
+&lt;/openmage_api&gt;</pre>
 		</div>
 </div></div>
 

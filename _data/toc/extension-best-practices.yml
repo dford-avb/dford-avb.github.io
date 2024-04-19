@@ -32,7 +32,7 @@ pages:
         - label: Coding FAQ
           url: /ext-best-practices/extension-coding/coding-faq.html
 
-        - label: Creating a Magento admin page
+        - label: Creating a Openmage admin page
           url: /ext-best-practices/extension-coding/example-module-adminpage.html
 
     - label: Storefront

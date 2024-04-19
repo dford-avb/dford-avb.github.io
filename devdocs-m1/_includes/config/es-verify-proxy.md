@@ -3,7 +3,7 @@
 This section discusses two ways to verify that HTTP Basic authentication is working:
 
 *	Using a `curl` command to verify you must enter a username and password to get cluster status
-*	Configuring HTTP Basic authentication in the Magento Admin
+*	Configuring HTTP Basic authentication in the Openmage Admin
 
 ### Use a `curl` command to verify cluster status
 
@@ -47,7 +47,7 @@ curl -i -u <username>:<password> http://<hostname, ip, or localhost>:<proxy port
 For example:
 
 ```bash
-curl -i -u magento_elasticsearch:mypassword http://localhost:8080/_cluster/health
+curl -i -u openmage_elasticsearch:mypassword http://localhost:8080/_cluster/health
 ```
 
 This time the command succeeds with a message similar to the following:
@@ -62,10 +62,10 @@ Connection: keep-alive
 {"cluster_name":"elasticsearch","status":"yellow","timed_out":false,"number_of_nodes":1,"number_of_data_nodes":1,"active_primary_shards":5,"active_shards":5,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":5,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":50.0}
 ```
 
-### Configure HTTP Basic authentication in the Magento Admin
+### Configure HTTP Basic authentication in the Openmage Admin
 
-Perform the same tasks as discussed in [Configure Magento to use Elasticsearch](#elastic-m2-configure) *except* click **Yes** from the **Enable Elasticsearch HTTP Auth** list and enter your username and password in the provided fields.
+Perform the same tasks as discussed in [Configure Openmage to use Elasticsearch](#elastic-m2-configure) *except* click **Yes** from the **Enable Elasticsearch HTTP Auth** list and enter your username and password in the provided fields.
 
 Click **Test Connection** to make sure it works and then click **Save Config**.
 
-You must flush the Magento cache and reindex before you continue.
+You must flush the Openmage cache and reindex before you continue.

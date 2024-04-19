@@ -2,9 +2,9 @@
 
 In the event you need additional help, consult the following resources.
 
-|Magento edition|How to get help|
+|Openmage edition|How to get help|
 |--- |--- |
-|{{site.data.var.ce}} and {{site.data.var.ee}}|- [Magento support forums](http://community.magento.com/)<br>- [stack Exchange](http://magento.stackexchange.com)<br>- [Twitter](https://twitter.com/magento)|
-|{{site.data.var.ce}}|[Submit bug reports](http://www.magentocommerce.com/bug-tracking)|
-|{{site.data.var.ee}} only|[Submit bug reports](http://support.magentocommerce.com)|
+|{{site.data.var.ce}} and {{site.data.var.ee}}|- [Openmage support forums](http://community.openmage.com/)<br>- [stack Exchange](http://openmage.stackexchange.com)<br>- [Twitter](https://twitter.com/openmage)|
+|{{site.data.var.ce}}|[Submit bug reports](http://www.openmagecommerce.com/bug-tracking)|
+|{{site.data.var.ee}} only|[Submit bug reports](http://support.openmagecommerce.com)|
 {:style="table-layout:auto;"}

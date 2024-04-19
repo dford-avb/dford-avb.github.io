@@ -1,6 +1,6 @@
 Use this section to enable Apache 2.2 rewrites and specify a setting for the [distributed configuration file, `.htaccess`](http://httpd.apache.org/docs/current/howto/htaccess.html)
 
-Magento uses server rewrites and `.htaccess` to provide directory-level instructions for Apache.
+Openmage uses server rewrites and `.htaccess` to provide directory-level instructions for Apache.
 
 {:.bs-callout .bs-callout-info}
 Failure to enable these settings typically results in no styles displaying on your storefront or Admin.

@@ -10,10 +10,10 @@ Do you know what a "terminal" application is? Do you know what operating system 
 
 Topics include:
 
-*	[Choose how to get the Magento software]({{ page.baseurl }}/install-gde/bk-install-guide.html)
+*	[Choose how to get the Openmage software]({{ page.baseurl }}/install-gde/bk-install-guide.html)
 *	[System requirements]({{ page.baseurl }}/install-gde/system-requirements.html)
 *	[Prerequisites]({{ page.baseurl }}/install-gde/prereq/prereq-overview.html)
-*	[The Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html)
+*	[The Openmage file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html)
 
 ## Installation part 2: Installing
 
@@ -29,18 +29,18 @@ Topics include:
 
 *	[Verifying]({{ page.baseurl }}/install-gde/install/verify.html)
 *	[Configuring]({{ page.baseurl }}/install-gde/install/post-install-config.html)
-*	[Optional sample data (after installing Magento)]({{ page.baseurl }}/install-gde/install/sample-data-after-magento.html)
+*	[Optional sample data (after installing Openmage)]({{ page.baseurl }}/install-gde/install/sample-data-after-openmage.html)
 
 ## Upgrade, update
 
 Topics include:
 
-*	[Upgrading (or *patching* the Magento application)]({{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html)
+*	[Upgrading (or *patching* the Openmage application)]({{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html)
 *	[Updating components (including install, uninstall, update, enable, disable)]({{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html)
-*	*Contributing developers only*: [Contributing developers&mdash;update, reinstall Magento]({{ page.baseurl }}/install-gde/install/cli/dev_options.html)
+*	*Contributing developers only*: [Contributing developers&mdash;update, reinstall Openmage]({{ page.baseurl }}/install-gde/install/cli/dev_options.html)
 
 ## Deploy to production
 
-[Deploy Magento to production]({{ page.baseurl }}/howdoi/deploy/deploy-to-prod.html)
+[Deploy Openmage to production]({{ page.baseurl }}/howdoi/deploy/deploy-to-prod.html)
 
-*[Contributing developers]: A developer who contributes code to the Magento 2 CE codebase
+*[Contributing developers]: A developer who contributes code to the Openmage 2 CE codebase

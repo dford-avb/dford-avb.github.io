@@ -1,4 +1,4 @@
-## Step 4: Customize Your Store   {#instgde-install-magento-web-step4}
+## Step 4: Customize Your Store   {#instgde-install-openmage-web-step4}
 
 1.	From the **Store Default Time Zone** list, click the name of your store's time zone.
 
@@ -6,18 +6,18 @@
 
 3.	From the **Store Default Language** list, click the default language to use in your store.
 
-3.	Expand **Advanced Modules Configuration** to optionally enable or disable modules before you install the Magento software.
+3.	Expand **Advanced Modules Configuration** to optionally enable or disable modules before you install the Openmage software.
 
 	Before you enable or disable modules, review the information discussed in [Enabling and disabling modules]({{ page.baseurl }}/install-gde/install/web/install-web.html#instgde-install-web-enable-mod).
 
 	See one of the following sections for more information about enabling and disabling modules:
 
-	*	[General module configuration options](#instgde-install-magento-web-step4-depend1)
-	*	[Module dependency errors](#instgde-install-magento-web-step4-depend2)
+	*	[General module configuration options](#instgde-install-openmage-web-step4-depend1)
+	*	[Module dependency errors](#instgde-install-openmage-web-step4-depend2)
 
 4.	Click **Next**.
 
-#### General module configuration options   {#instgde-install-magento-web-step4-depend1}
+#### General module configuration options   {#instgde-install-openmage-web-step4-depend1}
 
 Modules are listed in **Advanced Modules Configuration** in alphabetical order; the order has nothing to do with dependencies.
 
@@ -31,13 +31,13 @@ You have the following options for any module listed:
 
 If a module's checkbox is unavailable, some other module depends on it. In the case of a dependency, to change the state of that module, you must first perform the corresponding action on the module on which it depends.
 
-For example, `Magento_GoogleAnalytics` can be disabled only if `Magento_GoogleOptimizer` is disabled first. Conversely, if both modules are disabled, you must enable `Magento_GoogleAnalytics` first.
+For example, `Openmage_GoogleAnalytics` can be disabled only if `Openmage_GoogleOptimizer` is disabled first. Conversely, if both modules are disabled, you must enable `Openmage_GoogleAnalytics` first.
 
-The following figure shows an example of disabling the `Magento_GoogleAnalytics` and `Magento_GoogleOptimizer` modules.
+The following figure shows an example of disabling the `Openmage_GoogleAnalytics` and `Openmage_GoogleOptimizer` modules.
 
 ![Disabling a module]({{ site.baseurl }}/common/images/install_wizard_disable-google.png)
 
-#### Module dependency errors   {#instgde-install-magento-web-step4-depend2}
+#### Module dependency errors   {#instgde-install-openmage-web-step4-depend2}
 
 A dependency error occurs when two inter-dependent modules are disabled at the same time.
 
@@ -50,4 +50,4 @@ Click **Show details** to display details about the dependency error. You can th
 *	Resolve the issue by taking the action indicated by the message.
 
 {:.bs-callout .bs-callout-warning}
-Use <strong>Skip dependency check for individual modules</strong> with caution. We recommend against it because a typical reason for this error is you manually edited the [deployment configuration]({{ page.baseurl }}/config-guide/config/config-php.html). Editing the deployment configuration is not recommended because future Magento software updates can undo your changes.
+Use <strong>Skip dependency check for individual modules</strong> with caution. We recommend against it because a typical reason for this error is you manually edited the [deployment configuration]({{ page.baseurl }}/config-guide/config/config-php.html). Editing the deployment configuration is not recommended because future Openmage software updates can undo your changes.

@@ -30,7 +30,7 @@ title: Product Update
 </ul>
 
 <p><strong>Note:</strong></p>
-<p>Although the API accepts up to four digits of precision for all price arguments, Magento strongly recommends you pass in two digits to reduce inaccuracy in the tax calculation process. (That is, use a price like 12.35 and not 12.3487).</p>
+<p>Although the API accepts up to four digits of precision for all price arguments, Openmage strongly recommends you pass in two digits to reduce inaccuracy in the tax calculation process. (That is, use a price like 12.35 and not 12.3487).</p>
 
 <p><b>Arguments:</b></p>
 
@@ -402,7 +402,7 @@ Multi Data: array of attributes which could contain several values</p>
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$client = new SoapClient('http://magentohost/api/soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$client = new SoapClient('http://openmagehost/api/soap/?wsdl');
 
 // If some stuff requires API authentication,
 // then get a session token
@@ -433,7 +433,7 @@ var_dump ($result);</pre>
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$client = new SoapClient('http://magentohost/api/v2_soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$client = new SoapClient('http://openmagehost/api/v2_soap/?wsdl');
 
 // If some stuff requires API authentication,
 // then get a session token
@@ -465,7 +465,7 @@ var_dump ($result);</pre>
 
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
 <div>
-		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://magentohost/api/v2_soap/?wsdl');
+		<pre class="theme: Default; brush: php; gutter: false">$proxy = new SoapClient('http://openmagehost/api/v2_soap/?wsdl');
 
 $sessionId = $proxy-&gt;login((object)array('username' =&gt; 'apiUser', 'apiKey' =&gt; 'apiKey'));
 
