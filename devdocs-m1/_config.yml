@@ -1,0 +1,37 @@
+title: OpenMage LTS Developer Documentation
+logo: DevDocs
+description: OpenMage LTS Developer Documentation.
+
+lsi: false
+safe: true
+source: dford-avb.github.io 
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+##########
+# Ignore #
+##########
+#
+# The path patterns excluded during site generation
+#
+exclude:
+  - scss
+  - bin
+  - node_modules
+  - vendor
+  - .git
+  - .idea
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - rakelib
+  - README.md
+  - _plugins
