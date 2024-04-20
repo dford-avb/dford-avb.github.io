@@ -19,7 +19,7 @@
 {% include m1x/eol_message.html %}
 
 <h1>Upgrading to and Verifying Openmage Community Edition and Enterprise Edition&mdash;Part 2</h1>
-<p><a href="{{ site.m1xgithuburl }}/install/installing_upgrade_details.html" target="_blank">Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
+<p><a href="{{ site.m1xgithuburl }}/install/installing_upgrade_details.html" >Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
 
 
 <div class="toc"> <h4 class="toc">Table of Contents</h4>
@@ -49,26 +49,26 @@
 
 
 <h2 id="upgrade-ee-versions">Upgrade Roadmaps</h2>
-<ul><li>High-level roadmaps for upgrading to EE 1.13.0.2 or later are discussed in <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_landing.html#ee1300-11301-upgrade-to-ee11302-start" target="_blank">Understanding the Upgrade to EE 1.13.0.2 or EE 1.14</a>.</li>
+<ul><li>High-level roadmaps for upgrading to EE 1.13.0.2 or later are discussed in <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_landing.html#ee1300-11301-upgrade-to-ee11302-start" >Understanding the Upgrade to EE 1.13.0.2 or EE 1.14</a>.</li>
 <li>To upgrade from EE 1.13.0.2 to EE 1.13.1.0 or later (including EE 1.14.x), see <a href="#prereq-tasks">Getting Ready For Your Upgrade</a>.</li>
-<li>To upgrade to CE 1.8 or 1.9, see <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_ce18_upgrade-roadmap.html" target="_blank">Upgrade Roadmap for CE 1.8 or 1.9</a></li></ul>
+<li>To upgrade to CE 1.8 or 1.9, see <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_ce18_upgrade-roadmap.html" >Upgrade Roadmap for CE 1.8 or 1.9</a></li></ul>
 
 <h2 id="prereq-tasks">Getting Ready For Your Upgrade</h2>
 <p>This section discusses how to get ready for your upgrade by backing up the database and customizations on the file system. The steps that follow do not affect your current production system. You can continue serving customers with no downtime.</p>
 <p>To get ready for your upgrade:</p>
-<ol><li>Get the Openmage installation archive as discussed in <a href="{{ site.m1xgdeurl }}/install/installing.html#get" target="_blank">Getting Openmage CE or EE</a>.</li>
+<ol><li>Get the Openmage installation archive as discussed in <a href="{{ site.m1xgdeurl }}/install/installing.html#get" >Getting Openmage CE or EE</a>.</li>
 <li>Install Openmage in a different directory:
 <ul><li><em>Recommended</em>. Set up a new system (that is, another host) on which to install Openmage.<br />
-The system should be identical to, if not better than, your current system. The new system must meet the <a href="{{ site.m1xgdeurl }}/system-requirements.html" target="_blank">Openmage system requirements</a>.</li>
+The system should be identical to, if not better than, your current system. The new system must meet the <a href="{{ site.m1xgdeurl }}/system-requirements.html" >Openmage system requirements</a>.</li>
 <li>Install Openmage in a new, empty root installation directory on the same server.</li>
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: <em>Do not</em> upgrade Openmage in the same directory on the same server because post-upgrade errors are likely to occur.</span></div></li>
 
 <li>Openmage <em>strongly</em> recommends you observe the following guidelines when you set up the Openmage database in your development environment:
 <ul>
-<li>Openmage for the first time uses <a href="http://dev.mysql.com/doc/refman/5.0/en/triggers.html" target="_blank">MySQL database triggers</a> to improve database access during reindexing. Openmage does not support any custom triggers in the Openmage database because custom triggers can introduce incompatibilities with future Openmage versions.</li>
-<li>Familiarize yourself with <a href="http://dev.mysql.com/doc/mysql-reslimits-excerpt/5.1/en/stored-program-restrictions.html" target="_blank">these potential MySQL trigger limitations</a> before you continue.</li>
-<li>If you use MySQL database replication, Openmage <em>does not</em> support MySQL statement-based replication. Make sure you use only <a href="http://dev.mysql.com/doc/refman/5.1/en/replication-formats.html" target="_blank">row-based replication</a>.</li>
-<li>Review the MySQL recommendations for <a href="http://dev.mysql.com/doc/refman/5.0/en/password-security-user.html" target="_blank">MySQL password security</a>.</li></ul>
+<li>Openmage for the first time uses <a href="http://dev.mysql.com/doc/refman/5.0/en/triggers.html" >MySQL database triggers</a> to improve database access during reindexing. Openmage does not support any custom triggers in the Openmage database because custom triggers can introduce incompatibilities with future Openmage versions.</li>
+<li>Familiarize yourself with <a href="http://dev.mysql.com/doc/mysql-reslimits-excerpt/5.1/en/stored-program-restrictions.html" >these potential MySQL trigger limitations</a> before you continue.</li>
+<li>If you use MySQL database replication, Openmage <em>does not</em> support MySQL statement-based replication. Make sure you use only <a href="http://dev.mysql.com/doc/refman/5.1/en/replication-formats.html" >row-based replication</a>.</li>
+<li>Review the MySQL recommendations for <a href="http://dev.mysql.com/doc/refman/5.0/en/password-security-user.html" >MySQL password security</a>.</li></ul>
 </li>
 <li>Complete the tasks discussed in the following sections in the order shown:
 <ol><li style="list-style-type:lower-alpha"><a href="#prereq-tasks-prod">Pre-Upgrade Tasks For Your Production Environment</a></li>
@@ -185,7 +185,7 @@ Exit the MySQL command shell:
 Verify the database exists using the following command:
 <pre>mysql -u openmage -p openmage</pre>
 If an error displays, repeat the commands. If the command succeeded, enter <code>exit</code> to return to the command prompt.</li>
-<li>If you're using <a href="http://selinuxproject.org/page/Main_Page" target="_blank">Security Enhanced Linux (SELinux)</a> <em>and</em> Apache must initiate a connection to another host, you must run the commands discussed in this step.
+<li>If you're using <a href="http://selinuxproject.org/page/Main_Page" >Security Enhanced Linux (SELinux)</a> <em>and</em> Apache must initiate a connection to another host, you must run the commands discussed in this step.
 <ol><li style="list-style-type:lower-alpha">To determine if SELinux is enabled, use the following command:
 <code>getenforce</code><br />
 <code>Enforcing</code> displays to confirm that SELinux is running.</li>
@@ -198,11 +198,11 @@ Ubuntu
 
 <h4 id="prereq-tasks-dev-php">Optional: Upgrading to PHP 5.4</h4>
 <p>PHP 5.3 is currently the latest PHP version available in the default repositories for Ubuntu and CentOS. PHP 5.3 works with CE 1.8, CE 1.9, EE 1.13, and EE 1.14.</p>
-<p>We recommend PHP 5.4 for all of the preceding CE and EE versions because of the <a href="http://php.net/ChangeLog-5.php#5.4.0" target="_blank">new features and changes</a> in that release.</p>
-<p>CE 1.8 and EE 1.13 both require a <a href="{{ site.m1xgdeurl }}/other/php5.4_patch.html" target="_blank">PHP 5.4 patch</a>. The patch is listed as <strong>PHP 5.4 Compatibility</strong> in the EE support portal.</p>
+<p>We recommend PHP 5.4 for all of the preceding CE and EE versions because of the <a href="http://php.net/ChangeLog-5.php#5.4.0" >new features and changes</a> in that release.</p>
+<p>CE 1.8 and EE 1.13 both require a <a href="{{ site.m1xgdeurl }}/other/php5.4_patch.html" >PHP 5.4 patch</a>. The patch is listed as <strong>PHP 5.4 Compatibility</strong> in the EE support portal.</p>
 
 <h5>Upgrading to PHP 5.4&mdash;Ubuntu</h5>
-<p>Use the instructions on <a href="http://phpave.com/upgrade-php-5-3-php-5-5-ubuntu-12-04-lts/" target="_blank">phpave</a>.</p>
+<p>Use the instructions on <a href="http://phpave.com/upgrade-php-5-3-php-5-5-ubuntu-12-04-lts/" >phpave</a>.</p>
 
 <h5>Upgrading to PHP 5.4&mdash;CentOS</h5>
 <p>Enter the following commands in the order shown as a user with <code>root</code> privileges:</p>
@@ -211,9 +211,9 @@ rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noar
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 yum --enablerepo=remi install httpd php php-common</pre>
 <p>The following resources are also available:</p>
-<ul><li><a href="http://kb.parallels.com/en/115875" target="_blank">kb.parallels</li>
-<li><a href="http://stackoverflow.com/questions/21502656/upgrading-php-on-centos-6-5-final" target="_blank">stackoverflow</a></li>
-<li><a href="http://rpms.famillecollet.com/" target="_blank">remi repository</a></li></ul>
+<ul><li><a href="http://kb.parallels.com/en/115875" >kb.parallels</li>
+<li><a href="http://stackoverflow.com/questions/21502656/upgrading-php-on-centos-6-5-final" >stackoverflow</a></li>
+<li><a href="http://rpms.famillecollet.com/" >remi repository</a></li></ul>
 
 <h2 id="upgrade-manual">Upgrading the File System, Solr, and Database</h2>
 <p>Upgrade your Openmage installation by completing all of the following tasks in the order shown:</p>
@@ -415,7 +415,7 @@ chown -R <em>your-user-name</em>:<em>web-server-group</em> openmage<br />
 chown -R myuser:www-data openmage</code></li></ol> -->
 
 <h2 id="upgrade-manual-post-upgrade-ee11300">Running the URL Redirect Script (EE 1.13.0.0 and 1.13.0.1 only)</h2>
-<p>If you're upgrading to EE 1.14 from EE 1.13.0.0 or 1.13.0.1, see <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_from-ee11300-or-01.html" target="_blank">EE 1.13.1.0 Upgrade: Running the EE 1.13.0.0 or EE 1.13.0.1 URL Redirect Script</a> now. When you're done, return here to continue your upgrade.</p>
+<p>If you're upgrading to EE 1.14 from EE 1.13.0.0 or 1.13.0.1, see <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_from-ee11300-or-01.html" >EE 1.13.1.0 Upgrade: Running the EE 1.13.0.0 or EE 1.13.0.1 URL Redirect Script</a> now. When you're done, return here to continue your upgrade.</p>
 
 <h2 id="upgrade-manual-run">Completing the Openmage Upgrade</h2>
 <p>To complete the upgrade, go to your Openmage base URL in a web browser. The first time you go to your Openmage base URL, server-side scripts run to update the database. Depending on the amount of data in your database, this process can take a long time.</p>
@@ -427,7 +427,7 @@ chown -R myuser:www-data openmage</code></li></ol> -->
 <ol><li><a href="#upgrade-manual-scripts">Running the Upgrade Scripts and Fixing Exceptions</a></li>
 <li><a href="#upgrade-manual-post-upgrade-11302">Running the URL Redirect Script <em>(EE 1.12.x and earlier only)</em></a></li>
 <li><a href="#upgrade-manual-post-upgrade-11300">Post-Upgrade Tasks <em>(EE 1.13.0.1 Only)</em></a></li>
-<li>To apply the <a href="https://openmage.com/security/patches/supee-8788" target="_blank">security patch</a> released in October, 2016, see <a href="{{ site.baseurl }}/guides/m1x/other/ht_install-patches.html#apply-8788" target="_blank">How to Apply the SUPEE-8788 Patch</a>.</li>
+<li>To apply the <a href="https://openmage.com/security/patches/supee-8788" >security patch</a> released in October, 2016, see <a href="{{ site.baseurl }}/guides/m1x/other/ht_install-patches.html#apply-8788" >How to Apply the SUPEE-8788 Patch</a>.</li>
 <li><a href="#upgrade-manual-cron">Setting Up the Openmage Cron Job</a></li>
 <li><a href="#upgrade-manual-var">Clearing Openmage var/ Subdirectories</a></li>
 <li><a href="#upgrade-manual-index">Verifying the Status of Indexers</a></li>
@@ -440,7 +440,7 @@ chown -R myuser:www-data openmage</code></li></ol> -->
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left" width="40"><span><strong>Note</strong>: Your production system remains up during this step in the upgrade process. You can continue taking and shipping orders and also making changes in the Admin Panel.</div>
 <p>To run the upgrade scripts:</p>
 <ol><li>In a web browser address or location field, enter your Openmage installation's base URL.<br />
-<div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left" width="40"><span><strong>Note</strong>: If you upgraded Openmage on the same server, you might need to update your Apache web server's virtual host configuration to reference the new Openmage installation directory. For more information about configuring virtual hosts, see the <a href="http://httpd.apache.org/docs/2.2/vhosts" target="_blank">Apache Virtual Host documentation</a>.</div>
+<div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left" width="40"><span><strong>Note</strong>: If you upgraded Openmage on the same server, you might need to update your Apache web server's virtual host configuration to reference the new Openmage installation directory. For more information about configuring virtual hosts, see the <a href="http://httpd.apache.org/docs/2.2/vhosts" >Apache Virtual Host documentation</a>.</div>
 
 (You updated the Openmage database with the development system base URL as discussed in <a href="#upgrade-manual-db">Updating the Openmage Database</a>.)</li>
 <li>Wait while upgrade scripts run on the server.</li>
@@ -469,7 +469,7 @@ You can find errors in the web server's error log or in <code>[your Openmage ins
 <p>Continue with <a href="#upgrade-manual-cron">Setting Up Openmage Cron Jobs</a>.</p>
 
 <h3 id="upgrade-manual-post-upgrade-11302">Running the URL Redirect Script (EE 1.12.x and Earlier Only)</h3>
-<p>If you're upgrading to EE 1.14 from EE 1.12 or earlier, see <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_from-ee112.html" target="_blank">EE 1.14 Upgrade: Running the EE 1.12 and Earlier URL Redirect Script</a> now. When you're done, return here to continue your upgrade.</p>
+<p>If you're upgrading to EE 1.14 from EE 1.12 or earlier, see <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_from-ee112.html" >EE 1.14 Upgrade: Running the EE 1.12 and Earlier URL Redirect Script</a> now. When you're done, return here to continue your upgrade.</p>
 <!-- <h3 id="upgrade-manual-post-upgrade-ee112">Running a Full Reindex <em>(EE 1.13.0.0 or 1.13.0.1 only)</em></h3>
 <p>If you're upgrading from EE 1.13.0.0 or 1.13.0.1, enter the following commands as a user with <codE>root</code> privileges to fully reindex:</p>
 <ol><li>Change to the Openmage installation directory.</li>
@@ -479,7 +479,7 @@ You can find errors in the web server's error log or in <code>[your Openmage ins
 <li>Clear the Openmage <code>var/</code> subdirectories as discussed in the next section.</li></ol> -->
 
 <h3 id="upgrade-manual-cron">Setting Up the Openmage Cron Job</h3>
-<p>You should now set up your Openmage cron job as discussed <a href="{{ site.m1xgdeurl }}/install/installing_install.html#install-cron" target="_blank">here</a>.</p>
+<p>You should now set up your Openmage cron job as discussed <a href="{{ site.m1xgdeurl }}/install/installing_install.html#install-cron" >here</a>.</p>
 
 <h3 id="upgrade-manual-var">Clearing Openmage var/ Subdirectories</h3>
 <p>Run the following command to clean the Openmage <code>var/</code> subdirectories:</p>
@@ -516,7 +516,7 @@ Verify that all indexers have a status of Ready, as the following figure shows.<
 <ol><li>Test all extensions and customizations thoroughly.<br />
 Make sure the UIs perform as expected, make sure the extensions behave properly, and so on.</li>
 <li>Run some orders, making sure prices are calculated correctly and that orders go through the configured payment mechanisms.</li>
-<li>If you encounter issues, <a href="{{ site.m1xgdeurl }}/install/installing.html#help" target="_blank">get help</a>.</li>
+<li>If you encounter issues, <a href="{{ site.m1xgdeurl }}/install/installing.html#help" >get help</a>.</li>
 <li>Before making the development system live, back up everything in your production and development environments again.<br />
 The way you make your development system live is up to you; a simple way is to update your DNS server to point to the development IP address.</li></ol>
 
@@ -539,7 +539,7 @@ The way you do this is up to you; typically, you can configure your DNS server t
 <p>Congratulations! You successfully upgraded! Review our <a href="{{ site.m1xgdeurl }}/ce19-ee114-home.html">welcome page</a> to see the improvements you're getting.</p>
 
 <h2 id="install-privs-after">Setting Openmage File System Permissions and Ownership After Upgrade</h2>
-<p>To secure your Openmage installation after the upgrade, see <a href="{{ site.m1xgdeurl }}/install/installer-privileges_after.html" target="_blank">After You Install Openmage: Recommended File System Ownership and Privileges</a>.</p>
+<p>To secure your Openmage installation after the upgrade, see <a href="{{ site.m1xgdeurl }}/install/installer-privileges_after.html" >After You Install Openmage: Recommended File System Ownership and Privileges</a>.</p>
 
 <h2 id="upgrade-troubleshoot">Troubleshooting</h2>
 <p>There is a known issue after upgrading to EE 1.13.1 that affects you <em>only</em> if you do <em>not</em> follow the recommended procedure to upgrade to a new environment as discussed in <a href="#prereq-tasks">Getting Ready For Your Upgrade</a>.</p>
@@ -552,7 +552,7 @@ The way you do this is up to you; typically, you can configure your DNS server t
 <pre>[your Openmage install dir]/app/code/core/Mage/GoogleCheckout/etc</pre></li>
 <li>When you log back in to the Admin Panel, everything works as expected.</li></ol>
 
-<p>In the event of any other issue during the upgrade, see <a href="{{ site.m1xgdeurl }}/install/installing.html#help" target="_blank">Getting Help With Your Installation or Upgrade</a>.</p>
+<p>In the event of any other issue during the upgrade, see <a href="{{ site.m1xgdeurl }}/install/installing.html#help" >Getting Help With Your Installation or Upgrade</a>.</p>
 
 </body>
 </html>

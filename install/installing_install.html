@@ -27,7 +27,7 @@
 <!-- URL: ce18-and-ee113-installing -->
 
 <h1>Installing and Verifying Openmage Community Edition (CE) and Enterprise Edition (EE)</h1>
-<p><a href="{{ site.m1xgithuburl }}/install/installing_install.html" target="_blank">Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
+<p><a href="{{ site.m1xgithuburl }}/install/installing_install.html" >Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
 
 
 <div class="toc"> <h4 class="toc">Contents</h4>
@@ -47,7 +47,7 @@
 <ul><li>Openmage Community Edition (CE) 1.8.x or 1.9.x</li>
 <li>Openmage Enterprise Edition (EE) 1.13.x or 1.14.x</li></ul>
 <p>To install Openmage CE or Openmage EE, use the following high-level guidelines:</p>
-<ol><li>Set up a system that meets the <a href="{{ site.m1xgdeurl }}/system-requirements.html" target="_blank">Openmage system requirements</a>.</li>
+<ol><li>Set up a system that meets the <a href="{{ site.m1xgdeurl }}/system-requirements.html" >Openmage system requirements</a>.</li>
 <li>Install prerequisite software (web server, PHP, and required PHP extensions).</li>
 <li>Set up a MySQL Openmage database instance.</li>
 <li>Run the Openmage installer to complete the installation.</li>
@@ -57,16 +57,16 @@
 
 <h2 id="prereq">Prerequisites</h2>
 <p>Before starting your installation:</p>
-<ul><li>Get the Openmage installation archive as discussed in <a href="{{ site.m1xgdeurl }}/install/installing.html#get" target="_blank">Getting Openmage CE or EE</a>.</li>
-<li>Set up one or more hosts that meet the <a href="{{ site.m1xgdeurl }}/system-requirements.html" target="_blank">Openmage system requirements</a>.</li>
+<ul><li>Get the Openmage installation archive as discussed in <a href="{{ site.m1xgdeurl }}/install/installing.html#get" >Getting Openmage CE or EE</a>.</li>
+<li>Set up one or more hosts that meet the <a href="{{ site.m1xgdeurl }}/system-requirements.html" >Openmage system requirements</a>.</li>
 <li>If you are setting up more than one web node with load balancing, set up and test that part of your system <em>before</em> you install Openmage.</li>
-<li>If your database server and web server are located on different hosts, <a href="{{ site.m1xgdeurl }}/install/installing.html#help" target="_blank">get help</a> before proceeding.</li>
+<li>If your database server and web server are located on different hosts, <a href="{{ site.m1xgdeurl }}/install/installing.html#help" >get help</a> before proceeding.</li>
 <li>Make sure you can back up your entire system at various points during the installation so you can roll back in the event of issues.</li></ul>
 <p>Openmage <em>strongly</em> recommends you observe the following guidelines when you set up your Openmage database:</p>
 <ul>
-<li>Openmage for the first time uses <a href="http://dev.mysql.com/doc/refman/5.0/en/triggers.html" target="_blank">MySQL database triggers</a> to improve database access during reindexing. Openmage does not support any custom triggers in the Openmage database because custom triggers can introduce incompatibilities with future Openmage versions.</li>
-<li>Familiarize yourself with <a href="http://dev.mysql.com/doc/mysql-reslimits-excerpt/5.1/en/stored-program-restrictions.html" target="_blank">these potential MySQL trigger limitations</a> before you continue.</li>
-<li>If you use MySQL database replication, be aware that Openmage <em>does not</em> support MySQL statement-based replication. Make sure you use only <a href="http://dev.mysql.com/doc/refman/5.1/en/replication-formats.html" target="_blank">row-based replication</a>.</li></ul>
+<li>Openmage for the first time uses <a href="http://dev.mysql.com/doc/refman/5.0/en/triggers.html" >MySQL database triggers</a> to improve database access during reindexing. Openmage does not support any custom triggers in the Openmage database because custom triggers can introduce incompatibilities with future Openmage versions.</li>
+<li>Familiarize yourself with <a href="http://dev.mysql.com/doc/mysql-reslimits-excerpt/5.1/en/stored-program-restrictions.html" >these potential MySQL trigger limitations</a> before you continue.</li>
+<li>If you use MySQL database replication, be aware that Openmage <em>does not</em> support MySQL statement-based replication. Make sure you use only <a href="http://dev.mysql.com/doc/refman/5.1/en/replication-formats.html" >row-based replication</a>.</li></ul>
 <p>More information, including software prerequisites, can be found in the next section.</p>
 
 <h2 id="prepare">Preparing Your Server for Openmage CE or EE</h2>
@@ -78,12 +78,12 @@
 <li>PHP 5.4 and required extensions</li>
 <li>MySQL database</li></ul>
 <strong>Notes</strong>:
-<ul><li>Discussing how to configure Secure Sockets Layer (SSL) is beyond the scope of this guide. You can consult some general resources such as <a href="http://httpd.apache.org/docs/2.4/ssl/" target="_blank">Apache</a>, <a href="http://www.zytrax.com/tech/survival/ssl.html" target="_blank">zytrax.com</a>, or the <a href="https://www.openssl.org/docs" target="_blank">OpenSSL documentation page</a>.</li>
-<li>Discussing how to <a href="http://wiki.nginx.org/Install" target="_blank">install and configure nginx</a> is beyond the scope of this article.</li>
-<li>Review the MySQL developer site's recommendations for <a href="http://dev.mysql.com/doc/refman/5.0/en/password-security-user.html" target="_blank">MySQL password security</a>.</li>
-<li>Before you continue, make sure the system on which you install Openmage meets the <a href="{{ site.m1xgdeurl }}/system-requirements.html" target="_blank">Openmage system requirements</a>.</li></ul>
+<ul><li>Discussing how to configure Secure Sockets Layer (SSL) is beyond the scope of this guide. You can consult some general resources such as <a href="http://httpd.apache.org/docs/2.4/ssl/" >Apache</a>, <a href="http://www.zytrax.com/tech/survival/ssl.html" >zytrax.com</a>, or the <a href="https://www.openssl.org/docs" >OpenSSL documentation page</a>.</li>
+<li>Discussing how to <a href="http://wiki.nginx.org/Install" >install and configure nginx</a> is beyond the scope of this article.</li>
+<li>Review the MySQL developer site's recommendations for <a href="http://dev.mysql.com/doc/refman/5.0/en/password-security-user.html" >MySQL password security</a>.</li>
+<li>Before you continue, make sure the system on which you install Openmage meets the <a href="{{ site.m1xgdeurl }}/system-requirements.html" >Openmage system requirements</a>.</li></ul>
 <p>Complete the tasks discussed in the following sections in the order shown:</p>
-<ol><li>Installing and configuring required prerequisite Software for <a href="{{ site.m1xgdeurl }}/install/installing_req-prereq_ubuntu.html" target="_blank">Ubuntu</a> or <a href="{{ site.m1xgdeurl }}/install/installing_req-prereq_centos.html" target="_blank">CentOS</a></li>
+<ol><li>Installing and configuring required prerequisite Software for <a href="{{ site.m1xgdeurl }}/install/installing_req-prereq_ubuntu.html" >Ubuntu</a> or <a href="{{ site.m1xgdeurl }}/install/installing_req-prereq_centos.html" >CentOS</a></li>
 <li><a href="#install-prereq-selinux">SELinux Prerequisite</a></li>
 <li><a href="#install-iptables">Opening Ports In Your Firewall</a></li>
 <li><a href="#install-optional">Installing Optional Software</a></li>
@@ -94,7 +94,7 @@
 
 
 <h3 id="install-prereq-selinux">SELinux Prerequisite</h3>
-<p><a href="http://selinuxproject.org/page/Main_Page" target="_blank">Security Enhanced Linux (SELinux)</a> enables CentOS and Ubuntu administrators greater access control over their servers. If you're using SELinux <em>and</em> Apache must initiate a connection to another host, you must run the commands discussed in this section.</p>
+<p><a href="http://selinuxproject.org/page/Main_Page" >Security Enhanced Linux (SELinux)</a> enables CentOS and Ubuntu administrators greater access control over their servers. If you're using SELinux <em>and</em> Apache must initiate a connection to another host, you must run the commands discussed in this section.</p>
 <p>If Apache and the database server are on the same host, you can skip this section and continue with <a href="#install-iptables">Opening Ports In Your Firewall</a>.</p>
 <p>To enable Apache to initiate a connection to another host with SELinux enabled:</p>
 <ol><li>To determine if SELinux is enabled, use the following command:
@@ -110,13 +110,13 @@
 
 <h3 id="install-iptables">Opening Ports In Your Firewall</h3>
 <p>Depending on your security requirements, you might find it necessary to open port 80 and other ports in your firewall. Because of the sensitive nature of networking security, Openmage strongly recommends you consult with your IT department before proceeding. Following are some suggested references:</p>
-<ul><li>Ubuntu: <a href="https://help.ubuntu.com/community/IptablesHowTo" target="_blank">Ubuntu documentation page</a>.</li>
-<li>CentOS: <a href="http://wiki.centos.org/HowTos/Network/IPTables" target="_blank">CentOS how-to</a>.</li></ul>
+<ul><li>Ubuntu: <a href="https://help.ubuntu.com/community/IptablesHowTo" >Ubuntu documentation page</a>.</li>
+<li>CentOS: <a href="http://wiki.centos.org/HowTos/Network/IPTables" >CentOS how-to</a>.</li></ul>
 
 <h3 id="install-optional">Installing Optional Software</h3>
 <p>This section discusses how to create or install the following:</p>
 <ul><li>Install and configure Network Time Protocol (NTP) which enables you to synchronize the system clock with pool servers located around the world. NTP is particularly useful for synchronizing the clocks of multiple hosts.</li>
-<li>Create a <a href="http://php.net/manual/en/function.phpinfo.php" target="_blank"><code>phpinfo.php</code></a> file</li>
+<li>Create a <a href="http://php.net/manual/en/function.phpinfo.php" ><code>phpinfo.php</code></a> file</li>
 <li>Install and configure the <code>phpmyadmin</code> database administration utility.</li></ul>
 <p>These optional utilities might assist you with your installation; however, they are not required to install or use Openmage.</p>
 <p>To skip installing these utilities, go directly to <a href="#install-create-db">Creating a Openmage Database Instance</a>.</p>
@@ -126,7 +126,7 @@
 <li><a href="#install-optional-phpmyadmin">Installing phpmyadmin</a></li></ul>
 
 <h4 id="install-optional-ntp">Installing and Configuring Network Time Protocol (NTP)</h4>
-<p><a href="http://www.ntp.org" target="_blank">NTP</a> enables servers to synchronize their system clocks using <a href="http://www.pool.ntp.org/en" target="_blank">globally available pool servers</a>. Openmage recommends you use NTP servers you trust, whether they are dedicated hardware solutions your internal network or external, public servers.</p>
+<p><a href="http://www.ntp.org" >NTP</a> enables servers to synchronize their system clocks using <a href="http://www.pool.ntp.org/en" >globally available pool servers</a>. Openmage recommends you use NTP servers you trust, whether they are dedicated hardware solutions your internal network or external, public servers.</p>
 <p>If you are deploying Openmage on multiple hosts, NTP is a simple way to guarantee their clocks are all synchronized, no matter what time zone the servers are in.</p>
 <p>To install and configure NTP:</p>
 <ol><li><em>CentOS only.</em>
@@ -139,7 +139,7 @@
 <li><em>Ubuntu only</em>. Enter the following command to install NTP:
 <code>apt-get install ntp</code></li>
 <li>Select the NTP pool servers you wish to use.<br />
-Selecting pool servers is up to you. If you use NTP pool servers, ntp.org recommends you use <a href="http://www.pool.ntp.org/en" target="_blank">pool servers</a> that are close to your servers' time zone as discussed on the <a href="http://www.pool.ntp.org/en/use.html" target="_blank">NTP pool project help page</a>. If you have a private NTP server that is available to all hosts in your Openmage deployment, you can use that server instead.</li>
+Selecting pool servers is up to you. If you use NTP pool servers, ntp.org recommends you use <a href="http://www.pool.ntp.org/en" >pool servers</a> that are close to your servers' time zone as discussed on the <a href="http://www.pool.ntp.org/en/use.html" >NTP pool project help page</a>. If you have a private NTP server that is available to all hosts in your Openmage deployment, you can use that server instead.</li>
 <li>Open <code>/etc/ntp.conf</code> in a text editor.</li>
 <li>Look for lines similar to the following:
 <pre>server 0.centos.pool.ntp.org
@@ -165,23 +165,23 @@ If the date is incorrect, make sure the NTP client port (typically, UDP 123) is 
 If all else fails, try restarting the server.</li></ol>
 
 <h4 id="install-optional-phpinfo">Creating phpinfo.php</h4>
-<p><a href="http://php.net/manual/en/function.phpinfo.php" target="_blank"><code>phpinfo.php</code></a> displays a large amount of information about PHP and its extensions. Add the following code anywhere in your web server's docroot:</p>
+<p><a href="http://php.net/manual/en/function.phpinfo.php" ><code>phpinfo.php</code></a> displays a large amount of information about PHP and its extensions. Add the following code anywhere in your web server's docroot:</p>
 <pre>&lt;?php
 // Show all information, defaults to INFO_ALL
 phpinfo();</pre>
-<p>For more information, see the <a href="http://php.net/manual/en/function.phpinfo.php" target="_blank">phpinfo manual page</a>.</p>
+<p>For more information, see the <a href="http://php.net/manual/en/function.phpinfo.php" >phpinfo manual page</a>.</p>
 <p>To view the results, enter the following URL in your browser's location or address field:</p>
 <pre>http://<em>web-server-ip-or-host</em>/phpinfo.php</pre>
 <p>If a 404 (Not Found) error displays, check the following:</p>
 <ul><li>Start the web server if necessary.</li>
 <li>Make sure your firewall allows traffic on port 80.<br />
-<a href="https://help.ubuntu.com/community/UFW" target="_blank">Help for Ubuntu</a><br />
-<a href="http://wiki.centos.org/HowTos/Network/IPTables" target="_blank">Help for CentOS</a></li></ul>
+<a href="https://help.ubuntu.com/community/UFW" >Help for Ubuntu</a><br />
+<a href="http://wiki.centos.org/HowTos/Network/IPTables" >Help for CentOS</a></li></ul>
 
 <h4 id="install-optional-phpmyadmin">Installing phpmyadmin</h4>
 <p><code>phpmyadmin</code> is an easy-to-use, free database administration utility. You can use it to check and manipulate the contents of your database. You must log in to <code>phpmyadmin</code> as the MySQL database administrative user.</p>
-<p>For more information about <code>phpmyadmin</code>, see the <a href="http://www.phpmyadmin.net/home_page/index.php" target="_blank">phpmyadmin home page</a>.</p>
-<p>For more detailed information about installation, see the <a href="http://docs.phpmyadmin.net/en/latest/setup.html#quick-install" target="_blank">phpmyadmin installation documentation</a>.</p>
+<p>For more information about <code>phpmyadmin</code>, see the <a href="http://www.phpmyadmin.net/home_page/index.php" >phpmyadmin home page</a>.</p>
+<p>For more detailed information about installation, see the <a href="http://docs.phpmyadmin.net/en/latest/setup.html#quick-install" >phpmyadmin installation documentation</a>.</p>
 <p>To install phpmyadmin on CentOS:</p>
 <ol><li>Download the epel RPM for the version of CentOS you're using. A sample follows.
 <pre>cd /tmp<br />
@@ -341,7 +341,7 @@ chown -R myuser:www-data openmage</code></li>
 
 <h2 id="install-openmage">Installing Openmage CE or EE</h2>
 <p>This section discusses how to run the Openmage installer, using Openmage EE as an example. The Openmage CE installer has exactly the same options; only the appearance is different.</p>
-<div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: The procedure that follows assumes that your web server and database server are on the same host. If they are installed on different hosts, additional tasks are required. <a href="{{ site.m1xgdeurl }}/install/installing.html#help" target="_blank">Get help</a> before you continue your installation.</span></div>
+<div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: The procedure that follows assumes that your web server and database server are on the same host. If they are installed on different hosts, additional tasks are required. <a href="{{ site.m1xgdeurl }}/install/installing.html#help" >Get help</a> before you continue your installation.</span></div>
 
 <p>To install Openmage CE or EE:</p>
 <ol><li>Complete all of the tasks discussed earlier in this article.</li>
@@ -441,7 +441,7 @@ A sample follows.<br />
 </tr>
 <tr>
   <td>Use Web Server (Apache) Rewrites</td>
-  <td>Select this checkbox to enable the use of the Apache <a href="http://httpd.apache.org/docs/2.2/rewrite/" target="_blank"><code>mod_rewrite</code></a> module. You can select this checkbox only if you configured Apache to use server rewrites.</td>
+  <td>Select this checkbox to enable the use of the Apache <a href="http://httpd.apache.org/docs/2.2/rewrite/" ><code>mod_rewrite</code></a> module. You can select this checkbox only if you configured Apache to use server rewrites.</td>
 </tr>
 <tr>
   <td>Use Secure URLs (SSL)</td>
@@ -620,7 +620,7 @@ For example, for CentOS,<br />
 </pre>
 
 <h2 id="install-privs-after">Setting Openmage File System Permissions and Ownership After Installation</h2>
-<p>To secure your Openmage installation after the installation, see <a href="{{ site.m1xgdeurl }}/install/installer-privileges_after.html" target="_blank">After You Install Openmage: Recommended File System Ownership and Privileges</a>.</p>
+<p>To secure your Openmage installation after the installation, see <a href="{{ site.m1xgdeurl }}/install/installer-privileges_after.html" >After You Install Openmage: Recommended File System Ownership and Privileges</a>.</p>
 
 <h2 id="install-troubleshoot">Troubleshooting</h2>
 <p>This section discusses some suggestions for issues you might encounter when installing Openmage.</p>
@@ -637,7 +637,7 @@ For example, for CentOS,<br />
 </tr>
 <tr>
   <td>You never advance past the installer's Configuration page.</td>
-  <td>Try selecting the <strong>Skip Base URL Validation Before the Next Step</strong> checkbox. If problems persist, <a href="{{ site.m1xgdeurl }}/install/installing.html#help" target="_blank">get help</a>.</td>
+  <td>Try selecting the <strong>Skip Base URL Validation Before the Next Step</strong> checkbox. If problems persist, <a href="{{ site.m1xgdeurl }}/install/installing.html#help" >get help</a>.</td>
 </tr>
 </tbody>
 </table>

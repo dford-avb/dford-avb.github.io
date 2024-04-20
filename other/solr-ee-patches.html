@@ -47,15 +47,15 @@
 <p>This fix affects Openmage EE 1.12.0.0, 1.12.0.1, and 1.12.0.1</p>
 
 <h3 id="fixed_solr_ee11200"><!-- (ID: SUPEE-111)-->Issues Fixed in the Openmage EE 1.12.0.x Patch</h3>
-<ul><li><!-- (<a href="https://jira.corp.x.com/browse/SUP-4880" target="_blank">SUP-4880</a>)  -->Using layered navigation filtering returns the wrong results. (For example, filtering by brand has no effect.)</li>
-<li><!--(<a href="https://jira.corp.x.com/browse/SUP-4901" target="_blank">SUP-4901</a>)  -->Resolved an issue where search results don't display correctly after a Openmage upgrade.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5164" target="_blank">SUP-5164</a>)  -->Catalog navigation works properly.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-1417" target="_blank">MAGETWO-1417</a>)  -->Products display as expected in categories if the products have a Date attribute with the option <strong>Used for Sorting in Product Listing></strong> set to <strong>Yes</strong>. There are no exceptions in Openmage logs after reindexing.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-646" target="_blank">SUPEE-646</a>)  -->Corrected the sort order of products searched by SKU.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-843" target="_blank">SUPEE-843</a>, <a href="https://jira.corp.x.com/browse/SUPEE-1034" target="_blank">SUPEE-1034</a>)  -->Search results of products with names and/or SKUs that contains numbers, letters, and a hyphen character (-) are as expected.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-1283" target="_blank">SUPEE-1283</a>)  -->Resolved issues with search results for products in a locale other than en_US with numeric SKUs.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-954" target="_blank">SUPEE-954</a>)  -->Resolved issues with Solr not returning product search results.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-1833" target="_blank">SUPEE-1833</a>)  -->Search results no longer include products that are either Disabled or Out of Stock.</li>
+<ul><li><!-- (<a href="https://jira.corp.x.com/browse/SUP-4880" >SUP-4880</a>)  -->Using layered navigation filtering returns the wrong results. (For example, filtering by brand has no effect.)</li>
+<li><!--(<a href="https://jira.corp.x.com/browse/SUP-4901" >SUP-4901</a>)  -->Resolved an issue where search results don't display correctly after a Openmage upgrade.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5164" >SUP-5164</a>)  -->Catalog navigation works properly.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-1417" >MAGETWO-1417</a>)  -->Products display as expected in categories if the products have a Date attribute with the option <strong>Used for Sorting in Product Listing></strong> set to <strong>Yes</strong>. There are no exceptions in Openmage logs after reindexing.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-646" >SUPEE-646</a>)  -->Corrected the sort order of products searched by SKU.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-843" >SUPEE-843</a>, <a href="https://jira.corp.x.com/browse/SUPEE-1034" >SUPEE-1034</a>)  -->Search results of products with names and/or SKUs that contains numbers, letters, and a hyphen character (-) are as expected.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-1283" >SUPEE-1283</a>)  -->Resolved issues with search results for products in a locale other than en_US with numeric SKUs.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-954" >SUPEE-954</a>)  -->Resolved issues with Solr not returning product search results.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-1833" >SUPEE-1833</a>)  -->Search results no longer include products that are either Disabled or Out of Stock.</li>
 </ul>
 
 <h3 id="install_ee11200">Installation Instructions</h3>
@@ -92,13 +92,13 @@ For example, if Openmage is installed in <tt>/var/www/openmage</tt> and Solr con
 <li>In the left navigation bar, from the CATALOG group, click <strong>Catalog</strong>.</li>
 <li>In the right pane, expand <strong>Catalog Search</strong>.</li>
 <li>From the <strong>Indexation Mode</strong> list, click <strong>Final Commit</strong>.<br />
-This is the setting Openmage recommends. For a description of the other options, see the <a href="http://merch.docs.openmage.com/ee/user_guide/Openmage_Enterprise_Edition_User_Guide.html" target="_blank">Openmage EE User Guide</a>.</li>
+This is the setting Openmage recommends. For a description of the other options, see the <a href="http://merch.docs.openmage.com/ee/user_guide/Openmage_Enterprise_Edition_User_Guide.html" >Openmage EE User Guide</a>.</li>
 <li>Click <strong>System</strong> > <strong>Index Management</strong>.</li>
 <li>Click the <strong>Reindex Data</strong> link in the Catalog Search row.</li>
 <li>Reindex other indexers if necessary.</li></ol>
 
 <h3>Reverting the Patch</h3>
-<p>If applying the patch results in errors, <a href="http://support.openmagecommerce.com/" target="_blank">contact Openmage Support</a>. If you are instructed to do so, revert the patch:</p>
+<p>If applying the patch results in errors, <a href="http://support.openmagecommerce.com/" >contact Openmage Support</a>. If you are instructed to do so, revert the patch:</p>
 <ol><li>Change to your Openmage installation directory.</li>
 <li>Enter the following command as a user with sufficient privileges to write to Openmage files (typically, the web server user or <tt>root</tt>):<br />
 <pre>sh PATCH_SUPEE-111_EE_1.12.0.0_v6.sh -R</pre></li></ol>
@@ -111,42 +111,42 @@ CentOS example: <tt>/var/www/html/openmage</tt></li>
 <li>Verify you're running the patch with sufficient privileges.<br />
 Typically, this means running it as the web server user or as a user with <tt>root</tt> privileges.</li>
 <li>Try running the patch again.<br />
-If problems persist, <a href="http://support.openmagecommerce.com/" target="_blank">contact Openmage Support</a>.</li></ul>
+If problems persist, <a href="http://support.openmagecommerce.com/" >contact Openmage Support</a>.</li></ul>
 
 <h2 id="supee-107">Openmage EE Solr Patch for EE 1.11.1.0 (ID: SUPEE-107)</h2>
 <h3>Openmage EE Version(s) Affected</h3>
 <p>This fix affects Openmage EE 1.11.1.0.</p>
 
 <h3 id="fixed_solr_ee11110"><!-- (ID: SUPEE-107)-->Issues Fixed in the Openmage EE 1.11.1.0 Patch</h3>
-<ul><li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5852" target="_blank">MAGE-5852</a>)  -->Search results display correctly if products have attribute values set at the store view.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4771" target="_blank">MAGE-4771</a>)  -->You can now enable or disable search engine recommendations.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4937" target="_blank">MAGE-4937</a>)  -->Search results properly detect the configured price navigation step calculation.<br />
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5095" target="_blank">MAGE-5095</a>, <a href="https://jira.corp.x.com/browse/MAGE-5093" target="_blank">MAGE-5093</a>)  -->Reindexing performance has been improved.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5101" target="_blank">MAGE-5101</a>)  -->Solr search displays expected results when products use an attribute set for <strong>Catalog Input Type for Store Owner</strong> configured for <strong>Price</strong>&mdash;and this attribute is used for sorting. The following error no longer displays after reindexing the catalog search index:<br />
+<ul><li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5852" >MAGE-5852</a>)  -->Search results display correctly if products have attribute values set at the store view.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4771" >MAGE-4771</a>)  -->You can now enable or disable search engine recommendations.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4937" >MAGE-4937</a>)  -->Search results properly detect the configured price navigation step calculation.<br />
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5095" >MAGE-5095</a>, <a href="https://jira.corp.x.com/browse/MAGE-5093" >MAGE-5093</a>)  -->Reindexing performance has been improved.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5101" >MAGE-5101</a>)  -->Solr search displays expected results when products use an attribute set for <strong>Catalog Input Type for Store Owner</strong> configured for <strong>Price</strong>&mdash;and this attribute is used for sorting. The following error no longer displays after reindexing the catalog search index:<br />
 <tt>SEVERE: org.apache.solr.common.SolrException: can not sort on multivalued field</tt></li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5405" target="_blank">MAGE-5405</a>)  -->Search results display in the order consistent with the setting for <strong>Catalog</strong> > <strong>Attributes</strong> > <strong>Manage Label</strong> > <strong>Options</strong>.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5194" target="_blank">MAGE-5194</a>)  -->Search results display correctly if you use non-default attributes.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5580" target="_blank">MAGE-5580</a>)  -->A product that uses an attribute name that has a trailing space displays in search results.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5610" target="_blank">MAGE-5610</a>)  -->Resolved an issue that prevented products from displaying in the web store if Solr is enabled.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5877" target="_blank">MAGE-5877</a>)  -->Products can be located using layered navigation if the products have attributes set for <strong>Use in Quick Search</strong> and/or <strong>Use in Advanced Search</strong> set to <strong>No</strong>.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5965" target="_blank">MAGE-5965</a>, <a href="https://jira.corp.x.com/browse/MAGE-6168" target="_blank">MAGE-6168</a>)  -->Advanced search works properly when Solr is enabled.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5945" target="_blank">MAGE-5945</a>)  -->Category permissions work properly when Solr is enabled.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6178" target="_blank">MAGE-6178</a>)  -->Changing pricing, such as configuring a discount for an existing product, automatically re-indexes and displays the correct price in the web store.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6280" target="_blank">MAGE-6280</a>)  -->Advanced search results display as expected after toggling the value of a Yes/No attribute.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6359" target="_blank">MAGE-6359</a>)  -->A product displays in search results after changing the value of the product's Visibility setting to <strong>Catalog</strong>.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6456" target="_blank">MAGE-6456</a>)  -->Quick search results display as expected when the value of maximum query length is null.<br />
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6426" target="_blank">MAGE-6426</a>)  -->Searching for the value of a Yes/No attribute in a supported locale other than en_US works properly.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6510" target="_blank">MAGE-6510</a>)  -->Resolved issues with incorrect attribute values being assigned to a configurable product.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6528" target="_blank">MAGE-6528</a>)  -->Out of stock products display in the web store when <strong>Display Out of Stock Products</strong> is set to <strong>Yes</strong>.<br />
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6550" target="_blank">MAGE-6550</a>, <a href="https://jira.corp.x.com/browse/MAGE-6720" target="_blank">MAGE-6720</a>)  -->Products display in advanced search if they have attributes of multiple select and drop-down.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6565" target="_blank">MAGE-6565</a>)  -->Quick search works properly in store views with a locale other than English.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6744" target="_blank">MAGE-6744</a>)  -->Cron job reindexing uses the specified indexation mode for the catalog search index.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-45694" target="_blank">SUP-4569</a>)  -->Simple products that are configured as part of a grouped product display in search results for the simple product's SKU.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6654" target="_blank">MAGE-6654</a>)  -->A product's price attribute displays in layered navigation when Solr is enabled.<br />
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-2665" target="_blank">SUP-2665</a>)  -->Resolves an issue with attributes displaying in layered navigation as <em>empty</em>.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5164" target="_blank">SUP-5164</a>)  -->Catalog navigation works properly.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-4901" target="_blank">SUP-4901</a>)  -->Resolved issues with Solr after upgrading to EE 1.11.1.0</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-1417" target="_blank">MAGETWO-1417</a>)  -->Products display in categories after import.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5405" >MAGE-5405</a>)  -->Search results display in the order consistent with the setting for <strong>Catalog</strong> > <strong>Attributes</strong> > <strong>Manage Label</strong> > <strong>Options</strong>.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5194" >MAGE-5194</a>)  -->Search results display correctly if you use non-default attributes.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5580" >MAGE-5580</a>)  -->A product that uses an attribute name that has a trailing space displays in search results.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5610" >MAGE-5610</a>)  -->Resolved an issue that prevented products from displaying in the web store if Solr is enabled.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5877" >MAGE-5877</a>)  -->Products can be located using layered navigation if the products have attributes set for <strong>Use in Quick Search</strong> and/or <strong>Use in Advanced Search</strong> set to <strong>No</strong>.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5965" >MAGE-5965</a>, <a href="https://jira.corp.x.com/browse/MAGE-6168" >MAGE-6168</a>)  -->Advanced search works properly when Solr is enabled.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5945" >MAGE-5945</a>)  -->Category permissions work properly when Solr is enabled.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6178" >MAGE-6178</a>)  -->Changing pricing, such as configuring a discount for an existing product, automatically re-indexes and displays the correct price in the web store.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6280" >MAGE-6280</a>)  -->Advanced search results display as expected after toggling the value of a Yes/No attribute.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6359" >MAGE-6359</a>)  -->A product displays in search results after changing the value of the product's Visibility setting to <strong>Catalog</strong>.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6456" >MAGE-6456</a>)  -->Quick search results display as expected when the value of maximum query length is null.<br />
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6426" >MAGE-6426</a>)  -->Searching for the value of a Yes/No attribute in a supported locale other than en_US works properly.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6510" >MAGE-6510</a>)  -->Resolved issues with incorrect attribute values being assigned to a configurable product.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6528" >MAGE-6528</a>)  -->Out of stock products display in the web store when <strong>Display Out of Stock Products</strong> is set to <strong>Yes</strong>.<br />
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6550" >MAGE-6550</a>, <a href="https://jira.corp.x.com/browse/MAGE-6720" >MAGE-6720</a>)  -->Products display in advanced search if they have attributes of multiple select and drop-down.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6565" >MAGE-6565</a>)  -->Quick search works properly in store views with a locale other than English.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6744" >MAGE-6744</a>)  -->Cron job reindexing uses the specified indexation mode for the catalog search index.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-45694" >SUP-4569</a>)  -->Simple products that are configured as part of a grouped product display in search results for the simple product's SKU.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6654" >MAGE-6654</a>)  -->A product's price attribute displays in layered navigation when Solr is enabled.<br />
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-2665" >SUP-2665</a>)  -->Resolves an issue with attributes displaying in layered navigation as <em>empty</em>.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5164" >SUP-5164</a>)  -->Catalog navigation works properly.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-4901" >SUP-4901</a>)  -->Resolved issues with Solr after upgrading to EE 1.11.1.0</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-1417" >MAGETWO-1417</a>)  -->Products display in categories after import.</li>
 </ul>
 
 <h3 id="install_ee11110">Installation Instructions</h3>
@@ -183,13 +183,13 @@ For example, if Openmage is installed in <tt>/var/www/openmage</tt> and Solr con
 <li>In the left navigation bar, from the CATALOG group, click <strong>Catalog</strong>.</li>
 <li>In the right pane, expand <strong>Catalog Search</strong>.</li>
 <li>From the <strong>Indexation Mode</strong> list, click <strong>Final Commit</strong>.<br />
-This is the setting Openmage recommends. For a description of the other options, see the <a href="http://merch.docs.openmage.com/ee/user_guide/Openmage_Enterprise_Edition_User_Guide.html" target="_blank">Openmage EE User Guide</a>.</li>
+This is the setting Openmage recommends. For a description of the other options, see the <a href="http://merch.docs.openmage.com/ee/user_guide/Openmage_Enterprise_Edition_User_Guide.html" >Openmage EE User Guide</a>.</li>
 <li>Click <strong>System</strong> > <strong>Index Management</strong>.</li>
 <li>Click the <strong>Reindex Data</strong> link in the Catalog Search row.</li>
 <li>Reindex other indexers if necessary.</li></ol>
 
 <h3>Reverting the Patch</h3>
-<p>If applying the patch results in errors, <a href="http://support.openmagecommerce.com/" target="_blank">contact Openmage Support</a>. If you are instructed to do so, revert the patch:</p>
+<p>If applying the patch results in errors, <a href="http://support.openmagecommerce.com/" >contact Openmage Support</a>. If you are instructed to do so, revert the patch:</p>
 <ol><li>Change to your Openmage installation directory.</li>
 <li>Enter the following command as a user with sufficient privileges to write to Openmage files (typically, the web server user or <tt>root</tt>):<br />
 <pre>sh PATCH_SUPEE-107_EE_1.11.1.0_v1.sh -R</pre></li></ol>
@@ -202,50 +202,50 @@ CentOS example: <tt>/var/www/html/openmage</tt></li>
 <li>Verify you're running the patch with sufficient privileges.<br />
 Typically, this means running it as the web server user or as a user with <tt>root</tt> privileges.</li>
 <li>Try running the patch again.<br />
-If problems persist, <a href="http://support.openmagecommerce.com/" target="_blank">contact Openmage Support</a>.</li></ul>
+If problems persist, <a href="http://support.openmagecommerce.com/" >contact Openmage Support</a>.</li></ul>
 
 <h2 id="supee-108">Openmage EE Solr Patch for EE 1.11.0.x (ID: SUPEE-108)</h2>
 <h3>Openmage EE Version(s) Affected</h3>
 <p>This fix affects Openmage EE 1.11.0.0, 1.11.0.1, and 1.11.0.2.</p>
 
 <h3 id="fixed_solr_ee11102"><!-- (ID: SUPEE-108)-->Issues Fixed in the Openmage EE 1.11.0.x Patch</h3>
-<ul><li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-2662" target="_blank">MAGE-2662</a>)  -->Solr does not display an anchor category if the layered navigation block is absent, such as when this block has been removed from the layout. Search results in this case are processed by the database, not by Solr.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4093" target="_blank">MAGE-4093</a>)  -->Search results display correctly regardless of the order in which content blocks load.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4094" target="_blank">MAGE-4094</a>)  -->Paginated search results display the total number of pages returned by a Solr search.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4152" target="_blank">MAGE-4152</a>)  -->Search results display properly for all locales supported by the Openmage configuration. (A <em>supported locale</em> is one for which you have uploaded translations.)</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4174" target="_blank">MAGE-4174</a>)  -->Reindexing using a cron job no longer causes PHP fatal errors.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4771" target="_blank">MAGE-4771</a>)  -->You can now enable or disable search engine recommendations.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4937" target="_blank">MAGE-4937</a>)  -->Search results properly detect the configured price navigation step calculation.<br />
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5101" target="_blank">MAGE-5101</a>)  -->Solr search displays expected results when products use an attribute set for <strong>Catalog Input Type for Store Owner</strong> configured for <strong>Price</strong>&mdash;and this attribute is used for sorting. The following error no longer displays after reindexing the catalog search index:<br />
+<ul><li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-2662" >MAGE-2662</a>)  -->Solr does not display an anchor category if the layered navigation block is absent, such as when this block has been removed from the layout. Search results in this case are processed by the database, not by Solr.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4093" >MAGE-4093</a>)  -->Search results display correctly regardless of the order in which content blocks load.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4094" >MAGE-4094</a>)  -->Paginated search results display the total number of pages returned by a Solr search.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4152" >MAGE-4152</a>)  -->Search results display properly for all locales supported by the Openmage configuration. (A <em>supported locale</em> is one for which you have uploaded translations.)</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4174" >MAGE-4174</a>)  -->Reindexing using a cron job no longer causes PHP fatal errors.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4771" >MAGE-4771</a>)  -->You can now enable or disable search engine recommendations.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4937" >MAGE-4937</a>)  -->Search results properly detect the configured price navigation step calculation.<br />
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5101" >MAGE-5101</a>)  -->Solr search displays expected results when products use an attribute set for <strong>Catalog Input Type for Store Owner</strong> configured for <strong>Price</strong>&mdash;and this attribute is used for sorting. The following error no longer displays after reindexing the catalog search index:<br />
 <tt>SEVERE: org.apache.solr.common.SolrException: can not sort on multivalued field</tt></li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5095" target="_blank">MAGE-5095</a>, <a href="https://jira.corp.x.com/browse/MAGE-5093" target="_blank">MAGE-5093</a>, <a href="https://jira.corp.x.com/browse/MAGE-4005" target="_blank">MAGE-4005</a>)  -->Reindexing performance has been improved.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5405" target="_blank">MAGE-5405</a>)  -->Search results display in the order consistent with the setting for <strong>Catalog</strong> > <strong>Attributes</strong> > <strong>Manage Label</strong> > <strong>Options</strong>.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5194" target="_blank">MAGE-5194</a>)  -->Search results display correctly if you use non-default attributes.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5580" target="_blank">MAGE-5580</a>)  -->Products that use an attribute name that has a trailing space display in search results.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5610" target="_blank">MAGE-5610</a>)  -->Resolved an issue that prevented products from displaying in the web store if Solr is enabled.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5965" target="_blank">MAGE-5965</a>, <a href="https://jira.corp.x.com/browse/MAGE-6168" target="_blank">MAGE-6168</a>)  -->Advanced search works properly when Solr is enabled.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5945" target="_blank">MAGE-5945</a>)  -->Category permissions work properly when Solr is enabled.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6178" target="_blank">MAGE-6178</a>)  -->Changing pricing, such as configuring a discount for an existing product, automatically re-indexes and displays the correct price in the web store.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6280" target="_blank">MAGE-6280</a>)  -->Advanced search results display as expected after toggling the value of a Yes/No attribute.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6359" target="_blank">MAGE-6359</a>)  -->A product displays in search results after changing the value of the product's Visibility setting to <strong>Catalog</strong>.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6426" target="_blank">MAGE-6426</a>)  -->Searching for the value of a Yes/No attribute in a supported locale other than en_US works properly.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6510" target="_blank">MAGE-6510</a>)  -->Resolved issues with incorrect attribute values being assigned to a configurable product.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6528" target="_blank">MAGE-6528</a>)  -->Out of stock products display in the web store when <strong>Display Out of Stock Products</strong> is set to <strong>Yes</strong>.<br />
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5095" >MAGE-5095</a>, <a href="https://jira.corp.x.com/browse/MAGE-5093" >MAGE-5093</a>, <a href="https://jira.corp.x.com/browse/MAGE-4005" >MAGE-4005</a>)  -->Reindexing performance has been improved.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5405" >MAGE-5405</a>)  -->Search results display in the order consistent with the setting for <strong>Catalog</strong> > <strong>Attributes</strong> > <strong>Manage Label</strong> > <strong>Options</strong>.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5194" >MAGE-5194</a>)  -->Search results display correctly if you use non-default attributes.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5580" >MAGE-5580</a>)  -->Products that use an attribute name that has a trailing space display in search results.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5610" >MAGE-5610</a>)  -->Resolved an issue that prevented products from displaying in the web store if Solr is enabled.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5965" >MAGE-5965</a>, <a href="https://jira.corp.x.com/browse/MAGE-6168" >MAGE-6168</a>)  -->Advanced search works properly when Solr is enabled.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5945" >MAGE-5945</a>)  -->Category permissions work properly when Solr is enabled.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6178" >MAGE-6178</a>)  -->Changing pricing, such as configuring a discount for an existing product, automatically re-indexes and displays the correct price in the web store.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6280" >MAGE-6280</a>)  -->Advanced search results display as expected after toggling the value of a Yes/No attribute.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6359" >MAGE-6359</a>)  -->A product displays in search results after changing the value of the product's Visibility setting to <strong>Catalog</strong>.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6426" >MAGE-6426</a>)  -->Searching for the value of a Yes/No attribute in a supported locale other than en_US works properly.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6510" >MAGE-6510</a>)  -->Resolved issues with incorrect attribute values being assigned to a configurable product.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6528" >MAGE-6528</a>)  -->Out of stock products display in the web store when <strong>Display Out of Stock Products</strong> is set to <strong>Yes</strong>.<br />
 (In the Admin Panel, click <strong>System</strong> > <strong>Configuration</strong> > CATALOG > <strong>Inventory</strong> > <strong>Stock Options</strong>.)
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6550" target="_blank">MAGE-6550</a>, <a href="https://jira.corp.x.com/browse/MAGE-6720" target="_blank">MAGE-6720</a>)  -->Products display in advanced search if they have attributes of multiple select and drop-down.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6565" target="_blank">MAGE-6565</a>)  -->Quick search works properly in store views with a locale other than English.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5877" target="_blank">MAGE-5877</a>)  -->Products can be located using layered navigation if the products have attributes set for <strong>Use in Quick Search</strong> and/or <strong>Use in Advanced Search</strong> set to <strong>No</strong>.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6456" target="_blank">MAGE-6456</a>)  -->Quick search results display as expected when the value of maximum query length is null.<br />
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6550" >MAGE-6550</a>, <a href="https://jira.corp.x.com/browse/MAGE-6720" >MAGE-6720</a>)  -->Products display in advanced search if they have attributes of multiple select and drop-down.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6565" >MAGE-6565</a>)  -->Quick search works properly in store views with a locale other than English.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5877" >MAGE-5877</a>)  -->Products can be located using layered navigation if the products have attributes set for <strong>Use in Quick Search</strong> and/or <strong>Use in Advanced Search</strong> set to <strong>No</strong>.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6456" >MAGE-6456</a>)  -->Quick search results display as expected when the value of maximum query length is null.<br />
 (In the Admin Panel, click <strong>System</strong> > <strong>Configuration</strong> CATALOG > <strong>Catalog Search</strong>, value of <strong>Maximum Query Length</strong>.)</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6744" target="_blank">MAGE-6744</a>)  -->Cron job reindexing uses the specified indexation mode for the catalog search index.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-45694" target="_blank">SUP-4569</a>)  -->Simple products that are configured as part of a grouped product display in search results for the simple product's SKU.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6654" target="_blank">MAGE-6654</a>)  -->A product's price attribute displays in layered navigation when Solr is enabled.<br />
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6744" >MAGE-6744</a>)  -->Cron job reindexing uses the specified indexation mode for the catalog search index.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-45694" >SUP-4569</a>)  -->Simple products that are configured as part of a grouped product display in search results for the simple product's SKU.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-6654" >MAGE-6654</a>)  -->A product's price attribute displays in layered navigation when Solr is enabled.<br />
 (Attribute is configured with <strong>Catalog Input Type for Store Owner</strong> set to <strong>Price</strong> and <strong>Use In Layered Navigation</strong> set to <strong>Filterable (with results)</strong>.)</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-1417" target="_blank">MAGETWO-1417</a>)  -->Products display as expected in categories if the products have a Date attribute with the option <strong>Used for Sorting in Product Listing</strong> set to <strong>Yes</strong>. There are no exceptions in Openmage logs after reindexing.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-2665" target="_blank">SUP-2665</a>)  -->Resolves an issue with attributes displaying in layered navigation as <em>empty</em>.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-4901" target="_blank">SUP-4901</a>)  -->Resolved an issue where search results don't display correctly after a Openmage upgrade.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5164" target="_blank">SUP-5164</a>)  -->Catalog navigation works properly.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5852" target="_blank">MAGE-5852</a>)  -->Search results display correctly if products have attribute values set at the store view.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-1417" >MAGETWO-1417</a>)  -->Products display as expected in categories if the products have a Date attribute with the option <strong>Used for Sorting in Product Listing</strong> set to <strong>Yes</strong>. There are no exceptions in Openmage logs after reindexing.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-2665" >SUP-2665</a>)  -->Resolves an issue with attributes displaying in layered navigation as <em>empty</em>.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-4901" >SUP-4901</a>)  -->Resolved an issue where search results don't display correctly after a Openmage upgrade.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5164" >SUP-5164</a>)  -->Catalog navigation works properly.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5852" >MAGE-5852</a>)  -->Search results display correctly if products have attribute values set at the store view.</li>
 </ul>
 
 <h3 id="install_ee11102">Installation Instructions</h3>
@@ -282,13 +282,13 @@ For example, if Openmage is installed in <tt>/var/www/openmage</tt> and Solr con
 <li>In the left navigation bar, from the CATALOG group, click <strong>Catalog</strong>.</li>
 <li>In the right pane, expand <strong>Catalog Search</strong>.</li>
 <li>From the <strong>Indexation Mode</strong> list, click <strong>Final Commit</strong>.<br />
-This is the setting Openmage recommends. For a description of the other options, see the <a href="http://merch.docs.openmage.com/ee/user_guide/Openmage_Enterprise_Edition_User_Guide.html" target="_blank">Openmage EE User Guide</a>.</li>
+This is the setting Openmage recommends. For a description of the other options, see the <a href="http://merch.docs.openmage.com/ee/user_guide/Openmage_Enterprise_Edition_User_Guide.html" >Openmage EE User Guide</a>.</li>
 <li>Click <strong>System</strong> > <strong>Index Management</strong>.</li>
 <li>Click the <strong>Reindex Data</strong> link in the Catalog Search row.</li>
 <li>Reindex other indexers if necessary.</li></ol>
 
 <h3>Reverting the Patch</h3>
-<p>If applying the patch results in errors, <a href="http://support.openmagecommerce.com/" target="_blank">contact Openmage Support</a>. If you are instructed to do so, revert the patch:</p>
+<p>If applying the patch results in errors, <a href="http://support.openmagecommerce.com/" >contact Openmage Support</a>. If you are instructed to do so, revert the patch:</p>
 <ol><li>Change to your Openmage installation directory.</li>
 <li>Enter the following command as a user with sufficient privileges to write to Openmage files (typically, the web server user or <tt>root</tt>):<br />
 <pre>sh PATCH_SUPEE-108_EE_1.11.0.2_v1.sh -R</pre></li></ol>
@@ -301,26 +301,26 @@ CentOS example: <tt>/var/www/html/openmage</tt></li>
 <li>Verify you're running the patch with sufficient privileges.<br />
 Typically, this means running it as the web server user or as a user with <tt>root</tt> privileges.</li>
 <li>Try running the patch again.<br />
-If problems persist, <a href="http://support.openmagecommerce.com/" target="_blank">contact Openmage Support</a>.</li></ul>
+If problems persist, <a href="http://support.openmagecommerce.com/" >contact Openmage Support</a>.</li></ul>
 
 <h2 id="supee-110">Openmage EE Solr Patch for EE 1.10.1.x (ID: SUPEE-110)</h2>
 <h3>Openmage EE Version(s) Affected</h3>
 <p>This fix affects Openmage EE 1.10.1.0 and 1.10.1.1.</p>
 
 <h3 id="fixed_solr_ee11010"><!-- (ID: SUPEE-110)-->Issues Fixed in the Openmage EE 1.10.1.x Patch</h3>
-<ul><li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-2662" target="_blank">MAGE-2662</a>)  -->Solr does not display an anchor category if the layered navigation block is absent, such as when this block has been removed from the layout. Search results in this case are processed by the database, not by Solr.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-3770" target="_blank">MAGE-3770</a>)  -->Solr search results display correctly with different settings for an attribute set that uses <strong>Use In Layered Navigation</strong> set to <strong>Filterable (no results)</strong>.<br />
+<ul><li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-2662" >MAGE-2662</a>)  -->Solr does not display an anchor category if the layered navigation block is absent, such as when this block has been removed from the layout. Search results in this case are processed by the database, not by Solr.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-3770" >MAGE-3770</a>)  -->Solr search results display correctly with different settings for an attribute set that uses <strong>Use In Layered Navigation</strong> set to <strong>Filterable (no results)</strong>.<br />
 In other words, if some products are assigned to a category that do <em>not</em> use that attribute set, they display correctly in Solr search results if there are products in other categories that <em>do</em> use the attribute set.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4005" target="_blank">MAGE-4005</a>)  -->Catalog search reindexing has better performance.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4094" target="_blank">MAGE-4094</a>)  -->Paginated search results display the total number of pages returned by a Solr search.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4152" target="_blank">MAGE-4152</a>)  -->Search results display properly for all locales supported by the Openmage configuration. (A <em>supported locale</em> is one for which you have uploaded translations.)</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4937" target="_blank">MAGE-4937</a>)  -->Search results properly detect the configured price navigation step calculation.<br />
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4005" >MAGE-4005</a>)  -->Catalog search reindexing has better performance.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4094" >MAGE-4094</a>)  -->Paginated search results display the total number of pages returned by a Solr search.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4152" >MAGE-4152</a>)  -->Search results display properly for all locales supported by the Openmage configuration. (A <em>supported locale</em> is one for which you have uploaded translations.)</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-4937" >MAGE-4937</a>)  -->Search results properly detect the configured price navigation step calculation.<br />
 (In the Admin Panel, click <strong>System</strong> > <strong>Configuration</strong> > CATALOG > <strong>Catalog</strong> > <strong>Layered Navigation</strong>. From the <strong>Price Navigation Step Calculation</strong> list, click <strong>Manual</strong>.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5194" target="_blank">MAGE-5194</a>)  -->Search results display correctly if you use non-default attributes.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-2656" target="_blank">SUP-2656</a>)  -->Relevancy and suggestions were improved.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5164" target="_blank">SUP-5164</a>)  -->Catalog navigation works properly.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5239" target="_blank">SUP-5239</a>)  -->When the user chooses to display all search results, the correct number of results display.</li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-1378" target="_blank">SUPEE-1378</a>)  -->Search results include only products that are in stock.</li></ul>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MAGE-5194" >MAGE-5194</a>)  -->Search results display correctly if you use non-default attributes.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-2656" >SUP-2656</a>)  -->Relevancy and suggestions were improved.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5164" >SUP-5164</a>)  -->Catalog navigation works properly.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5239" >SUP-5239</a>)  -->When the user chooses to display all search results, the correct number of results display.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/SUPEE-1378" >SUPEE-1378</a>)  -->Search results include only products that are in stock.</li></ul>
 
 <h3 id="install_11010">Installation Instructions</h3>
 <p>To install this fix:</p>
@@ -356,13 +356,13 @@ For example, if Openmage is installed in <tt>/var/www/openmage</tt> and Solr con
 <li>In the left navigation bar, from the CATALOG group, click <strong>Catalog</strong>.</li>
 <li>In the right pane, expand <strong>Catalog Search</strong>.</li>
 <li>From the <strong>Indexation Mode</strong> list, click <strong>Final Commit</strong>.<br />
-This is the setting Openmage recommends. For a description of the other options, see the <a href="http://merch.docs.openmage.com/ee/user_guide/Openmage_Enterprise_Edition_User_Guide.html" target="_blank">Openmage EE User Guide</a>.</li>
+This is the setting Openmage recommends. For a description of the other options, see the <a href="http://merch.docs.openmage.com/ee/user_guide/Openmage_Enterprise_Edition_User_Guide.html" >Openmage EE User Guide</a>.</li>
 <li>Click <strong>System</strong> > <strong>Index Management</strong>.</li>
 <li>Click the <strong>Reindex Data</strong> link in the Catalog Search row.</li>
 <li>Reindex other indexers if necessary.</li></ol>
 
 <h3>Reverting the Patch</h3>
-<p>If applying the patch results in errors, <a href="http://support.openmagecommerce.com/" target="_blank">contact Openmage Support</a>. If you are instructed to do so, revert the patch:</p>
+<p>If applying the patch results in errors, <a href="http://support.openmagecommerce.com/" >contact Openmage Support</a>. If you are instructed to do so, revert the patch:</p>
 <ol><li>Change to your Openmage installation directory.</li>
 <li>Enter the following command as a user with sufficient privileges to write to Openmage files (typically, the web server user or <tt>root</tt>):<br />
 <pre>sh PATCH_SUPEE-110_EE_1.10.1.1_v2.sh -R</pre></li></ol>
@@ -375,7 +375,7 @@ CentOS example: <tt>/var/www/html/openmage</tt></li>
 <li>Verify you're running the patch with sufficient privileges.<br />
 Typically, this means running it as the web server user or as a user with <tt>root</tt> privileges.</li>
 <li>Try running the patch again.<br />
-If problems persist, <a href="http://support.openmagecommerce.com/" target="_blank">contact Openmage Support</a>.</li></ul>
+If problems persist, <a href="http://support.openmagecommerce.com/" >contact Openmage Support</a>.</li></ul>
 
 </div>
 </body>

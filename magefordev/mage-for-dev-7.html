@@ -19,7 +19,7 @@
 <div id="content">
 <h1>Openmage for Developers: Part 7&mdash;Advanced ORM: Entity Attribute Value</h1>
 <p><em>by Alan Storm</em>, updated for Openmage 1.12</p>
-<p><a href="{{ site.m1xgithuburl }}/magefordev/mage-for-dev-7.html" target="_blank">Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
+<p><a href="{{ site.m1xgithuburl }}/magefordev/mage-for-dev-7.html" >Edit this page on GitHub <img src="{{ site.baseurl }}/common/images/github_icon.png" height="15px"></a></p>
 
 
 <!--Openmage for Developers: Part 7&mdash;Advanced ORM: Entity Attribute Value -->
@@ -82,7 +82,7 @@
 <p>There aren't many open source or commercial databases that use EAV by default.  There are none that are available on a wide variety of web hosting platforms.  Because of that, the Openmage engineers have built an EAV system out of PHP objects that use MySQL as a data-store.  In other words, they've built an EAV database system <strong>on top of</strong> a traditional relational database.  </p>
 
 <p>In practice this means any Model that uses an EAV resource has its attributes spread out over a number of MySQL tables.<br/>
-<a href="http://alanstorm.com/2009/img/openmage-book/eav.png" target="_blank"><img src="http://alanstorm.com/2009/img/openmage-book/eav.png" width="700" height="463" style="border:1px solid #000;margin-left:40px"/></a>
+<a href="http://alanstorm.com/2009/img/openmage-book/eav.png" ><img src="http://alanstorm.com/2009/img/openmage-book/eav.png" width="700" height="463" style="border:1px solid #000;margin-left:40px"/></a>
 
 <p>The above diagram is a rough layout of the database tables Openmage consults when it looks up an EAV record for the <tt>catalog_product</tt> entity.  Each individual product has a row in <tt>catalog_product_entity</tt>.  All the available attributes in the <strong>entire</strong> system (not just for products)  are stored in <tt>eav_attribute</tt>, and the actual attribute values are stored in tables with names like <tt>catalog_product_entity_varchar</tt>, <tt>catalog_product_entity_decimal</tt>, <tt>catalog_product_entity_<em>etc.</em></tt>.</p>
 

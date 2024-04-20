@@ -11,7 +11,7 @@ Archives are available in the following formats: `.zip`, `.tar.bz2`, `.tar.gz`
 
 To get the Openmage Open Source software archive:
 
-1.	Go to [http://openmage.com/download](http://openmage.com/download){:target="_blank"}.
+1.	Go to [http://openmage.com/download](http://openmage.com/download){:}.
 2.	Choose either the software or the software and sample data:
 
 	*	`Openmage-CE-<version>.*` (without sample data)

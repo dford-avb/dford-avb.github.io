@@ -45,14 +45,14 @@
 <h3 id="overview-general">Coupon Auto Generation and the Openmage REST API</h3>
 <p>Openmage CE 1.7 introduced a new method of creating coupon codes&mdash;<em>auto generation</em>. Auto generating coupons means Openmage programmatically creates several coupon codes at one time quickly and easily. However, if Openmage generates the coupon codes, you'd have to manually distribute them to customers.</p>
 <p>Openmage's REST API is extensible and can easily be called by an outside program to auto generate coupon codes. You can use this feature, for example, to e-mail coupon codes to your top 100 customers.</p>
-<p>No programming is necessary to implement the extension module discussed in this guide; however, basic familiarity with <a href="http://www.openmagecommerce.com/openmage-connect/create_your_extension/" target="_blank">Openmage modules</a> and PHP programming is desirable.</p>
+<p>No programming is necessary to implement the extension module discussed in this guide; however, basic familiarity with <a href="http://www.openmagecommerce.com/openmage-connect/create_your_extension/" >Openmage modules</a> and PHP programming is desirable.</p>
 <p>The Coupon AutoGen API enables any authorized external program to instruct Openmage to:</p>
 <ul><li>Auto-generate the specified number of coupon codes</li>
 <li>Return these codes to the calling program&mdash;simulated in this guide using a simple <code>.php</code> file</li></ul>
 
 <h3 id="overview-detail">Implementation Details</h3>
 <p>This guide discusses how to use coupon auto generation and a web service to dynamically call the Openmage REST API to generate a series of codes. The web service instantiates the underlying Openmage sales rule (<code>salesrule/rule</code>) coupon code generator and creates a pool of new codes. These codes returned to the caller as a JSON string.</p>
-<p>For more information about the Openmage REST API, see <a href="http://www.openmagecommerce.com/api/rest/introduction.html" target="_blank">Introduction to REST API</a>. To extend the REST API to add a web service for generating and retrieving coupon codes, this guide discusses the following:</p>
+<p>For more information about the Openmage REST API, see <a href="http://www.openmagecommerce.com/api/rest/introduction.html" >Introduction to REST API</a>. To extend the REST API to add a web service for generating and retrieving coupon codes, this guide discusses the following:</p>
 <ul><li>Setting up an auto generated coupon rule</li>
 <li>Creating a module to use a REST based API extension<br />
 This guide gives you all the files to create the module; no programming is necessary. There are four module configuration <code>.xml</code> files and one <code>.php</code> file to create the web service.</li>
@@ -63,15 +63,15 @@ This guide gives you all the files to create the module; no programming is neces
 <p>To implement and test the Coupon AutoGen API, you must have all of the following:</p>
 <ul><li>Openmage Community Edition (CE) 1.7 or later on Ubuntu.</li>
 <li>Openmage Enterprise Edition (EE) 1.12 or later on Ubuntu.</li>
-<li><a href="http://pecl.php.net/package/oauth" target="_blank">pecl OAuth 1.0a extension</a> which you install as discussed in <a href="#prereq-software">Installing OAuth</a>.<br />
-Openmage CE 1.7 and later support the <a href="http://tools.ietf.org/html/rfc5849" target="_blank">OAuth 1.0a specification</a>.</li>
-<li><em>Optional.</em> <a href="http://www.phpmyadmin.net/home_page/downloads.php" target="_blank"><code>phpmyadmin</code></a>, which makes it easier to view and manipulate the Openmage database. You can use <code>phpmyadmin</code> for convenience to get the OAuth key and shared secret later in this guide.</li>
+<li><a href="http://pecl.php.net/package/oauth" >pecl OAuth 1.0a extension</a> which you install as discussed in <a href="#prereq-software">Installing OAuth</a>.<br />
+Openmage CE 1.7 and later support the <a href="http://tools.ietf.org/html/rfc5849" >OAuth 1.0a specification</a>.</li>
+<li><em>Optional.</em> <a href="http://www.phpmyadmin.net/home_page/downloads.php" ><code>phpmyadmin</code></a>, which makes it easier to view and manipulate the Openmage database. You can use <code>phpmyadmin</code> for convenience to get the OAuth key and shared secret later in this guide.</li>
 </ul>
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left" width="40"><span><strong>Note</strong>: Although Openmage supports other Linux operating systems, Ubuntu is the only one discussed in this guide. Consult an appropriate reference for equivalent commands on other Linux operating systems.</div>
 
 
 <h3 id="prereq-software">Installing OAuth</h3>
-<p>This section discusses how to install the <a href="http://pecl.php.net/package/oauth" target="_blank">pecl OAuth extension</a> on Ubuntu. Consult the <a href="http://pecl.php.net/support.php" target="_blank">pecl.php.net documentation</a> for installation instructions on other operating systems.</p>
+<p>This section discusses how to install the <a href="http://pecl.php.net/package/oauth" >pecl OAuth extension</a> on Ubuntu. Consult the <a href="http://pecl.php.net/support.php" >pecl.php.net documentation</a> for installation instructions on other operating systems.</p>
 <p>The pecl OAuth extension requires the PEAR installer. The following sections discuss the installation in detail:</p>
 <ul><li><a href="#prereq-software-phpinfo">Creating a phpinfo File</a></li>
 <li><a href="#prereq-software-pear">Installing the OAuth Packages</a></li>
@@ -317,9 +317,9 @@ Openmage disables the selected caches, replacing the green ENABLED status indica
 <li>Log out of the Openmage Admin Panel.</li></ol>
 
 <h3><a name="extend-rest-api_create-files"></a>Creating Configuration Files</h3>
-<p>This section discusses how to create a module (also referred to as an <em>extension</em>). The module consists of configuration files that create a web service that extends the Openmage REST API to take input from an external program. This program uses <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5" target="_blank">HTTP POST</a> and OAuth calls to auto-generate coupon codes.</p>
+<p>This section discusses how to create a module (also referred to as an <em>extension</em>). The module consists of configuration files that create a web service that extends the Openmage REST API to take input from an external program. This program uses <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5" >HTTP POST</a> and OAuth calls to auto-generate coupon codes.</p>
 <p>In this guide, the external program is a PHP script; however, it could be any application that uses OAuth and REST calls. </p>
-<p>For more information about Openmage module development, see <a href="http://www.openmagecommerce.com/openmage-connect/create_your_extension/" target="_blank">developer documentation on Openmage Connect</a>.</p>
+<p>For more information about Openmage module development, see <a href="http://www.openmagecommerce.com/openmage-connect/create_your_extension/" >developer documentation on Openmage Connect</a>.</p>
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left" width="40"><span><strong>Note</strong>: It is up to you to determine ownership and permissions. This guide assumes you create files and directories as <code>root</code> and change the permissions appropriately later. Consult an IT administrator if you're not sure how to proceed.</div>
 
 <ol><li>Log in to your Openmage server and create the following directories:
@@ -603,8 +603,8 @@ You must include these values in the test script you will write in the next sect
 <li>Log out of the Openmage Admin Panel.</li></ol>
 
 <h2 id="test">Testing the Coupon AutoGen API</h2>
-<p>This section discusses how to create a simple PHP file that acts as an external program and, with permissions you granted the OAuth consumer, enables the program to use the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5" target="_blank">HTTP POST</a> method to auto generate coupon codes.</p>
-<p>You can use <em>any</em> type of OAuth/REST call, in fact, such as using the Firefox REST Client plug-in as discussed <a href="http://www.openmagecommerce.com/api/rest/testing_rest_resources.html" target="_blank">here</a>.</p>
+<p>This section discusses how to create a simple PHP file that acts as an external program and, with permissions you granted the OAuth consumer, enables the program to use the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5" >HTTP POST</a> method to auto generate coupon codes.</p>
+<p>You can use <em>any</em> type of OAuth/REST call, in fact, such as using the Firefox REST Client plug-in as discussed <a href="http://www.openmagecommerce.com/api/rest/testing_rest_resources.html" >here</a>.</p>
 <p>The following sections discuss how to create and run the test script:</p>
 <ul><li><a href="#test-create">Creating the Test Script</a></li>
 <li><a href="#test-run">Running the Test Script</a></li></ul>
@@ -862,7 +862,7 @@ $consumerSecret = '<em>value</em>';</pre>
 Not Found
 The requested URL /openmage/oauth/initiate was not found on this server.</pre>
 <p><strong>Description:</strong> The HTTP redirect failed, most likely because web server rewrites are not properly enabled.</p>
-<p><strong>Solution:</strong> Make sure web server rewrites are enabled. The procedure you use depends on your web server and operating system. An example for Ubuntu can be found <a href="http://www.fontis.com.au/blog/openmage/definitive-installation-guide" target="_blank">here</a>.</p>
+<p><strong>Solution:</strong> Make sure web server rewrites are enabled. The procedure you use depends on your web server and operating system. An example for Ubuntu can be found <a href="http://www.fontis.com.au/blog/openmage/definitive-installation-guide" >here</a>.</p>
 
 <h2 id="next">Next Steps</h2>
 <p>Refer to <a href="http://www.openmagecommerce.com/api/rest/introduction.html#RESTAPIIntroduction-Overview">Openmage  APIs&mdash;REST</a> for documentation explaining how the Openmage's REST API framework works.</p>

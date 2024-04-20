@@ -11,7 +11,7 @@ Archives are available in the following formats: `.zip`, `.tar.bz2`, `.tar.gz`
 
 To get the Openmage Commerce archive:
 
-1.	Go to [your account on openmage.com](https://www.openmagecommerce.com/products/customer/account/login/){:target="_blank"}.
+1.	Go to [your account on openmage.com](https://www.openmagecommerce.com/products/customer/account/login/){:}.
 3.	Log in with your Openmage username and password.
 4.	In the left navigation bar, click **Downloads**.
 5.	In the right pane, click **Openmage Commerce 2.X** > **Full Release** or **Openmage Commerce 2.X** > **Full Release + Sample Data** for the software.

@@ -2,7 +2,7 @@ The `repo.openmage.com` repository is where Openmage 2 and third-party Composer 
 
 To create authentication keys:
 
-1.  Log in to the [Openmage Marketplace](https://marketplace.openmage.com){:target="_blank"}. If you don't have an account, click **Register**.
+1.  Log in to the [Openmage Marketplace](https://marketplace.openmage.com){:}. If you don't have an account, click **Register**.
 2.  Click your account name in the top-right of the page and select **My Profile**.
 
 3.  Click **Access Keys** in the Marketplace tab.
@@ -20,9 +20,9 @@ You can also disable or delete authentication keys. For example, you can disable
 *	To enable a previously disabled key: Click **Enable**.
 *	To delete keys: Click **Delete**.
 
-You cannot delete or disable keys you created by signing in to your [openmage.com account](https://www.openmagecommerce.com/products/customer/account/login){:target="_blank"}. To manage those keys:
+You cannot delete or disable keys you created by signing in to your [openmage.com account](https://www.openmagecommerce.com/products/customer/account/login){:}. To manage those keys:
 
-1.	Log in to your [openmage.com account](https://www.openmagecommerce.com/products/customer/account/login){:target="_blank"}.
+1.	Log in to your [openmage.com account](https://www.openmagecommerce.com/products/customer/account/login){:}.
 2.	Click **My Account** at the top of the page.
 3.	Click **Account Settings** > **Downloads Access Token**.
 

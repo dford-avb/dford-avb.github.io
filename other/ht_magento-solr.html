@@ -26,12 +26,12 @@ title: How to Install and Configure the Solr Search Engine With Openmage Enterpr
   catalog search engine:</p>
 <ul class="level1">
   <li>Full text search using the MySQL database (the default)</li>
-  <li>The <a href="http://lucene.apache.org/solr/" target="_blank">Apache Solr search engine</a></li>
+  <li>The <a href="http://lucene.apache.org/solr/" >Apache Solr search engine</a></li>
 </ul>
 <p>Solr enables you to provide your web store users with a powerful full-text search engine that includes:</p>
 <ul class="level1">
-  <li><a href="http://wiki.apache.org/solr/SolrFacetingOverview" target="_blank">Faceted search</a></li>
-  <li><a href="https://cwiki.apache.org/confluence/display/solr/SolrCloud" target="_blank">Dynamic clustering using
+  <li><a href="http://wiki.apache.org/solr/SolrFacetingOverview" >Faceted search</a></li>
+  <li><a href="https://cwiki.apache.org/confluence/display/solr/SolrCloud" >Dynamic clustering using
       SolrCloud</a></li>
   <li>Database integration</li>
 </ul>
@@ -43,8 +43,8 @@ title: How to Install and Configure the Solr Search Engine With Openmage Enterpr
   <li><a href="#overview-solr">More Information About the Solr Solution</a></li>
 </ul>
 <!-- <p>Related information:</p>
-<ul class="level1"><li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-faq" target="_blank">Frequently Asked Questions (FAQ) About Using Solr with Openmage Enterprise Edition (EE)</a></li>
-<li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-best-practices" target="_blank">Solr and Openmage Enterprise Edition (EE) Best Practices</a></li></ul> -->
+<ul class="level1"><li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-faq" >Frequently Asked Questions (FAQ) About Using Solr with Openmage Enterprise Edition (EE)</a></li>
+<li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-best-practices" >Solr and Openmage Enterprise Edition (EE) Best Practices</a></li></ul> -->
 
 <h3><a name="overview-this-guide"></a>Intended Audience and Purpose of this Guide</h3>
 <p>This guide is intended for Openmage EE administrators and systems integrators who have some familiarity with search
@@ -156,44 +156,44 @@ search for specific terms.
     <tr>
       <td class="confluenceTd">EE 1.14.x.x</td>
       <td class="confluenceTd">Any version
-        <!-- from <a href="https://archive.apache.org/dist/lucene/solr/1.4.0/" target="_blank">1.4.1</a> -->up to <a
-          href="http://archive.apache.org/dist/lucene/solr/3.6.2/" target="_blank">3.6.2</a>.</td>
+        <!-- from <a href="https://archive.apache.org/dist/lucene/solr/1.4.0/" >1.4.1</a> -->up to <a
+          href="http://archive.apache.org/dist/lucene/solr/3.6.2/" >3.6.2</a>.</td>
       <td class="confluenceTd">No patch is required to use EE 1.14.x.x with Solr 3.6.2. <a
-          href="https://archive.apache.org/dist/lucene/solr/" target="_blank">Click here</a> to browse the list of all
+          href="https://archive.apache.org/dist/lucene/solr/" >Click here</a> to browse the list of all
         available Solr versions.</td>
     </tr>
     <tr>
       <td class="confluenceTd">EE 1.13.x.x</td>
       <td class="confluenceTd">Any version
-        <!-- from <a href="https://archive.apache.org/dist/lucene/solr/1.4.0/" target="_blank">1.4.1</a> -->up to <a
-          href="http://archive.apache.org/dist/lucene/solr/3.6.2/" target="_blank">3.6.2</a>.</td>
-      <td class="confluenceTd"><a href="https://archive.apache.org/dist/lucene/solr/" target="_blank">Click here</a> to
+        <!-- from <a href="https://archive.apache.org/dist/lucene/solr/1.4.0/" >1.4.1</a> -->up to <a
+          href="http://archive.apache.org/dist/lucene/solr/3.6.2/" >3.6.2</a>.</td>
+      <td class="confluenceTd"><a href="https://archive.apache.org/dist/lucene/solr/" >Click here</a> to
         browse the list of all available Solr versions.</td>
     </tr>
     <tr>
       <td class="confluenceTd">EE 1.12.0.x</td>
       <td class="confluenceTd">Any version
-        <!-- from <a href="https://archive.apache.org/dist/lucene/solr/1.4.0/" target="_blank">1.4.1</a> -->up to <a
-          href="http://archive.apache.org/dist/lucene/solr/3.5.0/" target="_blank">3.5.0</a></td>
+        <!-- from <a href="https://archive.apache.org/dist/lucene/solr/1.4.0/" >1.4.1</a> -->up to <a
+          href="http://archive.apache.org/dist/lucene/solr/3.5.0/" >3.5.0</a></td>
       <td class="confluenceTd">
         <p>If you use a later version, such as 3.6.x, see <a
-            href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-patches" target="_blank">Information About
+            href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-patches" >Information About
             Enterprise Edition (EE) Patches for Apache Solr</a> to get a patch.</p>
-        <p><a href="https://archive.apache.org/dist/lucene/solr/" target="_blank">Click here</a> to browse the list of
+        <p><a href="https://archive.apache.org/dist/lucene/solr/" >Click here</a> to browse the list of
           all available Solr versions.</p>
       </td>
     </tr>
     <tr>
       <td class="confluenceTd">EE 1.8.0.0 to 1.11.0.2</td>
       <td class="confluenceTd">Any version
-        <!-- from <a href="https://archive.apache.org/dist/lucene/solr/1.4.0/" target="_blank">1.4.1</a> -->up to <a
-          href="https://archive.apache.org/dist/lucene/solr/3.4.0/" target="_blank">3.4.0</a>.
+        <!-- from <a href="https://archive.apache.org/dist/lucene/solr/1.4.0/" >1.4.1</a> -->up to <a
+          href="https://archive.apache.org/dist/lucene/solr/3.4.0/" >3.4.0</a>.
       </td>
       <td class="confluenceTd">
         <p>To use a Solr version later than 1.4.x, see <a
-            href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-patches" target="_blank">Information About
+            href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-patches" >Information About
             Enterprise Edition (EE) Patches for Apache Solr</a> to get a patch.</p>
-        <a href="https://archive.apache.org/dist/lucene/solr/" target="_blank">Click here</a> to browse the list of all
+        <a href="https://archive.apache.org/dist/lucene/solr/" >Click here</a> to browse the list of all
         available Solr versions.
       </td>
     </tr>
@@ -206,16 +206,16 @@ search for specific terms.
 <p>Solr runs as a standalone full-text search server in a servlet container such as Jetty (which is used by the Solr
   example configuration) and Tomcat.</p>
 <p>Solr uses the Lucene Java search library for full-text indexing and search. Your applications interact with Solr
-  using <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5" target="_blank">HTTP POST</a> (in JSON,
-  <a href="http://wiki.apache.org/solr/UpdateXmlMessages" target="_blank">XML</a>, CSV, or binary formats) to index
-  documents and using <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3" target="_blank">HTTP
+  using <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5" >HTTP POST</a> (in JSON,
+  <a href="http://wiki.apache.org/solr/UpdateXmlMessages" >XML</a>, CSV, or binary formats) to index
+  documents and using <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3" >HTTP
     GET</a> to retrieve search results back as <a
-    href="http://wiki.apache.org/solr/SolJSON?highlight=%28json%29%7C%28solr%29" target="_blank">JSON</a>, XML, or a
+    href="http://wiki.apache.org/solr/SolJSON?highlight=%28json%29%7C%28solr%29" >JSON</a>, XML, or a
   variety of other formats (Python, Ruby, <a href="http://wiki.apache.org/solr/SolPHP?highlight=%28php%29%7C%28solr%29"
-    target="_blank">PHP</a>, <a href="http://wiki.apache.org/solr/CSVResponseWriter?highlight=%28solr%29%7C%28csv%29"
-    target="_blank">CSV</a>, binary, and so on). If you're a programmer, try the <a
-    href="http://lucene.apache.org/solr/api-3_6_2/doc-files/tutorial.html" target="_blank">Solr tutorial</a>. Whether
-  you're a programmer or not, read the <a href="http://wiki.apache.org/solr/FAQ" target="_blank">Solr FAQ</a>.</p>
+    >PHP</a>, <a href="http://wiki.apache.org/solr/CSVResponseWriter?highlight=%28solr%29%7C%28csv%29"
+    >CSV</a>, binary, and so on). If you're a programmer, try the <a
+    href="http://lucene.apache.org/solr/api-3_6_2/doc-files/tutorial.html" >Solr tutorial</a>. Whether
+  you're a programmer or not, read the <a href="http://wiki.apache.org/solr/FAQ" >Solr FAQ</a>.</p>
 <p>No programming is required to implement Solr as discussed in this guide.</p>
 <p>Solr's powerful external configuration allows it to be tailored to almost any type of application without Java
   coding, and it has an extensive plug-in architecture when more advanced customization is required. Solr is highly
@@ -225,7 +225,7 @@ search for specific terms.
     supports only the options displayed in the Admin Panel. Customizing the Solr engine itself, while potentially
     useful, can cause issues with Openmage. If you encounter problems with your customizations, do not contact Openmage
     Support; instead, consult the resources available from the <a href="http://wiki.apache.org/solr/"
-      target="_blank">Apache Solr Wiki</a>.</span></div>
+      >Apache Solr Wiki</a>.</span></div>
 <p>In this guide, you'll use the example configuration provided with Solr and Openmage's provided Solr configuration to
   implement a simple, quick integration with Solr.</p>
 <p>Some reasons to use Solr with Openmage include:</p>
@@ -234,7 +234,7 @@ search for specific terms.
     without your needing to customize any code.</li>
   <li>You get better performance of search, catalog views, and <a
       href="http://www.openmagecommerce.com/knowledge-base/entry/how-does-layered-navigation-work"
-      target="_blank">layered navigation</a>.</li>
+      >layered navigation</a>.</li>
   <li>When the system is under load, Solr avoids frequent updates of the MySQL <tt>catalogsearch_fulltext</tt> table and
     alleviates issues with database table locks.</li>
 </ul>
@@ -274,10 +274,10 @@ search for specific terms.
     If the message <tt>java: command not found</tt> displays, you must install the Java SDK as discussed in the next
     section. If Java is installed, make sure it's version 1.6 or later.</li>
   <li>Tomcat or Jetty servlet container. This guide discusses using Jetty, which comes with Solr. Consult another
-    resource, such as the <a href="http://wiki.apache.org/solr/SolrTomcat" target="_blank">Solr Wiki</a>, to use Tomcat
+    resource, such as the <a href="http://wiki.apache.org/solr/SolrTomcat" >Solr Wiki</a>, to use Tomcat
     with Solr.<br />
     To see if you're currently running Jetty and to check the version, see <a
-      href="https://wiki.eclipse.org/Jetty/FAQ#How_do_I_know_which_version_of_Jetty_I_am_running.3F" target="_blank">How
+      href="https://wiki.eclipse.org/Jetty/FAQ#How_do_I_know_which_version_of_Jetty_I_am_running.3F" >How
       to find out the version of Jetty</a>.</li>
 </ul>
 
@@ -296,22 +296,22 @@ search for specific terms.
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
     width="40"><span><strong>Note</strong>: Java version 7 might not be available for all operating systems. For
     example, you can search the list of available packages for Ubuntu <a href="http://packages.ubuntu.com/"
-      target="_blank">here</a>.</div>
+      >here</a>.</div>
 
 <h3><a name="install-prereq-solr"></a>Installing Solr 3.6.2 and Jetty</h3>
 <p>The Apache Solr package installs both Solr and Jetty. If Jetty is already installed, see the <a
-    href="http://wiki.apache.org/solr/SolrJetty" target="_blank">Solr with Jetty Wiki</a> for more information.</p>
+    href="http://wiki.apache.org/solr/SolrJetty" >Solr with Jetty Wiki</a> for more information.</p>
 <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-note.png" alt="note" align="left"
     width="40"><span><strong>Note</strong>: Tomcat is also a supported servlet container for Solr but discussing how to
     set up Tomcat with Solr is beyond the scope of this guide. For more information, see the <a
-      href="http://wiki.apache.org/solr/SolrTomcat" target="_blank">Solr With Tomcat Wiki</a>.</div>
+      href="http://wiki.apache.org/solr/SolrTomcat" >Solr With Tomcat Wiki</a>.</div>
 <p>To install Solr and Jetty:</p>
 <ol>
   <li>Find a suitable Solr distribution.
     <ul class="level2">
-      <li><a href="https://archive.apache.org/dist/lucene/solr/3.6.2" target="_blank">Solr 3.6.2</a></li>
-      <li><a href="https://archive.apache.org/dist/lucene/solr/3.5.0" target="_blank">Solr 3.5.0</a></li>
-      <li><a href="https://archive.apache.org/dist/lucene/solr/3.4.0" target="_blank">Solr 3.4.0</a></li>
+      <li><a href="https://archive.apache.org/dist/lucene/solr/3.6.2" >Solr 3.6.2</a></li>
+      <li><a href="https://archive.apache.org/dist/lucene/solr/3.5.0" >Solr 3.5.0</a></li>
+      <li><a href="https://archive.apache.org/dist/lucene/solr/3.4.0" >Solr 3.4.0</a></li>
     </ul>
     <p>If you're not sure what version of Solr to use, see <a href="#overview-matrix">Support Matrix for Solr and
         Openmage EE</a>.</p>
@@ -420,7 +420,7 @@ cp -R /var/www/openmage/lib/Apache/Solr/conf/* .</pre><br />
             <tr>
               <td class="confluenceTd">Solr Server Username</td>
               <td class="confluenceTd"><em>Optional.</em> Enter a username for <a
-                  href="http://wiki.apache.org/solr/SolrSecurity" target="_blank">Solr authentication</a>, if desired.
+                  href="http://wiki.apache.org/solr/SolrSecurity" >Solr authentication</a>, if desired.
               </td>
             </tr>
             <tr>
@@ -465,7 +465,7 @@ cp -R /var/www/openmage/lib/Apache/Solr/conf/* .</pre><br />
                       must configure Solr to commit at regular intervals (for example, every 5 minutes) or when a
                       certain number of uncommitted items is reached.</p>
                     <p>For more information, see the discussion of the <tt>&lt;autoCommit&gt;</tt> XML element in the <a
-                        href="http://wiki.apache.org/solr/SolrConfigXml" target="_blank"><tt>solrconfig.xml</tt> section
+                        href="http://wiki.apache.org/solr/SolrConfigXml" ><tt>solrconfig.xml</tt> section
                         of the Solr Wiki</a>.</p>
                   </li>
                 </ul>
@@ -503,11 +503,11 @@ cp -R /var/www/openmage/lib/Apache/Solr/conf/* .</pre><br />
                     resolve those before you continue.<br />
                     In particular, make sure you started Solr as a user with <tt>root</tt> privileges.</li>
                   <li>Verify that <a href="http://php.net/manual/en/filesystem.configuration.php"
-                      target="_blank"><tt>allow_url_fopen = On</tt></a> is present in your server's
+                      ><tt>allow_url_fopen = On</tt></a> is present in your server's
                     <tt>php.ini</tt>.<br />
                     If you are not sure where <tt>php.ini</tt> is located, you can <a
                       href="http://kb.mediatemple.net/questions/764/How+can+I+create+a+phpinfo.php+page%3F#gs"
-                      target="_blank">create a <tt>phpinfo.php</tt> page</a> to locate it.</li>
+                      >create a <tt>phpinfo.php</tt> page</a> to locate it.</li>
                   <li>Verify the value of the <strong>Solr Server Hostname</strong> field. Make sure the server is
                     available. You can try the server's IP address instead.</li>
                   <li>Use the command <tt>netstat -an | grep <em>listen-port</em></tt> command to verify that the port
@@ -520,7 +520,7 @@ cp -R /var/www/openmage/lib/Apache/Solr/conf/* .</pre><br />
                     reachable from your Openmage instance.</li>
                   <li>If SELinux is enabled, make sure the Solr servlet container's listen port is available; otherwise,
                     Openmage cannot communicate with the servlet container. For example, you can consult the <a
-                      href="http://wiki.centos.org/HowTos/SELinux" target="_blank">SELinux Centos wiki</a>.
+                      href="http://wiki.centos.org/HowTos/SELinux" >SELinux Centos wiki</a>.
                 </ul>
               </td>
             </tr>
@@ -539,7 +539,7 @@ cp -R /var/www/openmage/lib/Apache/Solr/conf/* .</pre><br />
         Openmage supports only the options displayed in the Admin Panel. Customizing the Solr engine itself, while
         potentially useful, can cause issues with Openmage. If you encounter problems with your customizations, do not
         contact Openmage Support; instead, consult the resources available from the <a
-          href="http://wiki.apache.org/solr/" target="_blank">Apache Solr Wiki</a>.</span></div>
+          href="http://wiki.apache.org/solr/" >Apache Solr Wiki</a>.</span></div>
     <p>To configure Openmage to work with Solr:</p>
     <ol>
       <li>Start the Openmage Admin Panel and log in as an administrator.</li>
@@ -614,7 +614,7 @@ cp -R /var/www/openmage/lib/Apache/Solr/conf/* .</pre><br />
                 <p>This functionality is not based on third party engine functionality, but is implemented as part of
                   the <tt>Enterprise_Search</tt> module and can be shown with the Solr search suggestions block.</p>
                 <p>By default, Openmage uses the <tt>Enterprise_Search_Model_Adapter_HttpStream</tt> module for
-                  recommendations. If you install the <a href="http://pecl.php.net/package/solr" target="_blank">Apache
+                  recommendations. If you install the <a href="http://pecl.php.net/package/solr" >Apache
                     Solr PHP extension</a>, Openmage automatically uses the
                   <tt>Enterprise_Search_Model_Adapter_PhpExtension</tt> adapter instead. Both adapters function in the
                   same way with no difference in performance. However, the <tt>PhpExtension</tt> adapter is not tested
@@ -642,7 +642,7 @@ cp -R /var/www/openmage/lib/Apache/Solr/conf/* .</pre><br />
               <td class="confluenceTd">
                 <p>Click <strong>Yes</strong> (the default) to use Solr to enable <a
                     href="http://www.openmagecommerce.com/knowledge-base/entry/how-does-layered-navigation-work"
-                    target="_blank">layered navigation</a> in the category view.</p>
+                    >layered navigation</a> in the category view.</p>
                 <p>Click <strong>No</strong> to use the database for layered navigation in the category view.</p>
               </td>
             </tr>
@@ -729,7 +729,7 @@ esac</pre>
                 <p>For <tt>-DSTOP.KEY=</tt>, specify a string. If you omit a value for <tt>-DSTOP.KEY=</tt>, Jetty
                   generates a random key you must enter to stop Jetty.</p>
                 <p>For more information, see <a href="https://wiki.eclipse.org/Jetty/Howto/Configure_SSL"
-                    target="_blank">Securing Jetty</a>.</p>
+                    >Securing Jetty</a>.</p>
               </td>
             </tr>
             <tr>
@@ -798,10 +798,10 @@ esac</pre>
         <ul class="level1">
           <li>For more information about performance, see "Using Solr as a Search Engine" in <a
               href="http://info.openmage.com/rs/openmagecommerce/images/Openmage_PerformanceWhitepaper-EEv1-9.1.pdf"
-              target="_blank">Maximizing Performance and Scalability with Openmage Enterprise Edition</a></li>
-          <li><a href="http://wiki.apache.org/solr/#Operations_and_Production" target="_blank">Customize Solr</a></li>
+              >Maximizing Performance and Scalability with Openmage Enterprise Edition</a></li>
+          <li><a href="http://wiki.apache.org/solr/#Operations_and_Production" >Customize Solr</a></li>
         </ul>
 
         <!-- <h2 id="related">Related Information</h2>
-<ul class="level1"><li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-faq" target="_blank">Frequently Asked Questions (FAQ) About Using Solr with Openmage Enterprise Edition (EE)</a></li>
-<li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-best-practices" target="_blank">Solr and Openmage Enterprise Edition (EE) Best Practices</a></li></ul> -->
+<ul class="level1"><li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-faq" >Frequently Asked Questions (FAQ) About Using Solr with Openmage Enterprise Edition (EE)</a></li>
+<li><a href="http://www.openmagecommerce.com/knowledge-base/entry/solr-ee-best-practices" >Solr and Openmage Enterprise Edition (EE) Best Practices</a></li></ul> -->

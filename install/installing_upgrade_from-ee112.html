@@ -25,14 +25,14 @@
 
 <h1>EE 1.14 Upgrade: Running the EE 1.12 and Earlier URL Redirect Script </h1>
 
-<p>This article is part of the Openmage Enterprise Edition (EE) upgrade documentation. If you're looking for something else, <a href="http://www.openmagecommerce.com/resources/openmage-user-guide" target="_blank">click here</a> to go back to the Openmage Knowledge Base.</p>
+<p>This article is part of the Openmage Enterprise Edition (EE) upgrade documentation. If you're looking for something else, <a href="http://www.openmagecommerce.com/resources/openmage-user-guide" >click here</a> to go back to the Openmage Knowledge Base.</p>
 <p>This article applies to the following Openmage EE upgrades:</p>
 <ul><li>From EE 1.12.x or earlier to EE 1.13.0.2</li>
 <li>From EE 1.12.x or earlier to EE 1.13.1.0</li>
 <li>From EE 1.12.x or earlier to EE 1.14.0.0</li></ul>
 <p>If your upgrade is not in the preceding list, go back to <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_details.html">Upgrading to and Verifying Openmage Community Edition (CE) 1.8 and Enterprise Edition (EE) 1.13</a>.</p>
 <p>This article discusses how to run the URL redirect script that creates HTTP 301 (Moved Permanently) redirects for any duplicate product URL keys. This enables <strong>Previous</strong> links in your web store to work, for example.</p>
-<!-- <p>To run the URL redirect script, see <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_from-ee112.html" target="_blank">EE 1.14 Upgrade: Running the EE 1.12 and Earlier URL Redirect Script</a>. When you're done, continue with the next section. -->
+<!-- <p>To run the URL redirect script, see <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_from-ee112.html" >EE 1.14 Upgrade: Running the EE 1.12 and Earlier URL Redirect Script</a>. When you're done, continue with the next section. -->
 <p>To create redirects for your URLs, perform the following tasks in the order shown:</p>
 <ol><li><a href="#upgrade-manual-post-upgrade-11302-cron-verify">Verifying that cron is Disabled</a></li>
 <li><a href="#upgrade-manual-post-upgrade-11302-indexer">Changing Indexer Settings to Update When Scheduled</a></li>
@@ -119,9 +119,9 @@ This command helps you to determine if each thread behaves correctly. After each
   <ol><li style="list-style-type:lower-alpha">Select another value from the list. You can select any value <em>other than</em> <strong>Global</strong>.</li>
   <li style="list-style-type:lower-alpha">Click <strong>Save Attribute</strong>.</li>
   <li style="list-style-type:lower-alpha">Log out of the Admin Panel.</li>
-  <li style="list-style-type:lower-alpha">Re-export the database as discussed in <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_details.html#prereq-tasks-prod-backup-db" target="_blank">Backing Up the Database</a>.</li>
-  <li style="list-style-type:lower-alpha">In the development system, drop and re-create the database as discussed in <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_details.html#prereq-tasks-dev" target="_blank">Pre-Upgrade Tasks for Your Development Environment</a>.</li>
-  <li style="list-style-type:lower-alpha">Import the database you just exported as discussed in <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_details.html#upgrade-manual-db" target="_blank">Updating the Openmage Database</a>.</li>
+  <li style="list-style-type:lower-alpha">Re-export the database as discussed in <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_details.html#prereq-tasks-prod-backup-db" >Backing Up the Database</a>.</li>
+  <li style="list-style-type:lower-alpha">In the development system, drop and re-create the database as discussed in <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_details.html#prereq-tasks-dev" >Pre-Upgrade Tasks for Your Development Environment</a>.</li>
+  <li style="list-style-type:lower-alpha">Import the database you just exported as discussed in <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_details.html#upgrade-manual-db" >Updating the Openmage Database</a>.</li>
   <li style="list-style-type:lower-alpha">Try running the upgrade script again.</li></ol>
   </li>
   <li>If the value of the <strong>Scope</strong> list is <em>not</em> <strong>Global</strong>, the issue is likely that the category <code>url_key</code> attribute is set to global. To confirm this:
@@ -132,12 +132,12 @@ This command helps you to determine if each thread behaves correctly. After each
   where attribute_id in (select attribute_id from eav_attribute /
   where attribute_code = 'url_key');</pre><br />
   <strong>Note:</strong> The command must be entered on a single line. It is shown here on multiple lines because of space limitations. When you enter the command, omit the <code>/</code> characters.</li>
-  <li style="list-style-type:lower-alpha">If any returned value is <code>1</code>, you must contact <a href="http://support.openmagecommerce.com" target="_blank">Openmage Support</a>.</li></ol>
+  <li style="list-style-type:lower-alpha">If any returned value is <code>1</code>, you must contact <a href="http://support.openmagecommerce.com" >Openmage Support</a>.</li></ol>
 </li></ol></td>
 </tr>
 <tr>
   <td>Other errors</td>
-  <td>Try running the script again. If errors persist, contact <a href="http://support.openmagecommerce.com" target="_blank">Openmage Support</a>.</td>
+  <td>Try running the script again. If errors persist, contact <a href="http://support.openmagecommerce.com" >Openmage Support</a>.</td>
 </tbody>
 </table>
 
@@ -163,7 +163,7 @@ The following figure shows an example.<br />
 
 <h2 id="complete-upgrade">Completing Your Upgrade</h2>
 <p>Complete your upgrade:</p>
-<ol><li><a href="{{ site.m1xgdeurl }}/install/installing_install.html#install-cron" target="_blank">Setting Up the Openmage Cron Job</a></li>
+<ol><li><a href="{{ site.m1xgdeurl }}/install/installing_install.html#install-cron" >Setting Up the Openmage Cron Job</a></li>
 <li><a href="{{ site.m1xgdeurl }}/install/installing_upgrade_details.html#upgrade-manual-var">Clearing Openmage var/ Subdirectories</a></li>
 <li>Complete the remainder of the tasks on that page in the order shown</li></ol>
 
