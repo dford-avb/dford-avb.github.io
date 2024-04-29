@@ -87,7 +87,7 @@
       <em>your Openmage install dir</em><code>/app/code/community</code> directory structure, the Openmage administrator
       sees an error message in the Openmage Connect Manager.<br />
       To set file system permissions appropriately, see <a
-        href="{{ site.m1xgdeurl }}/install/installer-privileges_after.html#extensions" >After You Install
+        href="{{ site.url }}/install/installer-privileges_after.html#extensions" >After You Install
         Openmage: Recommended File System Ownership and Privileges</a>.</li>
   </ul>
 
@@ -112,7 +112,7 @@
     certain Discover credit card number ranges were not recognized as being valid. As a result of the fix, all Discover
     cards should validate properly.</p>
     <p>The issue affects Openmage CE versions 1.4.2.0&ndash;1.8.1.0.</p>
-    <p>To get a fix for the issue, see <a href="{{ site.m1xgdeurl }}/other/discover-card-validation.html"
+    <p>To get a fix for the issue, see <a href="{{ site.url }}/other/discover-card-validation.html"
         >Discover credit card validation issue: Openmage EE 1.9.1.1&ndash;1.13.1.0 and CE
         1.4.2.0&ndash;1.8.1.0</a>.</p>
     <div class="msg-box important"><img src="{{ site.baseurl }}/guides/m1x/images/icon-important.png" alt="important"
@@ -123,7 +123,7 @@
 
     <h3 id="php54">PHP 5.4 Patch Available</h3>
     <p>You can use PHP 5.4 with Openmage CE versions 1.6.0.0&ndash;1.8.1.0.</p>
-    <p>To get the patch, see <a href="{{ site.m1xgdeurl }}/other/php5.4_patch.html" >Getting the PHP 5.4
+    <p>To get the patch, see <a href="{{ site.url }}/other/php5.4_patch.html" >Getting the PHP 5.4
         patch for Openmage Enterprise Edition (EE) and Community Edition (CE)</a>.</p>
     <p>For more information about PHP 5.4, see <a href="http://www.php.net/manual/en/migration54.changes.php"
         >the PHP migration page</a> and <a href="http://php.net/ChangeLog-5.php#5.4.0"
@@ -138,7 +138,7 @@
       <li>In the left pane, click <strong>Downloads</strong>.</li>
       <li>Scroll down to the Openmage Community Edition Patches section.</li>
       <li>Follow the prompts on your screen to download a patch for your version of CE.</li>
-      <li>Apply the patch as discussed in <a href="{{ site.m1xgdeurl }}/other/ht_install-patches.html"
+      <li>Apply the patch as discussed in <a href="{{ site.url }}/other/ht_install-patches.html"
           >How to Apply and Revert Openmage Patches</a>.</li>
     </ol>
 
@@ -213,7 +213,7 @@ Openmage thanks iSEC Security Consultants for contributing to this fix. For more
         <!-- <br />
 Openmage thanks iSEC Security Consultants for contributing to this fix. -->
       </li>
-      <!--<li> (<a href="https://jira.corp.x.com/browse/MPERF-2120" >MPERF-2120</a>)  Resolved a <a href="{{ site.m1xgdeurl }}/ce18-ee113/ce1.8_release-notes.html#ce18-1800security-advisory" >cross-site scripting (XSS) issue reported in CE 1.8.0.0</a>.<br />
+      <!--<li> (<a href="https://jira.corp.x.com/browse/MPERF-2120" >MPERF-2120</a>)  Resolved a <a href="{{ site.url }}/ce18-ee113/ce1.8_release-notes.html#ce18-1800security-advisory" >cross-site scripting (XSS) issue reported in CE 1.8.0.0</a>.<br />
 Openmage thanks Myke Hines, Fox, and Opteros for contributing to this fix.</li> -->
       <li>
         <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2123" >MPERF-2123</a>)  -->Resolved issues
@@ -246,7 +246,7 @@ Openmage thanks Binary Anvil for contributing to this fix. -->
     <p>
       <!-- https://jira.corp.x.com/browse/APPSEC-212 -->There is a known Issue After Upgrading to CE 1.8.1 that affects
       you <em>only</em> if you do <em>not</em> follow the recommended procedure to upgrade to a new environment as
-      discussed in <a href="{{ site.m1xgdeurl }}/install/installing_upgrade_details.html#prereq-tasks">Getting Ready For
+      discussed in <a href="{{ site.url }}/install/installing_upgrade_details.html#prereq-tasks">Getting Ready For
         Your Upgrade</a>.</p>
     <p><strong>Symptom</strong>: After completing the upgrade, when you log in to the Admin Panel and click
       <strong>System</strong> > <strong>Configuration</strong>, a fatal error similar to the following displays in your
@@ -261,7 +261,7 @@ Openmage thanks Binary Anvil for contributing to this fix. -->
         <pre><em>openmage-install-dir</em>/app/code/core/Mage/GoogleCheckout/etc</pre>
       </li>
       <li>When you log back in to the Admin Panel, everything works as expected.<br />
-        If you're still encountering errors, see <a href="{{ site.m1xgdeurl }}/install/installing.html#help"
+        If you're still encountering errors, see <a href="{{ site.url }}/install/installing.html#help"
           >Getting Help With Your Installation or Upgrade</a>.</li>
     </ol>
 
@@ -723,7 +723,7 @@ Openmage thanks TBD for contributing to this fix. Link to the <a href="https://g
     <li>
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-1972" >MPERF-1972</a>)  -->Upgraded Redis cache
       adapters for multi-server systems.<br />
-      To set up and use Redis with Openmage, see <a href="{{ site.m1xgdeurl }}/ce18-ee113/using_redis.html"
+      To set up and use Redis with Openmage, see <a href="{{ site.url }}/ce18-ee113/using_redis.html"
         >Using Redis with Openmage Community Edition (CE) and Enterprise Edition (EE)</a>.</li>
     <li>Eliminated many types of database deadlocks.</li>
   </ul>
@@ -1348,7 +1348,7 @@ Openmage thanks TBD for contributing to this fix. Link to the <a href="https://g
     <li>
       <!-- (<a href="https://jira.corp.x.com/browse/MAGE-7339" >MAGE-7339</a>)  -->The
       <code>.htaccess.sample</code> provided with Openmage now includes <code>php_value memory_limit 512M</code> to be
-      consistent with the <a href="{{ site.m1xgdeurl }}/system-requirements.html" >Openmage system
+      consistent with the <a href="{{ site.url }}/system-requirements.html" >Openmage system
         requirements</a>.</li>
     <li>
       <!-- (<a href="https://jira.corp.x.com/browse/MPERF-2575" >MPERF-2575</a>)  -->You can now install

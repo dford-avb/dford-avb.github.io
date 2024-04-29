@@ -37,7 +37,7 @@
 <li><!-- <a href="https://jira.corp.x.com/browse/MPERF-4558" >MPERF-4558</a>, <a href="https://jira.corp.x.com/browse/APPSTORE-4589" >APPSTORE-4589</a>  -->To improve security, Openmage Connect now uses HTTPS by default to download extensions, rather than FTP. </li>
 <li><!-- <a href="https://jira.corp.x.com/browse/MPERF-4558" >MPERF-4558</a>, <a href="https://jira.corp.x.com/browse/APPSTORE-4557" >APPSTORE-4557</a>  -->Extension developers can now create an extensions with a dash character in the name. Merchants can install those extensions without issues.</li>
 <li><!-- <a href="https://jira.corp.x.com/browse/MPERF-4558" >MPERF-4558</a>, <a href="https://jira.corp.x.com/browse/APPSTORE-4575" >APPSTORE-4575</a>  -->Openmage administrators who attempt to install an extension with insufficient file system privileges are now informed. Typically, the Openmage Admin Panel runs as the web server user. If this user has insufficient privileges to the <em>your Openmage install dir</em><tt>/app/code/community</tt> directory structure, the Openmage administrator sees an error message in the Openmage Connect Manager.<br />
-To set file system permissions appropriately, see <a href="{{ site.m1xgdeurl }}/install/installer-privileges_after.html#extensions" >After You Install Openmage: Recommended File System Ownership and Privileges</a>.</li></ul>
+To set file system permissions appropriately, see <a href="{{ site.url }}/install/installer-privileges_after.html#extensions" >After You Install Openmage: Recommended File System Ownership and Privileges</a>.</li></ul>
 
 <h4 id="ee113-patches-how-to-get">How to Get This Patch</h4>
 <p>To get this patch:</p>
@@ -45,7 +45,7 @@ To set file system permissions appropriately, see <a href="{{ site.m1xgdeurl }}/
 <li>In the left pane, click <strong>Downloads</strong>.</li>
 <li>In the right pane, click <strong>Openmage Enterprise Edition</strong>.</li>
 <li>Follow the prompts on your screen to download a patch for your version of EE.</li>
-<li>Apply the patch as discussed in <a href="{{ site.m1xgdeurl }}/other/ht_install-patches.html" >How to Apply and Revert Openmage Patches</a>.</li></ol>
+<li>Apply the patch as discussed in <a href="{{ site.url }}/other/ht_install-patches.html" >How to Apply and Revert Openmage Patches</a>.</li></ol>
 
 <h3 id="ee113-patches-solr-index">Solr Search Results and Indexing</h3>
 <p><em>Patch name</em>: PATCH_SUPEE-3630_EE_1.12.x_v1.sh for EE 1.12.x. <!-- <a href="https://jira.corp.x.com/browse/MPERF-5050" >MPERF-5050</a>, <a href="https://jira.corp.x.com/browse/SUPEE-3630" >SUPEE-3630</a>  -->After applying this patch, your search engine returns search results to users on the web store while reindexing is underway. We recommend you install this patch if you're using the Solr search engine. <em>This patch can result in slower performance if you're using the default MySQL Full Text search engine</em>.</p>
