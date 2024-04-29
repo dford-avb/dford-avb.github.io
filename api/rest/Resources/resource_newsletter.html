@@ -1,23 +1,17 @@
 ---
 layout: m1x_rest
-title: Customers
+title: Newsletter & Subscribers
 ---
 
-JSON responses on this page contributed by Tim Reynolds
-
-
 <ul class="introduction-menu">
-    <li><a href='#RESTAPI-Resource-Newsletter-RESTAPI-Newsletter'>REST API: Newsletter</a>
+    <li><a href="#RESTAPI-Resource-Newsletter-RESTAPI-Newsletter">REST API: Newsletter</a>
         <ul>
-            <li><a href='#RESTAPI-Resource-Newsletter-URI--newsletter'>URI: /newsletter</a>
+            <li><a href="#RESTAPI-Resource-Newsletter-URI--newsletter--subscribers">URI: /newsletter/subscribers</a></li>
                 <ul>
-                    <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-GET-newsletter'>HTTP Method: GET /newsletter/subscribers</a></li>
-                    <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-POST-newsletter'>HTTP Method: POST /newsletter</a></li>
-                    <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-PUT-newsletter'>HTTP Method: PUT /newsletter</a></li>
-                    <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-DELETE-newsletter'>HTTP Method: DELETE /newsletter</a></li>
+                    <li><a href="#RESTAPI-Resource-Newsletter-HTTPMethod-GET-newsletter--subscribers">HTTP Method: GET /newsletter/subscribers</a></li>
                 </ul>
-            </li>
         </ul>
+
     </li>
     <li><a href='#RESTAPI-Resource-Newsletter-RESTAPI-Newsletter'>REST API: Newsletter</a>
         <ul>
@@ -28,122 +22,187 @@ JSON responses on this page contributed by Tim Reynolds
             </li>
         </ul>
     </li>
+    <li><a href='#RESTAPI-Resource-Newsletter-RESTAPI-Newsletter'>REST API: Newsletter</a>
+        <ul>
+            <li><a href='#RESTAPI-Resource-Newsletter-URI--newsletter'>URI: /newsletter</a>
+                <ul>
+                    <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-POST-newsletter'>HTTP Method: POST /newsletter</a></li>
+                    <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-PUT-newsletter'>HTTP Method: PUT /newsletter</a></li>
+                    <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-DELETE-newsletter'>HTTP Method: DELETE /newsletter</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
 </ul>
 
 <h3><a name="RESTAPI-Resource-Newsletter-RESTAPI-Newsletter"></a>REST API: Newsletter</h3>
 
-<h4><a name="RESTAPI-Resource-Newsletter-URI--newsletter"></a>URI: /newsletter</h4>
+<h4><a name="RESTAPI-Resource-Newsletter-URI--newsletter--subscribers"></a>URI: /newsletter/subscribers</h4>
 
-<p>Allows you to create and retrieve subscribers.</p>
+<p>Allows you to retrieve subscribers.</p>
 
 <p><b>URL Structure</b>: http://openmagehost/api/rest/newsletter/subscribers<br/>
     <b>Version</b>: 1</p>
 
-<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-GET-customers"></a>HTTP Method: GET /newsletter/subscribers</h5>
+<h5><a name="RESTAPI-Resource-Newsletter-HTTPMethod-GET-newsletter--subscribers"></a>HTTP Method: GET /newsletter/subscribers</h5>
 
 <p><b>Description</b>: Allows you to retrieve the list of existing subscribers.<br/>
     <b>Notes:</b>: Only Admin user can retrieve the list of subscribers.</p>
 
 <p><b>Authentication</b>: Admin<br/>
-    <b>Default Format</b>: XML<br/>
+    <b>Default Format</b>: JSON<br/>
     <b>Parameters</b>:<br/>
     <em>code</em></p>
 
 <p><b>Example</b></p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/customers?code=protest1</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/newsletter/subscribers?code=protest1</td></tr></table></div>
 
 <p>CUSTOM: adding parameter <pre>code</pre> with a store code will retrieve list of customers for specific store.</p>
 <p>Without store code, the customers endpoint will return the first 100 records. Using filters such as <pre>page</pre> and <pre>limit</pre> will allow to paginate through customers</p>
+<p>Only pagination filters will work with this endpoint, Attribute filters will not work.</p>
 
 
 <p><b>Response Body:</b></p>
-<div class="panel" style="border-width: 1px;"><div class="panelContent">
-    <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
-        <div>
-		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
-  &lt;data_item&gt;
-    &lt;entity_id&gt;2&lt;/entity_id&gt;
-    &lt;website_id&gt;1&lt;/website_id&gt;
-    &lt;email&gt;test@example.com&lt;/email&gt;
-    &lt;group_id&gt;1&lt;/group_id&gt;
-    &lt;created_at&gt;2012-03-22 14:15:54&lt;/created_at&gt;
-    &lt;disable_auto_group_change&gt;1&lt;/disable_auto_group_change&gt;
-    &lt;firstname&gt;john&lt;/firstname&gt;
-    &lt;lastname&gt;Doe&lt;/lastname&gt;
-    &lt;created_in&gt;Default Store View&lt;/created_in&gt;
-  &lt;/data_item&gt;
-  &lt;data_item&gt;
-    &lt;entity_id&gt;4&lt;/entity_id&gt;
-    &lt;website_id&gt;1&lt;/website_id&gt;
-    &lt;email&gt;earl@example.com&lt;/email&gt;
-    &lt;group_id&gt;1&lt;/group_id&gt;
-    &lt;created_at&gt;2012-03-28 13:54:04&lt;/created_at&gt;
-    &lt;disable_auto_group_change&gt;0&lt;/disable_auto_group_change&gt;
-    &lt;firstname&gt;Earl&lt;/firstname&gt;
-    &lt;lastname&gt;Hickey&lt;/lastname&gt;
-    &lt;created_in&gt;Admin&lt;/created_in&gt;
-  &lt;/data_item&gt;
-&lt;/magento_api&gt;</pre>
-        </div>
-    </div></div>
-</div></div>
 <p><b>response example: json</b></p>
-<div class='panelmacro'><table class='infomacro'><tr><td>get http://openmagehost/api/rest/customers</td></tr></table></div>
+<div class='panelmacro'><table class='infomacro'><tr><td>get http://openmagehost/api/rest/newsletter/subscribers?code=protest1</td></tr></table></div>
 
 <p><b>response body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelcontent">
     <div class="code panel" style="border-width: 1px;"><div class="codecontent panelcontent">
         <div>
-		<pre class="theme: default; brush: java; gutter: false">
-
-{
-  "2": {
-    "entity_id": "2",
-    "website_id": "1",
-    "email": "test@example.com",
-    "group_id": "1",
-    "created_at": "2012-03-22 14:15:54",
-    "disable_auto_group_change": "1",
-    "firstname": "john",
-    "lastname": "Doe",
-    "created_in": "Admin",
-    "prefix": null,
-    "suffix": null,
-    "taxvat": null,
-    "dob": "2001-01-03 00:00:00",
-    "reward_update_notification": "1",
-    "reward_warning_notification": "1",
-    "gender": "1"
-  },
-  "4": {
-    "entity_id": "4",
-    "website_id": "1",
-    "email": "earl@example.com",
-    "group_id": "1",
-    "created_at": "2013-03-28 18:59:41",
-    "disable_auto_group_change": "0",
-    "firstname": "Earl",
-    "lastname": "Hickey",
-    "created_in": "Admin",
-    "prefix": null,
-    "suffix": null,
-    "taxvat": null,
-    "dob": "2012-03-28 13:54:04",
-    "reward_update_notification": "1",
-    "reward_warning_notification": "1",
-    "gender": "1"
-  }
+		<pre class="theme: default; brush: json; gutter: false">
+            [
+                {
+                    "email": "cpw@test.test",
+                    "first_name": null,
+                    "last_name": null,
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "subscribed",
+                    "mailmunch_subscriber_id": null,
+                    "mailmunch_sync_status": 0,
+                    "avb_subscriber_id": 523836
+                },
+                {
+                    "email": "good@email.com",
+                    "first_name": null,
+                    "last_name": null,
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "unsubscribed",
+                    "mailmunch_subscriber_id": null,
+                    "mailmunch_sync_status": 0,
+                    "avb_subscriber_id": 523859
+                },
+                {
+                    "email": "mailchimp.avb@gmail.com",
+                    "first_name": null,
+                    "last_name": null,
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "subscribed",
+                    "mailmunch_subscriber_id": null,
+                    "mailmunch_sync_status": 0,
+                    "avb_subscriber_id": 524041
+                },
+                {
+                    "email": "alden@test.test",
+                    "first_name": null,
+                    "last_name": null,
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "subscribed",
+                    "mailmunch_subscriber_id": null,
+                    "mailmunch_sync_status": 0,
+                    "avb_subscriber_id": 524959
+                },
+                {
+                    "email": "test@test.net",
+                    "first_name": null,
+                    "last_name": null,
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "subscribed",
+                    "mailmunch_subscriber_id": null,
+                    "mailmunch_sync_status": 0,
+                    "avb_subscriber_id": 561500
+                },
+                {
+                    "email": "xdz@ddfd.com",
+                    "first_name": "test",
+                    "last_name": "test last",
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "subscribed",
+                    "mailmunch_subscriber_id": 1,
+                    "mailmunch_sync_status": 0,
+                    "avb_subscriber_id": 561501
+                },
+                {
+                    "email": "xddddz@ddfd.com",
+                    "first_name": null,
+                    "last_name": null,
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "subscribed",
+                    "mailmunch_subscriber_id": null,
+                    "mailmunch_sync_status": 0,
+                    "avb_subscriber_id": 561502
+                },
+                {
+                    "email": "testesataestfrdasfasd@example.net",
+                    "first_name": "test",
+                    "last_name": "test last",
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "subscribed",
+                    "mailmunch_subscriber_id": 2,
+                    "mailmunch_sync_status": 1,
+                    "avb_subscriber_id": 561503
+                },
+                {
+                    "email": "testesataestffasd@example.net",
+                    "first_name": "test",
+                    "last_name": "test last",
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "subscribed",
+                    "mailmunch_subscriber_id": 2,
+                    "mailmunch_sync_status": 1,
+                    "avb_subscriber_id": 561504
+                },
+                {
+                    "email": "testesataestsd@example.net",
+                    "first_name": "test",
+                    "last_name": "test last",
+                    "store_code": "protest1",
+                    "customer_id": 0,
+                    "message": null,
+                    "status": "subscribed",
+                    "mailmunch_subscriber_id": 2,
+                    "mailmunch_sync_status": 1,
+                    "avb_subscriber_id": 561505
+                }
+        ]
 		</pre>
         </div>
     </div></div>
 </div></div>
 
-<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-POST-customers"></a>HTTP Method: POST /customers</h5>
+<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-POST-newsletter"></a>HTTP Method: POST /newsletter</h5>
 
-<p><b>Description</b>: Allows you to create a new customer.<br/>
+<p><b>Description</b>: Allows you to create a new subscriber.<br/>
     <b>Authentication</b>: Admin<br/>
-    <b>Default Format</b>: XML<br/>
+    <b>Default Format</b>: JSON<br/>
     <b>Parameters</b>:</p>
 
 
@@ -156,109 +215,86 @@ JSON responses on this page contributed by Tim Reynolds
     <th> Example Value </th>
 </tr>
 <tr>
-    <td> firstname </td>
+    <td> first_name </td>
     <td> The customer first name </td>
-    <td> required </td>
+    <td> optional </td>
     <td> string </td>
     <td> John </td>
 </tr>
 <tr>
-    <td> lastname </td>
-    <td> The customer last name </td>
-    <td> required </td>
+    <td> last_name </td>
+    <td> The subscriber last name </td>
+    <td> optional </td>
     <td> string </td>
     <td> Doe </td>
 </tr>
 <tr>
     <td> email </td>
-    <td> The customer email address </td>
+    <td> The subscriber email address </td>
     <td> required </td>
     <td> string </td>
     <td> johny@example.com </td>
 </tr>
 <tr>
-    <td> password </td>
-    <td> The customer password. The password must contain minimum 7 characters </td>
+    <td> store_code </td>
+    <td> AVBID associated with merchant </td>
     <td> required </td>
     <td> string </td>
-    <td> 123123q </td>
+    <td> protest1 </td>
 </tr>
 <tr>
-    <td> website_id </td>
-    <td> Website ID </td>
-    <td> required </td>
-    <td> int </td>
-    <td> 1 </td>
-</tr>
-<tr>
-    <td> group_id </td>
-    <td> Customer group ID </td>
-    <td> required </td>
-    <td> int </td>
-    <td> 1 </td>
-</tr>
-<tr>
-    <td> disable_auto_group_change </td>
-    <td> Defines whether the automatic group change for the customer will be disabled </td>
+    <td> external_subscriber_id </td>
+    <td> subscriber id associated with third party app </td>
     <td> optional </td>
     <td> int </td>
-    <td> 0 </td>
-</tr>
-<tr>
-    <td> prefix<br class="atl-forced-newline" /> </td>
-    <td> Customer prefix </td>
-    <td> optional<br class="atl-forced-newline" /> </td>
-    <td> string </td>
-    <td> Mr. </td>
-</tr>
-<tr>
-    <td> middlename<br class="atl-forced-newline" /> </td>
-    <td> Customer middle name or initial </td>
-    <td> optional<br class="atl-forced-newline" /> </td>
-    <td> string </td>
-    <td> R. </td>
-</tr>
-<tr>
-    <td> suffix<br class="atl-forced-newline" /> </td>
-    <td> Customer suffix </td>
-    <td> optional<br class="atl-forced-newline" /> </td>
-    <td> string </td>
-    <td> Sr. </td>
-</tr>
-<tr>
-    <td> taxvat<br class="atl-forced-newline" /> </td>
-    <td> Customer Tax or VAT number </td>
-    <td> optional<br class="atl-forced-newline" /> </td>
-    <td> string </td>
-    <td> GB999&nbsp;9999&nbsp;73<br class="atl-forced-newline" /> </td>
+    <td> 1 </td>
 </tr>
 </tbody></table>
 
 
-<p><b>Notes</b>: The list of parameters may change depending on the attributes settings in <b>Customers</b> &gt; <b>Attributes</b> &gt; <b>Manage Customer Attributes</b> page in Openmage Admin Panel. For example, a required status of the <b>middlename</b> attribute (Middle Name/Initial) may be changed to 'YES". Please note that managing customer attributes is available only in Openmage Enterprise Edition.</p>
-
 <p><b>Example</b>:</p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/customers</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/newsletter</td></tr></table></div>
 
 <p><b>Request Body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
     <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
         <div>
-		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
-    &lt;firstname&gt;Earl&lt;/firstname&gt;
-    &lt;lastname&gt;Hickey&lt;/lastname&gt;
-    &lt;password&gt;123123q&lt;/password&gt;
-    &lt;email&gt;earl@example.com&lt;/email&gt;
-    &lt;website_id&gt;1&lt;/website_id&gt;
-    &lt;group_id&gt;1&lt;/group_id&gt;
-&lt;/magento_api&gt;</pre>
+		<pre class="theme: Default; brush: json; gutter: false">
+            {
+                "email": "john@example.net",
+                "store_code": "protest1",
+                "first_name": "John",
+                "last_name": "Doe",
+                "external_subscriber_id": 1
+            }
+        </pre>
         </div>
     </div></div>
 </div></div>
 
 <p><b>Response</b>:<br/>
-    If the customer was created successfully, we receive <b>Response HTTP Code</b> = 200, empty <b>Response Body</b> and <b>Location</b> header like '/api/rest/customers/555' where '555' - an entity id of the new customer.</p>
+    If the subscriber was created successfully, we receive <b>Response HTTP Code</b> = 201, and a Response body with the subscriber information.</p>
+
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+    <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+        <div>
+		<pre class="theme: Default; brush: json; gutter: false">
+           {
+                "email": "testesataestsd@example.net",
+                "first_name": "test",
+                "last_name": "test last",
+                "store_code": "protest1",
+                "customer_id": 0,
+                "message": "The subscription has been saved.",
+                "status": "subscribed",
+                "external_subscriber_id": 2,
+                "external_sync_status": 1,
+                "avb_subscriber_id": "561505"
+            }
+        </pre>
+        </div>
+    </div></div>
+</div></div>
 
 <h5><a name="RESTAPI-Resource-Customers-HTTPMethod-PUT-customers"></a>HTTP Method: PUT /customers</h5>
 
