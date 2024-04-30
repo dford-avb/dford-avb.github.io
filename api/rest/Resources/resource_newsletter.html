@@ -441,22 +441,10 @@ title: Newsletter & Subscribers
         <div>
 		<pre class="theme: Default; brush: json; gutter: false">
 {
-    "email": "john@example.net",
-    "first_name": "John",
-    "last_name": "Doe",
-    "store_code": "protest1",
-    "customer_id": 0,
-    "message": "The subscription has been updated to unsubscribed.",
-    "status": "unsubscribed",
-    "external_subscriber_id": 2,
-    "external_sync_status": 1,
-    "avb_subscriber_id": "561505"
+    "message": "Subscription has been removed."
 }
         </pre>
         </div>
-        <p><b>Note*: if external_subscriber_id is supplied, external_sync_status will automatically be applied, as the subscriber information is being provided through the external source.</b></p>
-        <p><b>Note**: avb_subscriber_id is a primary auto-increment key</b></p>
-        <p><b>Note***: If subscriber is existing customer, customer_id will automatically be linked from customer table</b></p>
     </div></div>
 </div></div>
 
@@ -475,14 +463,14 @@ title: Newsletter & Subscribers
 <p><b>Authentication</b>: Admin<br/>
     <b>Default Format</b>: JSON<br/>
     <b>Parameters</b>:<br/>
-    <em>email</em><em>store</em></p>
+    <em>email</em><br/><em>store</em></p>
 
 <p><b>Example</b>:</p>
 <div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/newsletter/email/john@example.net/store/protest1</td></tr></table></div>
 
 <p><b>Response Body</b>:</p>
 <p><b>response example: json</b></p>
-<div class='panelmacro'><table class='infomacro'><tr><td>get http://openmagehost/api/rest/newsletter/email/:email/store/protest1</td></tr></table></div>
+<div class='panelmacro'><table class='infomacro'><tr><td>GET http://openmagehost/api/rest/newsletter/email/john@example.com/store/protest1</td></tr></table></div>
 
 <p><b>response body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelcontent">
