@@ -11,24 +11,19 @@ title: Newsletter & Subscribers
                     <li><a href="#RESTAPI-Resource-Newsletter-HTTPMethod-GET-newsletter--subscribers">HTTP Method: GET /newsletter/subscribers</a></li>
                 </ul>
         </ul>
-
-    </li>
-    <li><a href='#RESTAPI-Resource-Newsletter-RESTAPI-Newsletter'>REST API: Newsletter</a>
-        <ul>
-            <li><a href='#RESTAPI-Newsletter-Newsletter-URI--newsletter--email'>URI: /newsletter/email/:email</a>
-                <ul>
-                    <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-GET-newsletter--email'>HTTP Method: GET /newsletter/email/:email</a></li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li><a href='#RESTAPI-Resource-Newsletter-RESTAPI-Newsletter'>REST API: Newsletter</a>
         <ul>
             <li><a href='#RESTAPI-Resource-Newsletter-URI--newsletter'>URI: /newsletter</a>
                 <ul>
                     <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-POST-newsletter'>HTTP Method: POST /newsletter</a></li>
                     <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-PUT-newsletter'>HTTP Method: PUT /newsletter</a></li>
                     <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-DELETE-newsletter'>HTTP Method: DELETE /newsletter</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li><a href='#RESTAPI-Newsletter-Newsletter-URI--newsletter--email'>URI: /newsletter/email/:email/store/:store</a>
+                <ul>
+                    <li><a href='#RESTAPI-Resource-Newsletter-HTTPMethod-GET-newsletter--email'>HTTP Method: GET /newsletter/email/:email/store/:store</a></li>
                 </ul>
             </li>
         </ul>
@@ -57,8 +52,8 @@ title: Newsletter & Subscribers
 <p><b>Example</b></p>
 <div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/newsletter/subscribers?code=protest1</td></tr></table></div>
 
-<p>CUSTOM: adding parameter <pre>code</pre> with a store code will retrieve list of customers for specific store.</p>
-<p>Without store code, the customers endpoint will return the first 100 records. Using filters such as <pre>page</pre> and <pre>limit</pre> will allow to paginate through customers</p>
+<p>CUSTOM: adding parameter <pre>code</pre> with a store code will retrieve list of subscribers for specific store.</p>
+<p>Without store code, the subscribers endpoint will return the first 100 records. Using filters such as <pre>page</pre> and <pre>limit</pre> will allow to paginate through subscribers</p>
 <p>Only pagination filters will work with this endpoint, Attribute filters will not work.</p>
 
 
@@ -71,128 +66,128 @@ title: Newsletter & Subscribers
     <div class="code panel" style="border-width: 1px;"><div class="codecontent panelcontent">
         <div>
 		<pre class="theme: default; brush: json; gutter: false">
-            [
-                {
-                    "email": "cpw@test.test",
-                    "first_name": null,
-                    "last_name": null,
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "subscribed",
-                    "mailmunch_subscriber_id": null,
-                    "mailmunch_sync_status": 0,
-                    "avb_subscriber_id": 523836
-                },
-                {
-                    "email": "good@email.com",
-                    "first_name": null,
-                    "last_name": null,
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "unsubscribed",
-                    "mailmunch_subscriber_id": null,
-                    "mailmunch_sync_status": 0,
-                    "avb_subscriber_id": 523859
-                },
-                {
-                    "email": "mailchimp.avb@gmail.com",
-                    "first_name": null,
-                    "last_name": null,
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "subscribed",
-                    "mailmunch_subscriber_id": null,
-                    "mailmunch_sync_status": 0,
-                    "avb_subscriber_id": 524041
-                },
-                {
-                    "email": "alden@test.test",
-                    "first_name": null,
-                    "last_name": null,
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "subscribed",
-                    "mailmunch_subscriber_id": null,
-                    "mailmunch_sync_status": 0,
-                    "avb_subscriber_id": 524959
-                },
-                {
-                    "email": "test@test.net",
-                    "first_name": null,
-                    "last_name": null,
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "subscribed",
-                    "mailmunch_subscriber_id": null,
-                    "mailmunch_sync_status": 0,
-                    "avb_subscriber_id": 561500
-                },
-                {
-                    "email": "xdz@ddfd.com",
-                    "first_name": "test",
-                    "last_name": "test last",
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "subscribed",
-                    "mailmunch_subscriber_id": 1,
-                    "mailmunch_sync_status": 0,
-                    "avb_subscriber_id": 561501
-                },
-                {
-                    "email": "xddddz@ddfd.com",
-                    "first_name": null,
-                    "last_name": null,
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "subscribed",
-                    "mailmunch_subscriber_id": null,
-                    "mailmunch_sync_status": 0,
-                    "avb_subscriber_id": 561502
-                },
-                {
-                    "email": "testesataestfrdasfasd@example.net",
-                    "first_name": "test",
-                    "last_name": "test last",
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "subscribed",
-                    "mailmunch_subscriber_id": 2,
-                    "mailmunch_sync_status": 1,
-                    "avb_subscriber_id": 561503
-                },
-                {
-                    "email": "testesataestffasd@example.net",
-                    "first_name": "test",
-                    "last_name": "test last",
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "subscribed",
-                    "mailmunch_subscriber_id": 2,
-                    "mailmunch_sync_status": 1,
-                    "avb_subscriber_id": 561504
-                },
-                {
-                    "email": "testesataestsd@example.net",
-                    "first_name": "test",
-                    "last_name": "test last",
-                    "store_code": "protest1",
-                    "customer_id": 0,
-                    "message": null,
-                    "status": "subscribed",
-                    "mailmunch_subscriber_id": 2,
-                    "mailmunch_sync_status": 1,
-                    "avb_subscriber_id": 561505
-                }
-        ]
+[
+    {
+        "email": "cpw@test.test",
+        "first_name": null,
+        "last_name": null,
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "subscribed",
+        "mailmunch_subscriber_id": null,
+        "mailmunch_sync_status": 0,
+        "avb_subscriber_id": 523836
+    },
+    {
+        "email": "good@email.com",
+        "first_name": null,
+        "last_name": null,
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "unsubscribed",
+        "mailmunch_subscriber_id": null,
+        "mailmunch_sync_status": 0,
+        "avb_subscriber_id": 523859
+    },
+    {
+        "email": "mailchimp.avb@gmail.com",
+        "first_name": null,
+        "last_name": null,
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "subscribed",
+        "mailmunch_subscriber_id": null,
+        "mailmunch_sync_status": 0,
+        "avb_subscriber_id": 524041
+    },
+    {
+        "email": "alden@test.test",
+        "first_name": null,
+        "last_name": null,
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "subscribed",
+        "mailmunch_subscriber_id": null,
+        "mailmunch_sync_status": 0,
+        "avb_subscriber_id": 524959
+    },
+    {
+        "email": "test@test.net",
+        "first_name": null,
+        "last_name": null,
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "subscribed",
+        "mailmunch_subscriber_id": null,
+        "mailmunch_sync_status": 0,
+        "avb_subscriber_id": 561500
+    },
+    {
+        "email": "xdz@ddfd.com",
+        "first_name": "test",
+        "last_name": "test last",
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "subscribed",
+        "mailmunch_subscriber_id": 1,
+        "mailmunch_sync_status": 0,
+        "avb_subscriber_id": 561501
+    },
+    {
+        "email": "xddddz@ddfd.com",
+        "first_name": null,
+        "last_name": null,
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "subscribed",
+        "mailmunch_subscriber_id": null,
+        "mailmunch_sync_status": 0,
+        "avb_subscriber_id": 561502
+    },
+    {
+        "email": "testesataestfrdasfasd@example.net",
+        "first_name": "test",
+        "last_name": "test last",
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "subscribed",
+        "mailmunch_subscriber_id": 2,
+        "mailmunch_sync_status": 1,
+        "avb_subscriber_id": 561503
+    },
+    {
+        "email": "testesataestffasd@example.net",
+        "first_name": "test",
+        "last_name": "test last",
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "subscribed",
+        "mailmunch_subscriber_id": 2,
+        "mailmunch_sync_status": 1,
+        "avb_subscriber_id": 561504
+    },
+    {
+        "email": "testesataestsd@example.net",
+        "first_name": "test",
+        "last_name": "test last",
+        "store_code": "protest1",
+        "customer_id": 0,
+        "message": null,
+        "status": "subscribed",
+        "mailmunch_subscriber_id": 2,
+        "mailmunch_sync_status": 1,
+        "avb_subscriber_id": 561505
+    }
+]
 		</pre>
         </div>
     </div></div>
@@ -260,13 +255,13 @@ title: Newsletter & Subscribers
     <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
         <div>
 		<pre class="theme: Default; brush: json; gutter: false">
-            {
-                "email": "john@example.net",
-                "store_code": "protest1",
-                "first_name": "John",
-                "last_name": "Doe",
-                "external_subscriber_id": 1
-            }
+{
+    "email": "john@example.net",
+    "store_code": "protest1",
+    "first_name": "John",
+    "last_name": "Doe",
+    "external_subscriber_id": 1
+}
         </pre>
         </div>
     </div></div>
@@ -281,18 +276,18 @@ title: Newsletter & Subscribers
     <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
         <div>
 		<pre class="theme: Default; brush: json; gutter: false">
-           {
-                "email": "testesataestsd@example.net",
-                "first_name": "test",
-                "last_name": "test last",
-                "store_code": "protest1",
-                "customer_id": 0,
-                "message": "The subscription has been saved.",
-                "status": "subscribed",
-                "external_subscriber_id": 2,
-                "external_sync_status": 1,
-                "avb_subscriber_id": "561505"
-            }
+{
+    "email": "testesataestsd@example.net",
+    "first_name": "test",
+    "last_name": "test last",
+    "store_code": "protest1",
+    "customer_id": 0,
+    "message": "The subscription has been saved.",
+    "status": "subscribed",
+    "external_subscriber_id": 2,
+    "external_sync_status": 1,
+    "avb_subscriber_id": "561505"
+}
         </pre>
         </div>
         <p><b>Note*: if external_subscriber_id is supplied, external_sync_status will automatically be applied, as the subscriber information is being provided through the external source.</b></p>
@@ -363,21 +358,21 @@ title: Newsletter & Subscribers
 
 
 <p><b>Example</b>:</p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/newsletter</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://openmagehost/api/rest/newsletter</td></tr></table></div>
 
 <p><b>Request Body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
     <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
         <div>
 		<pre class="theme: Default; brush: json; gutter: false">
-            {
-                "email": "john@example.net",
-                "store_code": "protest1",
-                "first_name": "John",
-                "last_name": "Doe",
-                "external_subscriber_id": 2
-                "is_subscribed": 1
-            }
+{
+    "email": "john@example.net",
+    "store_code": "protest1",
+    "first_name": "John",
+    "last_name": "Doe",
+    "external_subscriber_id": 2
+    "is_subscribed": 1
+}
         </pre>
         </div>
     </div></div>
@@ -392,18 +387,18 @@ title: Newsletter & Subscribers
     <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
         <div>
 		<pre class="theme: Default; brush: json; gutter: false">
-           {
-                "email": "testesataestsd@example.net",
-                "first_name": "test",
-                "last_name": "test last",
-                "store_code": "protest1",
-                "customer_id": 0,
-                "message": "The subscription has been updated to subscribed.",
-                "status": "subscribed",
-                "external_subscriber_id": 2,
-                "external_sync_status": 1,
-                "avb_subscriber_id": "561505"
-            }
+{
+    "email": "testesataestsd@example.net",
+    "first_name": "test",
+    "last_name": "test last",
+    "store_code": "protest1",
+    "customer_id": 0,
+    "message": "The subscription has been updated to subscribed.",
+    "status": "subscribed",
+    "external_subscriber_id": 2,
+    "external_sync_status": 1,
+    "avb_subscriber_id": "561505"
+}
         </pre>
         </div>
         <p><b>Note*: if external_subscriber_id is supplied, external_sync_status will automatically be applied, as the subscriber information is being provided through the external source.</b></p>
@@ -418,7 +413,6 @@ title: Newsletter & Subscribers
     <b>Authentication</b>: Admin<br/>
     <b>Default Format</b>: JSON<br/>
     <b>Parameters</b>:</p>
-
 
 <table><tbody>
 <tr>
@@ -435,6 +429,13 @@ title: Newsletter & Subscribers
     <td> string </td>
     <td> johny@example.com </td>
 </tr>
+<tr>
+    <td> store_code </td>
+    <td> AVBID associated with merchant </td>
+    <td> required </td>
+    <td> string </td>
+    <td> protest1 </td>
+</tr>
 </tbody></table>
 
 
@@ -448,6 +449,7 @@ title: Newsletter & Subscribers
 		<pre class="theme: Default; brush: json; gutter: false">
             {
                 "email": "john@example.net",
+                "store_code": "protest1"
             }
         </pre>
         </div>
@@ -455,26 +457,25 @@ title: Newsletter & Subscribers
 
 </div></div>
 
-
 <p><b>Response</b>:<br/>
-    If the subscriber was deleted successfully, we receive <b>Response HTTP Code</b> = 201, and a Response body with the subscriber information.</p>
+    If the subscriber was unsubscribed successfully, we receive <b>Response HTTP Code</b> = 201, and a Response body with the subscriber information.</p>
 
 <div class="panel" style="border-width: 1px;"><div class="panelContent">
     <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
         <div>
 		<pre class="theme: Default; brush: json; gutter: false">
-           {
-                "email": "john@example.net",
-                "first_name": "John",
-                "last_name": "Doe",
-                "store_code": "protest1",
-                "customer_id": 0,
-                "message": "The subscription has been updated to unsubscribed.",
-                "status": "unsubscribed",
-                "external_subscriber_id": 2,
-                "external_sync_status": 1,
-                "avb_subscriber_id": "561505"
-            }
+{
+    "email": "john@example.net",
+    "first_name": "John",
+    "last_name": "Doe",
+    "store_code": "protest1",
+    "customer_id": 0,
+    "message": "The subscription has been updated to unsubscribed.",
+    "status": "unsubscribed",
+    "external_subscriber_id": 2,
+    "external_sync_status": 1,
+    "avb_subscriber_id": "561505"
+}
         </pre>
         </div>
         <p><b>Note*: if external_subscriber_id is supplied, external_sync_status will automatically be applied, as the subscriber information is being provided through the external source.</b></p>
@@ -484,50 +485,28 @@ title: Newsletter & Subscribers
 </div></div>
 
 
-<h3><a name="RESTAPI-Resource-Customers-RESTAPI-Customer"></a>REST API: Customer</h3>
+<h4><a name="RESTAPI-Resource-Newsletter-URI--newsletter--email"></a>URI: /newsletter/email/:email/store/:store</h4>
 
-<h4><a name="RESTAPI-Resource-Customers-URI--customers--customerId"></a>URI: /customers/:customerId</h4>
+<p>Allows you to retrieve an existing subscriber.</p>
 
-<p>Allows you to manage existing customers.</p>
-
-<p><b>URL Structure</b>: http://openmagehost/api/rest/customers/:customerId<br/>
+<p><b>URL Structure</b>: http://openmagehost/api/rest/newsletter/email/:email/store/:store<br/>
     <b>Version</b>: 1</p>
 
-<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-GET-customers--customerId"></a>HTTP Method: GET /customers/:customerId</h5>
+<h5><a name="RESTAPI-Resource-Newsletter-HTTPMethod-GET-newsletter--email"></a>HTTP Method: GET /newsletter/email/:email/store/:store</h5>
 
-<p><b>Description</b>: Allows you to retrieve information on an existing customer.<br/>
-    <b>Notes:</b>: The list of attributes that will be returned for customers is configured in the Openmage Admin Panel. The Customer user type has access only to his/her own information. Also, Admin can add additional non-system customer attributes by selecting <b>Customers</b> &gt; <b>Attributes</b> &gt; <b>Manage Customer Attributes</b>. If these attributes are set as visible on frontend, they will be returned in the response. Also, custom attributes will be returned in the response only after the customer information is updated in the Openmage Admin Panel or the specified custom attribute is updated via API (see the PUT method below). Please note that managing customer attributes is available only in Openmage Enterprise Edition.</p>
+<p><b>Description</b>: Allows you to retrieve information on an existing subscriber.<br/>
 
-<p><b>Authentication</b>: Admin, Customer<br/>
-    <b>Default Format</b>: XML<br/>
+<p><b>Authentication</b>: Admin<br/>
+    <b>Default Format</b>: JSON<br/>
     <b>Parameters</b>:<br/>
-    <em>No Parameters</em></p>
+    <em>email</em><em>store</em></p>
 
 <p><b>Example</b>:</p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/customers/2</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET http://openmagehost/api/rest/newsletter/email/john@example.net/store/protest1</td></tr></table></div>
 
 <p><b>Response Body</b>:</p>
-<div class="panel" style="border-width: 1px;"><div class="panelContent">
-    <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
-        <div>
-		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
-  &lt;entity_id&gt;2&lt;/entity_id&gt;
-  &lt;website_id&gt;1&lt;/website_id&gt;
-  &lt;email&gt;test@example.com&lt;/email&gt;
-  &lt;group_id&gt;1&lt;/group_id&gt;
-  &lt;created_at&gt;2012-03-22 14:15:54&lt;/created_at&gt;
-  &lt;disable_auto_group_change&gt;1&lt;/disable_auto_group_change&gt;
-  &lt;created_in&gt;Default Store View&lt;/created_in&gt;
-  &lt;firstname&gt;john&lt;/firstname&gt;
-  &lt;lastname&gt;Doe&lt;/lastname&gt;
-  &lt;last_logged_in&gt;2012-03-22 14:15:56&lt;/last_logged_in&gt;
-&lt;/magento_api&gt;</pre>
-        </div>
-    </div></div>
-</div></div>
 <p><b>response example: json</b></p>
-<div class='panelmacro'><table class='infomacro'><tr><td>get <a href="http://openmagehost/api/rest/customers">http://openmagehost/api/rest/customers/141</a></td></tr></table></div>
+<div class='panelmacro'><table class='infomacro'><tr><td>get http://openmagehost/api/rest/newsletter/email/:email/store/protest1</td></tr></table></div>
 
 <p><b>response body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelcontent">
@@ -536,64 +515,22 @@ title: Newsletter & Subscribers
 		<pre class="theme: default; brush: java; gutter: false">
 
 {
-  "entity_id": "2",
-  "website_id": "1",
-  "email": "test@example.com",
-  "group_id": "1",
-  "created_at": "2012-03-22 14:15:54",
-  "disable_auto_group_change": "1",
-  "created_in": "English",
-  "firstname": "john",
-  "lastname": "Doe"
+    "email": "david.ford@avb.net",
+    "first_name": "Test",
+    "last_name": "Test",
+    "store_code": "protest1",
+    "customer_id": 146622,
+    "message": null,
+    "status": "subscribed",
+    "external_subscriber_id": null,
+    "external_sync_status": 0,
+    "avb_subscriber_id": 394284
 }
 		</pre>
         </div>
     </div></div>
 </div></div>
-<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-POST-customers--customerId"></a>HTTP Method: POST /customers/:customerId</h5>
 
-<p><b>Description</b>: Not allowed.</p>
-
-<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-PUT-customers--customerId"></a>HTTP Method: PUT /customers/:customerId</h5>
-
-<p><b>Description</b>: Allows you to update an existing customer.<br/>
-    <b>Notes</b>: The list of attributes that will be updated for customer is configured in the Openmage Admin Panel. The Customer user type has access only to his/her own information. </p>
-
-<p><b>Authentication</b>: Admin, Customer<br/>
-    <b>Default Format</b>: XML<br/>
-    <b>Parameters</b>:<br/>
-    You must specify only those parameters which you want to update. Parameters that are not defined in the request body will preserve the previous values. The website_id and created_in attributes are not allowed for updating.</p>
-
-<p><b>Example</b>:</p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>PUT http://openmagehost/api/rest/customers/2</td></tr></table></div>
-
-<p><b>Request Body</b>:</p>
-<div class="panel" style="border-width: 1px;"><div class="panelContent">
-    <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
-        <div>
-		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api>;
-    &lt;firstname&gt;Earl&lt;/firstname&gt;
-    &lt;lastname&gt;Hickey&lt;/lastname&gt;
-    &lt;email&gt;customerss@example.com&lt;/email&gt;
-    &lt;group_id&gt;1&lt;/group_id&gt;
-&lt;/magento_api&gt;</pre>
-        </div>
-    </div></div>
-</div></div>
-
-<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-DELETE-customers--customerId"></a>HTTP Method: DELETE /customers/:customerId</h5>
-
-<p><b>Description</b>: Allows you to delete an existing customer.<br/>
-    <b>Notes</b>: Admin only can delete a customer.</p>
-
-<p><b>Authentication</b>: Admin<br/>
-    <b>Default Format</b>: XML<br/>
-    <b>Parameters</b>:<br/>
-    <em>No Parameters</em></p>
-
-<p><b>Example</b>:</p>
-<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://openmagehost/api/rest/customers/2</td></tr></table></div>
 
 
 
