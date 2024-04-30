@@ -198,7 +198,7 @@ title: Newsletter & Subscribers
     </div></div>
 </div></div>
 
-<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-POST-newsletter"></a>HTTP Method: POST /newsletter</h5>
+<h5><a name="RESTAPI-Resource-Newsletter-HTTPMethod-POST-newsletter"></a>HTTP Method: POST /newsletter</h5>
 
 <p><b>Description</b>: Allows you to create a new subscriber.<br/>
     <b>Authentication</b>: Admin<br/>
@@ -270,7 +270,9 @@ title: Newsletter & Subscribers
         </pre>
         </div>
     </div></div>
+
 </div></div>
+
 
 <p><b>Response</b>:<br/>
     If the subscriber was created successfully, we receive <b>Response HTTP Code</b> = 201, and a Response body with the subscriber information.</p>
@@ -293,16 +295,194 @@ title: Newsletter & Subscribers
             }
         </pre>
         </div>
+        <p><b>Note*: if external_subscriber_id is supplied, external_sync_status will automatically be applied, as the subscriber information is being provided through the external source.</b></p>
+        <p><b>Note**: avb_subscriber_id is a primary auto-increment key</b></p>
+        <p><b>Note***: If subscriber is existing customer, customer_id will automatically be linked from customer table</b></p>
     </div></div>
 </div></div>
 
-<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-PUT-customers"></a>HTTP Method: PUT /customers</h5>
+<h5><a name="RESTAPI-Resource-Newsletter-HTTPMethod-PUT-newsletter"></a>HTTP Method: PUT /newsletter</h5>
 
-<p><b>Description</b>: Not allowed</p>
+<p><b>Description</b>: Allows you to update an existing subscriber.<br/>
+    <b>Authentication</b>: Admin<br/>
+    <b>Default Format</b>: JSON<br/>
+    <b>Parameters</b>:</p>
 
-<h5><a name="RESTAPI-Resource-Customers-HTTPMethod-DELETE-customers"></a>HTTP Method: DELETE /customers</h5>
 
-<p><b>Description</b>: Not allowed</p>
+<table><tbody>
+<tr>
+    <th> Name </th>
+    <th> Description </th>
+    <th> Required </th>
+    <th> Type </th>
+    <th> Example Value </th>
+</tr>
+<tr>
+    <td> first_name </td>
+    <td> The customer first name </td>
+    <td> optional </td>
+    <td> string </td>
+    <td> John </td>
+</tr>
+<tr>
+    <td> last_name </td>
+    <td> The subscriber last name </td>
+    <td> optional </td>
+    <td> string </td>
+    <td> Doe </td>
+</tr>
+<tr>
+    <td> email </td>
+    <td> The subscriber email address </td>
+    <td> required </td>
+    <td> string </td>
+    <td> johny@example.com </td>
+</tr>
+<tr>
+    <td> store_code </td>
+    <td> AVBID associated with merchant </td>
+    <td> required </td>
+    <td> string </td>
+    <td> protest1 </td>
+</tr>
+<tr>
+    <td> is_subscribed </td>
+    <td> change status of subscriber </td>
+    <td> optional </td>
+    <td> int </td>
+    <td> 1 </td>
+</tr>
+<tr>
+    <td> external_subscriber_id </td>
+    <td> subscriber id associated with third party app </td>
+    <td> optional </td>
+    <td> int </td>
+    <td> 1 </td>
+</tr>
+</tbody></table>
+
+
+<p><b>Example</b>:</p>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST http://openmagehost/api/rest/newsletter</td></tr></table></div>
+
+<p><b>Request Body</b>:</p>
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+    <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+        <div>
+		<pre class="theme: Default; brush: json; gutter: false">
+            {
+                "email": "john@example.net",
+                "store_code": "protest1",
+                "first_name": "John",
+                "last_name": "Doe",
+                "external_subscriber_id": 2
+                "is_subscribed": 1
+            }
+        </pre>
+        </div>
+    </div></div>
+
+</div></div>
+
+
+<p><b>Response</b>:<br/>
+    If the subscriber was updated successfully, we receive <b>Response HTTP Code</b> = 201, and a Response body with the subscriber information.</p>
+
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+    <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+        <div>
+		<pre class="theme: Default; brush: json; gutter: false">
+           {
+                "email": "testesataestsd@example.net",
+                "first_name": "test",
+                "last_name": "test last",
+                "store_code": "protest1",
+                "customer_id": 0,
+                "message": "The subscription has been updated to subscribed.",
+                "status": "subscribed",
+                "external_subscriber_id": 2,
+                "external_sync_status": 1,
+                "avb_subscriber_id": "561505"
+            }
+        </pre>
+        </div>
+        <p><b>Note*: if external_subscriber_id is supplied, external_sync_status will automatically be applied, as the subscriber information is being provided through the external source.</b></p>
+        <p><b>Note**: avb_subscriber_id is a primary auto-increment key</b></p>
+        <p><b>Note***: If subscriber is existing customer, customer_id will automatically be linked from customer table</b></p>
+    </div></div>
+</div></div>
+
+<h5><a name="RESTAPI-Resource-Newletter-HTTPMethod-DELETE-newsletter"></a>HTTP Method: DELETE /newsletter</h5>
+
+<p><b>Description</b>: Allows you to unsubscribe an existing subscriber. (Note this will not delete record)<br/>
+    <b>Authentication</b>: Admin<br/>
+    <b>Default Format</b>: JSON<br/>
+    <b>Parameters</b>:</p>
+
+
+<table><tbody>
+<tr>
+    <th> Name </th>
+    <th> Description </th>
+    <th> Required </th>
+    <th> Type </th>
+    <th> Example Value </th>
+</tr>
+<tr>
+    <td> email </td>
+    <td> The subscriber email address </td>
+    <td> required </td>
+    <td> string </td>
+    <td> johny@example.com </td>
+</tr>
+</tbody></table>
+
+
+<p><b>Example</b>:</p>
+<div class='panelMacro'><table class='infoMacro'><tr><td>DELETE http://openmagehost/api/rest/newsletter</td></tr></table></div>
+
+<p><b>Request Body</b>:</p>
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+    <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+        <div>
+		<pre class="theme: Default; brush: json; gutter: false">
+            {
+                "email": "john@example.net",
+            }
+        </pre>
+        </div>
+    </div></div>
+
+</div></div>
+
+
+<p><b>Response</b>:<br/>
+    If the subscriber was deleted successfully, we receive <b>Response HTTP Code</b> = 201, and a Response body with the subscriber information.</p>
+
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+    <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+        <div>
+		<pre class="theme: Default; brush: json; gutter: false">
+           {
+                "email": "john@example.net",
+                "first_name": "John",
+                "last_name": "Doe",
+                "store_code": "protest1",
+                "customer_id": 0,
+                "message": "The subscription has been updated to unsubscribed.",
+                "status": "unsubscribed",
+                "external_subscriber_id": 2,
+                "external_sync_status": 1,
+                "avb_subscriber_id": "561505"
+            }
+        </pre>
+        </div>
+        <p><b>Note*: if external_subscriber_id is supplied, external_sync_status will automatically be applied, as the subscriber information is being provided through the external source.</b></p>
+        <p><b>Note**: avb_subscriber_id is a primary auto-increment key</b></p>
+        <p><b>Note***: If subscriber is existing customer, customer_id will automatically be linked from customer table</b></p>
+    </div></div>
+</div></div>
+
 
 <h3><a name="RESTAPI-Resource-Customers-RESTAPI-Customer"></a>REST API: Customer</h3>
 
@@ -392,7 +572,7 @@ title: Newsletter & Subscribers
     <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
         <div>
 		<pre class="theme: Default; brush: xml; gutter: false">&lt;?xml version="1.0"?&gt;
-&lt;magento_api&gt;
+&lt;magento_api>;
     &lt;firstname&gt;Earl&lt;/firstname&gt;
     &lt;lastname&gt;Hickey&lt;/lastname&gt;
     &lt;email&gt;customerss@example.com&lt;/email&gt;
