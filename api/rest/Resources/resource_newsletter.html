@@ -56,6 +56,8 @@ title: Newsletter & Subscribers
 <p>Without store code, the subscribers endpoint will return the first 100 records. Using filters such as <pre>page</pre> and <pre>limit</pre> will allow to paginate through subscribers</p>
 <p>Only pagination filters will work with this endpoint, Attribute filters will not work.</p>
 
+<p>Response will include pagination information.</p>
+
 
 <p><b>Response Body:</b></p>
 <p><b>response example: json</b></p>
@@ -162,6 +164,14 @@ title: Newsletter & Subscribers
         "external_subscriber_id": 2,
         "external_sync_status": 1,
         "avb_subscriber_id": 561505
+    },
+    {
+        "pagination": {
+            "current_page": 1,
+            "page_size": 8,
+            "total_pages": 1,
+            "total_count": 8
+        }
     }
 ]
 		</pre>

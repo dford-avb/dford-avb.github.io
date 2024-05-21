@@ -95,6 +95,8 @@ JSON responses on this page contributed by Tim Reynolds
 <p><b>response example: json</b></p>
 <div class='panelmacro'><table class='infomacro'><tr><td>get http://openmagehost/api/rest/customers</td></tr></table></div>
 
+<p>Response will include pagination information</p>
+
 <p><b>response body</b>:</p>
 <div class="panel" style="border-width: 1px;"><div class="panelcontent">
 <div class="code panel" style="border-width: 1px;"><div class="codecontent panelcontent">
@@ -137,7 +139,15 @@ JSON responses on this page contributed by Tim Reynolds
     "reward_update_notification": "1",
     "reward_warning_notification": "1",
     "gender": "1"
+  },
+  {
+    "pagination": {
+      "current_page": 1,
+      "page_size": 8,
+      "total_pages": 1,
+      "total_count": 8
   }
+}
 		</pre>
 		</div>
 </div></div>
