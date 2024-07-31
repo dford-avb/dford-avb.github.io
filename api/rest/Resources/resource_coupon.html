@@ -1,0 +1,824 @@
+---
+layout: m1x_rest
+title: Sales Rule & Coupon
+---
+
+### Sales Rule API
+
+<ul class="introduction-menu">
+  <li><a href="#RESTAPI-Resource-Salesrule-RESTAPI-Salesrule">REST API: Sales Rules</a>
+    <ul>
+      <li><a href='#RESTAPI-Resource-Salesrule-URI--Salesrule'>URI: /salesrule</a>
+        <ul>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-GET-Salesrule">HTTP Method: GET /salesrule</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-GET-Salesrule">HTTP Method: GET /salesrule/store/:store</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-GET-Salesrule">HTTP Method: GET /salesrule/12345/store/:store</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-POST-Salesrule">HTTP Method: POST /salesrule</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-PUT-salesrule">HTTP Method: PUT /salesrule</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-DELETE-salesrule">HTTP Method: DELETE NOT IMPLEMENTED</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><a href='#RESTAPI-Resource-Salesrule-URI--Coupons'>URI: /mailmunch/coupons</a>
+        <ul>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-GET-Coupons">HTTP Method: GET /mailmunch/coupons</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-GET-Coupons">HTTP Method: GET /mailmunch/coupons/store/:store</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-GET-Coupons-coupon_code">HTTP Method: GET /mailmunch/coupons/:coupon_code</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-GET-Coupons-rule_id">HTTP METHOD: GET /mailmunch/coupons?rule_id=12345</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-POST-Coupons">HTTP Method: POST /mailmunch/coupons</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-PUT-Coupons">HTTP Method: PUT NOT IMPLEMENTED</a></li>
+          <li><a href="#RESTAPI-Resource-Salesrule-HTTPMethod-DELETE-Coupons">HTTP Method: DELETE NOT IMPLEMENTED</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3><a name="RESTAPI-Resource-Salesrule-RESTAPI-Salesrule"></a>REST API: Salesrule</h3>
+
+<h4><a name="RESTAPI-Resource-Salesrule-URI--Salesrule"></a>URI: /salesrule</h4>
+
+<p>Allows you to retrieve salesrules.</p>
+
+<p><b>URL Structure</b>: https://magentotesting.avbportal.com/api/rest/salesrule<br/>
+<p><b>URL Structure</b>: https://magentotesting.avbportal.com/api/rest/salesrule/12345<br/>
+<p><b>URL Structure</b>: https://magentotesting.avbportal.com/api/rest/salesrule/store/:store<br/>
+<p><b>URL Structure</b>: https://magentotesting.avbportal.com/api/rest/salesrule/12345/store/:store<br/>
+<b>Version</b>: 1</p>
+
+<h5><a name="RESTAPI-Resource-Salesrule-HTTPMethod-GET-Salesrule"></a>HTTP Method: GET /salesrule</h5>
+
+<p><b>Description</b>: Allows you to retrieve the list of existing salesrules.<br/>
+  <b>Notes:</b>: Only Admin user can retrieve the list of salesrules.</p>
+
+<p><b>Authentication</b>: Admin<br/>
+  <b>Default Format</b>: JSON<br/>
+  <b>Parameters</b>:<br/>
+
+<p>
+    <b>Coupon Types:</b>
+    <pre>type</pre> field in the response body
+    1=No Coupon (default)
+    2=Specific Coupon
+    3=Use Auto Generation
+</p>
+
+<div>
+  <p>
+    GET api/rest/salesrule and api/rest/salesrule/store/:store
+    Returns a collection of Shopping Cart Price Rules, potentially filtering by store
+    Supports standard Magento filtering and paging, see example below
+    Shopping Cart Price Rules exist per website_id rather than per store_id, store_id is not returned
+    Only Status: Enabled rules are returned (is_active=1)
+    GET api/rest/salesrule/:id and api/rest/salesrule/:id/store/:store
+    Returns all data for a single Shopping Cart Price Rule
+  </p>
+</div>
+
+<p><b>Example</b></p>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET https://magentotesting.avbportal.com/api/rest/salesrule/store/protest1?filter[0][attribute]=use_for_mailmunch&filter[0][eq]=1</td></tr></table></div>
+
+<div>
+  <p>
+    Get enabled rules for all stores: api/rest/salesrule
+    Get enabled rules for a single store api/rest/salesrule/store/protest1
+    Filter by simple_action: api/rest/salesrule/store/protest1?filter[0][attribute]=simple_action&filter[0][eq]=cart_fixed
+    Has a coupon_code, with paging: filter[0][attribute]=coupon_code&filter[0][notnull]=1&page=1&limit=100
+    Does not have a coupon code: filter[0][attribute]=coupon_code&filter[0][null]=1
+    Has an expiration date: filter[0][attribute]=to_date&filter[0][notnull]=1
+    Does not have an expiration date, paging and ordering: filter[0][attribute]=to_date&filter[0][null]=1&page=1&limit=100&order=rule_id&dir=desc
+    Search by coupon_code: filter[0][attribute]=coupon_code&filter[0][like]=not-case-sensitive-code
+    Filter by coupon_code: filter[0][attribute]=coupon_code&filter[0][eq]=not-case-sensitive-code
+    * Filter by use_for_mailmunch: filter[0][attribute]=use_for_mailmunch&filter[0][eq]=1
+    Rules that use a particular product/cart/cart item attribute: TBA
+    Supported filter operators (some edge case failures exist): in, nin, eq, neq, like, null, notnull
+  </p>
+</div>
+
+<p><b>Response Body:</b></p>
+<p><b>response example: json</b></p>
+<div class='panelmacro'><table class='infomacro'>
+    <tr><td>GET https://magentotesting.avbportal.com/api/rest/salesrule/store/protest1?filter[0][attribute]=use_for_mailmunch&filter[0][eq]=1</td></tr></table>
+</div>
+
+<p><b>response body</b>:</p>
+<div class="panel" style="border-width: 1px;">
+    <div class="panelcontent">
+        <div class="code panel" style="border-width: 1px;">
+            <div class="codecontent panelcontent">
+                <div>
+                    <pre class="theme: default; brush: json; gutter: false">
+                        [
+                            {
+                                "coupon_code": null,
+                                "coupon_type": 2,
+                                "discount_amount": 10,
+                                "discount_hidden": false,
+                                "discount_qty": 0,
+                                "from_date": null,
+                                "name": "test autogen (protest 1)",
+                                "rule_id": 12505,
+                                "simple_action": "cart_by_percent",
+                                "sort_order": 1000,
+                                "to_date": null,
+                                "use_for_mailmunch": 1,
+                                "website_ids": [
+                                    126
+                                ]
+                            }
+                        ]
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h5><a name="RESTAPI-Resource-Salesrule-HTTPMethod-POST-Salesrule"></a>HTTP Method: POST /salesrule</h5>
+
+<p>
+    <b>Description</b>: Allows you to create a new salesrule.<br/>
+    <b>Authentication</b>: Admin<br/>
+    <b>Default Format</b>: JSON<br/>
+    <b>Parameters</b>:
+</p>
+
+<div>
+  <p>
+    POST api/rest/salesrule and api/rest/salesrule/store/:store
+    Create a new Shopping Cart Price Rule
+    Required fields: customer_group_ids, is_active, name, simple_action, website_ids
+    Fetch the customer group ids from GET api/rest/customergroups (admin API role only, can be cached, does not change often)
+    All Customer Groups should be assigned to HUB Quote related Shopping Cart Price Rules
+    WARNING: creating an active rule with no conditions or actions and a discount will result in the rule being applied to all ALTA carts for the given websites. The admin UI for Actions says "leave blank for all products" and for Conditions it says "leave blank for all items".
+    WARNING: when creating a product specific rule (by_percent, by_fixed) for a particular HUB Quote, discount_qty should always be specified
+    This prevents abuse where a consumer could change their ALTA cart item quantity before placing their order, getting more total discount than the merchant intended
+  </p>
+</div>
+
+<table><tbody>
+<tr>
+  <td>actions_deserialized:</td>
+  <td> the actions to take when the rule applies </td>
+</tr>
+<tr>
+  <td>conditions_deserialized:</td>
+  <td>the conditions under which the rule applies</td>
+</tr>
+<tr>
+  <td>coupon_code:</td>
+  <td>must be unique globally! Consider appending the HUB QUOTE ID and/or the AVB ID/store code.</td>
+</tr>
+<tr>
+  <td>coupon_type:</td>
+    <td>1=No Coupon (default), 2=Specific Coupon, 3=Use Auto Generation</td>
+</tr>
+<tr>
+  customer_group_ids: 0=guests/logged out, 1+=logged in.
+  all Customer Groups should generally be assigned to HUB Quote related Shopping Cart Price Rules
+  to offer a discount to logged in Customers only, omit 0.
+</tr>
+<tr>
+  description: an internal textarea for whatever
+</tr>
+<tr>
+  discount_hidden
+  present this product-level rule's Discount Amount as an Item Price reduction, rather than as part of the Discount subtotal
+  can only be used with by_percent and by_fixed product-level simple_actions
+</tr>
+<tr>
+  is_active: 0=Disabled, 1=Enabled (API DELETE is not allowed, instead set this to 0)
+</tr>
+<tr>
+  name: used internally in the Magento admin panel, globally scoped. use a naming convention. does not have to be unique.
+</tr>
+<tr>
+  simple_action
+  by_fixed
+  per item fixed amount off discounts
+  by_percent
+  per item percentage off discounts
+  considers previously applied discounts
+  applying before or after a by_fixed rule for the same product will change the total discount amount
+  two 10% discounts is not the same as a single 20% discount as discounts are applied sequentially
+  cart_fixed: per cart fixed discounts
+  cart_by_percent: per cart percentage discounts
+  considers previously applied discounts of other types
+  does not consider previously applied cart_by_percent discounts (two 10% cart_by_percent rules is 20% off)
+  always applied last
+  sort_order only impacts other cart_by_percent rules
+  item discounts (by_fixed and by_percent)
+  must always specify particular product matching conditions with actions_deserialized, or the rule will affect all cart products!
+  these rule types do not consider previously applied discounts, so sort_order does not matter
+</tr>
+<tr>
+  sort_order
+  an unsigned int which controls the order in which salesrules are applied
+  default value is 1000
+  HUB Quote price-matching salesrules are added with sort_order 5 (so never add anything with a sort_order of 5 or less!)
+  sort_order should always be above 5 so that HUB Quotes price matching salesrules can be dynamically added as needed
+  changing the order of salesrules application can change your final discount amount and grand total!
+  e.g. you can take 20% off of a product and then $20 off of the product, or vice versa, depending on sort_order
+  cart_by_percent rules are applied after all other rules, so sort_order only impacts the order of cart_by_percent rules application
+</tr>
+<tr>
+  store_labels
+  store scoped, non-unique, and publicly visible for coupon code rules
+  if specified, rule labels will show for Specific Coupon rules, in the subtotals section of the ALTA checkout and cart pages and in order confirmation emails
+  HUB Quotes Conditioned specific coupon rules can just set the store_id 0 store label, since hubquote_id locks the rule to the HUB Quote's particular (website and) store anyway. The rule will only be applied on a particular store_id.
+</tr>
+<tr>
+  stop_rules_processing: if this rule applies, do not attempt to apply any other rules, the discounting is complete
+</tr>
+<tr>
+  website_ids: cannot contain 0, "All Websites" rules do not exist
+</tr>
+</tbody></table>
+
+<h4><b>Examples of sales rules to POST</b></h4>
+<pre>
+  $10 off cart/quote - specific HUB Quote ID condition
+
+{
+    "conditions_deserialized": {
+      "type": "salesrule/rule_condition_combine",
+      "value": "1",
+      "aggregator": "all",
+      "conditions": [
+          {
+              "type": "salesrule/rule_condition_address",
+              "attribute": "hubquote_id",
+              "operator": "==",
+              "value": "1234"
+          }
+      ]
+    },
+    "customer_group_ids": [0,1,2,3],
+    "discount_amount": 10,
+    "is_active": 1,
+    "name": "HQ 1234 - $10 off cart",
+    "simple_action": "cart_fixed",
+    // critical, lets any future price matching salesrules run first!
+    "sort_order": 1000,
+    "stop_rules_processing": false,
+    "website_ids": [1]
+}
+10% off a particular SKU - specific HUB Quote ID condition - discount_qty specified to prevent abuse
+
+{
+    "actions_deserialized": {
+        "type": "salesrule/rule_condition_product_combine",
+        "value": "1",
+        "aggregator": "all",
+        "conditions": [
+          {
+              "type": "salesrule/rule_condition_product",
+              "attribute": "sku",
+              "operator": "==",
+              "value": "101216"
+          }
+        ]
+    },
+    "conditions_deserialized": {
+      "type": "salesrule/rule_condition_combine",
+      "value": "1",
+      "aggregator": "all",
+      "conditions": [
+          {
+              "type": "salesrule/rule_condition_address",
+              "attribute": "hubquote_id",
+              "operator": "==",
+              "value": "1234"
+          }
+      ]
+    },
+    "customer_group_ids": [0,1,2,3],
+    "discount_amount": 10,
+    "discount_qty": 3,
+    "is_active": 1,
+    "name": "HQ 1234 - 10% off SKU 101216",
+    "simple_action": "by_percent",
+    // critical, lets any future price matching salesrules run first!
+    "sort_order": 1000,
+    "stop_rules_processing": false,
+    "website_ids": [1]
+}
+$10 off a particular SKU - specific HUB Quote ID condition - discount_qty specified to prevent abuse
+
+{
+    "actions_deserialized": {
+        "type": "salesrule/rule_condition_product_combine",
+        "value": "1",
+        "aggregator": "all",
+        "conditions": [
+          {
+              "type": "salesrule/rule_condition_product",
+              "attribute": "sku",
+              "operator": "==",
+              "value": "101216"
+          }
+        ]
+    },
+    "conditions_deserialized": {
+      "type": "salesrule/rule_condition_combine",
+      "value": "1",
+      "aggregator": "all",
+      "conditions": [
+          {
+              "type": "salesrule/rule_condition_address",
+              "attribute": "hubquote_id",
+              "operator": "==",
+              "value": "1234"
+          }
+      ]
+    },
+    "customer_group_ids": [0,1,2,3],
+    "discount_amount": 10,
+    "discount_qty": 3,
+    "is_active": 1,
+    "name": "HQ 1234 - $10 off SKU 101216",
+    "simple_action": "by_fixed",
+    // critical, lets any future price matching salesrules run first!
+    "sort_order": 1000,
+    "stop_rules_processing": false,
+    "website_ids": [1]
+}
+Coupon code with store label - $10 off cart/quote - specific HUB Quote ID condition
+
+# Included for completeness, the HUB Quotes app doesn't really need to create new coupon codes. Standard
+# "No Coupon" Shopping Cart Price Rules are sufficient for doing HUB Quote price changes. A cart can only
+# have one Specific Coupon rule applied, but can have any number of No Coupon rules applied.
+{
+    "conditions_deserialized": {
+      "type": "salesrule/rule_condition_combine",
+      "attribute": null,
+      "operator": null,
+      "value": "1",
+      "is_value_processed": null,
+      "aggregator": "all",
+      "conditions": [
+          {
+              "type": "salesrule/rule_condition_address",
+              "attribute": "hubquote_id",
+              "operator": "==",
+              "value": "1234",
+              "is_value_processed": null
+          }
+      ]
+    },
+    "coupon_code": "SAMDAVES-VIP-COUPON",
+    "coupon_type": 2,
+    "customer_group_ids": [0,1,2,3],
+    "discount_amount": 10,
+    "discount_step": 0,
+    "discount_qty": 0,
+    "is_active": 1,
+    "name": "HQ 1234 - $10 off cart coupon",
+    "simple_action": "cart_fixed",
+    // critical, lets any future price matching salesrules run first!
+    "sort_order": 1000,
+    "stop_rules_processing": false,
+    "store_labels": {"0": "10% off"},
+    "website_ids": [1]
+}
+Default Actions
+
+"actions_deserialized": {
+    "type": "salesrule/rule_condition_product_combine",
+    "attribute": null,
+    "operator": null,
+    "value": "1",
+    "is_value_processed": null,
+    "aggregator": "all"
+},
+Default Conditions
+
+"conditions_deserialized": {
+    "type": "salesrule/rule_condition_combine",
+    "attribute": null,
+    "operator": null,
+    "value": "1",
+    "is_value_processed": null,
+    "aggregator": "all"
+},
+
+</pre>
+<h3> End Examples</h3>
+
+
+<h5><a name="RESTAPI-Resource-Salesrule-HTTPMethod-PUT-Salesrule"></a>HTTP Method: PUT /salesrule</h5>
+
+<p><b>Example</b>:</p>
+<div class='panelMacro'><table class='infoMacro'><tr><td>PUT https://magentotesting.avbportal.com/api/rest/salesrule</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>PUT api/rest/salesrule/:id and api/rest/salesrule/:id/store/:store</td></tr></table></div>
+<p>
+    Updates a rule by id
+    Can set null actions_deserialized and conditions_deserialized to revert these back to their defaults (shown below)
+    WARNING: creating an active rule with no conditions or actions and a discount will result in the rule being applied to all ALTA carts for the given websites. The admin UI for Actions says "leave blank for all products" and for Conditions it says "leave blank for all items".
+</p>
+
+<p><b>Request Body</b>:</p>
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+  <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+    <div>
+		<pre class="theme: Default; brush: json; gutter: false">
+            {
+                "rule_id": 12505,
+                "conditions_deserialized": {
+                  "type": "salesrule/rule_condition_combine",
+                  "attribute": null,
+                  "operator": null,
+                  "value": "1",
+                  "is_value_processed": null,
+                  "aggregator": "all",
+                  "conditions": [
+                      {
+                          "type": "salesrule/rule_condition_address",
+                          "attribute": "hubquote_id",
+                          "operator": "==",
+                          "value": "1234",
+                          "is_value_processed": null
+                      }
+                  ]
+                },
+                "coupon_code": "SAMDAVES-VIP-COUPON",
+                "coupon_type": 2,
+                "customer_group_ids": [0,1,2,3],
+                "discount_amount": 10,
+                "discount_step": 0,
+                "discount_qty": 0,
+                "is_active": 1,
+                "name": "HQ 1234 - $10 off cart coupon",
+                "simple_action": "cart_fixed",
+                // critical, lets any future price matching salesrules run first!
+                "sort_order": 1000,
+                "stop_rules_processing": false,
+                "store_labels": {"0": "10% off"},
+                "website_ids": [1]
+    }
+
+        </pre>
+    </div>
+  </div></div>
+
+</div></div>
+
+
+<p><b>Response</b>:<br/>
+  If the salesrule was updated successfully, we receive <b>Response HTTP Code</b> = 201, and a Response body with the salesrule information.</p>
+
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+  <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+    <div>
+		<pre class="theme: Default; brush: json; gutter: false">
+            {
+                "actions_deserialized": {
+                    "type": "salesrule/rule_condition_product_combine",
+                    "attribute": null,
+                    "operator": null,
+                    "value": "1",
+                    "is_value_processed": null,
+                    "aggregator": "all"
+                },
+                "apply_to_shipping": false,
+                "conditions_deserialized": {
+                    "type": "salesrule/rule_condition_combine",
+                    "attribute": null,
+                    "operator": null,
+                    "value": "1",
+                    "is_value_processed": null,
+                    "aggregator": "all",
+                    "conditions": [
+                        {
+                            "type": "salesrule/rule_condition_address",
+                            "attribute": "base_subtotal",
+                            "operator": ">=",
+                            "value": "1.00",
+                            "is_value_processed": false
+                        }
+                    ]
+                },
+                "coupon_code": "test-emailiq",
+                "coupon_type": 2,
+                "customer_group_ids": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "description": "test emailiq",
+                "discount_amount": 10,
+                "discount_hidden": false,
+                "discount_qty": 0,
+                "discount_step": 0,
+                "from_date": null,
+                "is_active": true,
+                "is_advanced": true,
+                "name": "test emailiq auto gen",
+                "product_ids": null,
+                "rule_id": 12506,
+                "simple_action": "cart_by_percent",
+                "simple_free_shipping": false,
+                "sort_order": 1000,
+                "stop_rules_processing": false,
+                "store_labels": [],
+                "times_used": 1,
+                "to_date": null,
+                "use_auto_generation": false,
+                "use_for_mailmunch": 1,
+                "uses_per_coupon": 1,
+                "uses_per_customer": 1,
+                "website_ids": [
+                    126
+                ]
+            }
+        </pre>
+    </div>
+  </div></div>
+</div></div>
+
+<h5><a name="RESTAPI-Resource-Salesrule-HTTPMethod-DELETE-salesrule"></a>HTTP Method: DELETE /salesrule</h5>
+
+<p><b>Description</b>: Not Implemented<br/>
+  <b>Authentication</b>: Admin<br/>
+  <b>Default Format</b>: JSON<br/>
+  <b>Parameters</b>:</p>
+
+DELETE api/rest/salesrule/:id not implemented, instead PUT {'is_active': false}
+
+<h4><a name="RESTAPI-Resource-Salesrule-URI--Coupons"></a>URI: /mailmunch/coupons</h4>
+
+<p>Allows you to retrieve Coupons by coupon code.</p>
+
+<h5><a name="RESTAPI-Resource-Salesrule-HTTPMethod-GET-Coupons"></a>HTTP Method: GET /mailmunch/coupons/store/:store</h5>
+
+<p><b>URL Structure</b>: https://magentotesting.avbportal.com/api/rest/mailmunch/coupons<br/>
+    <b>Version</b>: 1</p>
+
+<p><b>Description</b>: Allows you to retrieve coupon information by store.<br/>
+
+<p><b>Authentication</b>: Admin<br/>
+    <b>Default Format</b>: JSON<br/>
+    <b>Parameters</b>:<br/>
+
+<p><b>Example</b>:</p>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET https://magentotesting.avbportal.com/api/rest/mailmunch/coupons</td></tr></table></div>
+
+<p><b>Response Body</b>:</p>
+<p><b>response example: json</b></p>
+<div class='panelmacro'><table class='infomacro'><tr><td>GET https://magentotesting.avbportal.com/api/rest/mailmunch/coupons/store/protest1</td></tr></table></div>
+
+<p><b>response body</b>:</p>
+<div class="panel" style="border-width: 1px;">
+    <div class="panelcontent">
+        <div class="code panel" style="border-width: 1px;">
+            <div class="codecontent panelcontent">
+                <div>
+                <pre class="theme: default; brush: java; gutter: false">
+                   [
+                        {
+                            "coupon_id": 6,
+                            "rule_id": 6,
+                            "code": "SAVE50",
+                            "usage_limit": 10000,
+                            "usage_per_customer": 10,
+                            "times_used": 0,
+                            "expiration_date": null,
+                            "is_primary": 1,
+                            "created_at": "2019-06-06 17:21:32",
+                            "name": "Huppins - SAVE50",
+                            "description": "$50 off from checkout between $1001 and $1500",
+                            "use_for_mailmunch": 0
+                        },
+                        {
+                            "coupon_id": 10,
+                            "rule_id": 10,
+                            "code": "SAVE200",
+                            "usage_limit": 10000,
+                            "usage_per_customer": 10,
+                            "times_used": 0,
+                            "expiration_date": null,
+                            "is_primary": 1,
+                            "created_at": "2019-06-06 17:30:33",
+                            "name": "Huppins - SAVE200",
+                            "description": "$200 off from checkout between $4501 and $5500",
+                            "use_for_mailmunch": 0
+                        }
+                    ]
+                </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p><b>URL Structure</b>: <a name="RESTAPI-Resource-Salesrule-HTTPMethod-GET-Coupons-coupon_code"></a>https://magentotesting.avbportal.com/api/rest/mailmunch/coupons/:coupon_code/store/:store<br/>
+<p><b>URL Structure</b>: https://magentotesting.avbportal.com/api/rest/mailmunch/coupons/:coupon_code<br/>
+  <b>Version</b>: 1</p>
+
+<p><b>Description</b>: Allows you to retrieve coupon information by coupon code.<br/>
+
+<p><b>Authentication</b>: Admin<br/>
+  <b>Default Format</b>: JSON<br/>
+  <b>Parameters</b>:<br/>
+  <em>coupon_code</em><br/><em>store</em></p>
+
+<p><b>Example</b>:</p>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET https://magentotesting.avbportal.com/api/rest/mailmunch/coupons/emailiq-UKSSOGXPH82MCH9F</td></tr></table></div>
+
+<p><b>Response Body</b>:</p>
+<p><b>response example: json</b></p>
+<div class='panelmacro'><table class='infomacro'><tr><td>GET https://magentotesting.avbportal.com/api/rest/mailmunch/coupons/emailiq-UKSSOGXPH82MCH9F/store/protest1</td></tr></table></div>
+
+<p><b>response body</b>:</p>
+<div class="panel" style="border-width: 1px;">
+    <div class="panelcontent">
+      <div class="code panel" style="border-width: 1px;">
+          <div class="codecontent panelcontent">
+            <div>
+                <pre class="theme: default; brush: java; gutter: false">
+
+                    {
+                        "coupon_id": 2567,
+                        "rule_id": 12506,
+                        "code": "emailiq-UKSSOGXPH82MCH9F",
+                        "usage_limit": 1,
+                        "usage_per_customer": 1,
+                        "times_used": 0,
+                        "expiration_date": "2024-08-15 00:00:00",
+                        "is_primary": null,
+                        "created_at": "2024-07-31 15:36:24",
+                        "name": "test emailiq auto gen",
+                        "description": "test emailiq",
+                        "use_for_mailmunch": 1
+                    }
+                </pre>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+
+<p><b>URL Structure</b>: https://magentotesting.avbportal.com/api/rest/mailmunch/coupons?rule_id=12506<br/>
+<b>Version</b>: 1</p>
+
+<h5><a name="RESTAPI-Resource-Salesrule-HTTPMethod-GET-Coupons-rule_id"></a>HTTP Method: GET /mailmunch/coupons?rule_id=12506</h5>
+
+<p><b>Description</b>: Allows you to retrieve coupon information by rule id.<br/>
+
+<p><b>Authentication</b>: Admin<br/>
+    <b>Default Format</b>: JSON<br/>
+    <b>Parameters</b>:<br/>
+    <em>rule_id</em></p>
+
+<p><b>Example</b>:</p>
+<div class='panelMacro'><table class='infoMacro'><tr><td>GET https://magentotesting.avbportal.com/api/rest/mailmunch/coupons?rule_id=12506</td></tr></table></div>
+
+<p><b>Response Body</b>:</p>
+<p><b>response example: json</b></p>
+<div class='panelmacro'><table class='infomacro'><tr><td>GET https://magentotesting.avbportal.com/api/rest/mailmunch/coupons?rule_id=12506</td></tr></table></div>
+
+<p><b>response body</b>:</p>
+<div class="panel" style="border-width: 1px;">
+    <div class="panelcontent">
+        <div class="code panel" style="border-width: 1px;">
+            <div class="codecontent panelcontent">
+                <div>
+                <pre class="theme: default; brush: java; gutter: false">
+                    [
+                        {
+                            "coupon_id": 2567,
+                            "rule_id": 12506,
+                            "code": "emailiq-UKSSOGXPH82MCH9F",
+                            "usage_limit": 1,
+                            "usage_per_customer": 1,
+                            "times_used": 0,
+                            "expiration_date": "2024-08-15 00:00:00",
+                            "is_primary": null,
+                            "created_at": "2024-07-31 15:36:24",
+                            "name": "test emailiq auto gen",
+                            "description": "test emailiq",
+                            "use_for_mailmunch": 1
+                        },
+                        {
+                            "coupon_id": 2568,
+                            "rule_id": 12506,
+                            "code": "emailiq-9KOUA7BEIBHGCN7K",
+                            "usage_limit": 1,
+                            "usage_per_customer": 1,
+                            "times_used": 0,
+                            "expiration_date": "2024-08-15 00:00:00",
+                            "is_primary": null,
+                            "created_at": "2024-07-31 15:42:59",
+                            "name": "test emailiq auto gen",
+                            "description": "test emailiq",
+                            "use_for_mailmunch": 1
+                        },
+                        {
+                            "coupon_id": 2569,
+                            "rule_id": 12506,
+                            "code": "emailiq-HOY8UYD05JY7N6QB",
+                            "usage_limit": 1,
+                            "usage_per_customer": 1,
+                            "times_used": 0,
+                            "expiration_date": "2024-08-15 00:00:00",
+                            "is_primary": null,
+                            "created_at": "2024-07-31 15:42:59",
+                            "name": "test emailiq auto gen",
+                            "description": "test emailiq",
+                            "use_for_mailmunch": 1
+                        }
+                    ]
+                </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h5><a name="RESTAPI-Resource-Salesrule-HTTPMethod-POST-Coupons"></a>HTTP Method: POST /mailmunch/coupons</h5>
+
+<p>
+    <b>Description</b>: Allows you to create a new coupon for a specified salesrule.<br/>
+    <b>Authentication</b>: Admin<br/>
+    <b>Default Format</b>: JSON<br/>
+    <b>Parameters</b>:
+</p>
+
+<p><b>Example</b>:</p>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST https://magentotesting.avbportal.com/api/rest/mailmunch/coupons</td></tr></table></div>
+<div class='panelMacro'><table class='infoMacro'><tr><td>POST api/rest/salesrule/:id and api/rest/mailmunch/coupons/store/:store</td></tr></table></div>
+
+<p><b>Request Body</b>:</p>
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+    <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+        <div>
+		<pre class="theme: Default; brush: json; gutter: false">
+            {
+                "rule_id": 12506,
+            }
+        </pre>
+        </div>
+    </div></div>
+
+</div></div>
+
+<p><b>Response Body:</b></p>
+<p><b>response example: json</b></p>
+<div class='panelmacro'><table class='infomacro'>
+    <tr><td>POST </td></tr></table>
+</div>
+
+<p><b>response body</b>:</p>
+<div class="panel" style="border-width: 1px;">
+    <div class="panelcontent">
+        <div class="code panel" style="border-width: 1px;">
+            <div class="codecontent panelcontent">
+                <div>
+                    <pre class="theme: default; brush: json; gutter: false">
+                   [
+                        {
+                            "coupon_id": "3574",
+                            "rule_id": 12506,
+                            "usage_limit": 1,
+                            "usage_per_customer": 1,
+                            "expiration_date": "2024-08-15 00:00:00",
+                            "created_at": "2024-07-31 19:07:34",
+                            "code": "emailiq-YLL6PBV1MQ7AERFI",
+                            "is_primary": null,
+                            "name": "test emailiq auto gen",
+                            "description": "test emailiq",
+                            "use_for_mailmunch": 1,
+                            "discount_amount": "10.0000",
+                            "simple_action": "cart_by_percent"
+                        }
+                    ]
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h5><a name="RESTAPI-Resource-Salesrule-HTTPMethod-PUT-Coupons"></a>HTTP Method: PUT /mailmunch/coupons</h5>
+
+<p><b>Description</b>: Not Implemented<br/>
+    <b>Authentication</b>: Admin<br/>
+    <b>Default Format</b>: JSON<br/>
+    <b>Parameters</b>:</p>
+
+PUT api/rest/mailmunch/coupons not implemented
+
+<h5><a name="RESTAPI-Resource-Salesrule-HTTPMethod-DELETE-Coupons"></a>HTTP Method: DELETE /mailmunch/coupons/:id</h5>
+
+<p><b>Description</b>: Not Implemented<br/>
+    <b>Authentication</b>: Admin<br/>
+    <b>Default Format</b>: JSON<br/>
+    <b>Parameters</b>:</p>
+
+DELETE api/rest/mailmunch/coupons/:id not implemented
